@@ -59,7 +59,7 @@ namespace Vanilla
                         }
                         else
                         {
-                            AddLog("USUÁRIO LOGADO!"); //temporário
+                            AddLog("USUÁRIO LOGADO!", Util.id_user); //temporário
                         }
                         return ver;
                     }
@@ -71,7 +71,7 @@ namespace Vanilla
                 }
             }
         }
-        public void Deslog()
+        public void Deslog(int id)
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
             {
@@ -81,10 +81,14 @@ namespace Vanilla
                     using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_deslog", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        util = new Util();
-                        cmd.Parameters.Add("v_id", OracleDbType.Int16).Value = util.Id_user;
+                        util = new Util();;
+                        if (id == 0)
+                        {
+                            id = Util.id_user;
+                        }
+                        cmd.Parameters.Add("v_id", OracleDbType.Int16).Value = id;
                         cmd.ExecuteNonQuery();
-                        AddLog("USUÁRIO DESLOGADO!"); //temporário
+                        AddLog("USUÁRIO DESLOGADO!", id); //temporário
                     }
                 }
                 catch (Exception ex)
@@ -203,7 +207,7 @@ namespace Vanilla
                         cmd.Parameters.Add("v_uf", uf);
                         cmd.Parameters.Add("v_cep", cep);
                         cmd.ExecuteNonQuery();
-                        AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI CADASTRADA COM SUCESSO!");
+                        AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI CADASTRADA COM SUCESSO!", Util.id_user);
                         MessageBox.Show("Operação Concluída!");
                     }
                     connection.Close();
@@ -238,7 +242,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_pass", pass);
                             cmd.Parameters.Add("v_bloq", bloq_user);
                             cmd.ExecuteNonQuery();
-                            AddLog($"USUARIO: {user} | TIPO: {permissao} | FOI CADASTRADO COM SUCESSO!");
+                            AddLog($"USUARIO: {user} | TIPO: {permissao} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
                             MessageBox.Show("Usuario adicionado com sucesso!");
                         }
                         connection.Close();
@@ -283,7 +287,7 @@ namespace Vanilla
                                 cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem;
                                 cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_v;
                                 cmd.ExecuteNonQuery();
-                                AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI CADASTRADO COM SUCESSO!");
+                                AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
                             }
                             MessageBox.Show("Item gravado com sucesso!");
                         }
@@ -300,18 +304,17 @@ namespace Vanilla
             }
         }
 
-        public void AddLog(string msg)
+        public void AddLog(string msg,int id)
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
             {
-                util = new Util();
                 try
                 {
                     connection.Open();
                     using (OracleCommand cmd = new OracleCommand("vnl_pkg_log.vnl_reg_logs", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_id_user", OracleDbType.Int16).Value = util.Id_user;
+                        cmd.Parameters.Add("v_id_user", OracleDbType.Int16).Value = id;
                         cmd.Parameters.Add("v_ocorrencia", OracleDbType.Varchar2).Value = msg;
                         cmd.ExecuteNonQuery();
                     }
@@ -360,7 +363,7 @@ namespace Vanilla
                                 cmd.Parameters.Add("v_uf", uf);
                                 cmd.Parameters.Add("v_cep", cep);
                                 cmd.ExecuteNonQuery();
-                                AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI EDITADA COM SUCESSO!");
+                                AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI EDITADA COM SUCESSO!", Util.id_user);
                             }
                             MessageBox.Show($"{cnpj} / {nome} foi editado!");
                         }
@@ -400,7 +403,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem;
                             cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_v;
                             cmd.ExecuteNonQuery();
-                            AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!");
+                            AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!", Util.id_user );
                         }
                         MessageBox.Show("Item gravado com sucesso!");
                     }
@@ -432,7 +435,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_tel_2", OracleDbType.Varchar2).Value = tel2;
                             cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
                             cmd.ExecuteNonQuery();
-                            AddLog($"USUARIO: {nome} | ID: {id} | FOI EDITADO COM SUCESSO!");
+                            AddLog($"USUARIO: {nome} | ID: {id} | FOI EDITADO COM SUCESSO!", Util.id_user);
                         }
 
                         MessageBox.Show("Usuário gravado com sucesso!");
@@ -468,7 +471,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_uf", OracleDbType.Varchar2).Value = uf;
                             cmd.Parameters.Add("v_cep", OracleDbType.Varchar2).Value = cep;
                             cmd.ExecuteNonQuery();
-                            AddLog($"O endereço {id} foi alterado!");
+                            AddLog($"O endereço {id} foi alterado!", Util.id_user);
                         }
                         MessageBox.Show("Usuário gravado com sucesso!");
                     }
@@ -504,7 +507,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_login", OracleDbType.Varchar2).Value = login;
                             cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
                             cmd.ExecuteNonQuery();
-                            AddLog($"USUARIO: {login} | ID: {id} | PERMISSAO: {perm} | STATUS: {status} | FOI EDITADO COM SUCESSO!");
+                            AddLog($"USUARIO: {login} | ID: {id} | PERMISSAO: {perm} | STATUS: {status} | FOI EDITADO COM SUCESSO!", Util.id_user);
                         }
                         MessageBox.Show("Usuário gravado com sucesso!");
                     }
@@ -540,7 +543,7 @@ namespace Vanilla
                                 else if (table == "view_users_logados")
                                 {
                                     UserOn user = new UserOn();
-                                    user.AddNaLista(reader["login_user"].ToString(), reader["hostname"].ToString(), reader["ip"].ToString(), Convert.ToDateTime(reader["acess"]));
+                                    user.AddNaLista(Convert.ToInt32(reader["id"]),reader["login_user"].ToString(), reader["hostname"].ToString(), reader["ip"].ToString(), Convert.ToDateTime(reader["acess"]));
                                 }
                                 else
                                 {

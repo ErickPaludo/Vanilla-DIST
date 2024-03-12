@@ -14,6 +14,7 @@ namespace Vanilla
     {
         private Database db = new Database();
         static public List<UserOnBack> listuser = new List<UserOnBack>();
+        static private int id_select;
         public UserOn()
         {
             InitializeComponent();
@@ -28,9 +29,42 @@ namespace Vanilla
                 dataGridLogados.Rows.Add(obj.Login, obj.Maquina, obj.Ip, obj.Entrada);
             }
         }
-        public void AddNaLista(string user, string host, string ip, DateTime date)
+        public void AddNaLista(int id, string user, string host, string ip, DateTime date)
         {
-            listuser.Add(new UserOnBack(user, host, ip, date));
+            listuser.Add(new UserOnBack(id, user, host, ip, date));
+        }
+
+        private void Despreender(object sender, EventArgs e)
+        {
+            db.Deslog(id_select);
+            MessageBox.Show("A sessão do usuário selecionada foi encerrada!");
+            AtualizaTable();
+            id_select = 0;
+            btndesconect.Enabled = false;
+        }
+
+        private void EscolherUser(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) //Está sendo enviada a inscrição estadual para busca de dados (vai ser alterado para cnpj)
+            {
+                string user = (dataGridLogados.Rows[e.RowIndex].Cells[0].Value).ToString();
+                foreach (UserOnBack obj in listuser)
+                {
+                    if (obj.Login == user)
+                    {
+                        if (obj.Id != Util.id_user)
+                        {
+                            id_select = obj.Id;
+                            btndesconect.Enabled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não foi possível encerrar esta sessão!");
+                        }
+
+                    }
+                }
+            }
         }
 
         private void Atualize(object sender, KeyEventArgs e)
@@ -38,7 +72,7 @@ namespace Vanilla
             if (e.KeyCode == Keys.F5) // Verifica se a tecla pressionada é a tecla F5
             {
                 AtualizaTable();
-            }      
+            }
         }
     }
 }

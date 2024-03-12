@@ -115,7 +115,7 @@ namespace Vanilla
                 altercomun.ShowDialog();
                 if (validador == true)
                 {
-                    db.Deslog();
+                    db.Deslog(0);
                     DeslogarUsuario();
                 }
             }
@@ -136,7 +136,7 @@ namespace Vanilla
             db.VerificaLogin();
             if (validador == false)
             {
-                db.Deslog();
+                db.Deslog(0);
                 DeslogarUsuario();
             }
             else
@@ -155,7 +155,7 @@ namespace Vanilla
                 users.ShowDialog();
                 if (validador)
                 {
-                    db.Deslog();
+                    db.Deslog(0);
                     DeslogarUsuario();
                 }
             }
@@ -170,7 +170,7 @@ namespace Vanilla
             db.VerificaLogin();
             if (validador == false)
             {
-                db.Deslog();
+                db.Deslog(0);
                 Application.Exit();
             }
             else
@@ -188,7 +188,7 @@ namespace Vanilla
                 editbank.ShowDialog();
                 if (validador == true)
                 {
-                    db.Deslog();
+                    db.Deslog(0);
                     DeslogarUsuario();
                 }
             }

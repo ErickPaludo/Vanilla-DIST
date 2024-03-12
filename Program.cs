@@ -18,7 +18,7 @@ namespace Vanilla
            // Application.Run(new Homepage()); //Acessa direto o hom
 
             Database db = new Database();
-            db.Deslog();
+            db.Deslog(0);
             //Application.Run(new TabelaEmpresas()); //Acessa outras telas
         }
     }

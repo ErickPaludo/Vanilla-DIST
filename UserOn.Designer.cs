@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGridLogados = new DataGridView();
             ColumnUser = new DataGridViewTextBoxColumn();
             ColumnHost = new DataGridViewTextBoxColumn();
             ColumnIP = new DataGridViewTextBoxColumn();
             ColumnData = new DataGridViewTextBoxColumn();
+            btndesconect = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridLogados).BeginInit();
             SuspendLayout();
             // 
@@ -44,37 +45,39 @@
             dataGridLogados.AllowUserToAddRows = false;
             dataGridLogados.AllowUserToDeleteRows = false;
             dataGridLogados.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridLogados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridLogados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridLogados.BackgroundColor = SystemColors.Control;
             dataGridLogados.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridLogados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridLogados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridLogados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridLogados.Columns.AddRange(new DataGridViewColumn[] { ColumnUser, ColumnHost, ColumnIP, ColumnData });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridLogados.DefaultCellStyle = dataGridViewCellStyle6;
-            dataGridLogados.Enabled = false;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridLogados.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridLogados.Location = new Point(12, 12);
             dataGridLogados.Name = "dataGridLogados";
             dataGridLogados.ReadOnly = true;
             dataGridLogados.RowHeadersVisible = false;
             dataGridLogados.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridLogados.RowTemplate.Height = 25;
-            dataGridLogados.Size = new Size(656, 397);
+            dataGridLogados.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dataGridLogados.Size = new Size(656, 376);
             dataGridLogados.TabIndex = 7;
+            dataGridLogados.CellDoubleClick += EscolherUser;
+            dataGridLogados.KeyDown += Atualize;
             // 
             // ColumnUser
             // 
@@ -104,11 +107,23 @@
             ColumnData.Name = "ColumnData";
             ColumnData.ReadOnly = true;
             // 
+            // btndesconect
+            // 
+            btndesconect.Enabled = false;
+            btndesconect.Location = new Point(539, 405);
+            btndesconect.Name = "btndesconect";
+            btndesconect.Size = new Size(129, 23);
+            btndesconect.TabIndex = 8;
+            btndesconect.Text = "button1";
+            btndesconect.UseVisualStyleBackColor = true;
+            btndesconect.Click += Despreender;
+            // 
             // UserOn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(680, 440);
+            Controls.Add(btndesconect);
             Controls.Add(dataGridLogados);
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
@@ -116,7 +131,6 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Usuários Online";
-            KeyDown += Atualize;
             ((System.ComponentModel.ISupportInitialize)dataGridLogados).EndInit();
             ResumeLayout(false);
         }
@@ -128,5 +142,6 @@
         private DataGridViewTextBoxColumn ColumnHost;
         private DataGridViewTextBoxColumn ColumnIP;
         private DataGridViewTextBoxColumn ColumnData;
+        private Button btndesconect;
     }
 }

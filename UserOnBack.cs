@@ -19,7 +19,7 @@ namespace Vanilla
         {
         }
 
-        public UserOnBack(string user,string maquina, string ip, DateTime entrada) : base(user)
+        public UserOnBack(int id,string user,string maquina, string ip, DateTime entrada) : base(id,user)
         {
             this.maquina = maquina;
             this.ip = ip;
