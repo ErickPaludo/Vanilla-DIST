@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace Vanilla
 {
@@ -15,6 +17,7 @@ namespace Vanilla
         Util utilitarios = new Util();
         Database db = new Database();
         private static bool validador;
+        private Config _config = new Config();
         public Homepage()
         {
             InitializeComponent();
@@ -41,8 +44,10 @@ namespace Vanilla
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            db.VerificaLogin();
             CadastraCNPJ transportadora = new CadastraCNPJ();
             transportadora.ShowDialog();
+
         }
 
         private void AbrirItem(object sender, EventArgs e)
@@ -102,7 +107,7 @@ namespace Vanilla
             AlterarUsersGeral users = new AlterarUsersGeral();
             users.ExibirDadosTabela();
             users.ShowDialog();
-            if (validador == true)
+            if (validador)
             {
                 db.Deslog();
                 validador = false;

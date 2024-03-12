@@ -31,8 +31,8 @@ namespace Vanilla
             dataGridLog.Rows.Clear();
             logslist.Clear();
             db.RetornaLogs(combouser.Text, camppesq.Text, Convert.ToDateTime(dateinicial.Text), Convert.ToDateTime(datefinal.Text));
-            var listaOrdenada = logslist.OrderBy(item => item.Id_log);
-            foreach (BackLog log in listaOrdenada)
+            // var listaOrdenada = logslist.OrderBy(item => item.Id_log);
+            foreach (BackLog log in logslist.OrderByDescending(item => item.Date))
             {
                 dataGridLog.Rows.Add(log.Login, log.Log, log.Date);
             }

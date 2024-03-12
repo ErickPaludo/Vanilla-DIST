@@ -4,6 +4,9 @@ using Oracle.ManagedDataAccess.Types;
 using System.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net;
+using System.Reflection.PortableExecutable;
+using MySqlX.XDevAPI.Relational;
+using System.Reflection.Metadata;
 
 
 namespace Vanilla
@@ -79,7 +82,7 @@ namespace Vanilla
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         util = new Util();
-                        cmd.Parameters.Add("v_id", OracleDbType.Int16).Value = util.Id_user;                     
+                        cmd.Parameters.Add("v_id", OracleDbType.Int16).Value = util.Id_user;
                         cmd.ExecuteNonQuery();
                         AddLog("USUÁRIO DESLOGADO!"); //temporário
                     }
@@ -534,7 +537,7 @@ namespace Vanilla
                                     itens_table = new TabelaItens(true);
                                     itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_fornecedor"]), reader["nome_fantasia"].ToString(), reader["codigo_barras"].ToString(), reader["nome_item"].ToString(), reader["descri_item"].ToString(), reader["unidade_medida_item"].ToString(), Convert.ToInt32(reader["quant_item"]), Convert.ToDecimal(reader["preco_custo_item"]), Convert.ToDecimal(reader["margem_lucro_item"]), Convert.ToDecimal(reader["preco_venda_item"]), reader["status_conv"].ToString());
                                 }
-                                else if(table == "view_users_logados")
+                                else if (table == "view_users_logados")
                                 {
                                     UserOn user = new UserOn();
                                     user.AddNaLista(reader["login_user"].ToString(), reader["hostname"].ToString(), reader["ip"].ToString(), Convert.ToDateTime(reader["acess"]));
@@ -866,7 +869,7 @@ namespace Vanilla
                 MessageBox.Show(ex.ToString());
                 return false;
             }
-        } 
+        }
 
         #region Temporariamente desligdas
 
@@ -902,7 +905,7 @@ namespace Vanilla
 
         public void GravarCd(string tabela, int id_predio, int rua_cd, int empmin)//grava as informações de leyout cd no banco
         {
-           try
+            try
             {
                 using (OracleConnection connection = new OracleConnection(config.Lerdados()))
                 {
@@ -930,6 +933,45 @@ namespace Vanilla
             }
         }
         #endregion
+
+        public void VerificaLogin()
+        {
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                {
+                    connection.Open();
+
+                    using (OracleCommand cmd = new OracleCommand("verificar_existencia", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new OracleParameter("v_table", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "VNL_USER_LOGADO";
+                        cmd.Parameters.Add(new OracleParameter("v_coluna", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "ID";
+                        cmd.Parameters.Add(new OracleParameter("v_valor", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = Util.id_user.ToString();
+                        cmd.Parameters.Add(new OracleParameter("v_retorno", OracleDbType.Int32, ParameterDirection.ReturnValue));
+
+                        cmd.ExecuteNonQuery();
+
+                        object returnValue = cmd.Parameters["v_retorno"].Value;
+                        int v_retorno = returnValue == DBNull.Value ? -1 : Convert.ToInt32(returnValue);
+
+                        if (v_retorno != 1)
+                            throw new Exception("Este usuário não está mais connectado na aplicação.");
+
+                    }
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Houve um erro:\n{ex.Message}");
+                Homepage home = new Homepage();
+                home.Hide();
+                LoginFront login = new LoginFront();
+                login.Show();
+            }
+        }
     }
 }
 
