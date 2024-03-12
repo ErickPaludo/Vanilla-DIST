@@ -16,7 +16,7 @@ namespace Vanilla
     {
         Util utilitarios = new Util();
         Database db = new Database();
-        private static bool validador;
+        public static bool validador = false;
         private Config _config = new Config();
         public Homepage()
         {
@@ -42,24 +42,47 @@ namespace Vanilla
             }
             nameuser.Text = utilitarios.Nome_user;
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             db.VerificaLogin();
-            CadastraCNPJ transportadora = new CadastraCNPJ();
-            transportadora.ShowDialog();
-
+            if (validador == false)
+            {
+                CadastraCNPJ transportadora = new CadastraCNPJ();
+                transportadora.ShowDialog();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void AbrirItem(object sender, EventArgs e)
         {
-            CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
-            cadastrarItensFront.ShowDialog();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
+                cadastrarItensFront.ShowDialog();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AdicionarUsuariosFront usuarios = new AdicionarUsuariosFront();
-            usuarios.ShowDialog();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                AdicionarUsuariosFront usuarios = new AdicionarUsuariosFront();
+                usuarios.ShowDialog();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void Homepage_FormClosing(object sender, FormClosingEventArgs e)
@@ -69,22 +92,36 @@ namespace Vanilla
 
         private void Config_User(object sender, EventArgs e)
         {
-            AlterarUserCFront altercomun = new AlterarUserCFront();
-            altercomun.ExibirDados();
-            altercomun.ShowDialog();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                AlterarUserCFront altercomun = new AlterarUserCFront();
+                altercomun.ExibirDados();
+                altercomun.ShowDialog();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void AlterarUser(object sender, EventArgs e)
         {
-            AlterarUserCFront altercomun = new AlterarUserCFront();
-            altercomun.ExibirDados();
-            altercomun.ShowDialog();
-            if (validador == true)
+            db.VerificaLogin();
+            if (validador == false)
             {
-                db.Deslog();
-                this.Hide();
-                LoginFront login = new LoginFront();
-                login.Show();
+                AlterarUserCFront altercomun = new AlterarUserCFront();
+                altercomun.ExibirDados();
+                altercomun.ShowDialog();
+                if (validador == true)
+                {
+                    db.Deslog();
+                    DeslogarUsuario();
+                }
+            }
+            else
+            {
+                DeslogarUsuario();
             }
         }
 
@@ -96,46 +133,70 @@ namespace Vanilla
 
         private void TrocarConta(object sender, EventArgs e)
         {
-            db.Deslog();
-            this.Hide();
-            LoginFront login = new LoginFront();
-            login.Show();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                db.Deslog();
+                DeslogarUsuario();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void AlterarQualqueruser(object sender, EventArgs e)
         {
-            AlterarUsersGeral users = new AlterarUsersGeral();
-            users.ExibirDadosTabela();
-            users.ShowDialog();
-            if (validador)
+            db.VerificaLogin();
+            if (validador == false)
             {
-                db.Deslog();
-                validador = false;
-                this.Hide();
-                LoginFront login = new LoginFront();
-                login.Show();
+                AlterarUsersGeral users = new AlterarUsersGeral();
+                users.ExibirDadosTabela();
+                users.ShowDialog();
+                if (validador)
+                {
+                    db.Deslog();
+                    DeslogarUsuario();
+                }
+            }
+            else
+            {
+                DeslogarUsuario();
             }
         }
 
         private void Exit(object sender, EventArgs e)
         {
-            db.Deslog();
-            Application.Exit();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                db.Deslog();
+                Application.Exit();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void EndereçoBanco(object sender, EventArgs e)
         {
-            ConfigBank editbank = new ConfigBank();
-            editbank.ShowDialog();
-            if (validador == true)
+            db.VerificaLogin();
+            if (validador == false)
             {
-                db.Deslog();
-                this.Hide();
-                LoginFront login = new LoginFront();
-                login.Show();
+                ConfigBank editbank = new ConfigBank();
+                editbank.ShowDialog();
+                if (validador == true)
+                {
+                    db.Deslog();
+                    DeslogarUsuario();
+                }
+            }
+            else
+            {
+                DeslogarUsuario();
             }
         }
-
 
         private void VerSobre(object sender, EventArgs e)
         {
@@ -145,34 +206,74 @@ namespace Vanilla
 
         private void VerEmpresas(object sender, EventArgs e)
         {
-            Cursor = Cursors.WaitCursor;
-            TabelaEmpresas emp = new TabelaEmpresas(false);
-            emp.Carregar();
-            emp.Show();
-            Cursor = Cursors.Default;
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                Cursor = Cursors.WaitCursor;
+                TabelaEmpresas emp = new TabelaEmpresas(false);
+                emp.Carregar();
+                emp.Show();
+                Cursor = Cursors.Default;
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void VerLog(object sender, EventArgs e)
         {
-            Logs log = new Logs();
-            log.LimparCombo();
-            db.RetornaUsuarios();
-            log.ExibirlistComb();
-            log.Show();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                Logs log = new Logs();
+                log.LimparCombo();
+                db.RetornaUsuarios();
+                log.ExibirlistComb();
+                log.Show();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void ConsultarItens(object sender, EventArgs e)
         {
-            TabelaItens itens = new TabelaItens(false);
-            itens.AtualizarItens();
-            itens.Show();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                TabelaItens itens = new TabelaItens(false);
+                itens.AtualizarItens();
+                itens.Show();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
         }
 
         private void LOgados(object sender, EventArgs e)
         {
-            UserOn logados = new UserOn();
-            logados.AtualizaTable();
-            logados.Show();
+            db.VerificaLogin();
+            if (validador == false)
+            {
+                UserOn logados = new UserOn();
+                logados.AtualizaTable();
+                logados.Show();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
+        }
+
+        private void DeslogarUsuario()
+        {         
+                validador = false;
+                this.Hide();
+                LoginFront login = new LoginFront();
+                login.Show();
         }
     }
 }

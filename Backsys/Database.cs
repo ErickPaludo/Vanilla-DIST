@@ -966,9 +966,7 @@ namespace Vanilla
             {
                 MessageBox.Show($"Houve um erro:\n{ex.Message}");
                 Homepage home = new Homepage();
-                home.Hide();
-                LoginFront login = new LoginFront();
-                login.Show();
+                Homepage.validador = true;
             }
         }
     }

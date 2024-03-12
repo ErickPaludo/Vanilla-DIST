@@ -15,7 +15,7 @@ namespace Vanilla
     public class Util : Endereco
     {
         #region Cabeçalho
-        static public int id_user = 1;
+        static public int id_user;
         static public int permissao_user = 1;
         static public string nome_user = "sys";
         private string cnpj;
