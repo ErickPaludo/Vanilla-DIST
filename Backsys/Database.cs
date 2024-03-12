@@ -942,18 +942,17 @@ namespace Vanilla
                 {
                     connection.Open();
 
-                    using (OracleCommand cmd = new OracleCommand("verificar_existencia", connection))
+                    using (OracleCommand cmd = new OracleCommand("verificar_existencia_usuario", connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new OracleParameter("v_table", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "VNL_USER_LOGADO";
+                        cmd.Parameters.Add(new OracleParameter("v_table", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "VNL_USER_LOGADOS";
                         cmd.Parameters.Add(new OracleParameter("v_coluna", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "ID";
                         cmd.Parameters.Add(new OracleParameter("v_valor", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = Util.id_user.ToString();
-                        cmd.Parameters.Add(new OracleParameter("v_retorno", OracleDbType.Int32, ParameterDirection.ReturnValue));
+                        cmd.Parameters.Add(new OracleParameter("v_retorno", OracleDbType.Int32, ParameterDirection.Output));
 
                         cmd.ExecuteNonQuery();
 
-                        object returnValue = cmd.Parameters["v_retorno"].Value;
-                        int v_retorno = returnValue == DBNull.Value ? -1 : Convert.ToInt32(returnValue);
+                        int v_retorno = Convert.ToInt32(cmd.Parameters["v_retorno"].Value.ToString());
 
                         if (v_retorno != 1)
                             throw new Exception("Este usuário não está mais connectado na aplicação.");
