@@ -87,7 +87,12 @@ namespace Vanilla
 
         private void Homepage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            db.VerificaLogin();
+            if(validador == false)
+            {
+                db.Deslog(0);             
+            }
+            Environment.Exit(0);                  
         }
 
         private void Config_User(object sender, EventArgs e)
