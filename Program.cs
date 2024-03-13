@@ -15,11 +15,6 @@ namespace Vanilla
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
            Application.Run(new LoginFront()); // Acessa LOGIN
-           // Application.Run(new Homepage()); //Acessa direto o hom
-
-            Database db = new Database();
-            db.Deslog(0);
-            //Application.Run(new TabelaEmpresas()); //Acessa outras telas
         }
     }
 }
