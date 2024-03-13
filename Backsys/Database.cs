@@ -81,7 +81,7 @@ namespace Vanilla
                     using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_deslog", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        util = new Util();;
+                        util = new Util(); ;
                         if (id == 0)
                         {
                             id = Util.id_user;
@@ -304,7 +304,7 @@ namespace Vanilla
             }
         }
 
-        public void AddLog(string msg,int id)
+        public void AddLog(string msg, int id)
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
             {
@@ -403,7 +403,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem;
                             cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_v;
                             cmd.ExecuteNonQuery();
-                            AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!", Util.id_user );
+                            AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!", Util.id_user);
                         }
                         MessageBox.Show("Item gravado com sucesso!");
                     }
@@ -543,7 +543,7 @@ namespace Vanilla
                                 else if (table == "view_users_logados")
                                 {
                                     UserOn user = new UserOn();
-                                    user.AddNaLista(Convert.ToInt32(reader["id"]),reader["login_user"].ToString(), reader["hostname"].ToString(), reader["ip"].ToString(), Convert.ToDateTime(reader["acess"]));
+                                    user.AddNaLista(Convert.ToInt32(reader["id"]), reader["login_user"].ToString(), reader["hostname"].ToString(), reader["ip"].ToString(), Convert.ToDateTime(reader["acess"]));
                                 }
                                 else
                                 {
@@ -947,13 +947,20 @@ namespace Vanilla
 
                     using (OracleCommand cmd = new OracleCommand("verificar_existencia_usuario", connection))
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new OracleParameter("v_table", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "VNL_USER_LOGADOS";
-                        cmd.Parameters.Add(new OracleParameter("v_coluna", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "ID";
-                        cmd.Parameters.Add(new OracleParameter("v_valor", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = Util.id_user.ToString();
-                        cmd.Parameters.Add(new OracleParameter("v_retorno", OracleDbType.Int32, ParameterDirection.Output));
+                        try
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.Add(new OracleParameter("v_table", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "VNL_USER_LOGADOS";
+                            cmd.Parameters.Add(new OracleParameter("v_coluna", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = "ID";
+                            cmd.Parameters.Add(new OracleParameter("v_valor", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = Util.id_user.ToString();
+                            cmd.Parameters.Add(new OracleParameter("v_retorno", OracleDbType.Int32, ParameterDirection.Output));
 
-                        cmd.ExecuteNonQuery();
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception)
+                        {
+                            throw new Exception("Erro ao tentar executar a query.");
+                        }
 
                         int v_retorno = Convert.ToInt32(cmd.Parameters["v_retorno"].Value.ToString());
 
