@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GenCode128;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,7 @@ namespace Vanilla
             newItem.Enabled = false;
             editarItem.Enabled = false;
             codigoBarras.Text = cad.GeraCodBarrar();
+            MostrCodBar();
         }
         public void ModifyElements(bool type) //Altera propriedades
         {
@@ -140,7 +142,7 @@ namespace Vanilla
                 }
                 else
                 {
-                    cad.EditaItens(id_item, id_fornecedor, codigoBarras.Text,nomeItem.Text.ToString(), comboStatus.Text.ToString(), descItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToInt32(quantItem.Text), Convert.ToDecimal(precoCusto.Text), Convert.ToDecimal(porcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(precoCusto.Text), (Convert.ToDecimal(porcentLucro.Text)))));
+                    cad.EditaItens(id_item, id_fornecedor, codigoBarras.Text, nomeItem.Text.ToString(), comboStatus.Text.ToString(), descItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToInt32(quantItem.Text), Convert.ToDecimal(precoCusto.Text), Convert.ToDecimal(porcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(precoCusto.Text), (Convert.ToDecimal(porcentLucro.Text)))));
                 }
                 id_item = 0; //valor redefinido para zero pois caso contrario, um novo item sobreescreve um item j[a registrado
                 id_fornecedor = 0;
@@ -163,6 +165,7 @@ namespace Vanilla
             {
                 codigoBarras.Enabled = false;
                 codigoBarras.Text = cad.GeraCodBarrar();
+                MostrCodBar();
             }
         }
         private void VerificarCod(object sender, EventArgs e)//Assim que se digita o codigo de barras, ele verifica se nao ha outro codigo identico
@@ -171,6 +174,23 @@ namespace Vanilla
             {
                 codigoBarras.Text = string.Empty;
             }
+            else
+            {
+                MostrCodBar();
+            }
+        }
+        private void MostrCodBar()
+        {
+            try
+            {
+                Image varpictureCodBar = Code128Rendering.MakeBarcodeImage(codigoBarras.Text, 3, true);
+                pictureCodBar.Image = varpictureCodBar;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         public void ReturnItens(int id_i)
         {
@@ -192,7 +212,7 @@ namespace Vanilla
 
             //metodo da classe database que retorna os dados dos itens
             db.RetornarItens(id_item, out id_fornecedor, out r_codbar, out name, out description, out r_und_med, out r_quant, out r_pre_c, out r_porc_l, out r_pre_f, out r_name, out r_status);
-             if (id_item != 0)
+            if (id_item != 0)
             {
                 nomeItem.Text = name;
                 descItem.Text = description;
@@ -210,6 +230,7 @@ namespace Vanilla
                 ModifyElements(false);
                 ClearCamp();
             }
+            MostrCodBar();
         }
 
         private void calcular_Click(object sender, EventArgs e)
@@ -264,7 +285,8 @@ namespace Vanilla
         {
             cnpj.SomenteUmaVirgula(e, porcentLucro.Text.ToString());
         } //Somente numeros
-        #endregion
+
+#endregion
     }
-    
+
 }

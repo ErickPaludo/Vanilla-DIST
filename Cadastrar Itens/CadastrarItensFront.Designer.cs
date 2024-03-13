@@ -30,9 +30,9 @@ namespace Vanilla
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             nomeItem = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -67,8 +67,10 @@ namespace Vanilla
             newItem = new ToolStripMenuItem();
             editarItem = new ToolStripMenuItem();
             cancelar = new Button();
+            pictureCodBar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridFornecedores).BeginInit();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureCodBar).BeginInit();
             SuspendLayout();
             // 
             // nomeItem
@@ -94,7 +96,7 @@ namespace Vanilla
             // 
             label2.AutoSize = true;
             label2.Enabled = false;
-            label2.Location = new Point(244, 40);
+            label2.Location = new Point(497, 167);
             label2.Name = "label2";
             label2.Size = new Size(100, 15);
             label2.TabIndex = 5;
@@ -103,7 +105,7 @@ namespace Vanilla
             // codigoBarras
             // 
             codigoBarras.Enabled = false;
-            codigoBarras.Location = new Point(244, 56);
+            codigoBarras.Location = new Point(497, 183);
             codigoBarras.MaxLength = 13;
             codigoBarras.Name = "codigoBarras";
             codigoBarras.Size = new Size(142, 23);
@@ -120,7 +122,7 @@ namespace Vanilla
             comboStatus.FormattingEnabled = true;
             comboStatus.ItemHeight = 15;
             comboStatus.Items.AddRange(new object[] { "Ativo", "Inativo", "Bloqueado" });
-            comboStatus.Location = new Point(392, 56);
+            comboStatus.Location = new Point(334, 56);
             comboStatus.Name = "comboStatus";
             comboStatus.Size = new Size(72, 23);
             comboStatus.TabIndex = 8;
@@ -129,7 +131,7 @@ namespace Vanilla
             // 
             label3.AutoSize = true;
             label3.Enabled = false;
-            label3.Location = new Point(392, 40);
+            label3.Location = new Point(334, 40);
             label3.Name = "label3";
             label3.Size = new Size(42, 15);
             label3.TabIndex = 9;
@@ -151,7 +153,7 @@ namespace Vanilla
             descItem.Location = new Point(36, 113);
             descItem.Multiline = true;
             descItem.Name = "descItem";
-            descItem.Size = new Size(350, 93);
+            descItem.Size = new Size(445, 93);
             descItem.TabIndex = 3;
             // 
             // dataGridFornecedores
@@ -159,28 +161,28 @@ namespace Vanilla
             dataGridFornecedores.AllowUserToAddRows = false;
             dataGridFornecedores.AllowUserToDeleteRows = false;
             dataGridFornecedores.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridFornecedores.BackgroundColor = SystemColors.Control;
             dataGridFornecedores.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridFornecedores.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnNome, ColumnCNPJ });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridFornecedores.Enabled = false;
             dataGridFornecedores.Location = new Point(37, 235);
             dataGridFornecedores.Name = "dataGridFornecedores";
@@ -188,7 +190,7 @@ namespace Vanilla
             dataGridFornecedores.RowHeadersVisible = false;
             dataGridFornecedores.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridFornecedores.RowTemplate.Height = 25;
-            dataGridFornecedores.Size = new Size(424, 150);
+            dataGridFornecedores.Size = new Size(444, 136);
             dataGridFornecedores.TabIndex = 6;
             dataGridFornecedores.CellClick += SelectFornec;
             // 
@@ -245,7 +247,7 @@ namespace Vanilla
             comboUMed.FormattingEnabled = true;
             comboUMed.ItemHeight = 15;
             comboUMed.Items.AddRange(new object[] { "UN", "Fardo", "Palete" });
-            comboUMed.Location = new Point(392, 113);
+            comboUMed.Location = new Point(412, 56);
             comboUMed.Name = "comboUMed";
             comboUMed.Size = new Size(69, 23);
             comboUMed.TabIndex = 15;
@@ -254,7 +256,7 @@ namespace Vanilla
             // 
             label6.AutoSize = true;
             label6.Enabled = false;
-            label6.Location = new Point(392, 95);
+            label6.Location = new Point(412, 38);
             label6.Name = "label6";
             label6.Size = new Size(48, 15);
             label6.TabIndex = 16;
@@ -264,7 +266,7 @@ namespace Vanilla
             // 
             label7.AutoSize = true;
             label7.Enabled = false;
-            label7.Location = new Point(392, 165);
+            label7.Location = new Point(256, 38);
             label7.Name = "label7";
             label7.Size = new Size(72, 15);
             label7.TabIndex = 18;
@@ -273,7 +275,7 @@ namespace Vanilla
             // quantItem
             // 
             quantItem.Enabled = false;
-            quantItem.Location = new Point(392, 183);
+            quantItem.Location = new Point(256, 56);
             quantItem.MaxLength = 5;
             quantItem.Name = "quantItem";
             quantItem.Size = new Size(72, 23);
@@ -285,7 +287,7 @@ namespace Vanilla
             // 
             label8.AutoSize = true;
             label8.Enabled = false;
-            label8.Location = new Point(36, 388);
+            label8.Location = new Point(497, 253);
             label8.Name = "label8";
             label8.Size = new Size(90, 15);
             label8.TabIndex = 20;
@@ -294,7 +296,7 @@ namespace Vanilla
             // precoCusto
             // 
             precoCusto.Enabled = false;
-            precoCusto.Location = new Point(36, 405);
+            precoCusto.Location = new Point(497, 270);
             precoCusto.MaxLength = 10;
             precoCusto.Name = "precoCusto";
             precoCusto.PlaceholderText = "R$00,00";
@@ -308,7 +310,7 @@ namespace Vanilla
             // 
             Lucro.AutoSize = true;
             Lucro.Enabled = false;
-            Lucro.Location = new Point(147, 388);
+            Lucro.Location = new Point(608, 253);
             Lucro.Name = "Lucro";
             Lucro.Size = new Size(40, 15);
             Lucro.TabIndex = 22;
@@ -317,7 +319,7 @@ namespace Vanilla
             // porcentLucro
             // 
             porcentLucro.Enabled = false;
-            porcentLucro.Location = new Point(147, 405);
+            porcentLucro.Location = new Point(608, 270);
             porcentLucro.MaxLength = 5;
             porcentLucro.Name = "porcentLucro";
             porcentLucro.PlaceholderText = "0,0%";
@@ -330,7 +332,7 @@ namespace Vanilla
             // 
             label9.AutoSize = true;
             label9.Enabled = false;
-            label9.Location = new Point(39, 431);
+            label9.Location = new Point(500, 296);
             label9.Name = "label9";
             label9.Size = new Size(68, 15);
             label9.TabIndex = 23;
@@ -340,7 +342,7 @@ namespace Vanilla
             // 
             precoFinal.AutoSize = true;
             precoFinal.Enabled = false;
-            precoFinal.Location = new Point(113, 431);
+            precoFinal.Location = new Point(574, 296);
             precoFinal.Name = "precoFinal";
             precoFinal.Size = new Size(20, 15);
             precoFinal.TabIndex = 24;
@@ -350,7 +352,7 @@ namespace Vanilla
             // 
             newFornec.Enabled = false;
             newFornec.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            newFornec.Location = new Point(349, 388);
+            newFornec.Location = new Point(369, 375);
             newFornec.Name = "newFornec";
             newFornec.Size = new Size(112, 23);
             newFornec.TabIndex = 28;
@@ -360,7 +362,7 @@ namespace Vanilla
             // 
             // buttonGravar
             // 
-            buttonGravar.Location = new Point(386, 463);
+            buttonGravar.Location = new Point(1017, 374);
             buttonGravar.Name = "buttonGravar";
             buttonGravar.Size = new Size(75, 24);
             buttonGravar.TabIndex = 10;
@@ -373,7 +375,7 @@ namespace Vanilla
             // 
             buttonAtualizarTable.Enabled = false;
             buttonAtualizarTable.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonAtualizarTable.Location = new Point(279, 388);
+            buttonAtualizarTable.Location = new Point(298, 375);
             buttonAtualizarTable.Name = "buttonAtualizarTable";
             buttonAtualizarTable.Size = new Size(65, 23);
             buttonAtualizarTable.TabIndex = 27;
@@ -385,18 +387,18 @@ namespace Vanilla
             // 
             codMaual.AutoSize = true;
             codMaual.Enabled = false;
-            codMaual.Location = new Point(244, 85);
+            codMaual.Location = new Point(645, 183);
             codMaual.Name = "codMaual";
             codMaual.Size = new Size(124, 19);
             codMaual.TabIndex = 28;
             codMaual.Text = "Inserir cod Manual";
             codMaual.UseVisualStyleBackColor = true;
-            codMaual.Click += codMaual_Click;
+            codMaual.CheckedChanged += codMaual_Click;
             // 
             // calcular
             // 
             calcular.Enabled = false;
-            calcular.Location = new Point(36, 449);
+            calcular.Location = new Point(497, 314);
             calcular.Name = "calcular";
             calcular.Size = new Size(162, 23);
             calcular.TabIndex = 9;
@@ -409,7 +411,7 @@ namespace Vanilla
             menuStrip1.Items.AddRange(new ToolStripItem[] { itemToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(504, 24);
+            menuStrip1.Size = new Size(1108, 24);
             menuStrip1.TabIndex = 30;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -437,7 +439,7 @@ namespace Vanilla
             // cancelar
             // 
             cancelar.Enabled = false;
-            cancelar.Location = new Point(305, 463);
+            cancelar.Location = new Point(924, 374);
             cancelar.Name = "cancelar";
             cancelar.Size = new Size(75, 24);
             cancelar.TabIndex = 31;
@@ -445,12 +447,21 @@ namespace Vanilla
             cancelar.UseVisualStyleBackColor = true;
             cancelar.Click += Cancelar;
             // 
+            // pictureCodBar
+            // 
+            pictureCodBar.Location = new Point(497, 56);
+            pictureCodBar.Name = "pictureCodBar";
+            pictureCodBar.Size = new Size(595, 109);
+            pictureCodBar.TabIndex = 32;
+            pictureCodBar.TabStop = false;
+            // 
             // CadastrarItensFront
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(504, 508);
+            ClientSize = new Size(1108, 412);
+            Controls.Add(pictureCodBar);
             Controls.Add(cancelar);
             Controls.Add(calcular);
             Controls.Add(codMaual);
@@ -490,6 +501,7 @@ namespace Vanilla
             ((System.ComponentModel.ISupportInitialize)dataGridFornecedores).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureCodBar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -529,5 +541,6 @@ namespace Vanilla
         private ToolStripMenuItem newItem;
         private ToolStripMenuItem editarItem;
         private Button cancelar;
+        private PictureBox pictureCodBar;
     }
 }
