@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Aspose.Words;
 
 namespace Vanilla
 {
@@ -294,23 +295,32 @@ namespace Vanilla
         private void btnSalvararquivo_Click(object sender, EventArgs e)
         {
             string endereco = "C:\\Vanilla\\Codigo_de_barras";
-            if (!Directory.Exists(endereco))
+
+            if (!Directory.Exists(endereco)) //Verifica se o endereço existe
             {
                 Directory.CreateDirectory(endereco);
             }
-            pictureCodBar.Image.Save(endereco + "\\codbar_" + codigoBarras.Text + ".jpg");
-            //  MessageBox.Show($"Imagem Salva no diretório {endereco}\\codbar_{textCodBar.Text}.jpg");
-            if (System.IO.File.Exists(endereco + "\\codbar_" + codigoBarras.Text + ".jpg"))
+
+            pictureCodBar.Image.Save(endereco + "\\temp.jpg"); //salva temporariamente em jpg
+
+            var doc = new Document();
+            var builder = new DocumentBuilder(doc);
+
+            builder.InsertImage(endereco + "\\codbar_" + codigoBarras.Text + ".jpg");
+            doc.Save(endereco + "\\codbar_" + codigoBarras.Text + ".pdf"); 
+
+            if (System.IO.File.Exists(endereco + "\\codbar_" + codigoBarras.Text + ".pdf"))
             {
-                Process.Start("explorer.exe", "C:\\Vanilla\\Codigo_de_barras\\codbar_5555555.jpg");
+                Process.Start("explorer.exe", $"C:\\Vanilla\\Codigo_de_barras\\codbar_{codigoBarras.Text}.pdf");
             }
+            File.Delete(endereco + "\\temp.jpg");
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             using (var g = e.Graphics)
             {
-                using (var fnt = new Font("Courier New", 16))
+                using (var fnt = new System.Drawing.Font("Courier New", 16))
                 {
                     g.DrawImage(this.pictureCodBar.Image, 20, 50);
                     var caption = codigoBarras.Text;
