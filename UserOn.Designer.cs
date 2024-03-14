@@ -114,7 +114,7 @@
             btndesconect.Name = "btndesconect";
             btndesconect.Size = new Size(129, 23);
             btndesconect.TabIndex = 8;
-            btndesconect.Text = "button1";
+            btndesconect.Text = "Deslogar Usuário";
             btndesconect.UseVisualStyleBackColor = true;
             btndesconect.Click += Despreender;
             // 

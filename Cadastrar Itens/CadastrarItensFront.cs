@@ -189,6 +189,28 @@ namespace Vanilla
             {
                 Image varpictureCodBar = Code128Rendering.MakeBarcodeImage(codigoBarras.Text, 3, true);
                 pictureCodBar.Image = varpictureCodBar;
+                int heightWithText = varpictureCodBar.Height + 30; // Aumente esse valor conforme necessário
+                Bitmap bmp = new Bitmap(varpictureCodBar.Width, heightWithText);
+
+                // Adicionar o número do código de barras como texto na imagem
+                using (Graphics graphics = Graphics.FromImage(bmp))
+                {
+                    graphics.DrawImage(varpictureCodBar, 0, 0); // Desenhe a imagem original
+
+                    // Definir fonte e cor do texto
+                    using (System.Drawing.Font font = new System.Drawing.Font("Arial", 12))
+                    {
+                        using (SolidBrush brush = new SolidBrush(Color.Black))
+                        {
+                            // Desenhar o número do código de barras
+                            graphics.DrawString(codigoBarras.Text, font, brush, new PointF(245, varpictureCodBar.Height + 5));
+                            // Ajuste as coordenadas conforme necessário para posicionar o texto onde desejar
+                        }
+                    }
+                }
+
+                // Exibir a imagem do código de barras com o número no PictureBox
+                pictureCodBar.Image = bmp;
             }
             catch (Exception ex)
             {
@@ -306,7 +328,7 @@ namespace Vanilla
             var doc = new Document();
             var builder = new DocumentBuilder(doc);
 
-            builder.InsertImage(endereco + "\\codbar_" + codigoBarras.Text + ".jpg");
+            builder.InsertImage(endereco + "\\temp.jpg");
             doc.Save(endereco + "\\codbar_" + codigoBarras.Text + ".pdf"); 
 
             if (System.IO.File.Exists(endereco + "\\codbar_" + codigoBarras.Text + ".pdf"))
