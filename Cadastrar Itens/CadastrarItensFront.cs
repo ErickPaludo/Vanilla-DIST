@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -63,6 +64,8 @@ namespace Vanilla
             buttonGravar.Visible = type;
             codMaual.Enabled = type;
             cancelar.Enabled = type;
+            btnSalvararquivo.Enabled = type;
+            btnImp.Enabled = type;
         }
         public void ClearCamp() //Limpa tudo
         {
@@ -286,7 +289,44 @@ namespace Vanilla
             cnpj.SomenteUmaVirgula(e, porcentLucro.Text.ToString());
         } //Somente numeros
 
-#endregion
+        #endregion
+
+        private void btnSalvararquivo_Click(object sender, EventArgs e)
+        {
+            string endereco = "C:\\Vanilla\\Codigo_de_barras";
+            if (!Directory.Exists(endereco))
+            {
+                Directory.CreateDirectory(endereco);
+            }
+            pictureCodBar.Image.Save(endereco + "\\codbar_" + codigoBarras.Text + ".jpg");
+            //  MessageBox.Show($"Imagem Salva no diretório {endereco}\\codbar_{textCodBar.Text}.jpg");
+            if (System.IO.File.Exists(endereco + "\\codbar_" + codigoBarras.Text + ".jpg"))
+            {
+                Process.Start("explorer.exe", "C:\\Vanilla\\Codigo_de_barras\\codbar_5555555.jpg");
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            using (var g = e.Graphics)
+            {
+                using (var fnt = new Font("Courier New", 16))
+                {
+                    g.DrawImage(this.pictureCodBar.Image, 20, 50);
+                    var caption = codigoBarras.Text;
+                    g.DrawString(caption, fnt, Brushes.Black, 130, 110);
+                }
+            }
+        }
+
+        private void btnImp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.printDocument1.Print();
+            }
+            catch(Exception ex) { MessageBox.Show($"Ocorreu um erro:\n{ex.Message}"); }
+        }
     }
 
 }

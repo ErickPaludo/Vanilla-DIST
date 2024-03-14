@@ -1,4 +1,4 @@
-﻿using Correios.CorreiosServiceReference;
+﻿
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;

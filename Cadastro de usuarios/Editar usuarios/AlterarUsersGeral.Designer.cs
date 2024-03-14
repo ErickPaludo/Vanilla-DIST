@@ -59,7 +59,6 @@
             telfBox = new MaskedTextBox();
             label13 = new Label();
             label14 = new Label();
-            mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             encaminhar = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dataGridUser).BeginInit();
             SuspendLayout();
@@ -347,10 +346,6 @@
             // 
             // mySqlDataAdapter1
             // 
-            mySqlDataAdapter1.DeleteCommand = null;
-            mySqlDataAdapter1.InsertCommand = null;
-            mySqlDataAdapter1.SelectCommand = null;
-            mySqlDataAdapter1.UpdateCommand = null;
             // 
             // encaminhar
             // 
@@ -433,7 +428,6 @@
         private MaskedTextBox telfBox;
         private Label label13;
         private Label label14;
-        private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
         private CheckBox encaminhar;
     }
 }

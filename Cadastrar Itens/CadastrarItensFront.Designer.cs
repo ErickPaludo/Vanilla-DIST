@@ -30,9 +30,9 @@ namespace Vanilla
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             nomeItem = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -68,9 +68,14 @@ namespace Vanilla
             editarItem = new ToolStripMenuItem();
             cancelar = new Button();
             pictureCodBar = new PictureBox();
+            pictureBox1 = new PictureBox();
+            btnImp = new Button();
+            btnSalvararquivo = new Button();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)dataGridFornecedores).BeginInit();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // nomeItem
@@ -161,28 +166,28 @@ namespace Vanilla
             dataGridFornecedores.AllowUserToAddRows = false;
             dataGridFornecedores.AllowUserToDeleteRows = false;
             dataGridFornecedores.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridFornecedores.BackgroundColor = SystemColors.Control;
             dataGridFornecedores.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridFornecedores.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnNome, ColumnCNPJ });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridFornecedores.Enabled = false;
             dataGridFornecedores.Location = new Point(37, 235);
             dataGridFornecedores.Name = "dataGridFornecedores";
@@ -449,11 +454,47 @@ namespace Vanilla
             // 
             // pictureCodBar
             // 
-            pictureCodBar.Location = new Point(497, 56);
+            pictureCodBar.BackColor = SystemColors.ButtonHighlight;
+            pictureCodBar.Location = new Point(501, 55);
             pictureCodBar.Name = "pictureCodBar";
             pictureCodBar.Size = new Size(595, 109);
             pictureCodBar.TabIndex = 32;
             pictureCodBar.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ButtonHighlight;
+            pictureBox1.Location = new Point(500, 29);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(596, 135);
+            pictureBox1.TabIndex = 33;
+            pictureBox1.TabStop = false;
+            // 
+            // btnImp
+            // 
+            btnImp.Enabled = false;
+            btnImp.Location = new Point(1017, 183);
+            btnImp.Name = "btnImp";
+            btnImp.Size = new Size(75, 23);
+            btnImp.TabIndex = 34;
+            btnImp.Text = "Imprimir";
+            btnImp.UseVisualStyleBackColor = true;
+            btnImp.Click += btnImp_Click;
+            // 
+            // btnSalvararquivo
+            // 
+            btnSalvararquivo.Enabled = false;
+            btnSalvararquivo.Location = new Point(936, 183);
+            btnSalvararquivo.Name = "btnSalvararquivo";
+            btnSalvararquivo.Size = new Size(75, 23);
+            btnSalvararquivo.TabIndex = 35;
+            btnSalvararquivo.Text = "Salvar";
+            btnSalvararquivo.UseVisualStyleBackColor = true;
+            btnSalvararquivo.Click += btnSalvararquivo_Click;
+            // 
+            // printDocument1
+            // 
+            printDocument1.PrintPage += printDocument1_PrintPage;
             // 
             // CadastrarItensFront
             // 
@@ -461,6 +502,8 @@ namespace Vanilla
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(1108, 412);
+            Controls.Add(btnSalvararquivo);
+            Controls.Add(btnImp);
             Controls.Add(pictureCodBar);
             Controls.Add(cancelar);
             Controls.Add(calcular);
@@ -490,6 +533,7 @@ namespace Vanilla
             Controls.Add(label1);
             Controls.Add(nomeItem);
             Controls.Add(menuStrip1);
+            Controls.Add(pictureBox1);
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
@@ -502,6 +546,7 @@ namespace Vanilla
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -542,5 +587,9 @@ namespace Vanilla
         private ToolStripMenuItem editarItem;
         private Button cancelar;
         private PictureBox pictureCodBar;
+        private PictureBox pictureBox1;
+        private Button btnImp;
+        private Button btnSalvararquivo;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

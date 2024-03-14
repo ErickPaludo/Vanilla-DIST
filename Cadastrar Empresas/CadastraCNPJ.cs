@@ -12,8 +12,6 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography;
-using Google.Protobuf.WellKnownTypes;
-using MySqlX.XDevAPI.Common;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Vanilla
