@@ -839,7 +839,45 @@ namespace Vanilla
                 }
             }
         }
-
+        public void RetornoCd(bool type, int rua)
+        {
+            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            {
+                try
+                {
+                    CadastroCd cd = new CadastroCd();
+                    connection.Open();
+                    string query = string.Empty;
+                    if(type == true)
+                    {
+                        query = "select Max(rua_cd) as ruas_cd from vnl_endereco_cd"; //retorna numero de ruas
+                    }
+                    else
+                    {
+                        query = "select Max(rua_cd) as ruas_cd from vnl_endereco_cd";
+                    }
+                    using (OracleCommand cmd = new OracleCommand(query, connection))
+                    {
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                if (type == true)
+                                {
+                                    cd.AtualizaTabelaRuas(Convert.ToInt32(reader["ruas_cd"]));
+                                }
+                                else { }
+                                    
+                            }                 
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocorreu o seguinte erro:\n{ex}");
+                }
+            }
+        }
         #endregion
 
         public bool AntiCopy(string celula, string table, string cod)//Verifica se uma palavra já existe já existe
@@ -906,69 +944,6 @@ namespace Vanilla
             }
         }
 
-        #region Temporariamente desligdas
-
-        public void Gravarla(string tabela, int id_la, int id_predio, int id_rua) //grava as informações de La no banco
-        {
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-
-                        string query = $"INSERT INTO {tabela}(id_la, id_predio,id_rua) VALUES (:la,:id_p,:id_rua)";
-
-                        using (OracleCommand cmd = new OracleCommand(query, connection))
-                        {
-                            cmd.Parameters.Add("la", OracleDbType.Int32).Value = id_la;
-                            cmd.Parameters.Add("id_p", OracleDbType.Int32).Value = id_predio;
-                            cmd.Parameters.Add("id_rua", OracleDbType.Int32).Value = id_rua;
-                            cmd.ExecuteNonQuery();
-                        }
-                        transaction.Commit();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        public void GravarCd(string tabela, int id_predio, int rua_cd, int empmin)//grava as informações de leyout cd no banco
-        {
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-
-                        string query = $"INSERT INTO {tabela}(id_predio,rua_cd,la_emp_min) VALUES (:id_p,:rua_cd,:emp_min)";
-
-                        using (OracleCommand cmd = new OracleCommand(query, connection))
-                        {
-                            cmd.Parameters.Add("id_p", OracleDbType.Int32).Value = id_predio;
-                            cmd.Parameters.Add("rua_cd", OracleDbType.Int32).Value = rua_cd;
-                            cmd.Parameters.Add("emp_min", OracleDbType.Int32).Value = empmin;
-                            cmd.ExecuteNonQuery();
-                        }
-                        transaction.Commit();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-        #endregion
-
         public bool VerificaLogin()
         {
             try
@@ -1012,6 +987,3 @@ namespace Vanilla
         }
     }
 }
-
-
-
