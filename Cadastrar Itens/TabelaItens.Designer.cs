@@ -165,7 +165,7 @@
             // search
             // 
             search.Cursor = Cursors.Hand;
-            search.Location = new Point(173, 12);
+            search.Location = new Point(273, 12);
             search.Name = "search";
             search.Size = new Size(75, 23);
             search.TabIndex = 14;
@@ -177,8 +177,9 @@
             // 
             camppesq.Location = new Point(12, 12);
             camppesq.Name = "camppesq";
-            camppesq.Size = new Size(142, 23);
+            camppesq.Size = new Size(255, 23);
             camppesq.TabIndex = 15;
+            camppesq.Leave += Pesquisar;
             // 
             // button2
             // 

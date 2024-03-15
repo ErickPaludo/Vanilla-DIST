@@ -55,20 +55,23 @@
             flowLayoutPanel2 = new FlowLayoutPanel();
             logs = new Button();
             ConsultaItens = new Button();
+            pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             containercad.SuspendLayout();
             containerlabelcad.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // cademp
             // 
             cademp.BackColor = Color.White;
+            cademp.Cursor = Cursors.Hand;
             cademp.Location = new Point(3, 47);
             cademp.Name = "cademp";
-            cademp.Size = new Size(114, 114);
+            cademp.Size = new Size(167, 114);
             cademp.TabIndex = 0;
             cademp.Text = "Empresa";
             cademp.UseVisualStyleBackColor = false;
@@ -77,30 +80,33 @@
             // caditem
             // 
             caditem.BackColor = Color.White;
-            caditem.Location = new Point(123, 47);
+            caditem.Cursor = Cursors.Hand;
+            caditem.Location = new Point(176, 47);
             caditem.Name = "caditem";
-            caditem.Size = new Size(114, 114);
-            caditem.TabIndex = 3;
+            caditem.Size = new Size(167, 114);
+            caditem.TabIndex = 1;
             caditem.Text = "Itens";
             caditem.UseVisualStyleBackColor = false;
             caditem.Click += AbrirItem;
             // 
             // adduser
             // 
-            adduser.Location = new Point(243, 47);
+            adduser.Cursor = Cursors.Hand;
+            adduser.Location = new Point(349, 47);
             adduser.Name = "adduser";
-            adduser.Size = new Size(114, 114);
-            adduser.TabIndex = 4;
+            adduser.Size = new Size(167, 114);
+            adduser.TabIndex = 2;
             adduser.Text = "Usuario";
             adduser.UseVisualStyleBackColor = true;
             adduser.Click += button5_Click;
             // 
             // addcd
             // 
-            addcd.Location = new Point(363, 47);
+            addcd.Cursor = Cursors.Hand;
+            addcd.Location = new Point(522, 47);
             addcd.Name = "addcd";
-            addcd.Size = new Size(114, 114);
-            addcd.TabIndex = 10;
+            addcd.Size = new Size(167, 114);
+            addcd.TabIndex = 3;
             addcd.Text = "Add Cd";
             addcd.UseVisualStyleBackColor = true;
             addcd.Visible = false;
@@ -108,17 +114,20 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.DarkSlateBlue;
+            menuStrip1.Dock = DockStyle.None;
             menuStrip1.Items.AddRange(new ToolStripItem[] { nameuser, configuraçõesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.RenderMode = ToolStripRenderMode.System;
-            menuStrip1.Size = new Size(981, 24);
+            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
+            menuStrip1.Size = new Size(163, 24);
             menuStrip1.TabIndex = 12;
             menuStrip1.Text = "menuStrip1";
             // 
             // nameuser
             // 
             nameuser.DropDownItems.AddRange(new ToolStripItem[] { useron, alterarOutrosUsuários, userConfigToolStripMenuItem, trocarDeContaToolStripMenuItem, sairToolStripMenuItem });
+            nameuser.ForeColor = SystemColors.ButtonHighlight;
             nameuser.Name = "nameuser";
             nameuser.Size = new Size(59, 20);
             nameuser.Text = "Usuário";
@@ -162,6 +171,7 @@
             // configuraçõesToolStripMenuItem
             // 
             configuraçõesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { endereçoDoBandoToolStripMenuItem, sobreToolStripMenuItem });
+            configuraçõesToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
             configuraçõesToolStripMenuItem.Size = new Size(96, 20);
             configuraçõesToolStripMenuItem.Text = "Configurações";
@@ -169,23 +179,24 @@
             // endereçoDoBandoToolStripMenuItem
             // 
             endereçoDoBandoToolStripMenuItem.Name = "endereçoDoBandoToolStripMenuItem";
-            endereçoDoBandoToolStripMenuItem.Size = new Size(159, 22);
+            endereçoDoBandoToolStripMenuItem.Size = new Size(180, 22);
             endereçoDoBandoToolStripMenuItem.Text = "Endereço Banco";
             endereçoDoBandoToolStripMenuItem.Click += EndereçoBanco;
             // 
             // sobreToolStripMenuItem
             // 
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(159, 22);
+            sobreToolStripMenuItem.Size = new Size(180, 22);
             sobreToolStripMenuItem.Text = "Sobre";
             sobreToolStripMenuItem.Click += VerSobre;
             // 
             // emp
             // 
-            emp.Location = new Point(123, 3);
+            emp.Cursor = Cursors.Hand;
+            emp.Location = new Point(176, 3);
             emp.Name = "emp";
-            emp.Size = new Size(114, 114);
-            emp.TabIndex = 13;
+            emp.Size = new Size(167, 114);
+            emp.TabIndex = 5;
             emp.Text = "Empresas";
             emp.UseVisualStyleBackColor = true;
             emp.Click += VerEmpresas;
@@ -195,7 +206,7 @@
             flowLayoutPanel1.Controls.Add(containercad);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
-            flowLayoutPanel1.Location = new Point(23, 27);
+            flowLayoutPanel1.Location = new Point(25, 48);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(868, 484);
             flowLayoutPanel1.TabIndex = 14;
@@ -260,31 +271,48 @@
             // 
             // logs
             // 
+            logs.Cursor = Cursors.Hand;
             logs.Location = new Point(3, 3);
             logs.Name = "logs";
-            logs.Size = new Size(114, 114);
-            logs.TabIndex = 15;
+            logs.Size = new Size(167, 114);
+            logs.TabIndex = 4;
             logs.Text = "Logs";
             logs.UseVisualStyleBackColor = true;
             logs.Click += VerLog;
             // 
             // ConsultaItens
             // 
-            ConsultaItens.Location = new Point(243, 3);
+            ConsultaItens.Cursor = Cursors.Hand;
+            ConsultaItens.Location = new Point(349, 3);
             ConsultaItens.Name = "ConsultaItens";
-            ConsultaItens.Size = new Size(114, 114);
-            ConsultaItens.TabIndex = 16;
+            ConsultaItens.Size = new Size(167, 114);
+            ConsultaItens.TabIndex = 6;
             ConsultaItens.Text = "Itens";
             ConsultaItens.UseVisualStyleBackColor = true;
             ConsultaItens.Click += ConsultarItens;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.BackColor = Color.DarkSlateBlue;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Padding = new Padding(5);
+            pictureBox1.Size = new Size(981, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
             // 
             // Homepage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnableAllowFocusChange;
+            BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(981, 544);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
+            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Homepage";
             Text = "Início";
@@ -299,6 +327,7 @@
             flowLayoutPanel4.ResumeLayout(false);
             flowLayoutPanel4.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -330,5 +359,6 @@
         private FlowLayoutPanel flowLayoutPanel4;
         private FlowLayoutPanel containercad;
         private ToolStripMenuItem useron;
+        private PictureBox pictureBox1;
     }
 }

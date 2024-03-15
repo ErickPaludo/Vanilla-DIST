@@ -68,10 +68,10 @@ namespace Vanilla
             editarItem = new ToolStripMenuItem();
             cancelar = new Button();
             pictureCodBar = new PictureBox();
-            pictureBox1 = new PictureBox();
             btnImp = new Button();
             btnSalvararquivo = new Button();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridFornecedores).BeginInit();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).BeginInit();
@@ -329,7 +329,7 @@ namespace Vanilla
             porcentLucro.Name = "porcentLucro";
             porcentLucro.PlaceholderText = "0,0%";
             porcentLucro.Size = new Size(51, 23);
-            porcentLucro.TabIndex = 10;
+            porcentLucro.TabIndex = 11;
             porcentLucro.KeyDown += PercentLucro_KeyDown;
             porcentLucro.KeyPress += PercentLucro_KeyPress;
             // 
@@ -370,7 +370,7 @@ namespace Vanilla
             buttonGravar.Location = new Point(1017, 374);
             buttonGravar.Name = "buttonGravar";
             buttonGravar.Size = new Size(75, 24);
-            buttonGravar.TabIndex = 13;
+            buttonGravar.TabIndex = 14;
             buttonGravar.Text = "Gravar";
             buttonGravar.UseVisualStyleBackColor = true;
             buttonGravar.Visible = false;
@@ -406,7 +406,7 @@ namespace Vanilla
             calcular.Location = new Point(497, 314);
             calcular.Name = "calcular";
             calcular.Size = new Size(162, 23);
-            calcular.TabIndex = 11;
+            calcular.TabIndex = 12;
             calcular.Text = "calcular";
             calcular.UseVisualStyleBackColor = true;
             calcular.Click += calcular_Click;
@@ -447,7 +447,7 @@ namespace Vanilla
             cancelar.Location = new Point(924, 374);
             cancelar.Name = "cancelar";
             cancelar.Size = new Size(75, 24);
-            cancelar.TabIndex = 12;
+            cancelar.TabIndex = 13;
             cancelar.Text = "Cancelar";
             cancelar.UseVisualStyleBackColor = true;
             cancelar.Click += Cancelar;
@@ -455,20 +455,11 @@ namespace Vanilla
             // pictureCodBar
             // 
             pictureCodBar.BackColor = SystemColors.ButtonHighlight;
-            pictureCodBar.Location = new Point(501, 55);
+            pictureCodBar.Location = new Point(501, 56);
             pictureCodBar.Name = "pictureCodBar";
-            pictureCodBar.Size = new Size(595, 109);
+            pictureCodBar.Size = new Size(595, 108);
             pictureCodBar.TabIndex = 32;
             pictureCodBar.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = SystemColors.ButtonHighlight;
-            pictureBox1.Location = new Point(500, 29);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(596, 135);
-            pictureBox1.TabIndex = 33;
-            pictureBox1.TabStop = false;
             // 
             // btnImp
             // 
@@ -495,6 +486,15 @@ namespace Vanilla
             // printDocument1
             // 
             printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ButtonHighlight;
+            pictureBox1.Location = new Point(500, 40);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(595, 124);
+            pictureBox1.TabIndex = 33;
+            pictureBox1.TabStop = false;
             // 
             // CadastrarItensFront
             // 
@@ -587,9 +587,9 @@ namespace Vanilla
         private ToolStripMenuItem editarItem;
         private Button cancelar;
         private PictureBox pictureCodBar;
-        private PictureBox pictureBox1;
         private Button btnImp;
         private Button btnSalvararquivo;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private PictureBox pictureBox1;
     }
 }
