@@ -122,6 +122,7 @@
             nameuser.Name = "nameuser";
             nameuser.Size = new Size(59, 20);
             nameuser.Text = "Usuário";
+            nameuser.Click += nameuser_Click;
             // 
             // useron
             // 

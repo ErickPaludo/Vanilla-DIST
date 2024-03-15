@@ -936,7 +936,7 @@ namespace Vanilla
         }
         #endregion
 
-        public void VerificaLogin()
+        public bool VerificaLogin()
         {
             try
             {
@@ -964,18 +964,17 @@ namespace Vanilla
                         int v_retorno = Convert.ToInt32(cmd.Parameters["v_retorno"].Value.ToString());
 
                         if (v_retorno != 1)
+                        {
                             throw new Exception("Este usuário não está mais connectado na aplicação.");
-
+                        }
+                        return true;
                     }
-
-                    connection.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Houve um erro:\n{ex.Message}");
-                Homepage home = new Homepage();
-                Homepage.validador = true;
+                return false;
             }
         }
     }

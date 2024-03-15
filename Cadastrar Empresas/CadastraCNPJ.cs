@@ -117,27 +117,34 @@ namespace Vanilla
         private void CadastrarCnpj(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-
-            try//verifica se o numero do endereco eh um numero de fato
+            if (db.VerificaLogin() == true)
             {
-                Convert.ToInt32(textnumber.Text);
-            }
-            catch { textnumber.Text = "0"; }
-            if (!string.IsNullOrEmpty(textcnpj.Text) && !string.IsNullOrEmpty(textname.Text) && !string.IsNullOrEmpty(nomefantasia.Text) && !string.IsNullOrEmpty(textdataatual.Text) && !string.IsNullOrEmpty(textabertura.Text) && !string.IsNullOrEmpty(textie.Text) && textie.Text.Length >= 5 && !string.IsNullOrEmpty(textemail.Text) && !string.IsNullOrEmpty(textlogradouro.Text) && !string.IsNullOrEmpty(textnumber.Text) && !string.IsNullOrEmpty(textbairro.Text) && !string.IsNullOrEmpty(textmuni.Text) && !string.IsNullOrEmpty(combouf.Text) && !string.IsNullOrEmpty(textcep.Text) && !string.IsNullOrEmpty(combotypeemp.Text) && !string.IsNullOrEmpty(combostatus.Text) && textel.Text.Length == 14)
-            {
-                if (editar == false)
+                try//verifica se o numero do endereco eh um numero de fato
                 {
-                    GravarCnpj();
+                    Convert.ToInt32(textnumber.Text);
+                }
+                catch { textnumber.Text = "0"; }
+                if (!string.IsNullOrEmpty(textcnpj.Text) && !string.IsNullOrEmpty(textname.Text) && !string.IsNullOrEmpty(nomefantasia.Text) && !string.IsNullOrEmpty(textdataatual.Text) && !string.IsNullOrEmpty(textabertura.Text) && !string.IsNullOrEmpty(textie.Text) && textie.Text.Length >= 5 && !string.IsNullOrEmpty(textemail.Text) && !string.IsNullOrEmpty(textlogradouro.Text) && !string.IsNullOrEmpty(textnumber.Text) && !string.IsNullOrEmpty(textbairro.Text) && !string.IsNullOrEmpty(textmuni.Text) && !string.IsNullOrEmpty(combouf.Text) && !string.IsNullOrEmpty(textcep.Text) && !string.IsNullOrEmpty(combotypeemp.Text) && !string.IsNullOrEmpty(combostatus.Text) && textel.Text.Length == 14)
+                {
+                    if (editar == false)
+                    {
+                        GravarCnpj();
+                    }
+                    else
+                    {
+                        EditarCnpj();
+                    }
+                    Clear();
                 }
                 else
                 {
-                    EditarCnpj();
+                    MessageBox.Show("Alguns campos estão inválivos!");
                 }
-                Clear();
             }
             else
             {
-                MessageBox.Show("Alguns campos estão inválivos!");
+                Homepage home = new Homepage();
+                home.DeslogarUsuario();
             }
             Cursor = Cursors.Default;
         }

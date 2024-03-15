@@ -138,24 +138,32 @@ namespace Vanilla
         private void buttonGravar_Click(object sender, EventArgs e) //Grava o item
         {
             //Verifica os parametros
-            if (!string.IsNullOrEmpty(nomeItem.Text) && (!string.IsNullOrEmpty(codigoBarras.Text) && (!string.IsNullOrEmpty(comboStatus.Text) && (!string.IsNullOrEmpty(selectFornecedor.Text)) && (!string.IsNullOrEmpty(comboUMed.Text)) && (!string.IsNullOrEmpty(quantItem.Text)) && (!string.IsNullOrEmpty(precoFinal.Text)))))
+            if (db.VerificaLogin() == true)
             {
-                if (db.AntiCopy("id", "itens_base", id_item.ToString()) == true)
+                if (!string.IsNullOrEmpty(nomeItem.Text) && (!string.IsNullOrEmpty(codigoBarras.Text) && (!string.IsNullOrEmpty(comboStatus.Text) && (!string.IsNullOrEmpty(selectFornecedor.Text)) && (!string.IsNullOrEmpty(comboUMed.Text)) && (!string.IsNullOrEmpty(quantItem.Text)) && (!string.IsNullOrEmpty(precoFinal.Text)))))
                 {
-                    cad.CadastraItem(id_fornecedor, codigoBarras.Text, nomeItem.Text, comboStatus.Text, descItem.Text, comboUMed.Text, Convert.ToInt32(quantItem.Text), Convert.ToDecimal(precoCusto.Text), Convert.ToDecimal(porcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(precoCusto.Text), (Convert.ToDecimal(porcentLucro.Text)))));
+                    if (db.AntiCopy("id", "itens_base", id_item.ToString()) == true)
+                    {
+                        cad.CadastraItem(id_fornecedor, codigoBarras.Text, nomeItem.Text, comboStatus.Text, descItem.Text, comboUMed.Text, Convert.ToInt32(quantItem.Text), Convert.ToDecimal(precoCusto.Text), Convert.ToDecimal(porcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(precoCusto.Text), (Convert.ToDecimal(porcentLucro.Text)))));
+                    }
+                    else
+                    {
+                        cad.EditaItens(id_item, id_fornecedor, codigoBarras.Text, nomeItem.Text.ToString(), comboStatus.Text.ToString(), descItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToInt32(quantItem.Text), Convert.ToDecimal(precoCusto.Text), Convert.ToDecimal(porcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(precoCusto.Text), (Convert.ToDecimal(porcentLucro.Text)))));
+                    }
+                    id_item = 0; //valor redefinido para zero pois caso contrario, um novo item sobreescreve um item j[a registrado
+                    id_fornecedor = 0;
+                    ClearCamp(); //Limpa toda interface
+                    ModifyElements(false); //Bloqueia interface ate que o user escolha o que deve ser feito
                 }
                 else
                 {
-                    cad.EditaItens(id_item, id_fornecedor, codigoBarras.Text, nomeItem.Text.ToString(), comboStatus.Text.ToString(), descItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToInt32(quantItem.Text), Convert.ToDecimal(precoCusto.Text), Convert.ToDecimal(porcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(precoCusto.Text), (Convert.ToDecimal(porcentLucro.Text)))));
+                    MessageBox.Show("Revise os campos!"); //Ocorre quando ha algum campo vazio
                 }
-                id_item = 0; //valor redefinido para zero pois caso contrario, um novo item sobreescreve um item j[a registrado
-                id_fornecedor = 0;
-                ClearCamp(); //Limpa toda interface
-                ModifyElements(false); //Bloqueia interface ate que o user escolha o que deve ser feito
             }
             else
             {
-                MessageBox.Show("Revise os campos!"); //Ocorre quando ha algum campo vazio
+                Homepage home = new Homepage();
+                home.DeslogarUsuario();
             }
         }
         private void codMaual_Click(object sender, EventArgs e)//habilita ou desabilita o cod de barras manual
@@ -198,17 +206,16 @@ namespace Vanilla
                     graphics.DrawImage(varpictureCodBar, 0, 0); // Desenhe a imagem original
 
                     // Definir fonte e cor do texto
-                    using (System.Drawing.Font font = new System.Drawing.Font("Arial", 12))
+                    using (System.Drawing.Font font = new System.Drawing.Font("Imperial", 12))
                     {
                         using (SolidBrush brush = new SolidBrush(Color.Black))
                         {
                             // Desenhar o número do código de barras
-                            graphics.DrawString(codigoBarras.Text, font, brush, new PointF(245, varpictureCodBar.Height + 5));
+                            graphics.DrawString(codigoBarras.Text, font, brush, new PointF(235, varpictureCodBar.Height + 5));
                             // Ajuste as coordenadas conforme necessário para posicionar o texto onde desejar
                         }
                     }
                 }
-
                 // Exibir a imagem do código de barras com o número no PictureBox
                 pictureCodBar.Image = bmp;
             }

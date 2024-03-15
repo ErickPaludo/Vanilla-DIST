@@ -23,45 +23,53 @@ namespace Vanilla
 
         private void GravarUser(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(nomeCompleto.Text) && !string.IsNullOrEmpty(cpfText.Text) && !string.IsNullOrEmpty(emailBox.Text) && !string.IsNullOrEmpty(telfBox.Text) && !string.IsNullOrEmpty(comboPerm.Text) && !string.IsNullOrEmpty(comboStatus.Text) && !string.IsNullOrEmpty(userBox.Text) && !string.IsNullOrEmpty(passBox.Text) && !string.IsNullOrEmpty(confPassBox.Text) && cpfText.Text.Length == 11)
+            if (db.VerificaLogin() == true)
             {
-                if (userBox.Text.Length >= 3)
+                if (!string.IsNullOrEmpty(nomeCompleto.Text) && !string.IsNullOrEmpty(cpfText.Text) && !string.IsNullOrEmpty(emailBox.Text) && !string.IsNullOrEmpty(telfBox.Text) && !string.IsNullOrEmpty(comboPerm.Text) && !string.IsNullOrEmpty(comboStatus.Text) && !string.IsNullOrEmpty(userBox.Text) && !string.IsNullOrEmpty(passBox.Text) && !string.IsNullOrEmpty(confPassBox.Text) && cpfText.Text.Length == 11)
                 {
-
-                    if (db.AntiCopy("login_user", "user_base", userBox.Text) == true)
+                    if (userBox.Text.Length >= 3)
                     {
-                        if (passBox.Text.Length >= 6 && confPassBox.Text.Length >= 6)
+
+                        if (db.AntiCopy("login_user", "user_base", userBox.Text) == true)
                         {
-                            if (passBox.Text == confPassBox.Text)
+                            if (passBox.Text.Length >= 6 && confPassBox.Text.Length >= 6)
                             {
-                                usuarios.Adduser(nomeCompleto.Text, cpfText.Text, emailBox.Text, telfBox.Text, telfBox2.Text, comboPerm.Text, comboStatus.Text, userBox.Text, passBox.Text, encaminhar.Checked);
-                                this.Close();
+                                if (passBox.Text == confPassBox.Text)
+                                {
+                                    usuarios.Adduser(nomeCompleto.Text, cpfText.Text, emailBox.Text, telfBox.Text, telfBox2.Text, comboPerm.Text, comboStatus.Text, userBox.Text, passBox.Text, encaminhar.Checked);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("As senhas não coincidem! Verifique novamente!");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("As senhas não coincidem! Verifique novamente!");
+                                MessageBox.Show("A senha deve conter no mínimo 6 carácteres!");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("A senha deve conter no mínimo 6 carácteres!");
+                            MessageBox.Show("Nome de usuário já está em uso!");
+                            userBox.Text = string.Empty;
                         }
+
                     }
                     else
                     {
-                        MessageBox.Show("Nome de usuário já está em uso!");
-                        userBox.Text = string.Empty;
+                        MessageBox.Show("Usuário deve conter no mínimo 3 carácteres!");
                     }
-
                 }
                 else
                 {
-                    MessageBox.Show("Usuário deve conter no mínimo 3 carácteres!");
+                    MessageBox.Show("Favor verificar os campos novamente!");
                 }
             }
             else
             {
-                MessageBox.Show("Favor verificar os campos novamente!");
+                Homepage home = new Homepage();
+                home.DeslogarUsuario();
             }
         }
         private void buttonCancelar_Click(object sender, EventArgs e)

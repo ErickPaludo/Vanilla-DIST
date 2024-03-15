@@ -36,11 +36,19 @@ namespace Vanilla
 
         private void Despreender(object sender, EventArgs e)
         {
-            db.Deslog(id_select);
-            MessageBox.Show("A sessão do usuário selecionada foi encerrada!");
-            AtualizaTable();
-            id_select = 0;
-            btndesconect.Enabled = false;
+            if (db.VerificaLogin() == true)
+            {
+                db.Deslog(id_select);
+                MessageBox.Show("A sessão do usuário selecionada foi encerrada!");
+                AtualizaTable();
+                id_select = 0;
+                btndesconect.Enabled = false;
+            }
+            else
+            {
+                Homepage home = new Homepage();
+                home.DeslogarUsuario();
+            }
         }
 
         private void EscolherUser(object sender, DataGridViewCellEventArgs e)

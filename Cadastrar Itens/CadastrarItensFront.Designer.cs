@@ -114,7 +114,7 @@ namespace Vanilla
             codigoBarras.MaxLength = 13;
             codigoBarras.Name = "codigoBarras";
             codigoBarras.Size = new Size(142, 23);
-            codigoBarras.TabIndex = 1;
+            codigoBarras.TabIndex = 6;
             codigoBarras.KeyDown += Cod_KeyDown;
             codigoBarras.KeyPress += Cod_KeyPress;
             codigoBarras.Leave += VerificarCod;
@@ -127,16 +127,16 @@ namespace Vanilla
             comboStatus.FormattingEnabled = true;
             comboStatus.ItemHeight = 15;
             comboStatus.Items.AddRange(new object[] { "Ativo", "Inativo", "Bloqueado" });
-            comboStatus.Location = new Point(334, 56);
+            comboStatus.Location = new Point(322, 56);
             comboStatus.Name = "comboStatus";
             comboStatus.Size = new Size(72, 23);
-            comboStatus.TabIndex = 8;
+            comboStatus.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Enabled = false;
-            label3.Location = new Point(334, 40);
+            label3.Location = new Point(322, 40);
             label3.Name = "label3";
             label3.Size = new Size(42, 15);
             label3.TabIndex = 9;
@@ -159,7 +159,7 @@ namespace Vanilla
             descItem.Multiline = true;
             descItem.Name = "descItem";
             descItem.Size = new Size(445, 93);
-            descItem.TabIndex = 3;
+            descItem.TabIndex = 4;
             // 
             // dataGridFornecedores
             // 
@@ -196,7 +196,7 @@ namespace Vanilla
             dataGridFornecedores.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridFornecedores.RowTemplate.Height = 25;
             dataGridFornecedores.Size = new Size(444, 136);
-            dataGridFornecedores.TabIndex = 6;
+            dataGridFornecedores.TabIndex = 5;
             dataGridFornecedores.CellClick += SelectFornec;
             // 
             // ColumnId
@@ -252,16 +252,16 @@ namespace Vanilla
             comboUMed.FormattingEnabled = true;
             comboUMed.ItemHeight = 15;
             comboUMed.Items.AddRange(new object[] { "UN", "Fardo", "Palete" });
-            comboUMed.Location = new Point(412, 56);
+            comboUMed.Location = new Point(400, 56);
             comboUMed.Name = "comboUMed";
             comboUMed.Size = new Size(69, 23);
-            comboUMed.TabIndex = 15;
+            comboUMed.TabIndex = 3;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Enabled = false;
-            label6.Location = new Point(412, 38);
+            label6.Location = new Point(400, 38);
             label6.Name = "label6";
             label6.Size = new Size(48, 15);
             label6.TabIndex = 16;
@@ -271,7 +271,7 @@ namespace Vanilla
             // 
             label7.AutoSize = true;
             label7.Enabled = false;
-            label7.Location = new Point(256, 38);
+            label7.Location = new Point(244, 38);
             label7.Name = "label7";
             label7.Size = new Size(72, 15);
             label7.TabIndex = 18;
@@ -280,11 +280,11 @@ namespace Vanilla
             // quantItem
             // 
             quantItem.Enabled = false;
-            quantItem.Location = new Point(256, 56);
+            quantItem.Location = new Point(244, 56);
             quantItem.MaxLength = 5;
             quantItem.Name = "quantItem";
             quantItem.Size = new Size(72, 23);
-            quantItem.TabIndex = 5;
+            quantItem.TabIndex = 1;
             quantItem.KeyDown += Qnt_KeyDown;
             quantItem.KeyPress += Qnt_KeyPress;
             // 
@@ -306,7 +306,7 @@ namespace Vanilla
             precoCusto.Name = "precoCusto";
             precoCusto.PlaceholderText = "R$00,00";
             precoCusto.Size = new Size(105, 23);
-            precoCusto.TabIndex = 7;
+            precoCusto.TabIndex = 10;
             precoCusto.KeyDown += PrecoCusto_KeyDown;
             precoCusto.KeyPress += PrecoCusto_KeyPress;
             precoCusto.Leave += PadronizaPCusto;
@@ -329,7 +329,7 @@ namespace Vanilla
             porcentLucro.Name = "porcentLucro";
             porcentLucro.PlaceholderText = "0,0%";
             porcentLucro.Size = new Size(51, 23);
-            porcentLucro.TabIndex = 8;
+            porcentLucro.TabIndex = 10;
             porcentLucro.KeyDown += PercentLucro_KeyDown;
             porcentLucro.KeyPress += PercentLucro_KeyPress;
             // 
@@ -370,7 +370,7 @@ namespace Vanilla
             buttonGravar.Location = new Point(1017, 374);
             buttonGravar.Name = "buttonGravar";
             buttonGravar.Size = new Size(75, 24);
-            buttonGravar.TabIndex = 10;
+            buttonGravar.TabIndex = 13;
             buttonGravar.Text = "Gravar";
             buttonGravar.UseVisualStyleBackColor = true;
             buttonGravar.Visible = false;
@@ -395,7 +395,7 @@ namespace Vanilla
             codMaual.Location = new Point(645, 183);
             codMaual.Name = "codMaual";
             codMaual.Size = new Size(124, 19);
-            codMaual.TabIndex = 28;
+            codMaual.TabIndex = 7;
             codMaual.Text = "Inserir cod Manual";
             codMaual.UseVisualStyleBackColor = true;
             codMaual.CheckedChanged += codMaual_Click;
@@ -406,7 +406,7 @@ namespace Vanilla
             calcular.Location = new Point(497, 314);
             calcular.Name = "calcular";
             calcular.Size = new Size(162, 23);
-            calcular.TabIndex = 9;
+            calcular.TabIndex = 11;
             calcular.Text = "calcular";
             calcular.UseVisualStyleBackColor = true;
             calcular.Click += calcular_Click;
@@ -447,7 +447,7 @@ namespace Vanilla
             cancelar.Location = new Point(924, 374);
             cancelar.Name = "cancelar";
             cancelar.Size = new Size(75, 24);
-            cancelar.TabIndex = 31;
+            cancelar.TabIndex = 12;
             cancelar.Text = "Cancelar";
             cancelar.UseVisualStyleBackColor = true;
             cancelar.Click += Cancelar;
@@ -476,7 +476,7 @@ namespace Vanilla
             btnImp.Location = new Point(1017, 183);
             btnImp.Name = "btnImp";
             btnImp.Size = new Size(75, 23);
-            btnImp.TabIndex = 34;
+            btnImp.TabIndex = 9;
             btnImp.Text = "Imprimir";
             btnImp.UseVisualStyleBackColor = true;
             btnImp.Click += btnImp_Click;
@@ -487,7 +487,7 @@ namespace Vanilla
             btnSalvararquivo.Location = new Point(936, 183);
             btnSalvararquivo.Name = "btnSalvararquivo";
             btnSalvararquivo.Size = new Size(75, 23);
-            btnSalvararquivo.TabIndex = 35;
+            btnSalvararquivo.TabIndex = 8;
             btnSalvararquivo.Text = "Salvar";
             btnSalvararquivo.UseVisualStyleBackColor = true;
             btnSalvararquivo.Click += btnSalvararquivo_Click;

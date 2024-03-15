@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using Aspose.Words.XAttr;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,8 +32,9 @@ namespace Vanilla
             if (utilitarios.Permissao_user == 0)
             {
                 alterarOutrosUsuários.Visible = false;
-                containerlabelcad.Visible = false;
-                containercad.Visible = false;
+                //containerlabelcad.Visible = false;
+                // containercad.Visible = false;
+                adduser.Visible = false;
                 useron.Visible = false;
             }
             else
@@ -44,8 +46,7 @@ namespace Vanilla
 
         private void button1_Click(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 CadastraCNPJ transportadora = new CadastraCNPJ();
                 transportadora.ShowDialog();
@@ -58,8 +59,7 @@ namespace Vanilla
 
         private void AbrirItem(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
                 cadastrarItensFront.ShowDialog();
@@ -72,8 +72,7 @@ namespace Vanilla
 
         private void button5_Click(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 AdicionarUsuariosFront usuarios = new AdicionarUsuariosFront();
                 usuarios.ShowDialog();
@@ -86,18 +85,16 @@ namespace Vanilla
 
         private void Homepage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            db.VerificaLogin();
-            if(validador == false)
+            if (db.VerificaLogin() == true)
             {
-                db.Deslog(0);             
+                db.Deslog(0);
             }
-            Environment.Exit(0);                  
+            Environment.Exit(0);
         }
 
         private void Config_User(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 AlterarUserCFront altercomun = new AlterarUserCFront();
                 altercomun.ExibirDados();
@@ -111,8 +108,7 @@ namespace Vanilla
 
         private void AlterarUser(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 AlterarUserCFront altercomun = new AlterarUserCFront();
                 altercomun.ExibirDados();
@@ -137,8 +133,7 @@ namespace Vanilla
 
         private void TrocarConta(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 db.Deslog(0);
                 DeslogarUsuario();
@@ -151,8 +146,7 @@ namespace Vanilla
 
         private void AlterarQualqueruser(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 AlterarUsersGeral users = new AlterarUsersGeral();
                 users.ExibirDadosTabela();
@@ -171,11 +165,10 @@ namespace Vanilla
 
         private void Exit(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 db.Deslog(0);
-                Application.Exit();
+                Environment.Exit(0);
             }
             else
             {
@@ -185,8 +178,8 @@ namespace Vanilla
 
         private void EndereçoBanco(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+
+            if (db.VerificaLogin() == true)
             {
                 ConfigBank editbank = new ConfigBank();
                 editbank.ShowDialog();
@@ -210,8 +203,7 @@ namespace Vanilla
 
         private void VerEmpresas(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 Cursor = Cursors.WaitCursor;
                 TabelaEmpresas emp = new TabelaEmpresas(false);
@@ -227,8 +219,8 @@ namespace Vanilla
 
         private void VerLog(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+
+            if (db.VerificaLogin() == true)
             {
                 Logs log = new Logs();
                 log.LimparCombo();
@@ -244,8 +236,7 @@ namespace Vanilla
 
         private void ConsultarItens(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 TabelaItens itens = new TabelaItens(false);
                 itens.AtualizarItens();
@@ -259,8 +250,7 @@ namespace Vanilla
 
         private void LOgados(object sender, EventArgs e)
         {
-            db.VerificaLogin();
-            if (validador == false)
+            if (db.VerificaLogin() == true)
             {
                 UserOn logados = new UserOn();
                 logados.AtualizaTable();
@@ -272,12 +262,34 @@ namespace Vanilla
             }
         }
 
-        private void DeslogarUsuario()
-        {         
-                validador = false;
-                this.Hide();
-                LoginFront login = new LoginFront();
-                login.Show();
+        public void DeslogarUsuario()
+        {
+            Type formTypeToKeepOpen = typeof(LoginFront);
+
+            // Crie uma instância do formulário de login
+            LoginFront login = new LoginFront();
+
+            // Itere sobre todas as formas abertas
+            foreach (Form childForm in Application.OpenForms.Cast<Form>().ToArray())
+            {
+                // Verifique se a forma não é a forma que você quer manter aberta
+                if (childForm.GetType() != formTypeToKeepOpen)
+                {
+                    // Se não for, feche a forma
+                    childForm.Hide();
+                }
+            }
+
+            // Mostrar o formulário de login
+            login.Show();
+        }
+
+        private void nameuser_Click(object sender, EventArgs e)
+        {
+            if(db.VerificaLogin() == false)
+            {
+                DeslogarUsuario();
+            }
         }
     }
 }

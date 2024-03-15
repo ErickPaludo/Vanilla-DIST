@@ -23,7 +23,7 @@ namespace Vanilla
         {
             Cursor = Cursors.WaitCursor;
             if (userLogin.Text != string.Empty && passLogin.Text != string.Empty && userLogin.Text.Length >= 3 && passLogin.Text.Length >= 6)
-            {            
+            {
                 bool val = db.Login(userLogin.Text, passLogin.Text);
                 if (val == false)
                 {
@@ -60,15 +60,15 @@ namespace Vanilla
             // config.GravarDados(connect.Text);
         }
 
-        private void LoginFront_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void ConfigBanco(object sender, EventArgs e)
         {
             ConfigBank configbank = new ConfigBank();
             configbank.ShowDialog();
+        }
+
+        private void LoginFront_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
