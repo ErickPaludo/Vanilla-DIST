@@ -277,7 +277,6 @@ namespace Vanilla
                 precoFinal.Text = string.Empty;
             }
         }
-
         private void Cancelar(object sender, EventArgs e)
         {
             ClearCamp();

@@ -80,7 +80,8 @@ namespace Vanilla
                     using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_deslog", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        util = new Util(); ;
+                        util = new Util();
+                        ;
                         if (id == 0)
                         {
                             id = Util.id_user;
@@ -302,7 +303,39 @@ namespace Vanilla
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void GravarCd(int predios, int la, int min_emp)
+        {
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                {
+                    try
+                    {
+                        connection.Open();
+                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_cd.vnl_cria_cds", connection))
+                        {
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.Add("v_predio_fin", predios);
+                            cmd.Parameters.Add("v_la", la);
+                            cmd.Parameters.Add("v_min_emp", min_emp);
+                            cmd.ExecuteNonQuery();
+                            AddLog($"{predios} adicionados ao CD",Util.id_user);
+                            MessageBox.Show("Usuario adicionado com sucesso!");
+                        }
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         public void AddLog(string msg, int id)
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))

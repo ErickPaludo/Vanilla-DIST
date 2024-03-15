@@ -91,25 +91,26 @@
             // 
             // adduser
             // 
+            adduser.BackColor = SystemColors.ControlLightLight;
             adduser.Cursor = Cursors.Hand;
             adduser.Location = new Point(349, 47);
             adduser.Name = "adduser";
             adduser.Size = new Size(167, 114);
             adduser.TabIndex = 2;
             adduser.Text = "Usuario";
-            adduser.UseVisualStyleBackColor = true;
+            adduser.UseVisualStyleBackColor = false;
             adduser.Click += button5_Click;
             // 
             // addcd
             // 
+            addcd.BackColor = SystemColors.ControlLightLight;
             addcd.Cursor = Cursors.Hand;
             addcd.Location = new Point(522, 47);
             addcd.Name = "addcd";
             addcd.Size = new Size(167, 114);
             addcd.TabIndex = 3;
             addcd.Text = "Add Cd";
-            addcd.UseVisualStyleBackColor = true;
-            addcd.Visible = false;
+            addcd.UseVisualStyleBackColor = false;
             addcd.Click += AddCd;
             // 
             // menuStrip1
@@ -135,6 +136,8 @@
             // 
             // useron
             // 
+            useron.BackColor = Color.DarkSlateBlue;
+            useron.ForeColor = SystemColors.ButtonHighlight;
             useron.Name = "useron";
             useron.Size = new Size(193, 22);
             useron.Text = "Usuários Online";
@@ -142,6 +145,8 @@
             // 
             // alterarOutrosUsuários
             // 
+            alterarOutrosUsuários.BackColor = Color.DarkSlateBlue;
+            alterarOutrosUsuários.ForeColor = SystemColors.ButtonHighlight;
             alterarOutrosUsuários.Name = "alterarOutrosUsuários";
             alterarOutrosUsuários.Size = new Size(193, 22);
             alterarOutrosUsuários.Text = "Alterar outros usuários";
@@ -149,6 +154,8 @@
             // 
             // userConfigToolStripMenuItem
             // 
+            userConfigToolStripMenuItem.BackColor = Color.DarkSlateBlue;
+            userConfigToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             userConfigToolStripMenuItem.Name = "userConfigToolStripMenuItem";
             userConfigToolStripMenuItem.Size = new Size(193, 22);
             userConfigToolStripMenuItem.Text = "Alterar Conta";
@@ -156,6 +163,8 @@
             // 
             // trocarDeContaToolStripMenuItem
             // 
+            trocarDeContaToolStripMenuItem.BackColor = Color.DarkSlateBlue;
+            trocarDeContaToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             trocarDeContaToolStripMenuItem.Name = "trocarDeContaToolStripMenuItem";
             trocarDeContaToolStripMenuItem.Size = new Size(193, 22);
             trocarDeContaToolStripMenuItem.Text = "Trocar de Conta";
@@ -163,6 +172,8 @@
             // 
             // sairToolStripMenuItem
             // 
+            sairToolStripMenuItem.BackColor = Color.DarkSlateBlue;
+            sairToolStripMenuItem.ForeColor = SystemColors.Control;
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(193, 22);
             sairToolStripMenuItem.Text = "Sair";
@@ -170,6 +181,7 @@
             // 
             // configuraçõesToolStripMenuItem
             // 
+            configuraçõesToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
             configuraçõesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { endereçoDoBandoToolStripMenuItem, sobreToolStripMenuItem });
             configuraçõesToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
@@ -178,6 +190,8 @@
             // 
             // endereçoDoBandoToolStripMenuItem
             // 
+            endereçoDoBandoToolStripMenuItem.BackColor = Color.DarkSlateBlue;
+            endereçoDoBandoToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             endereçoDoBandoToolStripMenuItem.Name = "endereçoDoBandoToolStripMenuItem";
             endereçoDoBandoToolStripMenuItem.Size = new Size(180, 22);
             endereçoDoBandoToolStripMenuItem.Text = "Endereço Banco";
@@ -185,6 +199,8 @@
             // 
             // sobreToolStripMenuItem
             // 
+            sobreToolStripMenuItem.BackColor = Color.DarkSlateBlue;
+            sobreToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             sobreToolStripMenuItem.Size = new Size(180, 22);
             sobreToolStripMenuItem.Text = "Sobre";
@@ -192,13 +208,14 @@
             // 
             // emp
             // 
+            emp.BackColor = SystemColors.ControlLightLight;
             emp.Cursor = Cursors.Hand;
             emp.Location = new Point(176, 3);
             emp.Name = "emp";
             emp.Size = new Size(167, 114);
             emp.TabIndex = 5;
             emp.Text = "Empresas";
-            emp.UseVisualStyleBackColor = true;
+            emp.UseVisualStyleBackColor = false;
             emp.Click += VerEmpresas;
             // 
             // flowLayoutPanel1
@@ -271,24 +288,26 @@
             // 
             // logs
             // 
+            logs.BackColor = SystemColors.ControlLightLight;
             logs.Cursor = Cursors.Hand;
             logs.Location = new Point(3, 3);
             logs.Name = "logs";
             logs.Size = new Size(167, 114);
             logs.TabIndex = 4;
             logs.Text = "Logs";
-            logs.UseVisualStyleBackColor = true;
+            logs.UseVisualStyleBackColor = false;
             logs.Click += VerLog;
             // 
             // ConsultaItens
             // 
+            ConsultaItens.BackColor = SystemColors.ControlLightLight;
             ConsultaItens.Cursor = Cursors.Hand;
             ConsultaItens.Location = new Point(349, 3);
             ConsultaItens.Name = "ConsultaItens";
             ConsultaItens.Size = new Size(167, 114);
             ConsultaItens.TabIndex = 6;
             ConsultaItens.Text = "Itens";
-            ConsultaItens.UseVisualStyleBackColor = true;
+            ConsultaItens.UseVisualStyleBackColor = false;
             ConsultaItens.Click += ConsultarItens;
             // 
             // pictureBox1

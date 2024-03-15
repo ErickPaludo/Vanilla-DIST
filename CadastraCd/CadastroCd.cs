@@ -26,7 +26,7 @@ namespace Vanilla
             {
                 minemp.Text = "0";
             }
-            cd.GerarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text) , Convert.ToInt32(minemp.Text));
+            db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text) , Convert.ToInt32(minemp.Text));
            // AtualizaTabelaRuas(db.ReturnId("rua_cd", "vnl_endereco_cd"));
             Cursor = Cursors.Default;
         }
