@@ -67,49 +67,61 @@
             // 
             // cademp
             // 
-            cademp.BackColor = Color.White;
+            cademp.BackColor = Color.MidnightBlue;
             cademp.Cursor = Cursors.Hand;
+            cademp.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cademp.ForeColor = SystemColors.ButtonHighlight;
             cademp.Location = new Point(3, 47);
             cademp.Name = "cademp";
             cademp.Size = new Size(167, 114);
             cademp.TabIndex = 0;
             cademp.Text = "Empresa";
+            cademp.TextAlign = ContentAlignment.MiddleLeft;
             cademp.UseVisualStyleBackColor = false;
             cademp.Click += button1_Click;
             // 
             // caditem
             // 
-            caditem.BackColor = Color.White;
+            caditem.BackColor = Color.MidnightBlue;
             caditem.Cursor = Cursors.Hand;
+            caditem.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            caditem.ForeColor = SystemColors.ButtonHighlight;
             caditem.Location = new Point(176, 47);
             caditem.Name = "caditem";
             caditem.Size = new Size(167, 114);
             caditem.TabIndex = 1;
             caditem.Text = "Itens";
+            caditem.TextAlign = ContentAlignment.MiddleLeft;
             caditem.UseVisualStyleBackColor = false;
             caditem.Click += AbrirItem;
             // 
             // adduser
             // 
-            adduser.BackColor = SystemColors.ControlLightLight;
+            adduser.BackColor = Color.MidnightBlue;
             adduser.Cursor = Cursors.Hand;
+            adduser.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            adduser.ForeColor = SystemColors.ButtonHighlight;
             adduser.Location = new Point(349, 47);
             adduser.Name = "adduser";
             adduser.Size = new Size(167, 114);
             adduser.TabIndex = 2;
             adduser.Text = "Usuario";
+            adduser.TextAlign = ContentAlignment.MiddleLeft;
             adduser.UseVisualStyleBackColor = false;
             adduser.Click += button5_Click;
             // 
             // addcd
             // 
-            addcd.BackColor = SystemColors.ControlLightLight;
+            addcd.BackColor = Color.MidnightBlue;
             addcd.Cursor = Cursors.Hand;
+            addcd.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            addcd.ForeColor = SystemColors.ButtonHighlight;
             addcd.Location = new Point(522, 47);
             addcd.Name = "addcd";
             addcd.Size = new Size(167, 114);
             addcd.TabIndex = 3;
             addcd.Text = "Add Cd";
+            addcd.TextAlign = ContentAlignment.MiddleLeft;
             addcd.UseVisualStyleBackColor = false;
             addcd.Click += AddCd;
             // 
@@ -193,7 +205,7 @@
             endereçoDoBandoToolStripMenuItem.BackColor = Color.DarkSlateBlue;
             endereçoDoBandoToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             endereçoDoBandoToolStripMenuItem.Name = "endereçoDoBandoToolStripMenuItem";
-            endereçoDoBandoToolStripMenuItem.Size = new Size(180, 22);
+            endereçoDoBandoToolStripMenuItem.Size = new Size(159, 22);
             endereçoDoBandoToolStripMenuItem.Text = "Endereço Banco";
             endereçoDoBandoToolStripMenuItem.Click += EndereçoBanco;
             // 
@@ -202,24 +214,28 @@
             sobreToolStripMenuItem.BackColor = Color.DarkSlateBlue;
             sobreToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(180, 22);
+            sobreToolStripMenuItem.Size = new Size(159, 22);
             sobreToolStripMenuItem.Text = "Sobre";
             sobreToolStripMenuItem.Click += VerSobre;
             // 
             // emp
             // 
-            emp.BackColor = SystemColors.ControlLightLight;
+            emp.BackColor = Color.Green;
             emp.Cursor = Cursors.Hand;
+            emp.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            emp.ForeColor = SystemColors.ButtonHighlight;
             emp.Location = new Point(176, 3);
             emp.Name = "emp";
             emp.Size = new Size(167, 114);
             emp.TabIndex = 5;
             emp.Text = "Empresas";
+            emp.TextAlign = ContentAlignment.MiddleLeft;
             emp.UseVisualStyleBackColor = false;
             emp.Click += VerEmpresas;
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.BackColor = Color.FromArgb(26, 26, 26);
             flowLayoutPanel1.Controls.Add(containercad);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
@@ -252,6 +268,7 @@
             // 
             cadastrar.AutoSize = true;
             cadastrar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            cadastrar.ForeColor = SystemColors.ButtonFace;
             cadastrar.Location = new Point(3, 0);
             cadastrar.Name = "cadastrar";
             cadastrar.Size = new Size(113, 32);
@@ -270,6 +287,7 @@
             // 
             visualizar.AutoSize = true;
             visualizar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            visualizar.ForeColor = SystemColors.ButtonHighlight;
             visualizar.Location = new Point(3, 0);
             visualizar.Name = "visualizar";
             visualizar.Size = new Size(114, 32);
@@ -288,25 +306,31 @@
             // 
             // logs
             // 
-            logs.BackColor = SystemColors.ControlLightLight;
+            logs.BackColor = Color.Green;
             logs.Cursor = Cursors.Hand;
+            logs.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            logs.ForeColor = SystemColors.ButtonHighlight;
             logs.Location = new Point(3, 3);
             logs.Name = "logs";
             logs.Size = new Size(167, 114);
             logs.TabIndex = 4;
             logs.Text = "Logs";
+            logs.TextAlign = ContentAlignment.MiddleLeft;
             logs.UseVisualStyleBackColor = false;
             logs.Click += VerLog;
             // 
             // ConsultaItens
             // 
-            ConsultaItens.BackColor = SystemColors.ControlLightLight;
+            ConsultaItens.BackColor = Color.Green;
             ConsultaItens.Cursor = Cursors.Hand;
+            ConsultaItens.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            ConsultaItens.ForeColor = SystemColors.ButtonHighlight;
             ConsultaItens.Location = new Point(349, 3);
             ConsultaItens.Name = "ConsultaItens";
             ConsultaItens.Size = new Size(167, 114);
             ConsultaItens.TabIndex = 6;
             ConsultaItens.Text = "Itens";
+            ConsultaItens.TextAlign = ContentAlignment.MiddleLeft;
             ConsultaItens.UseVisualStyleBackColor = false;
             ConsultaItens.Click += ConsultarItens;
             // 
@@ -327,7 +351,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
-            BackColor = SystemColors.ButtonHighlight;
+            BackColor = Color.FromArgb(26, 26, 26);
             ClientSize = new Size(981, 544);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);

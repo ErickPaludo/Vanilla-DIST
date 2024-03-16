@@ -128,7 +128,7 @@ namespace Vanilla
         private void AddCd(object sender, EventArgs e)
         {
             CadastroCd cd = new CadastroCd();
-            cd.AtualizaTabelaRua();
+            cd.AtualizaTabelaRuas();
             cd.ShowDialog();
         }
 

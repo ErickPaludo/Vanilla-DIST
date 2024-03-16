@@ -319,7 +319,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_la", la);
                             cmd.Parameters.Add("v_min_emp", min_emp);
                             cmd.ExecuteNonQuery();
-                            AddLog($"{predios} adicionados ao CD",Util.id_user);
+                            AddLog($"{predios} adicionados ao CD", Util.id_user);
                             MessageBox.Show("Usuario adicionado com sucesso!");
                         }
                         connection.Close();
@@ -848,13 +848,13 @@ namespace Vanilla
                     CadastroCd cd = new CadastroCd();
                     connection.Open();
                     string query = string.Empty;
-                    if(type == true)
+                    if (type == true)
                     {
-                        query = "select Max(rua_cd) as ruas_cd from vnl_endereco_cd"; //retorna numero de ruas
+                        query = "select Max(rua_cd) as rua_cd from vnl_endereco_cd"; //retorna numero de ruas
                     }
                     else
                     {
-                        query = "select Max(rua_cd) as ruas_cd from vnl_endereco_cd";
+                        query = $"select * from vnl_endereco_cd where rua_cd = {rua} order by id";
                     }
                     using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
@@ -864,11 +864,20 @@ namespace Vanilla
                             {
                                 if (type == true)
                                 {
-                                    cd.AtualizaTabelaRuas(Convert.ToInt32(reader["ruas_cd"]));
+
+                                    if (reader["rua_cd"] != DBNull.Value)
+                                    { cd.Obtem(Convert.ToInt32(reader["rua_cd"])); }
+
                                 }
-                                else { }
-                                    
-                            }                 
+                                else
+                                {
+                                    while (reader.Read())
+                                    {
+                                        cd.GravaListEndereco(Convert.ToInt32(reader["rua_cd"]), Convert.ToInt32(reader["predio_cd"]), Convert.ToInt32(reader["la_cd"]));
+                                    }
+                                }
+
+                            }
                         }
                     }
                 }

@@ -229,6 +229,7 @@
             dataGridruas.RowTemplate.Height = 25;
             dataGridruas.Size = new Size(583, 148);
             dataGridruas.TabIndex = 21;
+            dataGridruas.CellDoubleClick += SelecionaRua;
             // 
             // Ruas
             // 

@@ -20,16 +20,15 @@ namespace Vanilla
         {
         }
 
+        public LogisticaCD(int id_rua, int id_predio, int id_la) : this(id_rua)
+        {
+            this.id_predio = id_predio;
+            this.id_la = id_la;
+        }
+
         public LogisticaCD(int id_rua)
         {
             this.id_rua = id_rua;
-        }
-
-        public LogisticaCD(int id_rua, int id_predio, int id_la)
-        {
-            this.id_rua = id_rua;
-            this.id_predio = id_predio;
-            this.id_la = id_la;
         }
 
         public int Id_rua { get { return id_rua; } set {  id_rua = value; } }
