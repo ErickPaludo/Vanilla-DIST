@@ -322,7 +322,7 @@ namespace Vanilla
 
         private void btnSalvararquivo_Click(object sender, EventArgs e)
         {
-            string endereco = "C:\\Vanilla\\Codigo_de_barras";
+            string endereco = "C:\\Vanilla\\Codigo_de_barras\\Itens";
 
             if (!Directory.Exists(endereco)) //Verifica se o endereço existe
             {
@@ -339,7 +339,7 @@ namespace Vanilla
 
             if (System.IO.File.Exists(endereco + "\\codbar_" + codigoBarras.Text + ".pdf"))
             {
-                Process.Start("explorer.exe", $"C:\\Vanilla\\Codigo_de_barras\\codbar_{codigoBarras.Text}.pdf");
+                Process.Start("explorer.exe", $"{endereco}\\codbar_{codigoBarras.Text}.pdf");
             }
             File.Delete(endereco + "\\temp.jpg");
         }

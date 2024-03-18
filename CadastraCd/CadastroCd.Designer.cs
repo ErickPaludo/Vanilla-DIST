@@ -48,9 +48,15 @@
             minemp = new TextBox();
             dataGridruas = new DataGridView();
             Ruas = new DataGridViewTextBoxColumn();
+            button2 = new Button();
+            pictureCodBar = new PictureBox();
+            pictureBox1 = new PictureBox();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridimpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridruas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCodBar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // prediobox
@@ -79,7 +85,7 @@
             // 
             // atualizar
             // 
-            atualizar.Location = new Point(520, 428);
+            atualizar.Location = new Point(531, 697);
             atualizar.Name = "atualizar";
             atualizar.Size = new Size(75, 23);
             atualizar.TabIndex = 14;
@@ -110,13 +116,14 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridpar.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridpar.Location = new Point(12, 284);
+            dataGridpar.Location = new Point(12, 403);
             dataGridpar.Name = "dataGridpar";
             dataGridpar.ReadOnly = true;
             dataGridpar.RowHeadersVisible = false;
             dataGridpar.RowTemplate.Height = 25;
             dataGridpar.Size = new Size(274, 138);
             dataGridpar.TabIndex = 15;
+            dataGridpar.CellClick += SelecionaEnderecoPar;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -148,13 +155,14 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridimpar.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridimpar.Location = new Point(321, 284);
+            dataGridimpar.Location = new Point(333, 403);
             dataGridimpar.Name = "dataGridimpar";
             dataGridimpar.ReadOnly = true;
             dataGridimpar.RowHeadersVisible = false;
             dataGridimpar.RowTemplate.Height = 25;
             dataGridimpar.Size = new Size(274, 138);
             dataGridimpar.TabIndex = 16;
+            dataGridimpar.CellClick += SelecionaEnderecoImpar;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -227,9 +235,9 @@
             dataGridruas.ReadOnly = true;
             dataGridruas.RowHeadersVisible = false;
             dataGridruas.RowTemplate.Height = 25;
-            dataGridruas.Size = new Size(583, 148);
+            dataGridruas.Size = new Size(594, 234);
             dataGridruas.TabIndex = 21;
-            dataGridruas.CellDoubleClick += SelecionaRua;
+            dataGridruas.CellClick += SelecionaRua;
             // 
             // Ruas
             // 
@@ -238,12 +246,55 @@
             Ruas.Name = "Ruas";
             Ruas.ReadOnly = true;
             // 
+            // button2
+            // 
+            button2.Location = new Point(477, 370);
+            button2.Name = "button2";
+            button2.Size = new Size(129, 25);
+            button2.TabIndex = 22;
+            button2.Text = "Salvar cod Rua";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += GerarPDF;
+            // 
+            // pictureCodBar
+            // 
+            pictureCodBar.BackColor = SystemColors.ButtonHighlight;
+            pictureCodBar.Location = new Point(12, 583);
+            pictureCodBar.Name = "pictureCodBar";
+            pictureCodBar.Size = new Size(595, 108);
+            pictureCodBar.TabIndex = 34;
+            pictureCodBar.TabStop = false;
+            pictureCodBar.Click += pictureCodBar_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ButtonHighlight;
+            pictureBox1.Location = new Point(12, 567);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(595, 124);
+            pictureBox1.TabIndex = 35;
+            pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(14, 697);
+            button3.Name = "button3";
+            button3.Size = new Size(158, 23);
+            button3.TabIndex = 36;
+            button3.Text = "Salvar Endereço Prédio";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += SalvarCodUnitario;
+            // 
             // CadastroCd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(625, 490);
+            ClientSize = new Size(625, 732);
+            Controls.Add(button3);
+            Controls.Add(pictureCodBar);
+            Controls.Add(pictureBox1);
+            Controls.Add(button2);
             Controls.Add(dataGridruas);
             Controls.Add(label3);
             Controls.Add(minemp);
@@ -261,6 +312,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridpar).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridimpar).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridruas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureCodBar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -282,5 +335,9 @@
         private Label label2;
         private Label label3;
         private TextBox minemp;
+        private Button button2;
+        private PictureBox pictureCodBar;
+        private PictureBox pictureBox1;
+        private Button button3;
     }
 }

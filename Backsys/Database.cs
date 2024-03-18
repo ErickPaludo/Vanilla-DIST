@@ -65,7 +65,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
@@ -93,7 +93,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -108,7 +108,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Está ocorrendo o seguinte erro:\n{ex}");
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
 
@@ -140,7 +140,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ocorreu o seguinte erro:\n{ex}");
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return "";
                 }
             }
@@ -319,8 +319,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_la", la);
                             cmd.Parameters.Add("v_min_emp", min_emp);
                             cmd.ExecuteNonQuery();
-                            AddLog($"{predios} adicionados ao CD", Util.id_user);
-                            MessageBox.Show("Usuario adicionado com sucesso!");
+                            AddLog($"{predios} enderecos adicionados ao CD", Util.id_user);
                         }
                         connection.Close();
                     }
@@ -401,14 +400,14 @@ namespace Vanilla
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.ToString());
+                            MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -443,7 +442,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -477,7 +476,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -512,7 +511,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -548,7 +547,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -589,7 +588,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -622,7 +621,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -672,7 +671,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -714,7 +713,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -743,7 +742,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -776,7 +775,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -835,7 +834,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ocorreu o seguinte erro:\n{ex}");
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -860,30 +859,30 @@ namespace Vanilla
                     {
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {
-                            if (reader.Read())
+                            if (type == true)
                             {
-                                if (type == true)
+                                if (reader.Read())
                                 {
-
                                     if (reader["rua_cd"] != DBNull.Value)
-                                    { cd.Obtem(Convert.ToInt32(reader["rua_cd"])); }
-
-                                }
-                                else
-                                {
-                                    while (reader.Read())
                                     {
-                                        cd.GravaListEndereco(Convert.ToInt32(reader["rua_cd"]), Convert.ToInt32(reader["predio_cd"]), Convert.ToInt32(reader["la_cd"]));
+                                        cd.Obtem(Convert.ToInt32(reader["rua_cd"]));
                                     }
                                 }
-
+                            }
+                            else
+                            {
+                                while (reader.Read())
+                                {
+                                    int la = Convert.ToInt32(reader["la_cd"]);
+                                    cd.GravaListEndereco(Convert.ToInt32(reader["rua_cd"]), Convert.ToInt32(reader["predio_cd"]), Convert.ToInt32(reader["la_cd"]), reader["codbar_cd"].ToString());
+                                }
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ocorreu o seguinte erro:\n{ex}");
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -915,7 +914,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
@@ -948,7 +947,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -982,7 +981,7 @@ namespace Vanilla
 
                         if (v_retorno != 1)
                         {
-                            throw new Exception("Este usuário não está mais connectado na aplicação.");
+                            throw new Exception("Este usuário não está mais conectado na aplicação.");
                         }
                         return true;
                     }
@@ -990,7 +989,7 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Houve um erro:\n{ex.Message}");
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }

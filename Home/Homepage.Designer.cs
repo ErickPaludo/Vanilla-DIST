@@ -217,7 +217,7 @@
             endereçoDoBandoToolStripMenuItem.BackColor = Color.DarkSlateBlue;
             endereçoDoBandoToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             endereçoDoBandoToolStripMenuItem.Name = "endereçoDoBandoToolStripMenuItem";
-            endereçoDoBandoToolStripMenuItem.Size = new Size(180, 22);
+            endereçoDoBandoToolStripMenuItem.Size = new Size(159, 22);
             endereçoDoBandoToolStripMenuItem.Text = "Endereço Banco";
             endereçoDoBandoToolStripMenuItem.Click += EndereçoBanco;
             // 
@@ -226,7 +226,7 @@
             sobreToolStripMenuItem.BackColor = Color.DarkSlateBlue;
             sobreToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(180, 22);
+            sobreToolStripMenuItem.Size = new Size(159, 22);
             sobreToolStripMenuItem.Text = "Sobre";
             sobreToolStripMenuItem.Click += VerSobre;
             // 
@@ -250,7 +250,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.BackColor = Color.FromArgb(26, 26, 26);
+            flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.Controls.Add(containercad);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
@@ -283,7 +283,7 @@
             // 
             cadastrar.AutoSize = true;
             cadastrar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            cadastrar.ForeColor = SystemColors.ButtonFace;
+            cadastrar.ForeColor = SystemColors.ActiveCaptionText;
             cadastrar.Location = new Point(3, 0);
             cadastrar.Name = "cadastrar";
             cadastrar.Size = new Size(113, 32);
@@ -302,7 +302,7 @@
             // 
             visualizar.AutoSize = true;
             visualizar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            visualizar.ForeColor = SystemColors.ButtonHighlight;
+            visualizar.ForeColor = SystemColors.ActiveCaptionText;
             visualizar.Location = new Point(3, 0);
             visualizar.Name = "visualizar";
             visualizar.Size = new Size(114, 32);
@@ -372,7 +372,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
-            BackColor = Color.FromArgb(26, 26, 26);
+            BackColor = Color.White;
             ClientSize = new Size(981, 544);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
