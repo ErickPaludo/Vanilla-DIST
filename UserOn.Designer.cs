@@ -32,11 +32,11 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGridLogados = new DataGridView();
+            Deslog = new DataGridViewButtonColumn();
             ColumnUser = new DataGridViewTextBoxColumn();
             ColumnHost = new DataGridViewTextBoxColumn();
             ColumnIP = new DataGridViewTextBoxColumn();
             ColumnData = new DataGridViewTextBoxColumn();
-            btndesconect = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridLogados).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridLogados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridLogados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridLogados.Columns.AddRange(new DataGridViewColumn[] { ColumnUser, ColumnHost, ColumnIP, ColumnData });
+            dataGridLogados.Columns.AddRange(new DataGridViewColumn[] { Deslog, ColumnUser, ColumnHost, ColumnIP, ColumnData });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -76,8 +76,17 @@
             dataGridLogados.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGridLogados.Size = new Size(656, 376);
             dataGridLogados.TabIndex = 7;
-            dataGridLogados.CellDoubleClick += EscolherUser;
+            dataGridLogados.CellContentClick += dataGridLogados_CellContentClick;
+            dataGridLogados.CellFormatting += dataGridLogados_CellFormatting;
             dataGridLogados.KeyDown += Atualize;
+            // 
+            // Deslog
+            // 
+            Deslog.HeaderText = "";
+            Deslog.Name = "Deslog";
+            Deslog.ReadOnly = true;
+            Deslog.Resizable = DataGridViewTriState.True;
+            Deslog.Text = "Deslogar";
             // 
             // ColumnUser
             // 
@@ -107,23 +116,11 @@
             ColumnData.Name = "ColumnData";
             ColumnData.ReadOnly = true;
             // 
-            // btndesconect
-            // 
-            btndesconect.Enabled = false;
-            btndesconect.Location = new Point(539, 405);
-            btndesconect.Name = "btndesconect";
-            btndesconect.Size = new Size(129, 23);
-            btndesconect.TabIndex = 8;
-            btndesconect.Text = "Deslogar Usuário";
-            btndesconect.UseVisualStyleBackColor = true;
-            btndesconect.Click += Despreender;
-            // 
             // UserOn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(680, 440);
-            Controls.Add(btndesconect);
+            ClientSize = new Size(680, 414);
             Controls.Add(dataGridLogados);
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
@@ -138,10 +135,10 @@
         #endregion
 
         private DataGridView dataGridLogados;
+        private DataGridViewButtonColumn Deslog;
         private DataGridViewTextBoxColumn ColumnUser;
         private DataGridViewTextBoxColumn ColumnHost;
         private DataGridViewTextBoxColumn ColumnIP;
         private DataGridViewTextBoxColumn ColumnData;
-        private Button btndesconect;
     }
 }

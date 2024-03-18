@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aspose.Words.Tables;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,6 @@ namespace Vanilla
     {
         private Database db = new Database();
         static public List<UserOnBack> listuser = new List<UserOnBack>();
-        static private int id_select;
         public UserOn()
         {
             InitializeComponent();
@@ -24,25 +24,28 @@ namespace Vanilla
             listuser.Clear();
             dataGridLogados.Rows.Clear();
             db.ChamaView("view_users_logados");
+
             foreach (UserOnBack obj in listuser)
             {
-                dataGridLogados.Rows.Add(obj.Login, obj.Maquina, obj.Ip, obj.Entrada);
+                if (obj.Id != Util.id_user)
+                {
+                    dataGridLogados.Rows.Add("Deslogar", obj.Login, obj.Maquina, obj.Ip, obj.Entrada);
+                }
             }
+
         }
         public void AddNaLista(int id, string user, string host, string ip, DateTime date)
         {
             listuser.Add(new UserOnBack(id, user, host, ip, date));
         }
 
-        private void Despreender(object sender, EventArgs e)
+        private void Deslogar(int user)
         {
             if (db.VerificaLogin() == true)
             {
-                db.Deslog(id_select);
+                db.Deslog(user);
                 MessageBox.Show("A sessão do usuário selecionada foi encerrada!");
                 AtualizaTable();
-                id_select = 0;
-                btndesconect.Enabled = false;
             }
             else
             {
@@ -51,35 +54,64 @@ namespace Vanilla
             }
         }
 
-        private void EscolherUser(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) //Está sendo enviada a inscrição estadual para busca de dados (vai ser alterado para cnpj)
-            {
-                string user = (dataGridLogados.Rows[e.RowIndex].Cells[0].Value).ToString();
-                foreach (UserOnBack obj in listuser)
-                {
-                    if (obj.Login == user)
-                    {
-                        if (obj.Id != Util.id_user)
-                        {
-                            id_select = obj.Id;
-                            btndesconect.Enabled = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Não foi possível encerrar esta sessão!");
-                        }
-
-                    }
-                }
-            }
-        }
-
         private void Atualize(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5) // Verifica se a tecla pressionada é a tecla F5
             {
                 AtualizaTable();
+            }
+        }
+
+        private void dataGridLogados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dataGridLogados.Rows[e.RowIndex].Cells["Deslog"].ToolTipText = "Clique aqui para deslogar o usuário";
+        }
+
+        private void dataGridLogados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int validador = 0; //0 - nao encontrado | 1 - desloga | 2 - confirma deslog
+            string user = (dataGridLogados.Rows[e.RowIndex].Cells[1].Value).ToString();
+            int id_user = 0;
+            if (dataGridLogados.Columns[e.ColumnIndex] == dataGridLogados.Columns["Deslog"])
+            {
+                foreach (UserOnBack obj in listuser) //primeiro for
+                {
+                    if (obj.Login == user) //encontra usuario
+                    {
+                        DialogResult result = MessageBox.Show($"O usuário {obj.Login} será desconectado, podendo acarretar na perda de dados da tarefa que estiver sendo executada. \nDeseja continuar?", "Desconectar usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes) //solicita se o usuario quer deslogar mesmo o outro colaborador
+                        {
+                            validador = 1;
+                            id_user = obj.Id;
+                        }
+                        else
+                        {
+                            validador = 3;
+                        }
+
+                    }
+                }
+                AtualizaTable();
+                if (validador == 1) //desloga colaborador
+                {
+                    listuser.Clear();
+                    db.ChamaView("view_users_logados");
+                    foreach (UserOnBack obj2 in listuser) //verifica se o colaborador esta ainda online
+                    {
+                        if (obj2.Login == user)
+                        {
+                            validador = 2; //esta online
+                            id_user = obj2.Id;
+                        }
+                    }
+                    if (validador == 2) { Deslogar(id_user); }
+                    else // nao esta mais online
+                    {
+                        MessageBox.Show("O usuário não parece estar mais online!");
+                        AtualizaTable();
+                    }
+                }
+
             }
         }
     }

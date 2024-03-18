@@ -69,6 +69,9 @@
             // 
             cademp.BackColor = Color.MidnightBlue;
             cademp.Cursor = Cursors.Hand;
+            cademp.FlatAppearance.BorderColor = Color.Black;
+            cademp.FlatAppearance.BorderSize = 0;
+            cademp.FlatStyle = FlatStyle.Flat;
             cademp.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             cademp.ForeColor = SystemColors.ButtonHighlight;
             cademp.Location = new Point(3, 47);
@@ -84,6 +87,9 @@
             // 
             caditem.BackColor = Color.MidnightBlue;
             caditem.Cursor = Cursors.Hand;
+            caditem.FlatAppearance.BorderColor = Color.Black;
+            caditem.FlatAppearance.BorderSize = 0;
+            caditem.FlatStyle = FlatStyle.Flat;
             caditem.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             caditem.ForeColor = SystemColors.ButtonHighlight;
             caditem.Location = new Point(176, 47);
@@ -99,6 +105,9 @@
             // 
             adduser.BackColor = Color.MidnightBlue;
             adduser.Cursor = Cursors.Hand;
+            adduser.FlatAppearance.BorderColor = Color.Black;
+            adduser.FlatAppearance.BorderSize = 0;
+            adduser.FlatStyle = FlatStyle.Flat;
             adduser.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             adduser.ForeColor = SystemColors.ButtonHighlight;
             adduser.Location = new Point(349, 47);
@@ -114,6 +123,9 @@
             // 
             addcd.BackColor = Color.MidnightBlue;
             addcd.Cursor = Cursors.Hand;
+            addcd.FlatAppearance.BorderColor = Color.Black;
+            addcd.FlatAppearance.BorderSize = 0;
+            addcd.FlatStyle = FlatStyle.Flat;
             addcd.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             addcd.ForeColor = SystemColors.ButtonHighlight;
             addcd.Location = new Point(522, 47);
@@ -205,7 +217,7 @@
             endereçoDoBandoToolStripMenuItem.BackColor = Color.DarkSlateBlue;
             endereçoDoBandoToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             endereçoDoBandoToolStripMenuItem.Name = "endereçoDoBandoToolStripMenuItem";
-            endereçoDoBandoToolStripMenuItem.Size = new Size(159, 22);
+            endereçoDoBandoToolStripMenuItem.Size = new Size(180, 22);
             endereçoDoBandoToolStripMenuItem.Text = "Endereço Banco";
             endereçoDoBandoToolStripMenuItem.Click += EndereçoBanco;
             // 
@@ -214,7 +226,7 @@
             sobreToolStripMenuItem.BackColor = Color.DarkSlateBlue;
             sobreToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(159, 22);
+            sobreToolStripMenuItem.Size = new Size(180, 22);
             sobreToolStripMenuItem.Text = "Sobre";
             sobreToolStripMenuItem.Click += VerSobre;
             // 
@@ -222,6 +234,9 @@
             // 
             emp.BackColor = Color.Green;
             emp.Cursor = Cursors.Hand;
+            emp.FlatAppearance.BorderColor = Color.Black;
+            emp.FlatAppearance.BorderSize = 0;
+            emp.FlatStyle = FlatStyle.Flat;
             emp.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             emp.ForeColor = SystemColors.ButtonHighlight;
             emp.Location = new Point(176, 3);
@@ -308,6 +323,9 @@
             // 
             logs.BackColor = Color.Green;
             logs.Cursor = Cursors.Hand;
+            logs.FlatAppearance.BorderColor = Color.Black;
+            logs.FlatAppearance.BorderSize = 0;
+            logs.FlatStyle = FlatStyle.Flat;
             logs.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             logs.ForeColor = SystemColors.ButtonHighlight;
             logs.Location = new Point(3, 3);
@@ -323,6 +341,9 @@
             // 
             ConsultaItens.BackColor = Color.Green;
             ConsultaItens.Cursor = Cursors.Hand;
+            ConsultaItens.FlatAppearance.BorderColor = Color.Black;
+            ConsultaItens.FlatAppearance.BorderSize = 0;
+            ConsultaItens.FlatStyle = FlatStyle.Flat;
             ConsultaItens.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             ConsultaItens.ForeColor = SystemColors.ButtonHighlight;
             ConsultaItens.Location = new Point(349, 3);
