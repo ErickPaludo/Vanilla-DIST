@@ -85,7 +85,7 @@
             // 
             // atualizar
             // 
-            atualizar.Location = new Point(531, 697);
+            atualizar.Location = new Point(529, 651);
             atualizar.Name = "atualizar";
             atualizar.Size = new Size(75, 23);
             atualizar.TabIndex = 14;
@@ -116,7 +116,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridpar.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridpar.Location = new Point(12, 403);
+            dataGridpar.Location = new Point(10, 376);
             dataGridpar.Name = "dataGridpar";
             dataGridpar.ReadOnly = true;
             dataGridpar.RowHeadersVisible = false;
@@ -155,7 +155,7 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridimpar.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridimpar.Location = new Point(333, 403);
+            dataGridimpar.Location = new Point(331, 376);
             dataGridimpar.Name = "dataGridimpar";
             dataGridimpar.ReadOnly = true;
             dataGridimpar.RowHeadersVisible = false;
@@ -235,7 +235,7 @@
             dataGridruas.ReadOnly = true;
             dataGridruas.RowHeadersVisible = false;
             dataGridruas.RowTemplate.Height = 25;
-            dataGridruas.Size = new Size(594, 234);
+            dataGridruas.Size = new Size(594, 182);
             dataGridruas.TabIndex = 21;
             dataGridruas.CellClick += SelecionaRua;
             // 
@@ -248,7 +248,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(477, 370);
+            button2.Location = new Point(475, 343);
             button2.Name = "button2";
             button2.Size = new Size(129, 25);
             button2.TabIndex = 22;
@@ -259,7 +259,7 @@
             // pictureCodBar
             // 
             pictureCodBar.BackColor = SystemColors.ButtonHighlight;
-            pictureCodBar.Location = new Point(12, 583);
+            pictureCodBar.Location = new Point(10, 537);
             pictureCodBar.Name = "pictureCodBar";
             pictureCodBar.Size = new Size(595, 108);
             pictureCodBar.TabIndex = 34;
@@ -269,7 +269,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ButtonHighlight;
-            pictureBox1.Location = new Point(12, 567);
+            pictureBox1.Location = new Point(10, 521);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(595, 124);
             pictureBox1.TabIndex = 35;
@@ -277,7 +277,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(14, 697);
+            button3.Location = new Point(10, 651);
             button3.Name = "button3";
             button3.Size = new Size(158, 23);
             button3.TabIndex = 36;
@@ -290,7 +290,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(625, 732);
+            ClientSize = new Size(625, 680);
             Controls.Add(button3);
             Controls.Add(pictureCodBar);
             Controls.Add(pictureBox1);
