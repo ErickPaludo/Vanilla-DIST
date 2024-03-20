@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             prediobox = new TextBox();
             laandares = new TextBox();
             button1 = new Button();
@@ -54,30 +56,49 @@
             button3 = new Button();
             checkBoxPar = new CheckBox();
             checkBoxImpar = new CheckBox();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            textBoxNameRegiao = new TextBox();
+            button5 = new Button();
+            textBoxCodReg = new TextBox();
+            label5 = new Label();
+            tabPage2 = new TabPage();
+            dataGridViewReg = new DataGridView();
+            ColumnId = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            ColumnStatus = new DataGridViewTextBoxColumn();
+            button4 = new Button();
+            buttonCadRegion = new Button();
+            textBoxNameReg = new TextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridimpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridruas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewReg).BeginInit();
             SuspendLayout();
             // 
             // prediobox
             // 
-            prediobox.Location = new Point(146, 4);
+            prediobox.Location = new Point(161, 15);
             prediobox.Name = "prediobox";
             prediobox.Size = new Size(120, 23);
             prediobox.TabIndex = 0;
             // 
             // laandares
             // 
-            laandares.Location = new Point(146, 33);
+            laandares.Location = new Point(161, 44);
             laandares.Name = "laandares";
             laandares.Size = new Size(120, 23);
             laandares.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(260, 101);
+            button1.Location = new Point(17, 108);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 2;
@@ -87,7 +108,7 @@
             // 
             // atualizar
             // 
-            atualizar.Location = new Point(529, 651);
+            atualizar.Location = new Point(610, 618);
             atualizar.Name = "atualizar";
             atualizar.Size = new Size(75, 23);
             atualizar.TabIndex = 14;
@@ -100,25 +121,25 @@
             dataGridpar.AllowUserToAddRows = false;
             dataGridpar.AllowUserToDeleteRows = false;
             dataGridpar.BackgroundColor = SystemColors.Control;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dataGridpar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridpar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridpar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridpar.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1 });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dataGridpar.DefaultCellStyle = dataGridViewCellStyle8;
-            dataGridpar.Location = new Point(10, 376);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridpar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridpar.Location = new Point(90, 344);
             dataGridpar.Name = "dataGridpar";
             dataGridpar.ReadOnly = true;
             dataGridpar.RowHeadersVisible = false;
@@ -139,25 +160,25 @@
             dataGridimpar.AllowUserToAddRows = false;
             dataGridimpar.AllowUserToDeleteRows = false;
             dataGridimpar.BackgroundColor = SystemColors.Control;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dataGridimpar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridimpar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridimpar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridimpar.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn2 });
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = SystemColors.Window;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
-            dataGridimpar.DefaultCellStyle = dataGridViewCellStyle10;
-            dataGridimpar.Location = new Point(331, 376);
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridimpar.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridimpar.Location = new Point(411, 344);
             dataGridimpar.Name = "dataGridimpar";
             dataGridimpar.ReadOnly = true;
             dataGridimpar.RowHeadersVisible = false;
@@ -176,7 +197,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(2, 7);
+            label1.Location = new Point(17, 18);
             label1.Name = "label1";
             label1.Size = new Size(130, 15);
             label1.TabIndex = 17;
@@ -185,7 +206,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(2, 36);
+            label2.Location = new Point(17, 47);
             label2.Name = "label2";
             label2.Size = new Size(111, 15);
             label2.TabIndex = 18;
@@ -194,7 +215,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(2, 62);
+            label3.Location = new Point(17, 73);
             label3.Name = "label3";
             label3.Size = new Size(138, 15);
             label3.TabIndex = 20;
@@ -202,7 +223,7 @@
             // 
             // minemp
             // 
-            minemp.Location = new Point(146, 59);
+            minemp.Location = new Point(161, 70);
             minemp.Name = "minemp";
             minemp.Size = new Size(120, 23);
             minemp.TabIndex = 19;
@@ -214,30 +235,30 @@
             dataGridruas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridruas.BackgroundColor = SystemColors.Control;
             dataGridruas.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = SystemColors.Control;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dataGridruas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridruas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridruas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridruas.Columns.AddRange(new DataGridViewColumn[] { Ruas });
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = SystemColors.Window;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            dataGridruas.DefaultCellStyle = dataGridViewCellStyle12;
-            dataGridruas.Location = new Point(12, 130);
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridruas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridruas.Location = new Point(90, 137);
             dataGridruas.Name = "dataGridruas";
             dataGridruas.ReadOnly = true;
             dataGridruas.RowHeadersVisible = false;
             dataGridruas.RowTemplate.Height = 25;
-            dataGridruas.Size = new Size(594, 182);
+            dataGridruas.Size = new Size(595, 170);
             dataGridruas.TabIndex = 21;
             dataGridruas.CellClick += SelecionaRua;
             // 
@@ -250,7 +271,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(475, 343);
+            button2.Location = new Point(556, 313);
             button2.Name = "button2";
             button2.Size = new Size(129, 25);
             button2.TabIndex = 22;
@@ -261,17 +282,16 @@
             // pictureCodBar
             // 
             pictureCodBar.BackColor = SystemColors.ButtonHighlight;
-            pictureCodBar.Location = new Point(10, 537);
+            pictureCodBar.Location = new Point(90, 504);
             pictureCodBar.Name = "pictureCodBar";
             pictureCodBar.Size = new Size(595, 108);
             pictureCodBar.TabIndex = 34;
             pictureCodBar.TabStop = false;
-            pictureCodBar.Click += pictureCodBar_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ButtonHighlight;
-            pictureBox1.Location = new Point(10, 521);
+            pictureBox1.Location = new Point(90, 488);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(595, 124);
             pictureBox1.TabIndex = 35;
@@ -279,7 +299,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(10, 651);
+            button3.Location = new Point(90, 618);
             button3.Name = "button3";
             button3.Size = new Size(158, 23);
             button3.TabIndex = 36;
@@ -292,7 +312,7 @@
             checkBoxPar.AutoSize = true;
             checkBoxPar.Checked = true;
             checkBoxPar.CheckState = CheckState.Checked;
-            checkBoxPar.Location = new Point(272, 6);
+            checkBoxPar.Location = new Point(287, 17);
             checkBoxPar.Name = "checkBoxPar";
             checkBoxPar.Size = new Size(100, 19);
             checkBoxPar.TabIndex = 37;
@@ -304,36 +324,203 @@
             checkBoxImpar.AutoSize = true;
             checkBoxImpar.Checked = true;
             checkBoxImpar.CheckState = CheckState.Checked;
-            checkBoxImpar.Location = new Point(271, 29);
+            checkBoxImpar.Location = new Point(286, 40);
             checkBoxImpar.Name = "checkBoxImpar";
             checkBoxImpar.Size = new Size(114, 19);
             checkBoxImpar.TabIndex = 38;
             checkBoxImpar.Text = "Gerar lado impar";
             checkBoxImpar.UseVisualStyleBackColor = true;
             // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(1, 3);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(991, 676);
+            tabControl1.TabIndex = 39;
+            tabControl1.Click += AtualizaTable;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(textBoxNameRegiao);
+            tabPage1.Controls.Add(button5);
+            tabPage1.Controls.Add(textBoxCodReg);
+            tabPage1.Controls.Add(label5);
+            tabPage1.Controls.Add(dataGridruas);
+            tabPage1.Controls.Add(button2);
+            tabPage1.Controls.Add(button3);
+            tabPage1.Controls.Add(atualizar);
+            tabPage1.Controls.Add(dataGridimpar);
+            tabPage1.Controls.Add(checkBoxImpar);
+            tabPage1.Controls.Add(pictureCodBar);
+            tabPage1.Controls.Add(laandares);
+            tabPage1.Controls.Add(pictureBox1);
+            tabPage1.Controls.Add(checkBoxPar);
+            tabPage1.Controls.Add(prediobox);
+            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(dataGridpar);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(label2);
+            tabPage1.Controls.Add(minemp);
+            tabPage1.Controls.Add(label3);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(983, 648);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Layout do CD";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxNameRegiao
+            // 
+            textBoxNameRegiao.Enabled = false;
+            textBoxNameRegiao.Location = new Point(271, 98);
+            textBoxNameRegiao.Name = "textBoxNameRegiao";
+            textBoxNameRegiao.Size = new Size(224, 23);
+            textBoxNameRegiao.TabIndex = 42;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(238, 99);
+            button5.Name = "button5";
+            button5.Size = new Size(27, 23);
+            button5.TabIndex = 41;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += PesquisarRegiões;
+            // 
+            // textBoxCodReg
+            // 
+            textBoxCodReg.Location = new Point(161, 99);
+            textBoxCodReg.Name = "textBoxCodReg";
+            textBoxCodReg.Size = new Size(71, 23);
+            textBoxCodReg.TabIndex = 39;
+            textBoxCodReg.TextChanged += textBox1_TextChanged;
+            textBoxCodReg.KeyPress += textBoxCodReg_KeyPress;
+            textBoxCodReg.Leave += Leave;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(296, 73);
+            label5.Name = "label5";
+            label5.Size = new Size(49, 15);
+            label5.TabIndex = 40;
+            label5.Text = "Reg.Sep";
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(dataGridViewReg);
+            tabPage2.Controls.Add(button4);
+            tabPage2.Controls.Add(buttonCadRegion);
+            tabPage2.Controls.Add(textBoxNameReg);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(983, 648);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Região de Armazenamento";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewReg
+            // 
+            dataGridViewReg.AllowUserToAddRows = false;
+            dataGridViewReg.AllowUserToDeleteRows = false;
+            dataGridViewReg.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewReg.BackgroundColor = SystemColors.Control;
+            dataGridViewReg.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridViewReg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewReg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewReg.Columns.AddRange(new DataGridViewColumn[] { ColumnId, dataGridViewTextBoxColumn3, ColumnStatus });
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dataGridViewReg.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewReg.Location = new Point(16, 125);
+            dataGridViewReg.Name = "dataGridViewReg";
+            dataGridViewReg.ReadOnly = true;
+            dataGridViewReg.RowHeadersVisible = false;
+            dataGridViewReg.RowTemplate.Height = 25;
+            dataGridViewReg.Size = new Size(595, 170);
+            dataGridViewReg.TabIndex = 24;
+            // 
+            // ColumnId
+            // 
+            ColumnId.HeaderText = "ID";
+            ColumnId.Name = "ColumnId";
+            ColumnId.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn3.HeaderText = "Nome da Região";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // ColumnStatus
+            // 
+            ColumnStatus.HeaderText = "Status";
+            ColumnStatus.Name = "ColumnStatus";
+            ColumnStatus.ReadOnly = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(295, 341);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 23;
+            button4.Text = "Atualizar";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += AtualizaTable;
+            // 
+            // buttonCadRegion
+            // 
+            buttonCadRegion.Location = new Point(218, 82);
+            buttonCadRegion.Name = "buttonCadRegion";
+            buttonCadRegion.Size = new Size(75, 23);
+            buttonCadRegion.TabIndex = 22;
+            buttonCadRegion.Text = "Cadastrar";
+            buttonCadRegion.UseVisualStyleBackColor = true;
+            buttonCadRegion.Click += RegistraArmz;
+            // 
+            // textBoxNameReg
+            // 
+            textBoxNameReg.Location = new Point(120, 33);
+            textBoxNameReg.MaxLength = 25;
+            textBoxNameReg.Name = "textBoxNameReg";
+            textBoxNameReg.Size = new Size(284, 23);
+            textBoxNameReg.TabIndex = 18;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(16, 36);
+            label4.Name = "label4";
+            label4.Size = new Size(98, 15);
+            label4.TabIndex = 19;
+            label4.Text = "Nome da Região:";
+            // 
             // CadastroCd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(625, 680);
-            Controls.Add(checkBoxImpar);
-            Controls.Add(checkBoxPar);
-            Controls.Add(button3);
-            Controls.Add(pictureCodBar);
-            Controls.Add(pictureBox1);
-            Controls.Add(button2);
-            Controls.Add(dataGridruas);
-            Controls.Add(label3);
-            Controls.Add(minemp);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(dataGridimpar);
-            Controls.Add(dataGridpar);
-            Controls.Add(atualizar);
-            Controls.Add(button1);
-            Controls.Add(laandares);
-            Controls.Add(prediobox);
+            ClientSize = new Size(991, 680);
+            Controls.Add(tabControl1);
             Name = "CadastroCd";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CadastroCd";
@@ -342,8 +529,13 @@
             ((System.ComponentModel.ISupportInitialize)dataGridruas).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewReg).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -369,5 +561,20 @@
         private Button button3;
         private CheckBox checkBoxPar;
         private CheckBox checkBoxImpar;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private TextBox textBoxNameReg;
+        private Label label4;
+        private DataGridView dataGridViewReg;
+        private Button button4;
+        private Button buttonCadRegion;
+        private DataGridViewTextBoxColumn ColumnId;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn ColumnStatus;
+        private TextBox textBoxCodReg;
+        private Label label5;
+        private TextBox textBoxNameRegiao;
+        private Button button5;
     }
 }

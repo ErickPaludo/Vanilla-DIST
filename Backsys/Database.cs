@@ -18,11 +18,10 @@ namespace Vanilla
         CadastrarItensFront itens;
         Config config = new Config();
         Util util;
-        #endregion
-
         public Database()
         {
         }
+        #endregion
 
         public bool Login(string user, string pass)
         {
@@ -114,7 +113,6 @@ namespace Vanilla
 
             }
         }
-
         public string SobreSys()
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
@@ -172,12 +170,11 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return 0;
                 }
             }
         }
-
         public void GravarTFC(string nomef, string nome, string cnpj, DateTime abertura, DateTime cadastro, string insc_est, string type_cad, string tel, string email, string status, string rua, int numero, string comple, string bairro, string cidade, string uf, string cep) //Gravar TFC (Transportadoras,fornecedores,clientes)
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
@@ -214,11 +211,10 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-
         public void GravarnUsers(string nome, string cpf, string email, string tel, string tel2, string permissao, string status, string user, string pass, int bloq_user)
         {
             try
@@ -249,17 +245,16 @@ namespace Vanilla
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.ToString());
+                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         } //gravar na base o usuario
-
         public void GravarItens(int id_fornecedor, string cod, string nome, string status, string desc, string undm, int quant, decimal preco_c, decimal margem, decimal preco_v)     //Faz a Gravação de itens na tabela
         {
 
@@ -294,16 +289,17 @@ namespace Vanilla
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
-        public void GravarCd(int predios, int la, int min_emp, int type_generate)
+        public void GravarCd(int predios, int la, int min_emp, int type_generate, int id_reg)
         {
             try
             {
@@ -319,6 +315,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_la", la);
                             cmd.Parameters.Add("v_min_emp", min_emp);
                             cmd.Parameters.Add("v_par_or_impar", type_generate);
+                            cmd.Parameters.Add("v_id_reg", id_reg);
                             cmd.ExecuteNonQuery();
                             AddLog($"{predios} enderecos adicionados ao CD", Util.id_user);
                         }
@@ -326,14 +323,14 @@ namespace Vanilla
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.ToString());
+                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void AddLog(string msg, int id)
@@ -353,7 +350,27 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        public void GravaReg(string name_reg)
+        {
+            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            {
+                try
+                {
+                    connection.Open();
+                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_reg.vnl_cadastra_reg", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add("v_name_reg", OracleDbType.Varchar2).Value = name_reg;
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -887,8 +904,41 @@ namespace Vanilla
                 }
             }
         }
-        #endregion
+        public void RetornoReg(int local_class)
+        {
+            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            {
+                try
+                {
+                    CadastroCd cd = new CadastroCd();
+                    SelecionarReg reg = new SelecionarReg();
+                    connection.Open();
 
+                    using (OracleCommand cmd = new OracleCommand("Select * from view_reg_sep order by id", connection))
+                    {
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                if (local_class == 0)
+                                {
+                                    cd.GravarListaReg(Convert.ToInt32(reader["id"]), reader["nome_reg"].ToString(), reader["status_f"].ToString());
+                                }
+                                else
+                                {
+                                    reg.GravarListaReg(Convert.ToInt32(reader["id"]), reader["nome_reg"].ToString(), reader["status_f"].ToString());
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        #endregion
         public bool AntiCopy(string celula, string table, string cod)//Verifica se uma palavra já existe já existe
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
@@ -920,7 +970,6 @@ namespace Vanilla
                 }
             }
         }
-
         public bool BuscarCodBar(string cod)  //Metodo para buscar na base itens se já existe algum código de barras igual
         {
             try
@@ -952,7 +1001,6 @@ namespace Vanilla
                 return false;
             }
         }
-
         public bool VerificaLogin()
         {
             try

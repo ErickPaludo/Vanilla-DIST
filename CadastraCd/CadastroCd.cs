@@ -14,6 +14,7 @@ using iTextSharp.text.pdf;
 using System.IO;
 using Aspose.Words;
 using System.Diagnostics;
+using Vanilla.CadastraCd;
 
 namespace Vanilla
 {
@@ -21,14 +22,22 @@ namespace Vanilla
     {
         private Database db = new Database();
         static private List<LogisticaCD> cdList = new List<LogisticaCD>();
+        static private List<RegArmazenagem> reg = new List<RegArmazenagem>();
         static public int num_ruas = 0;
         static public int rua_select = 0;
+        static public int id_reg;
         static string codbar_endereco, endereco_formated = string.Empty;
         private string endereco = "C:\\Vanilla\\Codigo_de_barras\\CD";
+
         public CadastroCd()
         {
             InitializeComponent();
         }
+        public void RecebeIdReg(int value)
+        {
+            id_reg = value;
+        }
+        #region Cadastro de CD
         public void Obtem(int rua)
         {
             num_ruas = rua;
@@ -38,7 +47,7 @@ namespace Vanilla
             Cursor = Cursors.WaitCursor;
             if (db.VerificaLogin() == true)
             {
-                if (!string.IsNullOrEmpty(prediobox.Text) && !string.IsNullOrEmpty(laandares.Text))
+                if (!string.IsNullOrEmpty(prediobox.Text) && !string.IsNullOrEmpty(laandares.Text) && !string.IsNullOrEmpty(textBoxCodReg.Text))
                 {
                     if (checkBoxImpar.Checked == true || checkBoxPar.Checked == true)
                     {
@@ -64,18 +73,18 @@ namespace Vanilla
                             DialogResult result = MessageBox.Show("A quantidade de prédios / andares a ser gerada é muito alta, essa operação pode demorar alguns minutos, deseja continuar a operação?", "Excesso de prédios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                             if (result == DialogResult.Yes)
                             {
-                                db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd);
+                                db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd,Convert.ToInt32(textBoxCodReg.Text));
                             }
                         }
                         else
                         {
-                            db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd);
+                            db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd, Convert.ToInt32(textBoxCodReg.Text));
                         }
                     }
                     else
                     {
                         MessageBox.Show("Verifique os campos novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }                 
+                    }
                     AtualizaTabelaRuas();
                 }
                 else
@@ -103,7 +112,6 @@ namespace Vanilla
             }
             num_ruas = 0;
         }
-
         private void SelecionaRua(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -130,7 +138,6 @@ namespace Vanilla
         {
             cdList.Add(new LogisticaCD(rua, predio, andar, codbar));
         }
-
         private void Atualizar(object sender, EventArgs e)
         {
             dataGridruas.Rows.Clear();
@@ -138,9 +145,6 @@ namespace Vanilla
             dataGridimpar.Rows.Clear();
             AtualizaTabelaRuas();
         }
-
-
-
         private void SelecionaEnderecoPar(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -154,7 +158,6 @@ namespace Vanilla
                 MostrCodBar(rua, predio, la);
             }
         }
-
         private void SelecionaEnderecoImpar(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -168,7 +171,6 @@ namespace Vanilla
                 MostrCodBar(rua, predio, la);
             }
         }
-
         private void MostrCodBar(int rua, int predio, int la)
         {
             try
@@ -293,7 +295,6 @@ namespace Vanilla
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void SalvarCodUnitario(object sender, EventArgs e)
         {
             try
@@ -351,10 +352,92 @@ namespace Vanilla
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void PesquisarRegiões(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxCodReg.Text))
+            {
+                SelecionarReg reg_sep = new SelecionarReg();
+                reg_sep.AtualizaReg();
+                reg_sep.ShowDialog();
+                textBoxCodReg.Text = id_reg.ToString();
+            }
+            else
+            {
+                id_reg = Convert.ToInt16(textBoxCodReg.Text);
+            }
 
-        private void pictureCodBar_Click(object sender, EventArgs e)
+            AtualizaReg();
+            bool validador = false;
+            foreach (RegArmazenagem obj in reg)
+            {
+                if (obj.Id == id_reg)
+                {
+                    textBoxNameRegiao.Text = obj.Name.ToString();
+                    validador = true;
+                }
+            }
+            if (validador != true)
+            {
+                textBoxCodReg.Text = string.Empty;
+                textBoxNameRegiao.Text = string.Empty;
+                MessageBox.Show("Região não encontradaa!");
+            }
+        }
+        private void textBoxCodReg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Util util = new Util();
+            util.SomenteNumeros(e);
+        }
+        private void Leave(object sender, EventArgs e)
+        {
+            if (textBoxCodReg.Text == string.Empty)
+            {
+                textBoxCodReg.Text = string.Empty;
+                textBoxNameRegiao.Text = string.Empty;
+            }
+        }
+        #endregion
+
+        #region Cadastro de Região
+        private void RegistraArmz(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxNameReg.Text))
+            {
+                db.GravaReg(textBoxNameReg.Text);
+                textBoxNameReg.Text = string.Empty;
+                AtualizaReg();
+            }
+            else
+            {
+                MessageBox.Show("Preencha o campo 'Nome da Região' para continuar");
+            }
+        }
+        public void AtualizaReg()
+        {
+            reg.Clear();
+            dataGridViewReg.Rows.Clear();
+            db.RetornoReg(0);
+            foreach (RegArmazenagem obj in reg)
+            {
+                dataGridViewReg.Rows.Add(obj.Id, obj.Name, obj.Status);
+            }
+        }
+        public void GravarListaReg(int id, string name, string status)
+        {
+            reg.Add(new RegArmazenagem(id, name, status));
+        }
+        private void AtualizaTable(object sender, EventArgs e)
+        {
+            AtualizaReg();
+        }
+        #endregion
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }
