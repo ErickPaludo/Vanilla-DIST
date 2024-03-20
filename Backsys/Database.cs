@@ -303,7 +303,7 @@ namespace Vanilla
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void GravarCd(int predios, int la, int min_emp)
+        public void GravarCd(int predios, int la, int min_emp, int type_generate)
         {
             try
             {
@@ -318,6 +318,7 @@ namespace Vanilla
                             cmd.Parameters.Add("v_predio_fin", predios);
                             cmd.Parameters.Add("v_la", la);
                             cmd.Parameters.Add("v_min_emp", min_emp);
+                            cmd.Parameters.Add("v_par_or_impar", type_generate);
                             cmd.ExecuteNonQuery();
                             AddLog($"{predios} enderecos adicionados ao CD", Util.id_user);
                         }

@@ -38,31 +38,49 @@ namespace Vanilla
             Cursor = Cursors.WaitCursor;
             if (db.VerificaLogin() == true)
             {
-
                 if (!string.IsNullOrEmpty(prediobox.Text) && !string.IsNullOrEmpty(laandares.Text))
                 {
-                    if (minemp.Text == string.Empty)
+                    if (checkBoxImpar.Checked == true || checkBoxPar.Checked == true)
                     {
-                        minemp.Text = "0";
-                    }
-                    if (Convert.ToInt16(prediobox.Text) >= 100 || Convert.ToInt16(laandares.Text) >= 25)
-                    {
-                        DialogResult result = MessageBox.Show("A quantidade de prédios / andares a ser gerada é muito alta, essa operação pode demorar alguns minutos, deseja continuar a operação?","Excesso de prédios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        if (result == DialogResult.Yes)
+                        int gerador_cd; // 0 - full | 1 - lado impar | 2 - lado par
+                        if (minemp.Text == string.Empty)
                         {
-                            db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text));
+                            minemp.Text = "0";
+                        }
+                        if (checkBoxImpar.Checked == true && checkBoxPar.Checked == true)
+                        {
+                            gerador_cd = 0;
+                        }
+                        else if (checkBoxImpar.Checked == true)
+                        {
+                            gerador_cd = 1;
+                        }
+                        else
+                        {
+                            gerador_cd = 2;
+                        }
+                        if (Convert.ToInt16(prediobox.Text) >= 100 || Convert.ToInt16(laandares.Text) >= 25)
+                        {
+                            DialogResult result = MessageBox.Show("A quantidade de prédios / andares a ser gerada é muito alta, essa operação pode demorar alguns minutos, deseja continuar a operação?", "Excesso de prédios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (result == DialogResult.Yes)
+                            {
+                                db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd);
+                            }
+                        }
+                        else
+                        {
+                            db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd);
                         }
                     }
                     else
                     {
-                        db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text));
-                    }
+                        MessageBox.Show("Verifique os campos novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }                 
                     AtualizaTabelaRuas();
                 }
                 else
                 {
                     MessageBox.Show("Verifique os campos novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                 }
             }
             else
@@ -270,7 +288,7 @@ namespace Vanilla
                     MessageBox.Show("Selecione uma Rua!");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -327,11 +345,12 @@ namespace Vanilla
                 {
                     MessageBox.Show("Selecione um Prédio!");
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            }
+        }
 
         private void pictureCodBar_Click(object sender, EventArgs e)
         {
