@@ -41,9 +41,7 @@
             button1 = new Button();
             atualizar = new Button();
             dataGridpar = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridimpar = new DataGridView();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -71,6 +69,10 @@
             buttonCadRegion = new Button();
             textBoxNameReg = new TextBox();
             label4 = new Label();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            ColumnReg = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            ColumnRegImp = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridimpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridruas).BeginInit();
@@ -130,7 +132,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridpar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridpar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridpar.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1 });
+            dataGridpar.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, ColumnReg });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -148,13 +150,6 @@
             dataGridpar.TabIndex = 15;
             dataGridpar.CellClick += SelecionaEnderecoPar;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn1.HeaderText = "Lado Par";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // dataGridimpar
             // 
             dataGridimpar.AllowUserToAddRows = false;
@@ -169,7 +164,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridimpar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridimpar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridimpar.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn2 });
+            dataGridimpar.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn2, ColumnRegImp });
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -186,13 +181,6 @@
             dataGridimpar.Size = new Size(274, 138);
             dataGridimpar.TabIndex = 16;
             dataGridimpar.CellClick += SelecionaEnderecoImpar;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn2.HeaderText = "Lado Impar";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // label1
             // 
@@ -514,6 +502,32 @@
             label4.TabIndex = 19;
             label4.Text = "Nome da Região:";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn1.HeaderText = "Lado Par";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ColumnReg
+            // 
+            ColumnReg.HeaderText = "Reg";
+            ColumnReg.Name = "ColumnReg";
+            ColumnReg.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn2.HeaderText = "Lado Impar";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // ColumnRegImp
+            // 
+            ColumnRegImp.HeaderText = "Reg";
+            ColumnRegImp.Name = "ColumnRegImp";
+            ColumnRegImp.ReadOnly = true;
+            // 
             // CadastroCd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -549,8 +563,6 @@
         private Button atualizar;
         private DataGridView dataGridpar;
         private DataGridView dataGridimpar;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -576,5 +588,9 @@
         private Label label5;
         private TextBox textBoxNameRegiao;
         private Button button5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn ColumnReg;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn ColumnRegImp;
     }
 }

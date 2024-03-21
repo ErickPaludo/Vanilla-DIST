@@ -124,19 +124,19 @@ namespace Vanilla
                 {
                     if (obj.Id_predio % 2 == 0)
                     {
-                        dataGridpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}");
+                        dataGridpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}",obj.Name);
                     }
                     else
                     {
-                        dataGridimpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}");
+                        dataGridimpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}",obj.Name);
                     }
                 }
                 cdList.Clear();
             }
         }
-        public void GravaListEndereco(int rua, int predio, int andar, string codbar)
+        public void GravaListEndereco(int rua, int predio, int andar, string codbar,string name_reg)
         {
-            cdList.Add(new LogisticaCD(rua, predio, andar, codbar));
+            cdList.Add(new LogisticaCD(rua, predio, andar, codbar, name_reg));
         }
         private void Atualizar(object sender, EventArgs e)
         {

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vanilla.Backsys;
+using Vanilla.CadastraCd;
 
 namespace Vanilla
 {
-    public class LogisticaCD
+    public class LogisticaCD : RegArmazenagem
     {
         Database db = new Database();
         private BackLog login = new BackLog();
@@ -15,13 +16,23 @@ namespace Vanilla
         private int id_predio;
         private int id_la;
         private string codbar;
+        
 
         public LogisticaCD()
         {
         }
 
-        public LogisticaCD(int id_rua, int id_predio, int id_la, string codbar) : this(id_rua)
+        public LogisticaCD(int id_rua, int id_predio, int id_la, string codbar)
         {
+            this.id_rua = id_rua;
+            this.id_predio = id_predio;
+            this.id_la = id_la;
+            this.codbar = codbar;
+        }
+
+        public LogisticaCD(int id_rua, int id_predio, int id_la, string codbar, string name_reg) : base(name_reg)
+        {
+            this.id_rua = id_rua;
             this.id_predio = id_predio;
             this.id_la = id_la;
             this.codbar = codbar;

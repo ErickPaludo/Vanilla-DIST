@@ -871,7 +871,7 @@ namespace Vanilla
                     }
                     else
                     {
-                        query = $"select * from vnl_endereco_cd where rua_cd = {rua} order by id";
+                        query = $"select * from view_enderecos_cd where rua_cd = {rua} order by predio_cd , la_cd";
                     }
                     using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
@@ -891,8 +891,7 @@ namespace Vanilla
                             {
                                 while (reader.Read())
                                 {
-                                    int la = Convert.ToInt32(reader["la_cd"]);
-                                    cd.GravaListEndereco(Convert.ToInt32(reader["rua_cd"]), Convert.ToInt32(reader["predio_cd"]), Convert.ToInt32(reader["la_cd"]), reader["codbar_cd"].ToString());
+                                    cd.GravaListEndereco(Convert.ToInt32(reader["rua_cd"]), Convert.ToInt32(reader["predio_cd"]), Convert.ToInt32(reader["la_cd"]), reader["codbar_cd"].ToString(),reader["nome_reg"].ToString());
                                 }
                             }
                         }

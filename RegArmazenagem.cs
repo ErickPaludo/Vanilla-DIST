@@ -19,6 +19,11 @@ namespace Vanilla.CadastraCd
         {
         }
 
+        public RegArmazenagem(string name)
+        {
+            this.name = name;
+        }
+
         public RegArmazenagem(int id, string name, string status)
         {
             this.id = id;
