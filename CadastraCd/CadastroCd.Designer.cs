@@ -34,9 +34,9 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroCd));
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroCd));
             prediobox = new TextBox();
             laandares = new TextBox();
             button1 = new Button();
@@ -52,8 +52,6 @@
             label3 = new Label();
             minemp = new TextBox();
             dataGridruas = new DataGridView();
-            Ruas = new DataGridViewTextBoxColumn();
-            ColumnBtnSalva = new DataGridViewButtonColumn();
             pictureCodBar = new PictureBox();
             button3 = new Button();
             checkBoxPar = new CheckBox();
@@ -73,6 +71,8 @@
             buttonCadRegion = new Button();
             textBoxNameReg = new TextBox();
             label4 = new Label();
+            Ruas = new DataGridViewTextBoxColumn();
+            ColumnBtnSalva = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridimpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridruas).BeginInit();
@@ -278,20 +278,6 @@
             dataGridruas.CellClick += SelecionaRua;
             dataGridruas.CellContentClick += dataGridRuas_CellContentClick;
             dataGridruas.CellFormatting += dataGridRuas_CellFormatting;
-            // 
-            // Ruas
-            // 
-            Ruas.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Ruas.HeaderText = "Ruas";
-            Ruas.Name = "Ruas";
-            Ruas.ReadOnly = true;
-            // 
-            // ColumnBtnSalva
-            // 
-            ColumnBtnSalva.HeaderText = "";
-            ColumnBtnSalva.Name = "ColumnBtnSalva";
-            ColumnBtnSalva.ReadOnly = true;
-            ColumnBtnSalva.Text = "Imp";
             // 
             // pictureCodBar
             // 
@@ -524,6 +510,22 @@
             label4.TabIndex = 19;
             label4.Text = "Nome da Região:";
             // 
+            // Ruas
+            // 
+            Ruas.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ruas.HeaderText = "Ruas";
+            Ruas.Name = "Ruas";
+            Ruas.ReadOnly = true;
+            // 
+            // ColumnBtnSalva
+            // 
+            ColumnBtnSalva.HeaderText = "";
+            ColumnBtnSalva.Image = (Image)resources.GetObject("ColumnBtnSalva.Image");
+            ColumnBtnSalva.Name = "ColumnBtnSalva";
+            ColumnBtnSalva.ReadOnly = true;
+            ColumnBtnSalva.Resizable = DataGridViewTriState.True;
+            ColumnBtnSalva.Width = 30;
+            // 
             // CadastroCd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -586,6 +588,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn ColumnRegImp;
         private DataGridViewTextBoxColumn Ruas;
-        private DataGridViewButtonColumn ColumnBtnSalva;
+        private DataGridViewImageColumn ColumnBtnSalva;
     }
 }

@@ -871,7 +871,7 @@ namespace Vanilla
                     }
                     else
                     {
-                        query = $"select * from view_enderecos_cd where rua_cd = {rua} order by predio_cd , la_cd";
+                        query = $"select * from view_enderecos_cd where rua_cd = {rua} ORDER BY RUA_CD,PREDIO_CD,lA_CD";
                     }
                     using (OracleCommand cmd = new OracleCommand(query, connection))
                     {

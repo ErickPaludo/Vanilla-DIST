@@ -45,57 +45,65 @@ namespace Vanilla
         private void GerarCd(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            if (db.VerificaLogin() == true)
+            try
             {
-                if (!string.IsNullOrEmpty(prediobox.Text) && !string.IsNullOrEmpty(laandares.Text) && !string.IsNullOrEmpty(textBoxCodReg.Text))
+
+                if (db.VerificaLogin() == true)
                 {
-                    if (checkBoxImpar.Checked == true || checkBoxPar.Checked == true)
+                    if (minemp.Text == string.Empty)
                     {
-                        int gerador_cd; // 0 - full | 1 - lado impar | 2 - lado par
-                        if (minemp.Text == string.Empty)
+                        minemp.Text = "0";
+                    }
+                    if (!string.IsNullOrEmpty(prediobox.Text) && !string.IsNullOrEmpty(laandares.Text) && !string.IsNullOrEmpty(textBoxCodReg.Text) && Convert.ToInt32(minemp.Text) <= Convert.ToInt32(laandares.Text))
+                    {
+                        if (checkBoxImpar.Checked == true || checkBoxPar.Checked == true)
                         {
-                            minemp.Text = "0";
-                        }
-                        if (checkBoxImpar.Checked == true && checkBoxPar.Checked == true)
-                        {
-                            gerador_cd = 0;
-                        }
-                        else if (checkBoxImpar.Checked == true)
-                        {
-                            gerador_cd = 1;
-                        }
-                        else
-                        {
-                            gerador_cd = 2;
-                        }
-                        if (Convert.ToInt16(prediobox.Text) >= 100 || Convert.ToInt16(laandares.Text) >= 25)
-                        {
-                            DialogResult result = MessageBox.Show("A quantidade de prédios / andares a ser gerada é muito alta, essa operação pode demorar alguns minutos, deseja continuar a operação?", "Excesso de prédios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                            if (result == DialogResult.Yes)
+                            int gerador_cd; // 0 - full | 1 - lado impar | 2 - lado par                        
+                            if (checkBoxImpar.Checked == true && checkBoxPar.Checked == true)
+                            {
+                                gerador_cd = 0;
+                            }
+                            else if (checkBoxImpar.Checked == true)
+                            {
+                                gerador_cd = 1;
+                            }
+                            else
+                            {
+                                gerador_cd = 2;
+                            }
+                            if (Convert.ToInt16(prediobox.Text) >= 100 || Convert.ToInt16(laandares.Text) >= 25)
+                            {
+                                DialogResult result = MessageBox.Show("A quantidade de prédios / andares a ser gerada é muito alta, essa operação pode demorar alguns minutos, deseja continuar a operação?", "Excesso de prédios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                if (result == DialogResult.Yes)
+                                {
+                                    db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd, Convert.ToInt32(textBoxCodReg.Text));
+                                }
+                            }
+                            else
                             {
                                 db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd, Convert.ToInt32(textBoxCodReg.Text));
                             }
                         }
                         else
                         {
-                            db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd, Convert.ToInt32(textBoxCodReg.Text));
+                            MessageBox.Show("Verifique os campos novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
+                        AtualizaTabelaRuas();
                     }
                     else
                     {
                         MessageBox.Show("Verifique os campos novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    AtualizaTabelaRuas();
                 }
                 else
                 {
-                    MessageBox.Show("Verifique os campos novamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Homepage home = new Homepage();
+                    home.DeslogarUsuario();
                 }
             }
-            else
+            catch(Exception ex)
             {
-                Homepage home = new Homepage();
-                home.DeslogarUsuario();
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Cursor = Cursors.Default;
         }
@@ -404,13 +412,16 @@ namespace Vanilla
         {
             PesquisaReg();
         }
-
         private void dataGridRuas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridruas.Columns[e.ColumnIndex] == dataGridruas.Columns["ColumnBtnSalva"])
             {
-                rua_select = Convert.ToInt32(dataGridruas.Rows[e.RowIndex].Cells[0].Value);
-               GerarPDF();
+                DialogResult result = MessageBox.Show("Sera gerado um relatório em .PDF de todos os endereços desta rua, deseja proceguir?", "Confirmação gerador de PDF", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    rua_select = Convert.ToInt32(dataGridruas.Rows[e.RowIndex].Cells[0].Value);
+                    GerarPDF();
+                }       
             }
         }
         private void dataGridRuas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
