@@ -62,12 +62,12 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewReg.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewReg.Location = new Point(22, 22);
+            dataGridViewReg.Location = new Point(1, 1);
             dataGridViewReg.Name = "dataGridViewReg";
             dataGridViewReg.ReadOnly = true;
             dataGridViewReg.RowHeadersVisible = false;
             dataGridViewReg.RowTemplate.Height = 25;
-            dataGridViewReg.Size = new Size(606, 257);
+            dataGridViewReg.Size = new Size(647, 308);
             dataGridViewReg.TabIndex = 25;
             dataGridViewReg.CellClick += dataGridViewReg_CellClick;
             // 
@@ -96,8 +96,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(650, 311);
             Controls.Add(dataGridViewReg);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "SelecionarReg";
-            Text = "SelecionarReg";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)dataGridViewReg).EndInit();
             ResumeLayout(false);
         }

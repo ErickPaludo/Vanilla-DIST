@@ -73,7 +73,7 @@ namespace Vanilla
                             DialogResult result = MessageBox.Show("A quantidade de prédios / andares a ser gerada é muito alta, essa operação pode demorar alguns minutos, deseja continuar a operação?", "Excesso de prédios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                             if (result == DialogResult.Yes)
                             {
-                                db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd,Convert.ToInt32(textBoxCodReg.Text));
+                                db.GravarCd(Convert.ToInt32(prediobox.Text), Convert.ToInt32(laandares.Text), Convert.ToInt32(minemp.Text), gerador_cd, Convert.ToInt32(textBoxCodReg.Text));
                             }
                         }
                         else
@@ -116,6 +116,7 @@ namespace Vanilla
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
+                rua_select = Convert.ToInt32(dataGridruas.Rows[e.RowIndex].Cells[0].Value);
                 dataGridimpar.Rows.Clear();
                 dataGridpar.Rows.Clear();
                 rua_select = Convert.ToInt32(dataGridruas.Rows[e.RowIndex].Cells[0].Value);
@@ -124,17 +125,17 @@ namespace Vanilla
                 {
                     if (obj.Id_predio % 2 == 0)
                     {
-                        dataGridpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}",obj.Name);
+                        dataGridpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}", obj.Name);
                     }
                     else
                     {
-                        dataGridimpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}",obj.Name);
+                        dataGridimpar.Rows.Add($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}", obj.Name);
                     }
                 }
                 cdList.Clear();
             }
         }
-        public void GravaListEndereco(int rua, int predio, int andar, string codbar,string name_reg)
+        public void GravaListEndereco(int rua, int predio, int andar, string codbar, string name_reg)
         {
             cdList.Add(new LogisticaCD(rua, predio, andar, codbar, name_reg));
         }
@@ -218,7 +219,7 @@ namespace Vanilla
                 MessageBox.Show(ex.Message);
             }
         }
-        private void GerarPDF(object sender, EventArgs e)
+        private void GerarPDF()
         {
             try
             {
@@ -352,7 +353,23 @@ namespace Vanilla
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void PesquisarRegiões(object sender, EventArgs e)
+        private void textBoxCodReg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Util util = new Util();
+            util.SomenteNumeros(e);
+        }
+        private void Leave(object sender, EventArgs e)
+        {
+            if (textBoxCodReg.Text == string.Empty)
+            {
+                textBoxNameRegiao.Text = string.Empty;
+            }
+            else
+            {
+                PesquisaReg();
+            }
+        }
+        private void PesquisaReg()
         {
             if (string.IsNullOrEmpty(textBoxCodReg.Text))
             {
@@ -383,18 +400,22 @@ namespace Vanilla
                 MessageBox.Show("Região não encontradaa!");
             }
         }
-        private void textBoxCodReg_KeyPress(object sender, KeyPressEventArgs e)
+        private void BtnPesquisarRegioes(object sender, EventArgs e)
         {
-            Util util = new Util();
-            util.SomenteNumeros(e);
+            PesquisaReg();
         }
-        private void Leave(object sender, EventArgs e)
+
+        private void dataGridRuas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (textBoxCodReg.Text == string.Empty)
+            if (dataGridruas.Columns[e.ColumnIndex] == dataGridruas.Columns["ColumnBtnSalva"])
             {
-                textBoxCodReg.Text = string.Empty;
-                textBoxNameRegiao.Text = string.Empty;
+                rua_select = Convert.ToInt32(dataGridruas.Rows[e.RowIndex].Cells[0].Value);
+               GerarPDF();
             }
+        }
+        private void dataGridRuas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dataGridruas.Rows[e.RowIndex].Cells["ColumnBtnSalva"].ToolTipText = "Gerar PDF com todas as etiquetas de endereço";
         }
         #endregion
 
@@ -431,12 +452,6 @@ namespace Vanilla
             AtualizaReg();
         }
         #endregion
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
     }

@@ -34,6 +34,7 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroCd));
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             prediobox = new TextBox();
@@ -41,16 +42,19 @@
             button1 = new Button();
             atualizar = new Button();
             dataGridpar = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            ColumnReg = new DataGridViewTextBoxColumn();
             dataGridimpar = new DataGridView();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            ColumnRegImp = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             minemp = new TextBox();
             dataGridruas = new DataGridView();
             Ruas = new DataGridViewTextBoxColumn();
-            button2 = new Button();
+            ColumnBtnSalva = new DataGridViewButtonColumn();
             pictureCodBar = new PictureBox();
-            pictureBox1 = new PictureBox();
             button3 = new Button();
             checkBoxPar = new CheckBox();
             checkBoxImpar = new CheckBox();
@@ -69,15 +73,10 @@
             buttonCadRegion = new Button();
             textBoxNameReg = new TextBox();
             label4 = new Label();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            ColumnReg = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            ColumnRegImp = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridimpar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridruas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -100,7 +99,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(17, 108);
+            button1.Location = new Point(562, 65);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 2;
@@ -110,7 +109,7 @@
             // 
             // atualizar
             // 
-            atualizar.Location = new Point(610, 618);
+            atualizar.Location = new Point(663, 577);
             atualizar.Name = "atualizar";
             atualizar.Size = new Size(75, 23);
             atualizar.TabIndex = 14;
@@ -122,6 +121,7 @@
             // 
             dataGridpar.AllowUserToAddRows = false;
             dataGridpar.AllowUserToDeleteRows = false;
+            dataGridpar.Anchor = AnchorStyles.None;
             dataGridpar.BackgroundColor = SystemColors.Control;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
@@ -141,19 +141,33 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridpar.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridpar.Location = new Point(90, 344);
+            dataGridpar.Location = new Point(389, 312);
             dataGridpar.Name = "dataGridpar";
             dataGridpar.ReadOnly = true;
             dataGridpar.RowHeadersVisible = false;
             dataGridpar.RowTemplate.Height = 25;
-            dataGridpar.Size = new Size(274, 138);
+            dataGridpar.Size = new Size(360, 138);
             dataGridpar.TabIndex = 15;
             dataGridpar.CellClick += SelecionaEnderecoPar;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn1.HeaderText = "Lado Par";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ColumnReg
+            // 
+            ColumnReg.HeaderText = "Reg";
+            ColumnReg.Name = "ColumnReg";
+            ColumnReg.ReadOnly = true;
             // 
             // dataGridimpar
             // 
             dataGridimpar.AllowUserToAddRows = false;
             dataGridimpar.AllowUserToDeleteRows = false;
+            dataGridimpar.Anchor = AnchorStyles.None;
             dataGridimpar.BackgroundColor = SystemColors.Control;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
@@ -173,14 +187,27 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridimpar.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridimpar.Location = new Point(411, 344);
+            dataGridimpar.Location = new Point(7, 312);
             dataGridimpar.Name = "dataGridimpar";
             dataGridimpar.ReadOnly = true;
             dataGridimpar.RowHeadersVisible = false;
             dataGridimpar.RowTemplate.Height = 25;
-            dataGridimpar.Size = new Size(274, 138);
+            dataGridimpar.Size = new Size(360, 138);
             dataGridimpar.TabIndex = 16;
             dataGridimpar.CellClick += SelecionaEnderecoImpar;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn2.HeaderText = "Lado Impar";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // ColumnRegImp
+            // 
+            ColumnRegImp.HeaderText = "Reg";
+            ColumnRegImp.Name = "ColumnRegImp";
+            ColumnRegImp.ReadOnly = true;
             // 
             // label1
             // 
@@ -220,7 +247,7 @@
             // 
             dataGridruas.AllowUserToAddRows = false;
             dataGridruas.AllowUserToDeleteRows = false;
-            dataGridruas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridruas.Anchor = AnchorStyles.None;
             dataGridruas.BackgroundColor = SystemColors.Control;
             dataGridruas.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -232,7 +259,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
             dataGridruas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridruas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridruas.Columns.AddRange(new DataGridViewColumn[] { Ruas });
+            dataGridruas.Columns.AddRange(new DataGridViewColumn[] { Ruas, ColumnBtnSalva });
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = SystemColors.Window;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -241,14 +268,16 @@
             dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dataGridruas.DefaultCellStyle = dataGridViewCellStyle6;
-            dataGridruas.Location = new Point(90, 137);
+            dataGridruas.Location = new Point(7, 105);
             dataGridruas.Name = "dataGridruas";
             dataGridruas.ReadOnly = true;
             dataGridruas.RowHeadersVisible = false;
             dataGridruas.RowTemplate.Height = 25;
-            dataGridruas.Size = new Size(595, 170);
+            dataGridruas.Size = new Size(741, 170);
             dataGridruas.TabIndex = 21;
             dataGridruas.CellClick += SelecionaRua;
+            dataGridruas.CellContentClick += dataGridRuas_CellContentClick;
+            dataGridruas.CellFormatting += dataGridRuas_CellFormatting;
             // 
             // Ruas
             // 
@@ -257,37 +286,26 @@
             Ruas.Name = "Ruas";
             Ruas.ReadOnly = true;
             // 
-            // button2
+            // ColumnBtnSalva
             // 
-            button2.Location = new Point(556, 313);
-            button2.Name = "button2";
-            button2.Size = new Size(129, 25);
-            button2.TabIndex = 22;
-            button2.Text = "Salvar cod Rua";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += GerarPDF;
+            ColumnBtnSalva.HeaderText = "";
+            ColumnBtnSalva.Name = "ColumnBtnSalva";
+            ColumnBtnSalva.ReadOnly = true;
+            ColumnBtnSalva.Text = "Imp";
             // 
             // pictureCodBar
             // 
+            pictureCodBar.Anchor = AnchorStyles.None;
             pictureCodBar.BackColor = SystemColors.ButtonHighlight;
-            pictureCodBar.Location = new Point(90, 504);
+            pictureCodBar.Location = new Point(109, 463);
             pictureCodBar.Name = "pictureCodBar";
-            pictureCodBar.Size = new Size(595, 108);
+            pictureCodBar.Size = new Size(528, 108);
             pictureCodBar.TabIndex = 34;
             pictureCodBar.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = SystemColors.ButtonHighlight;
-            pictureBox1.Location = new Point(90, 488);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(595, 124);
-            pictureBox1.TabIndex = 35;
-            pictureBox1.TabStop = false;
-            // 
             // button3
             // 
-            button3.Location = new Point(90, 618);
+            button3.Location = new Point(7, 577);
             button3.Name = "button3";
             button3.Size = new Size(158, 23);
             button3.TabIndex = 36;
@@ -300,7 +318,7 @@
             checkBoxPar.AutoSize = true;
             checkBoxPar.Checked = true;
             checkBoxPar.CheckState = CheckState.Checked;
-            checkBoxPar.Location = new Point(287, 17);
+            checkBoxPar.Location = new Point(295, 48);
             checkBoxPar.Name = "checkBoxPar";
             checkBoxPar.Size = new Size(100, 19);
             checkBoxPar.TabIndex = 37;
@@ -312,7 +330,7 @@
             checkBoxImpar.AutoSize = true;
             checkBoxImpar.Checked = true;
             checkBoxImpar.CheckState = CheckState.Checked;
-            checkBoxImpar.Location = new Point(286, 40);
+            checkBoxImpar.Location = new Point(401, 48);
             checkBoxImpar.Name = "checkBoxImpar";
             checkBoxImpar.Size = new Size(114, 19);
             checkBoxImpar.TabIndex = 38;
@@ -321,12 +339,15 @@
             // 
             // tabControl1
             // 
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(1, 3);
+            tabControl1.Location = new Point(-1, 5);
+            tabControl1.Margin = new Padding(0);
             tabControl1.Name = "tabControl1";
+            tabControl1.Padding = new Point(0, 0);
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(991, 676);
+            tabControl1.Size = new Size(763, 645);
             tabControl1.TabIndex = 39;
             tabControl1.Click += AtualizaTable;
             // 
@@ -337,14 +358,12 @@
             tabPage1.Controls.Add(textBoxCodReg);
             tabPage1.Controls.Add(label5);
             tabPage1.Controls.Add(dataGridruas);
-            tabPage1.Controls.Add(button2);
             tabPage1.Controls.Add(button3);
             tabPage1.Controls.Add(atualizar);
             tabPage1.Controls.Add(dataGridimpar);
             tabPage1.Controls.Add(checkBoxImpar);
             tabPage1.Controls.Add(pictureCodBar);
             tabPage1.Controls.Add(laandares);
-            tabPage1.Controls.Add(pictureBox1);
             tabPage1.Controls.Add(checkBoxPar);
             tabPage1.Controls.Add(prediobox);
             tabPage1.Controls.Add(button1);
@@ -356,7 +375,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(983, 648);
+            tabPage1.Size = new Size(755, 617);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Layout do CD";
             tabPage1.UseVisualStyleBackColor = true;
@@ -364,39 +383,42 @@
             // textBoxNameRegiao
             // 
             textBoxNameRegiao.Enabled = false;
-            textBoxNameRegiao.Location = new Point(271, 98);
+            textBoxNameRegiao.Location = new Point(464, 15);
             textBoxNameRegiao.Name = "textBoxNameRegiao";
             textBoxNameRegiao.Size = new Size(224, 23);
             textBoxNameRegiao.TabIndex = 42;
             // 
             // button5
             // 
-            button5.Location = new Point(238, 99);
+            button5.BackColor = Color.DarkGray;
+            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
+            button5.FlatAppearance.BorderColor = Color.Black;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Location = new Point(430, 13);
             button5.Name = "button5";
-            button5.Size = new Size(27, 23);
+            button5.Size = new Size(28, 25);
             button5.TabIndex = 41;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += PesquisarRegiões;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += BtnPesquisarRegioes;
             // 
             // textBoxCodReg
             // 
-            textBoxCodReg.Location = new Point(161, 99);
+            textBoxCodReg.Location = new Point(353, 15);
             textBoxCodReg.Name = "textBoxCodReg";
             textBoxCodReg.Size = new Size(71, 23);
             textBoxCodReg.TabIndex = 39;
-            textBoxCodReg.TextChanged += textBox1_TextChanged;
             textBoxCodReg.KeyPress += textBoxCodReg_KeyPress;
             textBoxCodReg.Leave += Leave;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(296, 73);
+            label5.Location = new Point(295, 18);
             label5.Name = "label5";
-            label5.Size = new Size(49, 15);
+            label5.Size = new Size(52, 15);
             label5.TabIndex = 40;
-            label5.Text = "Reg.Sep";
+            label5.Text = "Reg.Sep:";
             // 
             // tabPage2
             // 
@@ -408,7 +430,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(983, 648);
+            tabPage2.Size = new Size(755, 617);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Região de Armazenamento";
             tabPage2.UseVisualStyleBackColor = true;
@@ -417,7 +439,7 @@
             // 
             dataGridViewReg.AllowUserToAddRows = false;
             dataGridViewReg.AllowUserToDeleteRows = false;
-            dataGridViewReg.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewReg.Anchor = AnchorStyles.None;
             dataGridViewReg.BackgroundColor = SystemColors.Control;
             dataGridViewReg.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -438,12 +460,12 @@
             dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
             dataGridViewReg.DefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewReg.Location = new Point(16, 125);
+            dataGridViewReg.Location = new Point(16, 124);
             dataGridViewReg.Name = "dataGridViewReg";
             dataGridViewReg.ReadOnly = true;
             dataGridViewReg.RowHeadersVisible = false;
             dataGridViewReg.RowTemplate.Height = 25;
-            dataGridViewReg.Size = new Size(595, 170);
+            dataGridViewReg.Size = new Size(718, 448);
             dataGridViewReg.TabIndex = 24;
             // 
             // ColumnId
@@ -467,7 +489,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(295, 341);
+            button4.Location = new Point(659, 578);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 23;
@@ -502,38 +524,13 @@
             label4.TabIndex = 19;
             label4.Text = "Nome da Região:";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn1.HeaderText = "Lado Par";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // ColumnReg
-            // 
-            ColumnReg.HeaderText = "Reg";
-            ColumnReg.Name = "ColumnReg";
-            ColumnReg.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn2.HeaderText = "Lado Impar";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // ColumnRegImp
-            // 
-            ColumnRegImp.HeaderText = "Reg";
-            ColumnRegImp.Name = "ColumnRegImp";
-            ColumnRegImp.ReadOnly = true;
-            // 
             // CadastroCd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(991, 680);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(761, 659);
             Controls.Add(tabControl1);
             Name = "CadastroCd";
             StartPosition = FormStartPosition.CenterScreen;
@@ -542,7 +539,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridimpar).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridruas).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -558,7 +554,6 @@
         private TextBox laandares;
         private Button button1;
         private DataGridView dataGridruas;
-        private DataGridViewTextBoxColumn Ruas;
         private DataGridViewTextBoxColumn ColumnRua;
         private Button atualizar;
         private DataGridView dataGridpar;
@@ -567,9 +562,7 @@
         private Label label2;
         private Label label3;
         private TextBox minemp;
-        private Button button2;
         private PictureBox pictureCodBar;
-        private PictureBox pictureBox1;
         private Button button3;
         private CheckBox checkBoxPar;
         private CheckBox checkBoxImpar;
@@ -592,5 +585,7 @@
         private DataGridViewTextBoxColumn ColumnReg;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn ColumnRegImp;
+        private DataGridViewTextBoxColumn Ruas;
+        private DataGridViewButtonColumn ColumnBtnSalva;
     }
 }
