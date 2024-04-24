@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Backsys\ConfigBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Backsys\Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CadastraCd\CadastroCd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastrar Empresas\CadastraCNPJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastrar Empresas\TabelaEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastrar endereco\EnderecoFront.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastrar Itens\CadastrarItensFront.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastrar Itens\TabelaItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastro de usuarios\AdicionarUsuariosFront.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastro de usuarios\Editar usuarios\AlterarUserCFront.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cadastro de usuarios\Editar usuarios\AlterarUsersGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Home\Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InserirItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Login\LoginFront.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Logs\Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SelecionarReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CadastraCd\Tabela\TabelaEnderecos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UsersOn\UserOn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
