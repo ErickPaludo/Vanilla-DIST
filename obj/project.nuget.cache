@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "APYR1sKUCP9YdHtIJDcw7q9b/EXqpDX3pQHMdRogDO2kIivtjjw36lVYYQVet6r+lfjJKDd+guZjF97Dx44p/A==",
+  "dgSpecHash": "4XyvWl/SlrmM1Er9H8zNxTLTpstGmf+8D40a2f9PRxFmqEH+0Qij/BlBo5MIaUrZ4oHFnBYudi8Rcci6cZtWoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST-master (2)\\Vanilla-DIST-master\\Vanilla.csproj",
+  "projectFilePath": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Vanilla.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Erick\\.nuget\\packages\\aspose.words\\24.3.0\\aspose.words.24.3.0.nupkg.sha512",
     "C:\\Users\\Erick\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
