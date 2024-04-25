@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vanilla.StatusCd;
 
 namespace Vanilla
 {
@@ -310,9 +311,23 @@ namespace Vanilla
         {
             if (db.VerificaLogin() == true)
             {
-               InserirItem itens = new InserirItem();
+                InserirItem itens = new InserirItem();
                 itens.Atualizar();
                 itens.Show();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
+        }
+
+        private void StatusCd(object sender, EventArgs e)
+        {
+            if (db.VerificaLogin() == true)
+            {
+                StatusdoCd scd = new StatusdoCd();
+                scd.Mostrar();
+                scd.Show();                     
             }
             else
             {

@@ -47,10 +47,13 @@
     <Compile Update="Logs\Logs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SelecionarReg.cs">
+    <Compile Update="CadastraCd\CadRegion\SelecionarReg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="CadastraCd\Tabela\TabelaEnderecos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StatusCd\StatusdoCd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UsersOn\UserOn.cs">

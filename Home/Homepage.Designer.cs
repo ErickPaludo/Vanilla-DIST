@@ -56,6 +56,7 @@
             Blogs = new Button();
             Bvisualizaitens = new Button();
             Bvisualizacd = new Button();
+            button1 = new Button();
             flowLayoutPanel3 = new FlowLayoutPanel();
             Llogistica = new Label();
             flowLayoutPanel5 = new FlowLayoutPanel();
@@ -324,9 +325,10 @@
             flowLayoutPanel2.Controls.Add(Bvisualizaemp);
             flowLayoutPanel2.Controls.Add(Bvisualizaitens);
             flowLayoutPanel2.Controls.Add(Bvisualizacd);
+            flowLayoutPanel2.Controls.Add(button1);
             flowLayoutPanel2.Location = new Point(3, 211);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(784, 125);
+            flowLayoutPanel2.Size = new Size(865, 125);
             flowLayoutPanel2.TabIndex = 14;
             // 
             // Blogs
@@ -382,6 +384,24 @@
             Bvisualizacd.TextAlign = ContentAlignment.MiddleLeft;
             Bvisualizacd.UseVisualStyleBackColor = false;
             Bvisualizacd.Click += AcessaTableCd;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Green;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.Black;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(695, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(167, 114);
+            button1.TabIndex = 19;
+            button1.Text = "Endereços Cd";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += StatusCd;
             // 
             // flowLayoutPanel3
             // 
@@ -505,5 +525,6 @@
         private Label Llogistica;
         private FlowLayoutPanel flowLayoutPanel5;
         private Button BInsereItem;
+        private Button button1;
     }
 }

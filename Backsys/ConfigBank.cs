@@ -92,11 +92,5 @@ namespace Vanilla
         {
             utilitarios.SomenteNumeros(e);
         }
-
-        private void Cancelar(object sender, EventArgs e)//Cancela toda a operação
-        {
-            home.ValidaRecebe(false);//Impedira o fechamento da aba home
-            this.Close();
-        }
     }
 }

@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Vanilla.StatusCd;
 
 namespace Vanilla
 {

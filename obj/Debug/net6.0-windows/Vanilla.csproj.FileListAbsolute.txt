@@ -351,3 +351,4 @@ C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net
 C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
 C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\ref\Vanilla.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.InserirItem.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.StatusCd.StatusdoCd.resources

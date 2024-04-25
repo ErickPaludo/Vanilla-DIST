@@ -33,9 +33,10 @@ namespace Vanilla
 
         public void AtualizaReg()
         {
+            RegArmazenagem region = new RegArmazenagem();
             reg.Clear();
             dataGridViewReg.Rows.Clear();
-            db.RetornoReg(1);
+            region.RetornoReg(1);
             foreach (RegArmazenagem obj in reg)
             {
                 dataGridViewReg.Rows.Add(obj.Id, obj.Name, obj.Status);

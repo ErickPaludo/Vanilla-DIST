@@ -47,7 +47,6 @@
             enderecoatual = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -140,7 +139,7 @@
             // 
             // gravar
             // 
-            gravar.Location = new Point(255, 40);
+            gravar.Location = new Point(255, 60);
             gravar.Name = "gravar";
             gravar.Size = new Size(91, 23);
             gravar.TabIndex = 7;
@@ -178,7 +177,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(255, 82);
+            button1.Location = new Point(255, 90);
             button1.Name = "button1";
             button1.Size = new Size(91, 23);
             button1.TabIndex = 6;
@@ -222,23 +221,11 @@
             pictureBox2.TabIndex = 19;
             pictureBox2.TabStop = false;
             // 
-            // button2
-            // 
-            button2.Location = new Point(255, 120);
-            button2.Name = "button2";
-            button2.Size = new Size(91, 23);
-            button2.TabIndex = 8;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += Cancelar;
-            // 
             // ConfigBank
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(603, 162);
-            ControlBox = false;
-            Controls.Add(button2);
             Controls.Add(enderecoatual);
             Controls.Add(label7);
             Controls.Add(button1);
@@ -293,6 +280,5 @@
         private Label enderecoatual;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private Button button2;
     }
 }

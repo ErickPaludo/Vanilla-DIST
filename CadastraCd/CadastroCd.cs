@@ -396,12 +396,13 @@ namespace Vanilla
         {
             if (db.VerificaLogin() == true)
             {
-                if (!string.IsNullOrEmpty(textBoxNameReg.Text))
+                if (!string.IsNullOrEmpty(Tnamereg.Text))
                 {
-                    if (db.AntiCopy("nome", "vnl_regiao", textBoxNameReg.Text) == true)
+                    if (db.AntiCopy("nome", "vnl_regiao", Tnamereg.Text) == true)
                     {
-                        db.GravaReg(textBoxNameReg.Text);
-                        textBoxNameReg.Text = string.Empty;
+                        RegArmazenagem region = new RegArmazenagem();
+                        region.GravaReg(Tnamereg.Text);
+                        Tnamereg.Text = string.Empty;
                         AtualizaReg();
                     }
                     else
@@ -422,9 +423,10 @@ namespace Vanilla
         }
         public void AtualizaReg()
         {
+            RegArmazenagem region = new RegArmazenagem();
             reg.Clear();
             dataGridViewReg.Rows.Clear();
-            db.RetornoReg(0);
+            region.RetornoReg(0);
             foreach (RegArmazenagem obj in reg)
             {
                 dataGridViewReg.Rows.Add(obj.Id, obj.Name, obj.Status);
