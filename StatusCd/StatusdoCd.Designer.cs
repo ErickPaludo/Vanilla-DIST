@@ -114,7 +114,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(295, 159);
+            ClientSize = new Size(269, 139);
             Controls.Add(Lporcent);
             Controls.Add(Lquantpk);
             Controls.Add(Lquantp);
@@ -123,8 +123,13 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
             Name = "StatusdoCd";
-            Text = "StatusdoCd";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Status do Cd";
             ResumeLayout(false);
             PerformLayout();
         }

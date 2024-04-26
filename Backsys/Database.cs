@@ -302,78 +302,8 @@ namespace Vanilla
             }
         }
 
-        public void InsereItens(int id, int quantidade)     //Faz a Gravação de itens na tabela
-        {
+       
 
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    try
-                    {
-                        connection.Open();
-
-                        using (OracleTransaction transaction = connection.BeginTransaction())
-                        {
-                            using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_end", connection))
-                            {
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                                cmd.Parameters.Add("v_id_item", OracleDbType.Int32).Value = id;
-                                cmd.Parameters.Add("v_quant", OracleDbType.Decimal).Value = quantidade;
-                                cmd.ExecuteNonQuery();
-                            }
-                            MessageBox.Show("Item gravado com sucesso!");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
-
-        public void GravarCd(int predios, int la, int min_emp, int type_generate, int id_reg, string nome_rua, int subla)
-        {
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    try
-                    {
-                        connection.Open();
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_cd.vnl_cria_cds", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_nome_rua", nome_rua);
-                            cmd.Parameters.Add("v_predio_fin", predios);
-                            cmd.Parameters.Add("v_la", la);
-                            cmd.Parameters.Add("v_sub_la", subla);
-                            cmd.Parameters.Add("v_min_emp", min_emp);
-                            cmd.Parameters.Add("v_par_or_impar", type_generate);
-                            cmd.Parameters.Add("v_id_reg", id_reg);
-                            cmd.ExecuteNonQuery();
-                            AddLog($"{predios} enderecos adicionados ao CD", Util.id_user);
-                        }
-                        connection.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         public void AddLog(string msg, int id)
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))

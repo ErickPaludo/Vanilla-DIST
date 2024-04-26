@@ -12,7 +12,8 @@ namespace Vanilla
 {
     public partial class InserirItem : Form
     {
-        Database db = new Database();
+        Util util = new Util();
+        ClassQuantItem estoque_item = new ClassQuantItem();
         private static List<CadastrarItens> item = new List<CadastrarItens>();
         static int id_select;
         public InserirItem()
@@ -24,7 +25,7 @@ namespace Vanilla
         {
             item.Clear();
             dataGridViewItens.Rows.Clear();
-            db.ChamaView("view_itens", 2);
+            estoque_item.RetornaItens();
             foreach (CadastrarItens obj in item)
             {
                 dataGridViewItens.Rows.Add(obj.Nome_item, obj.Quantidade);
@@ -38,9 +39,30 @@ namespace Vanilla
 
         private void Inserir(object sender, EventArgs e)
         {
-            db.InsereItens(id_select,Convert.ToInt32(Tquant.Text));
-            id_select = 0;
-            Atualizar();
+            if (id_select != 0)
+            {
+                if (!string.IsNullOrEmpty(Tquant.Text))
+                {
+                    DialogResult result = MessageBox.Show("Essa operação não poderá ser desfeita, deseja continuar?", $"Inserir itenss", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        estoque_item.InsereItens(id_select, Convert.ToInt32(Tquant.Text));
+                        id_select = 0;
+                        Tquant.Text = string.Empty;
+                        Litem.Text = string.Empty;
+                        Atualizar();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Verifique o campo de quantidades novamente!", "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um item!", "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Cellclick(object sender, DataGridViewCellEventArgs e)
@@ -48,16 +70,21 @@ namespace Vanilla
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0) //Está sendo enviada a inscrição estadual para busca de dados (vai ser alterado para cnpj)
             {
                 string select = (dataGridViewItens.Rows[e.RowIndex].Cells[0].Value).ToString();
-                foreach(CadastrarItens obj in item)
+                foreach (CadastrarItens obj in item)
                 {
-                    if(obj.Nome_item == select)
+                    if (obj.Nome_item == select)
                     {
                         id_select = obj.Id_item;
                         Litem.Text = obj.Nome_item;
                     }
                 }
-         
+
             }
+        }
+
+        private void SomenteNumeros(object sender, KeyPressEventArgs e)
+        {
+            util.SomenteNumeros(e);
         }
     }
 }

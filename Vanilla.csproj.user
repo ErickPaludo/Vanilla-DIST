@@ -38,7 +38,7 @@
     <Compile Update="Home\Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="InserirItem.cs">
+    <Compile Update="InserirItens\InserirItem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login\LoginFront.cs">
