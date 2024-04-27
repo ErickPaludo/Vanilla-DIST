@@ -21,8 +21,17 @@ namespace Vanilla
             InitializeComponent();
         }
 
+        public void ExistenciaEndereco()
+        {
+            if(estoque_item.VerificaExistencia() != true)
+            {
+                Binserir.Enabled = false;
+            }
+        }
+
         public void Atualizar()
         {
+            ExistenciaEndereco();
             item.Clear();
             dataGridViewItens.Rows.Clear();
             estoque_item.RetornaItens();

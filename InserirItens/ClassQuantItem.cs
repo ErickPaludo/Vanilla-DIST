@@ -1,9 +1,12 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vanilla.StatusCd;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace Vanilla
@@ -18,7 +21,7 @@ namespace Vanilla
                 using (OracleConnection connection = new OracleConnection(config.Lerdados()))
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From vnl_itens", connection))
+                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens", connection))
                     {
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {
@@ -71,6 +74,53 @@ namespace Vanilla
             {
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        public bool VerificaExistencia()    
+        {
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        using (OracleTransaction transaction = connection.BeginTransaction())
+                        {
+                            using (OracleCommand cmd = new OracleCommand("vnl_pkg_cd.vnl_status_cd", connection))
+                            {
+                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                                cmd.Parameters.Add("r_total", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add("r_pulmao_t", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add("r_picking_t", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add("r_pulmao_l", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add("r_picking_l", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                                cmd.ExecuteNonQuery();
+                               if(((OracleDecimal)cmd.Parameters["r_pulmao_t"].Value) != 0)
+                                {
+                                    return true;
+                                }
+                                else
+                                {
+                                    return false;
+                                }
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
     }
