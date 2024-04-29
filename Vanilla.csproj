@@ -17,6 +17,7 @@
     <PackageReference Include="GenCode128" Version="2.0.0" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NPOI" Version="2.7.0" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.130" />
     <PackageReference Include="System.ServiceModel.Http" Version="6.2.0" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="6.2.0" />

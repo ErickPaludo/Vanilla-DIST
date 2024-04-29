@@ -1,6 +1,6 @@
 ﻿namespace Vanilla
 {
-    internal class CadastrarItens : CadastraCnpjBack
+    public class CadastrarItens : CadastraCnpjBack
     {
         Database db = new Database();
         Util utilitarios = new Util();

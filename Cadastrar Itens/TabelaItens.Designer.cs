@@ -32,9 +32,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabelaItens));
             dataGridItens = new DataGridView();
-            search = new Button();
-            camppesq = new TextBox();
-            button2 = new Button();
             dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
             ColumnIdFornc = new DataGridViewTextBoxColumn();
             ColumnFornec = new DataGridViewTextBoxColumn();
@@ -46,6 +43,10 @@
             ColumnPrecoC = new DataGridViewTextBoxColumn();
             ColumnPorcent = new DataGridViewTextBoxColumn();
             ColumnPrecoF = new DataGridViewTextBoxColumn();
+            search = new Button();
+            camppesq = new TextBox();
+            button2 = new Button();
+            BExport = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridItens).BeginInit();
             SuspendLayout();
             // 
@@ -82,38 +83,6 @@
             dataGridItens.Size = new Size(1136, 590);
             dataGridItens.TabIndex = 12;
             dataGridItens.CellMouseDoubleClick += Env;
-            // 
-            // search
-            // 
-            search.Cursor = Cursors.Hand;
-            search.Location = new Point(273, 12);
-            search.Name = "search";
-            search.Size = new Size(75, 23);
-            search.TabIndex = 14;
-            search.Text = "Pesquisar";
-            search.UseVisualStyleBackColor = true;
-            search.Click += Pesquisar;
-            // 
-            // camppesq
-            // 
-            camppesq.Location = new Point(12, 12);
-            camppesq.Name = "camppesq";
-            camppesq.Size = new Size(255, 23);
-            camppesq.TabIndex = 15;
-            camppesq.Leave += Pesquisar;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.Cursor = Cursors.Hand;
-            button2.Location = new Point(1117, 645);
-            button2.Name = "button2";
-            button2.Size = new Size(30, 30);
-            button2.TabIndex = 16;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -187,11 +156,55 @@
             ColumnPrecoF.Name = "ColumnPrecoF";
             ColumnPrecoF.ReadOnly = true;
             // 
+            // search
+            // 
+            search.Cursor = Cursors.Hand;
+            search.Location = new Point(273, 12);
+            search.Name = "search";
+            search.Size = new Size(75, 23);
+            search.TabIndex = 14;
+            search.Text = "Pesquisar";
+            search.UseVisualStyleBackColor = true;
+            search.Click += Pesquisar;
+            // 
+            // camppesq
+            // 
+            camppesq.Location = new Point(12, 12);
+            camppesq.Name = "camppesq";
+            camppesq.Size = new Size(255, 23);
+            camppesq.TabIndex = 15;
+            camppesq.Leave += Pesquisar;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button2.BackColor = Color.Transparent;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.Cursor = Cursors.Hand;
+            button2.Location = new Point(1117, 645);
+            button2.Name = "button2";
+            button2.Size = new Size(30, 30);
+            button2.TabIndex = 16;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // BExport
+            // 
+            BExport.Cursor = Cursors.Hand;
+            BExport.Location = new Point(354, 12);
+            BExport.Name = "BExport";
+            BExport.Size = new Size(75, 23);
+            BExport.TabIndex = 17;
+            BExport.Text = "Exportar";
+            BExport.UseVisualStyleBackColor = true;
+            BExport.Click += Exportar;
+            // 
             // TabelaItens
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 687);
+            Controls.Add(BExport);
             Controls.Add(button2);
             Controls.Add(camppesq);
             Controls.Add(search);
@@ -225,5 +238,6 @@
         private DataGridViewTextBoxColumn ColumnPrecoC;
         private DataGridViewTextBoxColumn ColumnPorcent;
         private DataGridViewTextBoxColumn ColumnPrecoF;
+        private Button BExport;
     }
 }

@@ -39,7 +39,7 @@ namespace Vanilla
         public void AtualizarItens()
         {
             itens.Clear();
-            db.ChamaView("view_itens",1);
+            db.ChamaView("view_itens", 1);
             dataGridItens.Rows.Clear();
             var listaOrdenada = itens.OrderBy(item => item.Id_item); //ordena itens pelo id
             foreach (CadastrarItens obj in listaOrdenada)
@@ -69,6 +69,12 @@ namespace Vanilla
         private void button2_Click(object sender, EventArgs e)
         {
             AtualizarItens();
+        }
+
+        private void Exportar(object sender, EventArgs e)
+        {
+            TabelaItensClass export = new TabelaItensClass();
+            export.Export(itens);
         }
     }
 }

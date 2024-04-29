@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vanilla.StatusCd;
-using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace Vanilla
 {
