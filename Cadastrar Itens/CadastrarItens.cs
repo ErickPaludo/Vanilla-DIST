@@ -1,9 +1,13 @@
-﻿namespace Vanilla
+﻿using Oracle.ManagedDataAccess.Client;
+
+namespace Vanilla
 {
     public class CadastrarItens : CadastraCnpjBack
     {
         Database db = new Database();
         Util utilitarios = new Util();
+        Config config = new Config();
+        #region Propriedades
         private string nome_item;
         private int id_item;
         private decimal preco_custo;
@@ -15,30 +19,140 @@
         private string status_conv;
         private string descricao;
         private string unmed;
-        public string Nome_item { get { return nome_item; } set { nome_item = value; } }
-        public int Id_item { get { return id_item; } set { id_item = value; } }
-        public decimal Preco_custo { get { return preco_custo; } set { preco_custo = value; } }
-        public decimal Lucro_porcent { get { return lucro_porcent; } set { lucro_porcent = value; } }
-        public decimal Preco_final { get { return preco_final; } set { preco_final = value; } }
-        public int Quantidade { get { return quantidade; } set { quantidade = value; } }
-        public string Codbar { get { return codbar; } set { codbar = value; } }
-        public int Status { get { return status; } set { status = value; } }
-        public string Status_conv { get { return status_conv; } set { status_conv = value; } }
-        public string Descricao { get { return descricao; } set { descricao = value; } }
-        public string Unmed { get { return unmed; } set { unmed = value; } }
-
-
+        public string Nome_item
+        {
+            get
+            {
+                return nome_item;
+            }
+            set
+            {
+                nome_item = value;
+            }
+        }
+        public int Id_item
+        {
+            get
+            {
+                return id_item;
+            }
+            set
+            {
+                id_item = value;
+            }
+        }
+        public decimal Preco_custo
+        {
+            get
+            {
+                return preco_custo;
+            }
+            set
+            {
+                preco_custo = value;
+            }
+        }
+        public decimal Lucro_porcent
+        {
+            get
+            {
+                return lucro_porcent;
+            }
+            set
+            {
+                lucro_porcent = value;
+            }
+        }
+        public decimal Preco_final
+        {
+            get
+            {
+                return preco_final;
+            }
+            set
+            {
+                preco_final = value;
+            }
+        }
+        public int Quantidade
+        {
+            get
+            {
+                return quantidade;
+            }
+            set
+            {
+                quantidade = value;
+            }
+        }
+        public string Codbar
+        {
+            get
+            {
+                return codbar;
+            }
+            set
+            {
+                codbar = value;
+            }
+        }
+        public int Status
+        {
+            get
+            {
+                return status;
+            }
+            set
+            {
+                status = value;
+            }
+        }
+        public string Status_conv
+        {
+            get
+            {
+                return status_conv;
+            }
+            set
+            {
+                status_conv = value;
+            }
+        }
+        public string Descricao
+        {
+            get
+            {
+                return descricao;
+            }
+            set
+            {
+                descricao = value;
+            }
+        }
+        public string Unmed
+        {
+            get
+            {
+                return unmed;
+            }
+            set
+            {
+                unmed = value;
+            }
+        }
+        #endregion
+        #region Construtores
         public CadastrarItens()
         {
         }
 
-        public CadastrarItens(int id_item, int id_fornec,string nome_f, string nome_item, decimal preco_custo, decimal lucro_porcent, decimal preco_final, string codbar, string status_conv, string descricao, string unmed) : base(nome_f,id_fornec)
+        public CadastrarItens(int id_item, int id_fornec, string nome_f, string nome_item, decimal preco_custo, decimal lucro_porcent, decimal preco_final, string codbar, string status_conv, string descricao, string unmed) : base(nome_f, id_fornec)
         {
             this.nome_item = nome_item;
             this.id_item = id_item;
             this.preco_custo = preco_custo;
             this.lucro_porcent = lucro_porcent;
-            this.preco_final = preco_final;      
+            this.preco_final = preco_final;
             this.codbar = codbar;
             this.status_conv = status_conv;
             this.descricao = descricao;
@@ -48,13 +162,15 @@
         public CadastrarItens(int id, string name, int quant) // contrutor da lista de fornecedores de itens
         {
             this.id_item = id;
-            this.nome_item= name;
+            this.nome_item = name;
             this.quantidade = quant;
         }
 
-        public CadastrarItens(int id_fornec, string nome, string cnpj) : base(id_fornec,nome, cnpj) // contrutor da lista de fornecedores de itens
+        public CadastrarItens(int id_fornec, string nome, string cnpj) : base(id_fornec, nome, cnpj) // contrutor da lista de fornecedores de itens
         {
         }
+        #endregion
+
         public string GeraCodBarrar() //gera um cod de 13 digitos
         {
             bool verific = false;
@@ -70,21 +186,84 @@
             } while (verific == false);
             return cod_bar; //retorna o codigo
         }
+
         public decimal CalculaPrecoFinal(decimal preco_custo, decimal percent_lucro) //Faz o calculo de lucro
         {
             return preco_custo + (preco_custo * (percent_lucro / 100));
         }
-        public void CadastraItem(int id_fornecedor, string codigo_barras, string nome, string status, string desc, string und_m, decimal preco_custo, decimal margem_lucro, decimal preco_venda, int id_end, double cubagem) //Grava no banco de dados
+
+        public void CadastraItem(int id_fornecedor, string codigo_barras, string nome, string status, string desc,
+            string und_m, decimal preco_custo, decimal margem_lucro, decimal preco_venda, int id_end, double cubagem) //Grava no banco de dados
         {
-            db.GravarItens (id_fornecedor, codigo_barras, nome, status, desc, und_m, preco_custo, margem_lucro, preco_venda,id_end,cubagem); //grava de fato no banco
+
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                {
+                    connection.Open();
+
+                    using (OracleTransaction transaction = connection.BeginTransaction())
+                    {
+                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_item", connection))
+                        {
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
+                            cmd.Parameters.Add("v_cubagem", OracleDbType.Decimal).Value = cubagem;
+                            cmd.Parameters.Add("v_codbar", OracleDbType.Varchar2).Value = codigo_barras;
+                            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
+                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
+                            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
+                            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = und_m;
+                            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_custo;
+                            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem_lucro;
+                            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_venda;
+                            cmd.Parameters.Add("v_id_picking", OracleDbType.Int32).Value = id_end;
+                            cmd.Parameters.Add("v_quant_max", OracleDbType.Int32).Value = 999;
+                            cmd.ExecuteNonQuery();
+                            db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {codigo_barras} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
+                        }
+                        MessageBox.Show("Item gravado com sucesso!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        public void EditaItens(int id_principal,int id_fornecedor,string cod,string nome, string status, string desc, string und_m, decimal preco_custo, decimal margem_lucro, decimal preco_venda) //Grava no banco de dados
+
+
+        public void EditaItens(int id_principal, int id_fornecedor, string cod, string nome, string status, string desc, string und_m, decimal preco_custo, decimal margem_lucro, decimal preco_venda) //Grava no banco de dados
         {
-            db.EditaItens(id_principal, id_fornecedor, cod, nome, status, desc, und_m, preco_custo, margem_lucro, preco_venda); 
+            db.EditaItens(id_principal, id_fornecedor, cod, nome, status, desc, und_m, preco_custo, margem_lucro, preco_venda);
         }
-        public void ReturItens(int id)
+
+        public void ReturItens()
         {
-            db.ChamaView("view_itens",1);
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                {
+                    connection.Open();
+                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens", connection))
+                    {
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+
+                                TabelaItens itens_table = new TabelaItens(true);
+                                itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
+
 }

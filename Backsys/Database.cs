@@ -255,53 +255,6 @@ namespace Vanilla
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         } //gravar na base o usuario
-        public void GravarItens(int id_fornecedor, string cod, string nome, string status, string desc, string undm, decimal preco_c, decimal margem, decimal preco_v, int id_end, double cubagem)     //Faz a Gravação de itens na tabela
-        {
-
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    try
-                    {
-                        connection.Open();
-
-                        using (OracleTransaction transaction = connection.BeginTransaction())
-                        {
-                            using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_item", connection))
-                            {
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                                cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
-                                cmd.Parameters.Add("v_cubagem", OracleDbType.Decimal).Value = cubagem;
-                                cmd.Parameters.Add("v_codbar", OracleDbType.Varchar2).Value = cod;
-                                cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
-                                cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                                cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
-                                cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = undm;
-                                cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_c;
-                                cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem;
-                                cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_v;
-                                cmd.Parameters.Add("v_id_picking", OracleDbType.Int32).Value = id_end;
-                                cmd.Parameters.Add("v_quant_max", OracleDbType.Int32).Value = 999;
-                                cmd.ExecuteNonQuery();
-                                AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
-                            }
-                            MessageBox.Show("Item gravado com sucesso!");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
-
        
 
         public void AddLog(string msg, int id)

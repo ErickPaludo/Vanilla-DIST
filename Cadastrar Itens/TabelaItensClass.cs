@@ -97,20 +97,33 @@ namespace Vanilla
                     }
                 }
 
+                string pasta = @"C:\Vanilla\temp";
 
+                // Verificar se a pasta existe, senão criar
+                if (!Directory.Exists(pasta))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(pasta);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Erro ao criar a pasta: {ex.Message}");
+                        return; // Encerrar o programa se houver erro ao criar a pasta
+                    }
+                }
 
 
                 // Salva o arquivo XLS
-                using (FileStream file = new FileStream("exemplo.xls", FileMode.Create))
+                string arquivo = $"Itens{DateTime.Now:yyyy-MM-dd}.xls";
+
+                using (FileStream file = new FileStream(@$"C:\Vanilla\temp\{arquivo}", FileMode.Create))
                 {
                     workbook.Write(file);
+
+                    Process.Start(@"C:\Program Files\LibreOffice\program\scalc.exe", @$"{pasta}\{arquivo}");
+
                 }
-
-                Console.WriteLine("Arquivo XLS criado com sucesso!");
-
-                // Abre o arquivo XLS com o aplicativo padrão
-                //   Process.Start("exemplo.xls");
-            
             }
         catch(Exception ex){ MessageBox.Show(ex.ToString()); }
         }

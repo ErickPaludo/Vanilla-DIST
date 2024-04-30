@@ -39,7 +39,7 @@ namespace Vanilla
         public void AtualizarItens()
         {
             itens.Clear();
-            db.ChamaView("view_itens", 1);
+            itens_.ReturItens();
             dataGridItens.Rows.Clear();
             var listaOrdenada = itens.OrderBy(item => item.Id_item); //ordena itens pelo id
             foreach (CadastrarItens obj in listaOrdenada)

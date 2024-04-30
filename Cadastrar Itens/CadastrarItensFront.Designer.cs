@@ -30,9 +30,9 @@ namespace Vanilla
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             TnomeItem = new TextBox();
             Snomeitem = new Label();
             Lcodbar = new Label();
@@ -87,7 +87,7 @@ namespace Vanilla
             // TnomeItem
             // 
             TnomeItem.Enabled = false;
-            TnomeItem.Location = new Point(32, 84);
+            TnomeItem.Location = new Point(30, 57);
             TnomeItem.MaxLength = 100;
             TnomeItem.Name = "TnomeItem";
             TnomeItem.Size = new Size(382, 23);
@@ -97,7 +97,7 @@ namespace Vanilla
             // 
             Snomeitem.AutoSize = true;
             Snomeitem.Enabled = false;
-            Snomeitem.Location = new Point(32, 68);
+            Snomeitem.Location = new Point(30, 41);
             Snomeitem.Name = "Snomeitem";
             Snomeitem.Size = new Size(87, 15);
             Snomeitem.TabIndex = 3;
@@ -133,7 +133,7 @@ namespace Vanilla
             comboStatus.FormattingEnabled = true;
             comboStatus.ItemHeight = 15;
             comboStatus.Items.AddRange(new object[] { "Ativo", "Inativo", "Bloqueado" });
-            comboStatus.Location = new Point(432, 84);
+            comboStatus.Location = new Point(430, 57);
             comboStatus.Name = "comboStatus";
             comboStatus.Size = new Size(89, 23);
             comboStatus.TabIndex = 2;
@@ -142,7 +142,7 @@ namespace Vanilla
             // 
             Lstatus.AutoSize = true;
             Lstatus.Enabled = false;
-            Lstatus.Location = new Point(432, 68);
+            Lstatus.Location = new Point(430, 41);
             Lstatus.Name = "Lstatus";
             Lstatus.Size = new Size(42, 15);
             Lstatus.TabIndex = 9;
@@ -172,28 +172,28 @@ namespace Vanilla
             dataGridFornecedores.AllowUserToAddRows = false;
             dataGridFornecedores.AllowUserToDeleteRows = false;
             dataGridFornecedores.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridFornecedores.BackgroundColor = SystemColors.Control;
             dataGridFornecedores.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridFornecedores.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnNome, ColumnCNPJ });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridFornecedores.Enabled = false;
             dataGridFornecedores.Location = new Point(32, 304);
             dataGridFornecedores.Name = "dataGridFornecedores";
@@ -258,7 +258,7 @@ namespace Vanilla
             comboUMed.FormattingEnabled = true;
             comboUMed.ItemHeight = 15;
             comboUMed.Items.AddRange(new object[] { "UN", "Fardo", "Palete" });
-            comboUMed.Location = new Point(542, 84);
+            comboUMed.Location = new Point(540, 57);
             comboUMed.Name = "comboUMed";
             comboUMed.Size = new Size(83, 23);
             comboUMed.TabIndex = 3;
@@ -267,7 +267,7 @@ namespace Vanilla
             // 
             Lun.AutoSize = true;
             Lun.Enabled = false;
-            Lun.Location = new Point(542, 66);
+            Lun.Location = new Point(540, 39);
             Lun.Name = "Lun";
             Lun.Size = new Size(48, 15);
             Lun.TabIndex = 16;
@@ -277,7 +277,7 @@ namespace Vanilla
             // 
             Lprecocusto.AutoSize = true;
             Lprecocusto.Enabled = false;
-            Lprecocusto.Location = new Point(30, 109);
+            Lprecocusto.Location = new Point(29, 92);
             Lprecocusto.Name = "Lprecocusto";
             Lprecocusto.Size = new Size(90, 15);
             Lprecocusto.TabIndex = 20;
@@ -286,7 +286,7 @@ namespace Vanilla
             // TprecoCusto
             // 
             TprecoCusto.Enabled = false;
-            TprecoCusto.Location = new Point(32, 127);
+            TprecoCusto.Location = new Point(31, 110);
             TprecoCusto.MaxLength = 10;
             TprecoCusto.Name = "TprecoCusto";
             TprecoCusto.PlaceholderText = "R$00,00";
@@ -300,7 +300,7 @@ namespace Vanilla
             // 
             Llucro.AutoSize = true;
             Llucro.Enabled = false;
-            Llucro.Location = new Point(141, 109);
+            Llucro.Location = new Point(140, 92);
             Llucro.Name = "Llucro";
             Llucro.Size = new Size(40, 15);
             Llucro.TabIndex = 22;
@@ -309,7 +309,7 @@ namespace Vanilla
             // TporcentLucro
             // 
             TporcentLucro.Enabled = false;
-            TporcentLucro.Location = new Point(143, 127);
+            TporcentLucro.Location = new Point(142, 110);
             TporcentLucro.MaxLength = 5;
             TporcentLucro.Name = "TporcentLucro";
             TporcentLucro.PlaceholderText = "0,0%";
@@ -323,7 +323,7 @@ namespace Vanilla
             // 
             Lpreco.AutoSize = true;
             Lpreco.Enabled = false;
-            Lpreco.Location = new Point(200, 131);
+            Lpreco.Location = new Point(199, 114);
             Lpreco.Name = "Lpreco";
             Lpreco.Size = new Size(68, 15);
             Lpreco.TabIndex = 23;
@@ -333,7 +333,7 @@ namespace Vanilla
             // 
             LprecoFinal.AutoSize = true;
             LprecoFinal.Enabled = false;
-            LprecoFinal.Location = new Point(274, 131);
+            LprecoFinal.Location = new Point(273, 114);
             LprecoFinal.Name = "LprecoFinal";
             LprecoFinal.Size = new Size(20, 15);
             LprecoFinal.TabIndex = 24;
@@ -353,7 +353,7 @@ namespace Vanilla
             // 
             // BGravar
             // 
-            BGravar.Location = new Point(581, 626);
+            BGravar.Location = new Point(544, 354);
             BGravar.Name = "BGravar";
             BGravar.Size = new Size(60, 24);
             BGravar.TabIndex = 14;
@@ -419,9 +419,9 @@ namespace Vanilla
             // Bcancelar
             // 
             Bcancelar.Enabled = false;
-            Bcancelar.Location = new Point(503, 626);
+            Bcancelar.Location = new Point(540, 384);
             Bcancelar.Name = "Bcancelar";
-            Bcancelar.Size = new Size(65, 24);
+            Bcancelar.Size = new Size(68, 24);
             Bcancelar.TabIndex = 13;
             Bcancelar.Text = "Cancelar";
             Bcancelar.UseVisualStyleBackColor = true;
@@ -439,7 +439,7 @@ namespace Vanilla
             // Bimprimir
             // 
             Bimprimir.Enabled = false;
-            Bimprimir.Location = new Point(566, 465);
+            Bimprimir.Location = new Point(490, 622);
             Bimprimir.Name = "Bimprimir";
             Bimprimir.Size = new Size(75, 23);
             Bimprimir.TabIndex = 9;
@@ -450,7 +450,7 @@ namespace Vanilla
             // Bsalvararquivo
             // 
             Bsalvararquivo.Enabled = false;
-            Bsalvararquivo.Location = new Point(485, 466);
+            Bsalvararquivo.Location = new Point(566, 622);
             Bsalvararquivo.Name = "Bsalvararquivo";
             Bsalvararquivo.Size = new Size(75, 23);
             Bsalvararquivo.TabIndex = 8;
@@ -474,7 +474,7 @@ namespace Vanilla
             // Taltura
             // 
             Taltura.Enabled = false;
-            Taltura.Location = new Point(526, 247);
+            Taltura.Location = new Point(523, 195);
             Taltura.Name = "Taltura";
             Taltura.Size = new Size(100, 23);
             Taltura.TabIndex = 34;
@@ -483,7 +483,7 @@ namespace Vanilla
             // Tcomprimento
             // 
             Tcomprimento.Enabled = false;
-            Tcomprimento.Location = new Point(526, 291);
+            Tcomprimento.Location = new Point(523, 239);
             Tcomprimento.Name = "Tcomprimento";
             Tcomprimento.Size = new Size(100, 23);
             Tcomprimento.TabIndex = 35;
@@ -492,7 +492,7 @@ namespace Vanilla
             // TLargura
             // 
             TLargura.Enabled = false;
-            TLargura.Location = new Point(526, 338);
+            TLargura.Location = new Point(523, 286);
             TLargura.Name = "TLargura";
             TLargura.Size = new Size(100, 23);
             TLargura.TabIndex = 36;
@@ -502,7 +502,7 @@ namespace Vanilla
             // 
             Lcubagen.AutoSize = true;
             Lcubagen.Enabled = false;
-            Lcubagen.Location = new Point(565, 372);
+            Lcubagen.Location = new Point(566, 312);
             Lcubagen.Name = "Lcubagen";
             Lcubagen.Size = new Size(22, 15);
             Lcubagen.TabIndex = 37;
@@ -512,7 +512,7 @@ namespace Vanilla
             // 
             Laltura.AutoSize = true;
             Laltura.Enabled = false;
-            Laltura.Location = new Point(526, 229);
+            Laltura.Location = new Point(523, 177);
             Laltura.Name = "Laltura";
             Laltura.Size = new Size(42, 15);
             Laltura.TabIndex = 38;
@@ -522,7 +522,7 @@ namespace Vanilla
             // 
             Lcomprimento.AutoSize = true;
             Lcomprimento.Enabled = false;
-            Lcomprimento.Location = new Point(526, 273);
+            Lcomprimento.Location = new Point(523, 221);
             Lcomprimento.Name = "Lcomprimento";
             Lcomprimento.Size = new Size(85, 15);
             Lcomprimento.TabIndex = 39;
@@ -532,7 +532,7 @@ namespace Vanilla
             // 
             Llargura.AutoSize = true;
             Llargura.Enabled = false;
-            Llargura.Location = new Point(526, 320);
+            Llargura.Location = new Point(523, 268);
             Llargura.Name = "Llargura";
             Llargura.Size = new Size(50, 15);
             Llargura.TabIndex = 40;
@@ -541,7 +541,7 @@ namespace Vanilla
             // Bselectend
             // 
             Bselectend.Enabled = false;
-            Bselectend.Location = new Point(432, 127);
+            Bselectend.Location = new Point(325, 110);
             Bselectend.Name = "Bselectend";
             Bselectend.Size = new Size(194, 24);
             Bselectend.TabIndex = 41;
@@ -552,7 +552,7 @@ namespace Vanilla
             // Lenderecoselecionado
             // 
             Lenderecoselecionado.AutoSize = true;
-            Lenderecoselecionado.Location = new Point(486, 154);
+            Lenderecoselecionado.Location = new Point(536, 115);
             Lenderecoselecionado.Name = "Lenderecoselecionado";
             Lenderecoselecionado.Size = new Size(90, 15);
             Lenderecoselecionado.TabIndex = 42;

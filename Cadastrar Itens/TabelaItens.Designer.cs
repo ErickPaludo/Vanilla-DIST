@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabelaItens));
             dataGridItens = new DataGridView();
             dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
@@ -46,8 +46,16 @@
             search = new Button();
             camppesq = new TextBox();
             button2 = new Button();
-            BExport = new Button();
+            menuStrip1 = new MenuStrip();
+            salvarToolStripMenuItem = new ToolStripMenuItem();
+            planilhaToolStripMenuItem = new ToolStripMenuItem();
+            pDFToolStripMenuItem = new ToolStripMenuItem();
+            groupBox1 = new GroupBox();
+            Rnome = new RadioButton();
+            Rcodbar = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)dataGridItens).BeginInit();
+            menuStrip1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridItens
@@ -57,30 +65,30 @@
             dataGridItens.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridItens.BackgroundColor = SystemColors.Control;
             dataGridItens.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridItens.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn13, ColumnIdFornc, ColumnFornec, ColumnName, ColumnCodBar, ColumnUnmed, ColumnStatusitem, ColumnDescItem, ColumnPrecoC, ColumnPorcent, ColumnPrecoF });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridItens.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridItens.Location = new Point(12, 41);
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridItens.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridItens.Location = new Point(9, 104);
             dataGridItens.Name = "dataGridItens";
             dataGridItens.ReadOnly = true;
             dataGridItens.RowHeadersVisible = false;
             dataGridItens.RowTemplate.Height = 25;
-            dataGridItens.Size = new Size(1136, 590);
+            dataGridItens.Size = new Size(1136, 523);
             dataGridItens.TabIndex = 12;
             dataGridItens.CellMouseDoubleClick += Env;
             // 
@@ -159,7 +167,7 @@
             // search
             // 
             search.Cursor = Cursors.Hand;
-            search.Location = new Point(273, 12);
+            search.Location = new Point(290, 12);
             search.Name = "search";
             search.Size = new Size(75, 23);
             search.TabIndex = 14;
@@ -188,27 +196,82 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // BExport
+            // menuStrip1
             // 
-            BExport.Cursor = Cursors.Hand;
-            BExport.Location = new Point(354, 12);
-            BExport.Name = "BExport";
-            BExport.Size = new Size(75, 23);
-            BExport.TabIndex = 17;
-            BExport.Text = "Exportar";
-            BExport.UseVisualStyleBackColor = true;
-            BExport.Click += Exportar;
+            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { salvarToolStripMenuItem });
+            menuStrip1.Location = new Point(9, 645);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(58, 24);
+            menuStrip1.TabIndex = 18;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // salvarToolStripMenuItem
+            // 
+            salvarToolStripMenuItem.BackColor = SystemColors.ButtonHighlight;
+            salvarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { planilhaToolStripMenuItem, pDFToolStripMenuItem });
+            salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            salvarToolStripMenuItem.Size = new Size(50, 20);
+            salvarToolStripMenuItem.Text = "Salvar";
+            // 
+            // planilhaToolStripMenuItem
+            // 
+            planilhaToolStripMenuItem.Name = "planilhaToolStripMenuItem";
+            planilhaToolStripMenuItem.Size = new Size(116, 22);
+            planilhaToolStripMenuItem.Text = "Planilha";
+            planilhaToolStripMenuItem.Click += Exportar;
+            // 
+            // pDFToolStripMenuItem
+            // 
+            pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            pDFToolStripMenuItem.Size = new Size(116, 22);
+            pDFToolStripMenuItem.Text = "PDF";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(Rcodbar);
+            groupBox1.Controls.Add(Rnome);
+            groupBox1.Location = new Point(12, 41);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(175, 48);
+            groupBox1.TabIndex = 19;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
+            // 
+            // Rnome
+            // 
+            Rnome.AutoSize = true;
+            Rnome.Checked = true;
+            Rnome.Location = new Point(6, 22);
+            Rnome.Name = "Rnome";
+            Rnome.Size = new Size(63, 19);
+            Rnome.TabIndex = 0;
+            Rnome.TabStop = true;
+            Rnome.Text = "Rnome";
+            Rnome.UseVisualStyleBackColor = true;
+            // 
+            // Rcodbar
+            // 
+            Rcodbar.AutoSize = true;
+            Rcodbar.Location = new Point(86, 23);
+            Rcodbar.Name = "Rcodbar";
+            Rcodbar.Size = new Size(69, 19);
+            Rcodbar.TabIndex = 1;
+            Rcodbar.Text = "Rcodbar";
+            Rcodbar.UseVisualStyleBackColor = true;
             // 
             // TabelaItens
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 687);
-            Controls.Add(BExport);
+            Controls.Add(groupBox1);
             Controls.Add(button2);
             Controls.Add(camppesq);
             Controls.Add(search);
             Controls.Add(dataGridItens);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             MinimizeBox = false;
             MinimumSize = new Size(1041, 665);
             Name = "TabelaItens";
@@ -216,6 +279,10 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)dataGridItens).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -238,6 +305,12 @@
         private DataGridViewTextBoxColumn ColumnPrecoC;
         private DataGridViewTextBoxColumn ColumnPorcent;
         private DataGridViewTextBoxColumn ColumnPrecoF;
-        private Button BExport;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem salvarToolStripMenuItem;
+        private ToolStripMenuItem planilhaToolStripMenuItem;
+        private ToolStripMenuItem pDFToolStripMenuItem;
+        private GroupBox groupBox1;
+        private RadioButton Rcodbar;
+        private RadioButton Rnome;
     }
 }
