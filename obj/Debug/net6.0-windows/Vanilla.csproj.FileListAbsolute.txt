@@ -364,3 +364,22 @@ C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.StatusCd.StatusdoCd.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Enums.NET.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ExtendedNumerics.BigDecimal.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\MathNet.Numerics.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.Core.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OOXML.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OpenXml4Net.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\EPPlus.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\OfficeOpenXml.Extends.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Select.Html.dep
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Select.HtmlToPdf.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Spire.XLS.dll
