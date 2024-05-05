@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabelaItens));
             dataGridItens = new DataGridView();
             dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
@@ -51,8 +51,8 @@
             planilhaToolStripMenuItem = new ToolStripMenuItem();
             pDFToolStripMenuItem = new ToolStripMenuItem();
             groupBox1 = new GroupBox();
-            Rnome = new RadioButton();
             Rcodbar = new RadioButton();
+            Rnome = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)dataGridItens).BeginInit();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -65,24 +65,24 @@
             dataGridItens.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridItens.BackgroundColor = SystemColors.Control;
             dataGridItens.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridItens.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn13, ColumnIdFornc, ColumnFornec, ColumnName, ColumnCodBar, ColumnUnmed, ColumnStatusitem, ColumnDescItem, ColumnPrecoC, ColumnPorcent, ColumnPrecoF });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridItens.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridItens.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridItens.Location = new Point(9, 104);
             dataGridItens.Name = "dataGridItens";
             dataGridItens.ReadOnly = true;
@@ -202,7 +202,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { salvarToolStripMenuItem });
             menuStrip1.Location = new Point(9, 645);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(58, 24);
+            menuStrip1.Size = new Size(178, 24);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -217,15 +217,16 @@
             // planilhaToolStripMenuItem
             // 
             planilhaToolStripMenuItem.Name = "planilhaToolStripMenuItem";
-            planilhaToolStripMenuItem.Size = new Size(116, 22);
+            planilhaToolStripMenuItem.Size = new Size(180, 22);
             planilhaToolStripMenuItem.Text = "Planilha";
-            planilhaToolStripMenuItem.Click += Exportar;
+            planilhaToolStripMenuItem.Click += ExportarXls;
             // 
             // pDFToolStripMenuItem
             // 
             pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            pDFToolStripMenuItem.Size = new Size(116, 22);
+            pDFToolStripMenuItem.Size = new Size(180, 22);
             pDFToolStripMenuItem.Text = "PDF";
+            pDFToolStripMenuItem.Click += ExportarPdf;
             // 
             // groupBox1
             // 
@@ -238,6 +239,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
+            // Rcodbar
+            // 
+            Rcodbar.AutoSize = true;
+            Rcodbar.Location = new Point(86, 23);
+            Rcodbar.Name = "Rcodbar";
+            Rcodbar.Size = new Size(69, 19);
+            Rcodbar.TabIndex = 1;
+            Rcodbar.Text = "Rcodbar";
+            Rcodbar.UseVisualStyleBackColor = true;
+            // 
             // Rnome
             // 
             Rnome.AutoSize = true;
@@ -249,16 +260,6 @@
             Rnome.TabStop = true;
             Rnome.Text = "Rnome";
             Rnome.UseVisualStyleBackColor = true;
-            // 
-            // Rcodbar
-            // 
-            Rcodbar.AutoSize = true;
-            Rcodbar.Location = new Point(86, 23);
-            Rcodbar.Name = "Rcodbar";
-            Rcodbar.Size = new Size(69, 19);
-            Rcodbar.TabIndex = 1;
-            Rcodbar.Text = "Rcodbar";
-            Rcodbar.UseVisualStyleBackColor = true;
             // 
             // TabelaItens
             // 

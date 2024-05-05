@@ -71,10 +71,16 @@ namespace Vanilla
             AtualizarItens();
         }
 
-        private void Exportar(object sender, EventArgs e)
+        private void ExportarXls(object sender, EventArgs e)
         {
             TabelaItensClass export = new TabelaItensClass();
-            export.Export(itens);
+            export.ExportXls(itens);
+        }
+
+        private void ExportarPdf(object sender, EventArgs e)
+        {
+            TabelaItensClass export = new TabelaItensClass();
+            export.ExportPdf(itens);
         }
     }
 }
