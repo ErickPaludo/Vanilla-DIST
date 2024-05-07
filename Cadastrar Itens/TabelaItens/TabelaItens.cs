@@ -13,44 +13,62 @@ namespace Vanilla
 
     public partial class TabelaItens : Form
     {
-        Database db = new Database();
-        Util cnpj = new Util();
         CadastrarItens itens_ = new CadastrarItens();
         static private List<CadastrarItens> itens = new List<CadastrarItens>();
+        public List<CadastrarItens> Itens
+        {
+            get
+            {
+                return itens;
+            }
+        }
         private bool executer;//variavel responsavel permitir a visualizacao ou alteracao dos itens
+
+        public TabelaItens()
+        {
+            InitializeComponent();
+        }
+
         public TabelaItens(bool op)
         {
             InitializeComponent();
             executer = op;
         }
 
-        private void Pesquisar(object sender, EventArgs e) //Pesquisa na lista que veio do banco se existe o  item solicitado (id,nome,codbar)
-        {
-            dataGridItens.Rows.Clear();
-
-            var itensFiltrados = itens
-      .Where(item => item.Nome_f.StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase) || item.Codbar.StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase) || item.Id.ToString().StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase) || item.Status_conv.ToString().StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase))
-      .ToList();
-            foreach (var obj in itensFiltrados)
-            {
-                dataGridItens.Rows.Add(obj.Id_item, obj.Id, obj.Nome_f, obj.Nome_item, obj.Quantidade, obj.Codbar, obj.Unmed, obj.Status_conv, obj.Descricao, $"R${obj.Preco_custo.ToString("f2")}", $"{obj.Lucro_porcent.ToString("f1")} %", $"R$ {obj.Preco_final.ToString("f2")}");
-            }
-        }
-        public void AtualizarItens()
+        private void Pesquisar(object sender, EventArgs e) //faz uma pesquisa customizada no banco
         {
             itens.Clear();
-            itens_.ReturItens();
+            string column = string.Empty;
             dataGridItens.Rows.Clear();
-            var listaOrdenada = itens.OrderBy(item => item.Id_item); //ordena itens pelo id
-            foreach (CadastrarItens obj in listaOrdenada)
+            if (Rnome.Checked)
+            {
+                column = "nome";
+            }
+            else
+            {
+                column = "codbar";
+            }
+            itens_.ReturItensCuston(column, Tcamppesq.Text);
+            CaregaTable();        
+        }
+        public void AtualizarItens()//Pega todos os itens do estoque
+        {
+            itens.Clear();
+            itens_.ReturItens();           
+            CaregaTable();
+        }
+        public void CaregaTable()//Carrega a lista de itens
+        {
+            dataGridItens.Rows.Clear();
+            foreach (CadastrarItens obj in itens)
             {
                 dataGridItens.Rows.Add(obj.Id_item, obj.Id, obj.Nome_f, obj.Nome_item, obj.Codbar, obj.Unmed, obj.Status_conv, obj.Descricao, $"R$ {obj.Preco_custo.ToString("f2")}", $"{obj.Lucro_porcent.ToString("f1")} %", $"R$ {obj.Preco_final.ToString("f2")}");
             }
         }
-        public void AddNaTabelaItens(int id, int id_forn, string nome_fantasia, string codbar, string item, string descricao, string unmed, decimal preco_custo, decimal lucro_porcent, decimal preco_final, string status)
+        public void AddNaTabelaItens(CadastrarItens novo_item)//Recebe os dados do banco e registra na liste
         {
-            itens.Add(new CadastrarItens(id, id_forn, nome_fantasia, item, preco_custo, lucro_porcent, preco_final, codbar, status, descricao, unmed));
-        }
+            itens.Add(novo_item);
+        } //Voltar versão
 
         private void Env(object sender, DataGridViewCellMouseEventArgs e)//double click na celula para edicao do item
         {
@@ -66,21 +84,21 @@ namespace Vanilla
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//Atualiza o Datagrid manualmente
         {
             AtualizarItens();
         }
 
-        private void ExportarXls(object sender, EventArgs e)
+        private void ExportarXls(object sender, EventArgs e)//Exporta lista para XLS
         {
             TabelaItensClass export = new TabelaItensClass();
-            export.ExportXls(itens);
+            export.ExportXls();
         }
 
-        private void ExportarPdf(object sender, EventArgs e)
+        private void ExportarPdf(object sender, EventArgs e)//Exporta lista para PDF
         {
             TabelaItensClass export = new TabelaItensClass();
-            export.ExportPdf(itens);
+            export.ExportPdf();
         }
     }
 }

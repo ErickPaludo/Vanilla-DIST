@@ -232,7 +232,6 @@ namespace Vanilla
             }
         }
 
-
         public void EditaItens(int id_principal, int id_fornecedor, string cod, string nome, string status, string desc, string und_m, decimal preco_custo, decimal margem_lucro, decimal preco_venda) //Grava no banco de dados
         {
             db.EditaItens(id_principal, id_fornecedor, cod, nome, status, desc, und_m, preco_custo, margem_lucro, preco_venda);
@@ -245,7 +244,7 @@ namespace Vanilla
                 using (OracleConnection connection = new OracleConnection(config.Lerdados()))
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens", connection))
+                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens order by id", connection))
                     {
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {
@@ -253,7 +252,33 @@ namespace Vanilla
                             {
 
                                 TabelaItens itens_table = new TabelaItens(true);
-                                itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString());
+                              //  itens_table.AddNaTabelaItens(new CadastrarItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString()));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void ReturItensCuston(string column,string busca)
+        {
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                {
+                    connection.Open();
+                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens where {column} LIKE '%{busca}%'", connection))
+                    {
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                TabelaItens itens_table = new TabelaItens(true);
+                               // itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString());
                             }
                         }
                     }

@@ -44,18 +44,16 @@
             ColumnPorcent = new DataGridViewTextBoxColumn();
             ColumnPrecoF = new DataGridViewTextBoxColumn();
             search = new Button();
-            camppesq = new TextBox();
+            Tcamppesq = new TextBox();
             button2 = new Button();
             menuStrip1 = new MenuStrip();
             salvarToolStripMenuItem = new ToolStripMenuItem();
             planilhaToolStripMenuItem = new ToolStripMenuItem();
             pDFToolStripMenuItem = new ToolStripMenuItem();
-            groupBox1 = new GroupBox();
             Rcodbar = new RadioButton();
             Rnome = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)dataGridItens).BeginInit();
             menuStrip1.SuspendLayout();
-            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridItens
@@ -83,12 +81,12 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridItens.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridItens.Location = new Point(9, 104);
+            dataGridItens.Location = new Point(12, 93);
             dataGridItens.Name = "dataGridItens";
             dataGridItens.ReadOnly = true;
             dataGridItens.RowHeadersVisible = false;
             dataGridItens.RowTemplate.Height = 25;
-            dataGridItens.Size = new Size(1136, 523);
+            dataGridItens.Size = new Size(1136, 534);
             dataGridItens.TabIndex = 12;
             dataGridItens.CellMouseDoubleClick += Env;
             // 
@@ -167,7 +165,7 @@
             // search
             // 
             search.Cursor = Cursors.Hand;
-            search.Location = new Point(290, 12);
+            search.Location = new Point(273, 39);
             search.Name = "search";
             search.Size = new Size(75, 23);
             search.TabIndex = 14;
@@ -175,13 +173,13 @@
             search.UseVisualStyleBackColor = true;
             search.Click += Pesquisar;
             // 
-            // camppesq
+            // Tcamppesq
             // 
-            camppesq.Location = new Point(12, 12);
-            camppesq.Name = "camppesq";
-            camppesq.Size = new Size(255, 23);
-            camppesq.TabIndex = 15;
-            camppesq.Leave += Pesquisar;
+            Tcamppesq.Location = new Point(12, 39);
+            Tcamppesq.Name = "Tcamppesq";
+            Tcamppesq.Size = new Size(255, 23);
+            Tcamppesq.TabIndex = 15;
+            Tcamppesq.Leave += Pesquisar;
             // 
             // button2
             // 
@@ -198,11 +196,12 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.BackColor = Color.White;
             menuStrip1.Items.AddRange(new ToolStripItem[] { salvarToolStripMenuItem });
-            menuStrip1.Location = new Point(9, 645);
+            menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(178, 24);
+            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
+            menuStrip1.Size = new Size(1165, 24);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -216,49 +215,40 @@
             // 
             // planilhaToolStripMenuItem
             // 
+            planilhaToolStripMenuItem.BackColor = SystemColors.Control;
+            planilhaToolStripMenuItem.Image = (Image)resources.GetObject("planilhaToolStripMenuItem.Image");
             planilhaToolStripMenuItem.Name = "planilhaToolStripMenuItem";
-            planilhaToolStripMenuItem.Size = new Size(180, 22);
+            planilhaToolStripMenuItem.Size = new Size(116, 22);
             planilhaToolStripMenuItem.Text = "Planilha";
             planilhaToolStripMenuItem.Click += ExportarXls;
             // 
             // pDFToolStripMenuItem
             // 
+            pDFToolStripMenuItem.Image = (Image)resources.GetObject("pDFToolStripMenuItem.Image");
             pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            pDFToolStripMenuItem.Size = new Size(180, 22);
+            pDFToolStripMenuItem.Size = new Size(116, 22);
             pDFToolStripMenuItem.Text = "PDF";
             pDFToolStripMenuItem.Click += ExportarPdf;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(Rcodbar);
-            groupBox1.Controls.Add(Rnome);
-            groupBox1.Location = new Point(12, 41);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(175, 48);
-            groupBox1.TabIndex = 19;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
             // 
             // Rcodbar
             // 
             Rcodbar.AutoSize = true;
-            Rcodbar.Location = new Point(86, 23);
+            Rcodbar.Location = new Point(81, 68);
             Rcodbar.Name = "Rcodbar";
-            Rcodbar.Size = new Size(69, 19);
+            Rcodbar.Size = new Size(115, 19);
             Rcodbar.TabIndex = 1;
-            Rcodbar.Text = "Rcodbar";
+            Rcodbar.Text = "Código de Barras";
             Rcodbar.UseVisualStyleBackColor = true;
             // 
             // Rnome
             // 
-            Rnome.AutoSize = true;
             Rnome.Checked = true;
-            Rnome.Location = new Point(6, 22);
+            Rnome.Location = new Point(12, 68);
             Rnome.Name = "Rnome";
             Rnome.Size = new Size(63, 19);
             Rnome.TabIndex = 0;
             Rnome.TabStop = true;
-            Rnome.Text = "Rnome";
+            Rnome.Text = "Item";
             Rnome.UseVisualStyleBackColor = true;
             // 
             // TabelaItens
@@ -266,9 +256,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 687);
-            Controls.Add(groupBox1);
+            Controls.Add(Rnome);
+            Controls.Add(Rcodbar);
             Controls.Add(button2);
-            Controls.Add(camppesq);
+            Controls.Add(Tcamppesq);
             Controls.Add(search);
             Controls.Add(dataGridItens);
             Controls.Add(menuStrip1);
@@ -282,8 +273,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridItens).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -292,7 +281,7 @@
 
         private DataGridView dataGridItens;
         private Button search;
-        private TextBox camppesq;
+        private TextBox Tcamppesq;
         private Button button2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private DataGridViewTextBoxColumn ColumnIdFornc;
@@ -310,7 +299,6 @@
         private ToolStripMenuItem salvarToolStripMenuItem;
         private ToolStripMenuItem planilhaToolStripMenuItem;
         private ToolStripMenuItem pDFToolStripMenuItem;
-        private GroupBox groupBox1;
         private RadioButton Rcodbar;
         private RadioButton Rnome;
     }

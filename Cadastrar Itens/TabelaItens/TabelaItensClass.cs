@@ -10,14 +10,15 @@ using Font = iTextSharp.text.Font;
 
 namespace Vanilla
 {
-    public class TabelaItensClass
+    public class TabelaItensClass : IExportarRelatorios
     {
-       private string pasta = @"C:\Vanilla\temp";
-        public void ExportPdf(List<CadastrarItens> itens)
+        private string pasta = @"C:\Vanilla\temp";
+
+        public void ExportPdf()
         {
             try
             {
-
+                TabelaItens list = new TabelaItens();
                 // Cria um novo documento com orientação paisagem e margens definidas
                 Document document = new Document(PageSize.A4);
 
@@ -48,9 +49,9 @@ namespace Vanilla
                 table.AddCell(GetCell("PREÇO DE CUSTO", font_head));
                 table.AddCell(GetCell("LUCRO", font_head));
                 table.AddCell(GetCell("PREÇO FINAL", font_head));
-                
 
-                foreach (CadastrarItens item in itens)
+
+                foreach (CadastrarItens item in list.Itens)
                 {
                     table.AddCell(GetCell(item.Nome_f, font_data));
                     table.AddCell(GetCell(item.Nome_item, font_data));
@@ -64,13 +65,14 @@ namespace Vanilla
 
                 document.Add(table);
                 document.Close();
-                Process.Start("explorer.exe", @$"{pasta}\{arquivo}"); 
+                Process.Start("explorer.exe", @$"{pasta}\{arquivo}");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString()); // Exibe uma caixa de diálogo com a mensagem de erro
             }
         }
+
         public PdfPCell GetCell(string text, Font font)
         {
             PdfPCell cell = new PdfPCell(new Phrase(text, font));
@@ -79,11 +81,11 @@ namespace Vanilla
             return cell;
         }
 
-        public void ExportXls(List<CadastrarItens> itens)
+        public void ExportXls()
         {
             try
             {
-
+                TabelaItens list = new TabelaItens();
                 HSSFWorkbook workbook = new HSSFWorkbook();
 
                 ISheet planilha = workbook.CreateSheet("Itens");
@@ -106,64 +108,67 @@ namespace Vanilla
                 borderStyle.BorderLeft = NPOI.SS.UserModel.BorderStyle.Thin;
                 borderStyle.BorderRight = NPOI.SS.UserModel.BorderStyle.Thin;
 
-                // Estilo para formatação de valores decimais monetários
-                var currencyStyle = workbook.CreateCellStyle();
-                currencyStyle.BorderTop = NPOI.SS.UserModel.BorderStyle.Thin;
-                currencyStyle.BorderBottom = NPOI.SS.UserModel.BorderStyle.Thin;
-                currencyStyle.BorderLeft = NPOI.SS.UserModel.BorderStyle.Thin;
-                currencyStyle.BorderRight = NPOI.SS.UserModel.BorderStyle.Thin;
-                currencyStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Right;
-
-                // Cria um formato para valores decimais monetários
-                var currencyFormat = workbook.CreateDataFormat().GetFormat("[$R$-416]#,##0.00 ");
-
-                // Aplica o formato de moeda às células das colunas 7, 8 e 9
-                currencyStyle.DataFormat = currencyFormat;
 
                 // Configura o alinhamento para o cabeçalho
                 IRow headerRow = planilha.CreateRow(0);
 
                 headerRow.HeightInPoints = 20;
-                for (int i = 0; i < 8; i++)
+                for (int x = 0; x < 8; x++)
                 {
-                    ICell cell = headerRow.CreateCell(i);
-                    cell.SetCellValue(GetHeaderName(i));
+                    ICell cell = headerRow.CreateCell(x);
+                    cell.SetCellValue(GetHeaderName(x));
                     cell.CellStyle = center;
                     cell.CellStyle.BorderTop = borderStyle.BorderTop;
                     cell.CellStyle.BorderBottom = borderStyle.BorderBottom;
                     cell.CellStyle.BorderLeft = borderStyle.BorderLeft;
                     cell.CellStyle.BorderRight = borderStyle.BorderRight;
                 }
-
-                for (int i = 0; i < itens.Count; i++)
+                int i = 0; //contador
+                foreach (CadastrarItens obj in list.Itens)
                 {
-                    CadastrarItens item = itens[i];
                     IRow dataRow = planilha.CreateRow(i + 1);
-                    for (int j = 0; j < 8; j++)
-                    {
-                        ICell cell = dataRow.CreateCell(j);
-                        if (j == 5 || j == 7)
-                        {
-                            cell.SetCellValue(Convert.ToDouble(GetCellValue(item, j)));
-                            cell.CellStyle = currencyStyle; // Aplica o estilo de moeda
-                            cell.CellStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center; // Centraliza a célula
-                        }
-                        else
-                        {
-                            cell.SetCellValue(GetCellValue(item, j).ToString());
-                            // Aplica o estilo de centralização para todas as células, exceto para as colunas 7 e 9
-                            cell.CellStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
-                        }
+                    int columnIndex = 0; // Inicialize columnIndex dentro do loop
 
-                        // Aplica o estilo de borda para todas as células
-                        cell.CellStyle.BorderTop = borderStyle.BorderTop;
-                        cell.CellStyle.BorderBottom = borderStyle.BorderBottom;
-                        cell.CellStyle.BorderLeft = borderStyle.BorderLeft;
-                        cell.CellStyle.BorderRight = borderStyle.BorderRight;
+                    // Defina os valores das células
+                    ICell cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue(obj.Nome_f);
+
+                    cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue(obj.Nome_item);
+
+                    cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue(obj.Codbar);
+
+                    cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue(obj.Unmed);
+
+                    cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue(obj.Status_conv);
+
+                    cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue($"R${obj.Preco_custo.ToString("f2")}");
+
+                    cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue($"{obj.Lucro_porcent}%");
+
+                    cell = dataRow.CreateCell(columnIndex++);
+                    cell.SetCellValue($"R${obj.Preco_final.ToString("f2")}");
+
+
+                    for (int j = 0; j < columnIndex; j++)
+                    {
+                        ICell currentCell = dataRow.GetCell(j) ?? dataRow.CreateCell(j);
+                        currentCell.CellStyle = center;
+                        currentCell.CellStyle.BorderTop = borderStyle.BorderTop;
+                        currentCell.CellStyle.BorderBottom = borderStyle.BorderBottom;
+                        currentCell.CellStyle.BorderLeft = borderStyle.BorderLeft;
+                        currentCell.CellStyle.BorderRight = borderStyle.BorderRight;
                     }
+
+                    i++; // Incrementa o contador de linhas
                 }
 
-                // Verificar se a pasta existe, senão criar
+
                 if (!Directory.Exists(pasta))
                 {
                     try
@@ -192,7 +197,7 @@ namespace Vanilla
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
 
-        private string GetHeaderName(int index)
+        public string GetHeaderName(int index)
         {
             switch (index)
             {
@@ -217,29 +222,6 @@ namespace Vanilla
             }
         }
 
-        private object GetCellValue(CadastrarItens item, int index)
-        {
-            switch (index)
-            {
-                case 0:
-                    return item.Nome_f;
-                case 1:
-                    return item.Nome_item;
-                case 2:
-                    return item.Codbar;
-                case 3:
-                    return item.Unmed;
-                case 4:
-                    return item.Status_conv;
-                case 5:
-                    return item.Preco_custo;
-                case 6:
-                    return $"{item.Lucro_porcent}%";
-                case 7:
-                    return item.Preco_final;
-                default:
-                    return "";
-            }
-        }
     }
 }
+

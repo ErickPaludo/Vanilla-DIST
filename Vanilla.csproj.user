@@ -23,7 +23,7 @@
     <Compile Update="Cadastrar Itens\CadastrarItensFront.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Cadastrar Itens\TabelaItens.cs">
+    <Compile Update="Cadastrar Itens\TabelaItens\TabelaItens.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Cadastro de usuarios\AdicionarUsuariosFront.cs">
