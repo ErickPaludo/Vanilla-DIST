@@ -125,10 +125,6 @@ namespace Vanilla
                 id_fornecedor = Convert.ToInt32(dataGridFornecedores.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
-        private void PrecoFinal(object sender, EventArgs e) //Vai executar o calculo de valor final
-        {
-
-        }
         private void PadronizaPCusto(object sender, EventArgs e) //Apenas define o valo R$00,00 no custo caso ele seja vazio
         {
             if (TporcentLucro.Text != string.Empty && TprecoCusto.Text != string.Empty)
@@ -139,10 +135,6 @@ namespace Vanilla
             {
                 LprecoFinal.Text = string.Empty;
             }
-        }
-        private void PrecoFinal_(object sender, EventArgs e) //Vai executar o calculo de valor final quando clicar na textbox
-        {
-            PrecoFinal(sender, e);
         }
         private void buttonAtualizarTable_Click(object sender, EventArgs e) //Atualiza a tabela de fornecedores
         {
@@ -157,7 +149,7 @@ namespace Vanilla
                 {
                     if (db.AntiCopy("id", "vnl_itens", id_item.ToString()) == true)
                     {
-                        cad.CadastraItem(id_fornecedor, TcodigoBarras.Text, TnomeItem.Text, comboStatus.Text, TdescItem.Text, comboUMed.Text, Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)))),id_endereco,Convert.ToDouble(Lcubagen.Text));
+                        cad.CadastraItem(id_fornecedor, TcodigoBarras.Text, TnomeItem.Text, comboStatus.Text, TdescItem.Text, comboUMed.Text, Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)))), id_endereco, Convert.ToDouble(Lcubagen.Text), Convert.ToDouble(Taltura.Text), Convert.ToDouble(TLargura.Text), Convert.ToDouble(Tcomprimento.Text));
                     }
                     else
                     {
@@ -258,23 +250,25 @@ namespace Vanilla
             TabelaItens itens = new TabelaItens(true); //chama a tabela itens
             itens.AtualizarItens(); //atualiza a tabela antes de abrir
             itens.ShowDialog();
-            string r_codbar, name, description, r_und_med, r_name, r_status;
-           
-            decimal r_pre_c, r_porc_l, r_pre_f;
 
-            //metodo da classe database que retorna os dados dos itens
-            db.RetornarItens(id_item, out id_fornecedor, out r_codbar, out name, out description, out r_und_med, out r_pre_c, out r_porc_l, out r_pre_f, out r_name, out r_status);
+
+            CadastrarItens r_item;
+            r_item = cad.RetornarItens(id_item);
             if (id_item != 0)
             {
-                TnomeItem.Text = name;
-                TdescItem.Text = description;
-                TcodigoBarras.Text = r_codbar;
-                TporcentLucro.Text = r_porc_l.ToString("f2");
-                TprecoCusto.Text = r_pre_c.ToString("f2");
-                LprecoFinal.Text = r_pre_f.ToString("f2");
-                comboStatus.Text = r_status;
-                comboUMed.Text = r_und_med;
-                Lselectfornecedor.Text = r_name;
+                TnomeItem.Text = r_item.Nome_item;
+                TdescItem.Text = r_item.Descricao;
+                TcodigoBarras.Text = r_item.Codbar;
+                TporcentLucro.Text = r_item.Lucro_porcent.ToString("f2");
+                TprecoCusto.Text = r_item.Preco_custo.ToString("f2");
+                LprecoFinal.Text = r_item.Preco_final.ToString("f2");
+                comboStatus.Text = r_item.Status_conv;
+                comboUMed.Text = r_item.Unmed;
+                Lselectfornecedor.Text = r_item.Nome_f;
+                Taltura.Text = r_item.Altura.ToString();
+                TLargura.Text = r_item.Largura.ToString();
+                Tcomprimento.Text = r_item.Comprimento.ToString();
+                Lcubagen.Text = r_item.Cubagem.ToString();
             }
             else
             {
@@ -284,10 +278,7 @@ namespace Vanilla
             MostrCodBar();
         }
 
-        private void calcular_Click(object sender, EventArgs e)
-        {
-  
-        }
+
         private void Cancelar(object sender, EventArgs e)
         {
             ClearCamp();
@@ -381,11 +372,21 @@ namespace Vanilla
         {
             if (!string.IsNullOrEmpty(Taltura.Text) && !string.IsNullOrEmpty(TLargura.Text) && !string.IsNullOrEmpty(Tcomprimento.Text))
             {
-                double altura = Convert.ToDouble(Taltura.Text) / 100;
-                double largura = Convert.ToDouble(TLargura.Text) / 100;
-                double comprimento = Convert.ToDouble(Tcomprimento.Text) / 100;
+                double cubagem = cad.CalculaMetrosCubicos(Convert.ToDouble(Taltura.Text), Convert.ToDouble(TLargura.Text), Convert.ToDouble(Tcomprimento.Text));
 
-                Lcubagen.Text = $"{(altura * largura * comprimento).ToString("F4")}";
+                if (cubagem <= 1.92)
+                {
+                    Lcubagen.Text = $"{cubagem.ToString("F4")}";
+                }
+                else
+                {
+                    MessageBox.Show($"A cubagem do item é maios do que a cubagem padrão do estoque! ({cubagem.ToString("f4")}/1.92)", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Taltura.Text = string.Empty;
+                    TLargura.Text = string.Empty;
+                    Tcomprimento.Text = string.Empty;
+                    Lcubagen.Text = string.Empty;
+                }
+
 
             }
             else
@@ -400,6 +401,11 @@ namespace Vanilla
             tbend.ModoDeRetorno(1);
             tbend.ShowDialog();
             Lenderecoselecionado.Text = endereco;
+        }
+
+        private void CadastrarItensFront_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

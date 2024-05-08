@@ -12,6 +12,8 @@ namespace Vanilla
 {
     public class TabelaItensClass : IExportarRelatorios
     {
+        Util util = new Util();
+
         private string pasta = @"C:\Vanilla\temp";
 
         public void ExportPdf()
@@ -169,29 +171,16 @@ namespace Vanilla
                 }
 
 
-                if (!Directory.Exists(pasta))
-                {
-                    try
-                    {
-                        Directory.CreateDirectory(pasta);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Erro ao criar a pasta: {ex.Message}");
-                        return; // Encerrar o programa se houver erro ao criar a pasta
-                    }
-                }
-
-
                 // Salva o arquivo XLS
                 string arquivo = $"Itens{DateTime.Now:yyyy-MM-dd}.xls";
-
-                using (FileStream file = new FileStream(@$"{pasta}\{arquivo}", FileMode.Create))
+                string folder = util.SelectFolder();
+                if (!string.IsNullOrEmpty(folder))
                 {
-                    workbook.Write(file);
 
-                    Process.Start(@"C:\Program Files\LibreOffice\program\scalc.exe", @$"{pasta}\{arquivo}");
-
+                    using (FileStream file = new FileStream(@$"{folder}\{arquivo}", FileMode.Create))
+                    {
+                        workbook.Write(file);
+                    }
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
@@ -221,7 +210,7 @@ namespace Vanilla
                     return "";
             }
         }
-
+      
     }
 }
 

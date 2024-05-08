@@ -14,7 +14,7 @@
     <Compile Update="Cadastrar Empresas\CadastraCNPJ.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Cadastrar Empresas\TabelaEmpresas.cs">
+    <Compile Update="Cadastrar Empresas\Tabela\TabelaEmpresas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Cadastrar endereco\EnderecoFront.cs">

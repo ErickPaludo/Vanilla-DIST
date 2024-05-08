@@ -12,8 +12,7 @@ namespace Vanilla
 {
     public partial class LoginFront : Form
     {
-        Config config = new Config();
-        Database db = new Database();
+       LoginClass log = new LoginClass();
         public LoginFront()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace Vanilla
             Cursor = Cursors.WaitCursor;
             if (Tuser.Text != string.Empty && Tpass.Text != string.Empty && Tuser.Text.Length >= 3 && Tpass.Text.Length >= 6)
             {
-                bool val = db.Login(Tuser.Text, Tpass.Text);
+                bool val = log.Login(Tuser.Text, Tpass.Text);
                 if (val == false)
                 {
                     Tpass.Text = string.Empty;
@@ -53,11 +52,6 @@ namespace Vanilla
             {
                 Tpass.UseSystemPasswordChar = false;
             }
-        }
-
-        private void GravarConfig(object sender, EventArgs e)
-        {
-            // config.GravarDados(connect.Text);
         }
 
         private void ConfigBanco(object sender, EventArgs e)

@@ -34,7 +34,7 @@ namespace Vanilla
             }
             catch
             {
-                MessageBox.Show("O Arquivo de endereço de banco não existe!");
+                StreamWriter sw = File.CreateText(arquivo);
             }
            
             return endereco;

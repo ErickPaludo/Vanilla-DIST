@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,7 +24,7 @@ namespace Vanilla
             }
         }
         private bool executer;//variavel responsavel permitir a visualizacao ou alteracao dos itens
-
+        public OpenFileDialog folder;
         public TabelaItens()
         {
             InitializeComponent();
@@ -49,12 +50,12 @@ namespace Vanilla
                 column = "codbar";
             }
             itens_.ReturItensCuston(column, Tcamppesq.Text);
-            CaregaTable();        
+            CaregaTable();
         }
         public void AtualizarItens()//Pega todos os itens do estoque
         {
             itens.Clear();
-            itens_.ReturItens();           
+            itens_.ReturItens();
             CaregaTable();
         }
         public void CaregaTable()//Carrega a lista de itens
@@ -62,13 +63,13 @@ namespace Vanilla
             dataGridItens.Rows.Clear();
             foreach (CadastrarItens obj in itens)
             {
-                dataGridItens.Rows.Add(obj.Id_item, obj.Id, obj.Nome_f, obj.Nome_item, obj.Codbar, obj.Unmed, obj.Status_conv, obj.Descricao, $"R$ {obj.Preco_custo.ToString("f2")}", $"{obj.Lucro_porcent.ToString("f1")} %", $"R$ {obj.Preco_final.ToString("f2")}");
+                dataGridItens.Rows.Add(obj.Nome_f, obj.Nome_item, obj.Codbar, obj.Unmed, obj.Status_conv, obj.Descricao, $"R$ {obj.Preco_custo.ToString("f2")}", $"{obj.Lucro_porcent.ToString("f1")} %", $"R$ {obj.Preco_final.ToString("f2")}");
             }
         }
-        public void AddNaTabelaItens(CadastrarItens novo_item)//Recebe os dados do banco e registra na liste
+        public void AddNaTabelaItens(int id, int id_forn, string nome_fantasia, string codbar, string item, string descricao, string unmed, decimal preco_custo, decimal lucro_porcent, decimal preco_final, string status)//Retornar os itens para a lista
         {
-            itens.Add(novo_item);
-        } //Voltar versão
+            itens.Add(new CadastrarItens(id, id_forn, nome_fantasia, item, preco_custo, lucro_porcent, preco_final, codbar, status, descricao, unmed));
+        }
 
         private void Env(object sender, DataGridViewCellMouseEventArgs e)//double click na celula para edicao do item
         {
@@ -76,9 +77,15 @@ namespace Vanilla
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
-                    int id = Convert.ToInt32(dataGridItens.Rows[e.RowIndex].Cells[0].Value);
-                    CadastrarItensFront caditem = new CadastrarItensFront();
-                    caditem.ReturnItens(id);
+                    string codbar = dataGridItens.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    foreach (CadastrarItens obj in itens)
+                    {
+                        if (obj.Codbar == codbar)
+                        {
+                            CadastrarItensFront caditem = new CadastrarItensFront();
+                            caditem.ReturnItens(obj.Id);
+                        }
+                    }
                     this.Close();
                 }
             }
@@ -100,5 +107,6 @@ namespace Vanilla
             TabelaItensClass export = new TabelaItensClass();
             export.ExportPdf();
         }
+ 
     }
 }

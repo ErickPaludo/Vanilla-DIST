@@ -24,51 +24,6 @@ namespace Vanilla
         }
         #endregion
 
-        public bool Login(string user, string pass)
-        {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_login_user", connection))
-                    {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_user", OracleDbType.Varchar2).Value = user;
-                        cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
-                        cmd.Parameters.Add("v_ip", OracleDbType.Varchar2).Value = Dns.GetHostAddresses(Dns.GetHostName())
-                        .FirstOrDefault(ip => ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
-                        cmd.Parameters.Add("v_host", OracleDbType.Varchar2).Value = System.Net.Dns.GetHostName();
-                        cmd.Parameters.Add("r_verificador", OracleDbType.Boolean).Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add("r_msg", OracleDbType.Varchar2, 1000).Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add("r_id_user", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add("r_perm", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                        cmd.ExecuteNonQuery();
-                        string msg = cmd.Parameters["r_msg"].Value.ToString();
-                        decimal id = ((OracleDecimal)cmd.Parameters["r_id_user"].Value).Value;
-                        bool ver = ((OracleBoolean)cmd.Parameters["r_verificador"].Value).IsTrue;
-                        decimal perm = ((OracleDecimal)cmd.Parameters["r_perm"].Value).Value;
-                        string name = user;
-                        util = new Util();
-                        util.DadosUser(Convert.ToInt32(id), Convert.ToInt32(perm), name);
-                        if (ver == false)
-                        {
-                            MessageBox.Show(msg);
-                        }
-                        else
-                        {
-                            AddLog("USUÁRIO LOGADO!", Util.id_user); //temporário
-                        }
-                        return ver;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-            }
-        }
         public void Deslog(int id)
         {
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
@@ -175,46 +130,6 @@ namespace Vanilla
                 }
             }
         }
-        public void GravarTFC(string nomef, string nome, string cnpj, DateTime abertura, DateTime cadastro, string insc_est, string type_cad, string tel, string email, string status, string rua, int numero, string comple, string bairro, string cidade, string uf, string cep) //Gravar TFC (Transportadoras,fornecedores,clientes)
-        {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-
-                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_empresas.vnl_ins_emp", connection))
-                    {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_nome_emp", nome);
-                        cmd.Parameters.Add("v_cnpj", cnpj);
-                        cmd.Parameters.Add("v_inc", insc_est);
-                        cmd.Parameters.Add("v_tipo_emp", type_cad);
-                        cmd.Parameters.Add("v_tel", tel);
-                        cmd.Parameters.Add("v_email", email);
-                        cmd.Parameters.Add("v_data_abert", abertura);
-                        cmd.Parameters.Add("v_date_cad", cadastro);
-                        cmd.Parameters.Add("v_status", status);
-                        cmd.Parameters.Add("v_name_f", nomef);
-                        cmd.Parameters.Add("v_rua", rua);
-                        cmd.Parameters.Add("v_numero_end", numero.ToString());
-                        cmd.Parameters.Add("v_complemento", comple);
-                        cmd.Parameters.Add("v_bairro", bairro);
-                        cmd.Parameters.Add("v_cidade", cidade);
-                        cmd.Parameters.Add("v_uf", uf);
-                        cmd.Parameters.Add("v_cep", cep);
-                        cmd.ExecuteNonQuery();
-                        AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI CADASTRADA COM SUCESSO!", Util.id_user);
-                        MessageBox.Show("Operação Concluída!");
-                    }
-                    connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
         public void GravarnUsers(string nome, string cpf, string email, string tel, string tel2, string permissao, string status, string user, string pass)
         {
             try
@@ -279,93 +194,6 @@ namespace Vanilla
             }
         }
         #endregion
-
-        #region Editar
-        public void EditarTFC(int id, int id_end, string nomef, string nome, string cnpj, DateTime abertura, DateTime cadastro, string insc_est, string type_cad, string tel, string email, string status, string rua, int numero, string comple, string bairro, string cidade, string uf, string cep)
-        {
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        try
-                        {
-
-                            using (OracleCommand cmd = new OracleCommand("vnl_pkg_empresas.vnl_edit_emp", connection))
-                            {
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                                cmd.Parameters.Add("v_id", id);
-                                cmd.Parameters.Add("v_id_end", id_end);
-                                cmd.Parameters.Add("v_nome_emp", nome);
-                                cmd.Parameters.Add("v_inc", insc_est);
-                                cmd.Parameters.Add("v_tipo_emp", type_cad);
-                                cmd.Parameters.Add("v_tel", tel);
-                                cmd.Parameters.Add("v_email", email);
-                                cmd.Parameters.Add("v_data_abert", abertura);
-                                cmd.Parameters.Add("v_date_cad", cadastro);
-                                cmd.Parameters.Add("v_status", status);
-                                cmd.Parameters.Add("v_name_f", nomef);
-                                cmd.Parameters.Add("v_rua", rua);
-                                cmd.Parameters.Add("v_numero_end", numero.ToString());
-                                cmd.Parameters.Add("v_complemento", comple);
-                                cmd.Parameters.Add("v_bairro", bairro);
-                                cmd.Parameters.Add("v_cidade", cidade);
-                                cmd.Parameters.Add("v_uf", uf);
-                                cmd.Parameters.Add("v_cep", cep);
-                                cmd.ExecuteNonQuery();
-                                AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI EDITADA COM SUCESSO!", Util.id_user);
-                            }
-                            MessageBox.Show($"{cnpj} / {nome} foi editado!");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void EditaItens(int id_principal, int id_fornecedor, string cod, string nome, string status, string desc, string undm, decimal preco_c, decimal margem, decimal preco_v)
-        {
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_edit_item", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id_principal;
-                            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
-                            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
-                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
-                            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = undm;
-                            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_c;
-                            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem;
-                            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_v;
-                            cmd.ExecuteNonQuery();
-                            AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!", Util.id_user);
-                        }
-                        MessageBox.Show("Item gravado com sucesso!");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         public void EditarUserC(int id, string nome, string email, string tel, string tel2, string pass)//Usuario do tipo comum pode modificar seu perfil por aqui
         {
@@ -471,7 +299,6 @@ namespace Vanilla
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
 
         #region Buscadores
         public void ChamaView(string table, int type) //SELECT GERAL
@@ -694,65 +521,6 @@ namespace Vanilla
                             while (reader.Read())
                             {
                                 log.DadosnaLista(Convert.ToInt16(reader.GetString(0)), reader.GetString(1).ToString(), Convert.ToDateTime(reader.GetDateTime(2)), Convert.ToInt16(reader.GetString(3)), reader.GetString(4).ToString());
-
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        public void CarregarDadosEmpresas(int retorno, string cod_emp)
-        {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    string query = "Select * From view_empresas";
-                    if (retorno == 1)
-                    {
-                        query = $"Select * From view_empresas where cnpj = '{cod_emp}'";
-                    }
-
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                string status = reader["status_formatado"].ToString();
-                                string tel = reader["tel"].ToString();
-                                string email = reader["email"].ToString();
-                                string type = reader["tipo_emp"].ToString();
-                                string nome_f = reader["nome_fantasia"].ToString();
-                                string nome = reader["nome_emp"].ToString();
-                                string cnpj = reader["cnpj"].ToString();
-                                string ie = reader["insc"].ToString();
-                                int id = Convert.ToInt32(reader["id"]);
-                                int id_end = Convert.ToInt32(reader["id_endereco"]);
-                                string uf = reader["estado"].ToString();
-                                string cidade = reader["cidade"].ToString();
-                                string bairro = reader["bairro"].ToString();
-                                string rua = reader["rua"].ToString();
-                                int numero = Convert.ToInt32(reader["numero_residencia"]);
-                                string cep = reader["cep"].ToString();
-                                DateTime date = Convert.ToDateTime(reader["data_abertura"]);
-
-                                if (retorno == 0)
-                                {
-                                    tableemp = new TabelaEmpresas();
-                                    tableemp.RecebeInfoList(status, type, nome_f, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep);
-                                }
-                                else
-                                {
-                                    CadastraCNPJ classcnpj = new CadastraCNPJ();
-                                    classcnpj.AddList(status, type, nome_f, nome, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep, date);
-                                }
 
                             }
                         }

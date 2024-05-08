@@ -425,7 +425,7 @@
             editarCnpjToolStripMenuItem.Name = "editarCnpjToolStripMenuItem";
             editarCnpjToolStripMenuItem.Size = new Size(77, 20);
             editarCnpjToolStripMenuItem.Text = "Editar Cnpj";
-            editarCnpjToolStripMenuItem.Click += EditarCnpj;
+            editarCnpjToolStripMenuItem.Click += Editar;
             // 
             // nomefantasia
             // 

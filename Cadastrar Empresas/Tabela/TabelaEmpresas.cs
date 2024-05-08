@@ -15,8 +15,7 @@ namespace Vanilla
     {
         #region Cabeçalho
         static private List<CadastraCnpjBack> listaCNPJs = new List<CadastraCnpjBack>();
-        private Database db = new Database();
-        private Util util = new Util();
+        private TabelaEmpClass table = new TabelaEmpClass();
         private static bool executer;
         #endregion
         #region Construtores
@@ -38,7 +37,7 @@ namespace Vanilla
         {
             Cursor = Cursors.WaitCursor;
             listaCNPJs.Clear();
-            db.CarregarDadosEmpresas(0, "");
+            table.CarregarDadosEmpresas(0, "");
             dataGridEmp.Rows.Clear();
             foreach (CadastraCnpjBack obj in listaCNPJs)
             {

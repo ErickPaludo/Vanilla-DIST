@@ -398,7 +398,7 @@
             button1.Name = "button1";
             button1.Size = new Size(167, 114);
             button1.TabIndex = 19;
-            button1.Text = "Endereços Cd";
+            button1.Text = "Status CD";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = false;
             button1.Click += StatusCd;

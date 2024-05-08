@@ -22,6 +22,7 @@ namespace Vanilla
         private Util util = new Util();
         private static List<CadastraCnpjBack> list = new List<CadastraCnpjBack>();
         static List<Endereco> ceparmazena = new List<Endereco>();
+        private TabelaEmpClass table = new TabelaEmpClass();
         private Database db = new Database();
         private static bool editar = false;
         private static int id, id_end;
@@ -156,6 +157,7 @@ namespace Vanilla
         {
             Endereco endereco = new Endereco();
             cad.GravarCnpj(util.FormataCnpj(textcnpj.Text), nomefantasia.Text, textname.Text, Convert.ToDateTime(textabertura.Text), Convert.ToDateTime(textdataatual.Text), textie.Text, combotypeemp.Text, textel.Text, textemail.Text, combostatus.Text, textlogradouro.Text, Convert.ToInt32(textnumber.Text), textcompl.Text, textbairro.Text, textmuni.Text, combouf.Text, textcep.Text);
+
             editar = false;
             Cursor = Cursors.Default;
             Clear();
@@ -210,7 +212,7 @@ namespace Vanilla
             this.Close();
         }
 
-        private void EditarCnpj(object sender, EventArgs e)
+        private void Editar(object sender, EventArgs e)
         {
             TabelaEmpresas emp = new TabelaEmpresas(true);
             emp.Carregar();
@@ -242,10 +244,11 @@ namespace Vanilla
                 }
             }
         }
+
         public void ReturDadosCnpj(string cnpj, bool type)
         {
             editar = type;
-            db.CarregarDadosEmpresas(1, cnpj);
+            table.CarregarDadosEmpresas(1, cnpj);
         }
         public void AddList(string status, string type, string nomef, string nome_emp, string cnpj, string ie, string tel, string email, int id, int id_end, string uf, string cidade, string bairro, string rua, int numero, string cep, DateTime data)
         {
@@ -285,5 +288,6 @@ namespace Vanilla
         {
             util.SomenteNumeros(e);
         }
+
     }
 }

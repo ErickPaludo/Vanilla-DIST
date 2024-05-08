@@ -78,7 +78,26 @@ namespace Vanilla
             id_user = id;
             permissao_user = perm;
             nome_user = name_user;
-        } 
+        }
+
+        public string SelectFolder()
+        {
+            using (FolderBrowserDialog dirDialog = new FolderBrowserDialog())
+            {
+                // Mostra a janela de escolha do directorio
+                DialogResult res = dirDialog.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    // Como o utilizador carregou no OK, o directorio escolhido pode ser acedido da seguinte forma:
+                    return dirDialog.SelectedPath;
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+        }
+
         public void EnviarEmail(string titulo, string destinatario, string conteudo)
         {
             try
