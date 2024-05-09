@@ -83,7 +83,7 @@ namespace Vanilla
                         if (obj.Codbar == codbar)
                         {
                             CadastrarItensFront caditem = new CadastrarItensFront();
-                            caditem.ReturnItens(obj.Id);
+                           caditem.ReturnItens(obj.Id_item);
                         }
                     }
                     this.Close();

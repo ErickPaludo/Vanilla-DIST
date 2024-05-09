@@ -73,7 +73,7 @@ namespace Vanilla
             this.id = id;
             this.id_end = id_end;
         }
-        public CadastraCnpjBack(string status_format, string type_f, string nome_f, string nome_emp, string cnpj, string ie, string tel, string email, int id, int id_end, string uf, string cidade, string bairro, string rua, int numero, string cep,DateTime datacad) : base(uf, cidade, bairro, rua, numero, cep)
+        public CadastraCnpjBack(string status_format, string type_f, string nome_f, string nome_emp, string cnpj, string ie, string tel, string email, int id, int id_end, string uf, string cidade, string bairro, string rua, int numero, string cep,DateTime datacad,string complemento) : base(uf, cidade, bairro, rua, numero, cep, complemento)
         {
             this.status_format = status_format;
             this.tel = tel;
@@ -86,6 +86,7 @@ namespace Vanilla
             this.id = id;
             this.id_end = id_end;
             this.datacad = datacad;
+
         }
 
         public CadastraCnpjBack(string nome_emp, string cnpj, int id, int id_end)

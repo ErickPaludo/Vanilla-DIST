@@ -88,7 +88,7 @@ namespace Vanilla
                 DialogResult res = dirDialog.ShowDialog();
                 if (res == DialogResult.OK)
                 {
-                    // Como o utilizador carregou no OK, o directorio escolhido pode ser acedido da seguinte forma:
+                    MessageBox.Show($"Arquivo salvo na pasta {dirDialog.SelectedPath}");
                     return dirDialog.SelectedPath;
                 }
                 else
@@ -121,12 +121,13 @@ namespace Vanilla
                         MessageBox.Show($"Erro ao enviar mensagem para o destinatário: {destinatario}");
                     }
                 }
-            }catch
+            }
+            catch
             {
-                MessageBox.Show($"Erro ao enviar mensagem para o destinatário: { destinatario}");
+                MessageBox.Show($"Erro ao enviar mensagem para o destinatário: {destinatario}");
             }
         }
-        public void ReturnInfoCep(string cep, int type)
+        public void ReturnInfoCep(string cep)
         {
             using (WebClient client = new WebClient())
             {
@@ -141,16 +142,8 @@ namespace Vanilla
                         string bairro = cepInfo.bairro;
                         string rua = cepInfo.logradouro;
                         string cidade = cepInfo.localidade;
-                        if (type == 0)
-                        {
-                            EnderecoFront endereco = new EnderecoFront();
-                            endereco.ListaRecebe(rua, bairro, cidade, uf);
-                        }
-                        else
-                        {
-                            CadastraCNPJ endereco = new CadastraCNPJ();
-                            endereco.ListaRecebe(rua, bairro, cidade, uf);
-                        }
+                        CadastraCNPJ endereco = new CadastraCNPJ();
+                        endereco.ListaRecebe(rua, bairro, cidade, uf);
                     }
                     else
                     {

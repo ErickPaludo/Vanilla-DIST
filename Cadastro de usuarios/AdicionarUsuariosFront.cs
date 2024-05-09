@@ -15,7 +15,7 @@ namespace Vanilla
     {
         Database db = new Database();
         Util util = new Util();
-        AdicionarUsuarios usuarios = new AdicionarUsuarios();
+        UserClass usuarios = new UserClass();
         public AdicionarUsuariosFront()
         {
             InitializeComponent();
@@ -54,7 +54,6 @@ namespace Vanilla
                             MessageBox.Show("Nome de usuário já está em uso!");
                             userBox.Text = string.Empty;
                         }
-
                     }
                     else
                     {

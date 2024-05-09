@@ -47,6 +47,7 @@ namespace Vanilla
                                 int numero = Convert.ToInt32(reader["numero_residencia"]);
                                 string cep = reader["cep"].ToString();
                                 DateTime date = Convert.ToDateTime(reader["data_abertura"]);
+                                string complemento = reader["complemento"].ToString();
 
                                 if (retorno == 0)
                                 {
@@ -56,7 +57,7 @@ namespace Vanilla
                                 else
                                 {
                                     CadastraCNPJ classcnpj = new CadastraCNPJ();
-                                    classcnpj.AddList(status, type, nome_f, nome, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep, date);
+                                    classcnpj.AddList(status, type, nome_f, nome, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep, date, complemento);
                                 }
 
                             }

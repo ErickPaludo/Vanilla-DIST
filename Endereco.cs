@@ -52,6 +52,7 @@ namespace Vanilla
             this.cep = cep;
             this.id_endereco = id_endereco;
         }
+
         public Endereco(string uf, string cidade, string bairro, string rua, int numero, string cep)
         {
             this.rua = rua;
@@ -61,15 +62,15 @@ namespace Vanilla
             this.uf = uf;
             this.cep = cep;
         }
-
-        public void AddEndereco(string rua, int numero, string complemento, string bairro, string cidade, string uf, string cep, int classe)
+        public Endereco(string uf, string cidade, string bairro, string rua, int numero, string cep, string complemento)
         {
-            int id = db.GravarnabaseEndereco(rua, numero, complemento, bairro, cidade, uf, cep); //Faz a gravacao no banco e retorna um id para o endereco, esse id vai ser enviado para classe na qual a variacel "classe" esta numerada         
-        }
-
-        public void EditEndereco(int id, string rua, int numero, string complemento, string bairro, string cidade, string uf, string cep)
-        {
-            db.EditarEndereco(id, rua, numero, complemento, bairro, cidade, uf, cep);
+            this.rua = rua;
+            this.numero = numero;
+            this.bairro = bairro;
+            this.cidade = cidade;
+            this.uf = uf;
+            this.cep = cep;
+            this.complemento = complemento;
         }
     }
 }

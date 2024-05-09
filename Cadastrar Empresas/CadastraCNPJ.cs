@@ -241,6 +241,7 @@ namespace Vanilla
                     combotypeemp.Text = obj.Type_f;
                     combostatus.Text = obj.Status_Format;
                     textel.Text = obj.Tel;
+                    textcompl.Text = obj.Complemento;
                 }
             }
         }
@@ -250,9 +251,9 @@ namespace Vanilla
             editar = type;
             table.CarregarDadosEmpresas(1, cnpj);
         }
-        public void AddList(string status, string type, string nomef, string nome_emp, string cnpj, string ie, string tel, string email, int id, int id_end, string uf, string cidade, string bairro, string rua, int numero, string cep, DateTime data)
+        public void AddList(string status, string type, string nomef, string nome_emp, string cnpj, string ie, string tel, string email, int id, int id_end, string uf, string cidade, string bairro, string rua, int numero, string cep, DateTime data,string complemento)
         {
-            list.Add(new CadastraCnpjBack(status, type, nomef, nome_emp, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep, data));
+            list.Add(new CadastraCnpjBack(status, type, nomef, nome_emp, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep, data,complemento));
         }
 
         private void combostatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -264,13 +265,13 @@ namespace Vanilla
         {
             if (!string.IsNullOrEmpty(textcep.Text) && textcep.Text.Length == 8)
             {
-                util.ReturnInfoCep(textcep.Text, 1);
+                util.ReturnInfoCep(textcep.Text);
                 foreach (Endereco end in ceparmazena)
                 {
-                    combouf.Text = end.UF;
-                    textbairro.Text = end.Bairro;
-                    textlogradouro.Text = end.Rua;
-                    textmuni.Text = end.Cidade;
+                    combouf.Text = end.UF.ToUpper();
+                    textbairro.Text = end.Bairro.ToUpper();
+                    textlogradouro.Text = end.Rua.ToUpper();
+                    textmuni.Text = end.Cidade.ToUpper();
                 }
                 ceparmazena.Clear();
             }

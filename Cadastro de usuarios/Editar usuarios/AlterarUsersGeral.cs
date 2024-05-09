@@ -13,10 +13,10 @@ namespace Vanilla
 {
     public partial class AlterarUsersGeral : Form
     {  
-        AdicionarUsuarios clasusuarios = new AdicionarUsuarios();
+        UserClass clasusuarios = new UserClass();
         Util util = new Util();
         Database db = new Database();
-        static private List<AdicionarUsuarios> usuarios = new List<AdicionarUsuarios>();
+        static private List<UserClass> usuarios = new List<UserClass>();
         static int id_user;
         string cpf, user;
         private string oldemail;
@@ -28,16 +28,16 @@ namespace Vanilla
         public void ChamarNoBanco()
         {
             usuarios.Clear();
-            db.ChamaView("view_users", 1);
+            clasusuarios.ChamaView();
         }
         public void ArmazenaDados(int id, string name, string cpf, string email, string tel, string tel2, string perm, string status, string login, string password, int bloq_user)
         {
-            usuarios.Add(new AdicionarUsuarios(id, name, cpf, email, tel, tel2, perm, status, login, password, bloq_user));
+            usuarios.Add(new UserClass(id, name, cpf, email, tel, tel2, perm, status, login, password, bloq_user));
         }
         public void ExibirDadosTabela()// Puxa dados do banco para tabela
         {
             ChamarNoBanco();
-            foreach (AdicionarUsuarios obj in usuarios)
+            foreach (UserClass obj in usuarios)
             {
                 dataGridUser.Rows.Add(obj.Id, obj.Name, obj.Login, util.FormataCPF(obj.Cpf.ToString()));
             }
@@ -71,7 +71,7 @@ namespace Vanilla
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 int id = Convert.ToInt32(dataGridUser.Rows[e.RowIndex].Cells[0].Value);
-                foreach (AdicionarUsuarios obj in usuarios)
+                foreach (UserClass obj in usuarios)
                 {
                     if (obj.Id == id)
                     {
@@ -168,6 +168,7 @@ namespace Vanilla
         private void ChamaClassUser()//carrega as informacoes do form para classe usuarios
         {
             clasusuarios.AlterUserADM(id_user, nomeCompleto.Text, emailBox.Text, telfBox.Text, telfBox2.Text, userBox.Text, passBox.Text, comboPerm.Text, comboStatus.Text);
+
             if (encaminhar.Checked == true) //verifica se o envio para email está ativo
             {
                 if (comboStatus.Text == "Ativo")

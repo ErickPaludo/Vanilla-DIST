@@ -12,7 +12,7 @@ namespace Vanilla
 {
     public partial class AlterarUserCFront : Form
     {
-        AdicionarUsuarios clasusuarios = new AdicionarUsuarios();
+        UserClass clasusuarios = new UserClass();
         Util utiarios = new Util();
         Database db = new Database();
         private string oldemail, user;
@@ -22,28 +22,26 @@ namespace Vanilla
         }
         public void ExibirDados()
         {
-            string nome, email, tel, tel_, pass, login;
-            db.RetornarUserC(utiarios.Id_user, out nome, out email, out tel, out tel_, out pass, out login);
+            UserClass user = clasusuarios.RetornarUserC();
 
-            nomeCompleto.Text = nome;
-            emailBox.Text = email;
-            telfBox.Text = tel;
-            telfBox2.Text = tel_;
-            passBox.Text = pass;
-            confPassBox.Text = pass;
-            oldemail = email;
-            user = login;
+            emailBox.Text = user.Email;
+            telfBox.Text = user.Tel;
+            telfBox2.Text = user.Tel2;
+            passBox.Text = user.Password;
+            confPassBox.Text = string.Empty;
+            oldemail = user.Email;
+            this.user = user.Login;
         }
 
         private void Gravar(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(nomeCompleto.Text) && !string.IsNullOrEmpty(emailBox.Text) && !string.IsNullOrEmpty(telfBox.Text) && !string.IsNullOrEmpty(passBox.Text) && !string.IsNullOrEmpty(confPassBox.Text))
+            if ( !string.IsNullOrEmpty(emailBox.Text) && !string.IsNullOrEmpty(telfBox.Text) && !string.IsNullOrEmpty(passBox.Text) && !string.IsNullOrEmpty(confPassBox.Text))
             {
                 if (passBox.Text.Length >= 6 && confPassBox.Text.Length >= 6)
                 {
                     if (passBox.Text == confPassBox.Text)
                     {
-                        clasusuarios.AlterUserC(nomeCompleto.Text, emailBox.Text, telfBox.Text, telfBox2.Text, passBox.Text); //Manda as informações para a classe, para fazer a gravação
+                        clasusuarios.AlterUserC(emailBox.Text, telfBox.Text, telfBox2.Text, passBox.Text); //Manda as informações para a classe, para fazer a gravação
                         if (encaminhar.Checked == true) //verifica se o envio para email está ativo                        {
                             if (emailBox.Text == oldemail) //Envia email referente a alteração
                             {

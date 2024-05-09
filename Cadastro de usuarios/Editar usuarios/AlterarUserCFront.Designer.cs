@@ -33,11 +33,9 @@
             emailBox = new TextBox();
             label11 = new Label();
             label10 = new Label();
-            label1 = new Label();
             gravarBox = new Button();
             confPassBox = new TextBox();
             passBox = new TextBox();
-            nomeCompleto = new TextBox();
             telfBox2 = new MaskedTextBox();
             telfBox = new MaskedTextBox();
             label2 = new Label();
@@ -48,7 +46,7 @@
             // buttonCancelar
             // 
             buttonCancelar.Cursor = Cursors.Hand;
-            buttonCancelar.Location = new Point(134, 326);
+            buttonCancelar.Location = new Point(135, 270);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(75, 23);
             buttonCancelar.TabIndex = 8;
@@ -59,7 +57,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(12, 76);
+            label12.Location = new Point(13, 20);
             label12.Name = "label12";
             label12.Size = new Size(39, 15);
             label12.TabIndex = 52;
@@ -68,7 +66,7 @@
             // emailBox
             // 
             emailBox.Cursor = Cursors.Hand;
-            emailBox.Location = new Point(12, 94);
+            emailBox.Location = new Point(13, 38);
             emailBox.MaxLength = 50;
             emailBox.Name = "emailBox";
             emailBox.Size = new Size(316, 23);
@@ -78,7 +76,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(81, 251);
+            label11.Location = new Point(82, 195);
             label11.Name = "label11";
             label11.Size = new Size(98, 15);
             label11.TabIndex = 51;
@@ -87,25 +85,16 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(81, 198);
+            label10.Location = new Point(82, 142);
             label10.Name = "label10";
             label10.Size = new Size(42, 15);
             label10.TabIndex = 50;
             label10.Text = "Senha:";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(99, 15);
-            label1.TabIndex = 39;
-            label1.Text = "Nome Completo:";
-            // 
             // gravarBox
             // 
             gravarBox.Cursor = Cursors.Hand;
-            gravarBox.Location = new Point(134, 298);
+            gravarBox.Location = new Point(135, 242);
             gravarBox.Name = "gravarBox";
             gravarBox.Size = new Size(75, 23);
             gravarBox.TabIndex = 7;
@@ -116,7 +105,7 @@
             // confPassBox
             // 
             confPassBox.Cursor = Cursors.Hand;
-            confPassBox.Location = new Point(81, 269);
+            confPassBox.Location = new Point(82, 213);
             confPassBox.MaxLength = 15;
             confPassBox.Name = "confPassBox";
             confPassBox.Size = new Size(176, 23);
@@ -125,24 +114,15 @@
             // passBox
             // 
             passBox.Cursor = Cursors.Hand;
-            passBox.Location = new Point(81, 216);
+            passBox.Location = new Point(82, 160);
             passBox.MaxLength = 15;
             passBox.Name = "passBox";
             passBox.Size = new Size(176, 23);
             passBox.TabIndex = 5;
             // 
-            // nomeCompleto
-            // 
-            nomeCompleto.Cursor = Cursors.Hand;
-            nomeCompleto.Location = new Point(12, 44);
-            nomeCompleto.MaxLength = 50;
-            nomeCompleto.Name = "nomeCompleto";
-            nomeCompleto.Size = new Size(316, 23);
-            nomeCompleto.TabIndex = 0;
-            // 
             // telfBox2
             // 
-            telfBox2.Location = new Point(180, 160);
+            telfBox2.Location = new Point(181, 104);
             telfBox2.Mask = "(00) 0000-0000";
             telfBox2.Name = "telfBox2";
             telfBox2.Size = new Size(148, 23);
@@ -151,7 +131,7 @@
             // 
             // telfBox
             // 
-            telfBox.Location = new Point(12, 160);
+            telfBox.Location = new Point(13, 104);
             telfBox.Mask = "(00) 00000-0000";
             telfBox.Name = "telfBox";
             telfBox.Size = new Size(148, 23);
@@ -161,7 +141,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(176, 142);
+            label2.Location = new Point(177, 86);
             label2.Name = "label2";
             label2.Size = new Size(146, 15);
             label2.TabIndex = 54;
@@ -170,7 +150,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 142);
+            label3.Location = new Point(13, 86);
             label3.Name = "label3";
             label3.Size = new Size(47, 15);
             label3.TabIndex = 53;
@@ -181,7 +161,7 @@
             encaminhar.AutoSize = true;
             encaminhar.Checked = true;
             encaminhar.CheckState = CheckState.Checked;
-            encaminhar.Location = new Point(12, 120);
+            encaminhar.Location = new Point(13, 64);
             encaminhar.Name = "encaminhar";
             encaminhar.Size = new Size(174, 19);
             encaminhar.TabIndex = 62;
@@ -193,7 +173,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(344, 366);
+            ClientSize = new Size(344, 303);
             ControlBox = false;
             Controls.Add(encaminhar);
             Controls.Add(telfBox2);
@@ -205,11 +185,9 @@
             Controls.Add(emailBox);
             Controls.Add(label11);
             Controls.Add(label10);
-            Controls.Add(label1);
             Controls.Add(gravarBox);
             Controls.Add(confPassBox);
             Controls.Add(passBox);
-            Controls.Add(nomeCompleto);
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
@@ -229,11 +207,9 @@
         private TextBox emailBox;
         private Label label11;
         private Label label10;
-        private Label label1;
         private Button gravarBox;
         private TextBox confPassBox;
         private TextBox passBox;
-        private TextBox nomeCompleto;
         private MaskedTextBox telfBox2;
         private MaskedTextBox telfBox;
         private Label label2;

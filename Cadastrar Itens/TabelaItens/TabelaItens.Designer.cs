@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabelaItens));
             dataGridItens = new DataGridView();
-            search = new Button();
-            Tcamppesq = new TextBox();
-            button2 = new Button();
-            menuStrip1 = new MenuStrip();
-            salvarToolStripMenuItem = new ToolStripMenuItem();
-            planilhaToolStripMenuItem = new ToolStripMenuItem();
-            pDFToolStripMenuItem = new ToolStripMenuItem();
-            Rcodbar = new RadioButton();
-            Rnome = new RadioButton();
             ColumnFornec = new DataGridViewTextBoxColumn();
             ColumnName = new DataGridViewTextBoxColumn();
             ColumnCodBar = new DataGridViewTextBoxColumn();
@@ -50,6 +41,15 @@
             ColumnPrecoC = new DataGridViewTextBoxColumn();
             ColumnPorcent = new DataGridViewTextBoxColumn();
             ColumnPrecoF = new DataGridViewTextBoxColumn();
+            search = new Button();
+            Tcamppesq = new TextBox();
+            button2 = new Button();
+            menuStrip1 = new MenuStrip();
+            salvarToolStripMenuItem = new ToolStripMenuItem();
+            planilhaToolStripMenuItem = new ToolStripMenuItem();
+            pDFToolStripMenuItem = new ToolStripMenuItem();
+            Rcodbar = new RadioButton();
+            Rnome = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)dataGridItens).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -61,24 +61,24 @@
             dataGridItens.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridItens.BackgroundColor = SystemColors.Control;
             dataGridItens.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridItens.Columns.AddRange(new DataGridViewColumn[] { ColumnFornec, ColumnName, ColumnCodBar, ColumnUnmed, ColumnStatusitem, ColumnDescItem, ColumnPrecoC, ColumnPorcent, ColumnPrecoF });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridItens.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridItens.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridItens.Location = new Point(12, 93);
             dataGridItens.Name = "dataGridItens";
             dataGridItens.ReadOnly = true;
@@ -87,6 +87,64 @@
             dataGridItens.Size = new Size(1136, 534);
             dataGridItens.TabIndex = 12;
             dataGridItens.CellMouseDoubleClick += Env;
+            // 
+            // ColumnFornec
+            // 
+            ColumnFornec.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ColumnFornec.HeaderText = "Fornecedor";
+            ColumnFornec.MinimumWidth = 100;
+            ColumnFornec.Name = "ColumnFornec";
+            ColumnFornec.ReadOnly = true;
+            // 
+            // ColumnName
+            // 
+            ColumnName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ColumnName.HeaderText = "Nome";
+            ColumnName.MinimumWidth = 100;
+            ColumnName.Name = "ColumnName";
+            ColumnName.ReadOnly = true;
+            // 
+            // ColumnCodBar
+            // 
+            ColumnCodBar.HeaderText = "Cod_Barras";
+            ColumnCodBar.Name = "ColumnCodBar";
+            ColumnCodBar.ReadOnly = true;
+            // 
+            // ColumnUnmed
+            // 
+            ColumnUnmed.HeaderText = "UN.Med";
+            ColumnUnmed.Name = "ColumnUnmed";
+            ColumnUnmed.ReadOnly = true;
+            // 
+            // ColumnStatusitem
+            // 
+            ColumnStatusitem.HeaderText = "Status";
+            ColumnStatusitem.Name = "ColumnStatusitem";
+            ColumnStatusitem.ReadOnly = true;
+            // 
+            // ColumnDescItem
+            // 
+            ColumnDescItem.HeaderText = "Desc_Item";
+            ColumnDescItem.Name = "ColumnDescItem";
+            ColumnDescItem.ReadOnly = true;
+            // 
+            // ColumnPrecoC
+            // 
+            ColumnPrecoC.HeaderText = "Preço de Custo";
+            ColumnPrecoC.Name = "ColumnPrecoC";
+            ColumnPrecoC.ReadOnly = true;
+            // 
+            // ColumnPorcent
+            // 
+            ColumnPorcent.HeaderText = "Lucro";
+            ColumnPorcent.Name = "ColumnPorcent";
+            ColumnPorcent.ReadOnly = true;
+            // 
+            // ColumnPrecoF
+            // 
+            ColumnPrecoF.HeaderText = "Preço Final";
+            ColumnPrecoF.Name = "ColumnPrecoF";
+            ColumnPrecoF.ReadOnly = true;
             // 
             // search
             // 
@@ -177,64 +235,6 @@
             Rnome.Text = "Item";
             Rnome.UseVisualStyleBackColor = true;
             // 
-            // ColumnFornec
-            // 
-            ColumnFornec.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            ColumnFornec.HeaderText = "Fornecedor";
-            ColumnFornec.MinimumWidth = 100;
-            ColumnFornec.Name = "ColumnFornec";
-            ColumnFornec.ReadOnly = true;
-            // 
-            // ColumnName
-            // 
-            ColumnName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            ColumnName.HeaderText = "Nome";
-            ColumnName.MinimumWidth = 100;
-            ColumnName.Name = "ColumnName";
-            ColumnName.ReadOnly = true;
-            // 
-            // ColumnCodBar
-            // 
-            ColumnCodBar.HeaderText = "Cod_Barras";
-            ColumnCodBar.Name = "ColumnCodBar";
-            ColumnCodBar.ReadOnly = true;
-            // 
-            // ColumnUnmed
-            // 
-            ColumnUnmed.HeaderText = "UN.Med";
-            ColumnUnmed.Name = "ColumnUnmed";
-            ColumnUnmed.ReadOnly = true;
-            // 
-            // ColumnStatusitem
-            // 
-            ColumnStatusitem.HeaderText = "Status";
-            ColumnStatusitem.Name = "ColumnStatusitem";
-            ColumnStatusitem.ReadOnly = true;
-            // 
-            // ColumnDescItem
-            // 
-            ColumnDescItem.HeaderText = "Desc_Item";
-            ColumnDescItem.Name = "ColumnDescItem";
-            ColumnDescItem.ReadOnly = true;
-            // 
-            // ColumnPrecoC
-            // 
-            ColumnPrecoC.HeaderText = "Preço de Custo";
-            ColumnPrecoC.Name = "ColumnPrecoC";
-            ColumnPrecoC.ReadOnly = true;
-            // 
-            // ColumnPorcent
-            // 
-            ColumnPorcent.HeaderText = "Lucro";
-            ColumnPorcent.Name = "ColumnPorcent";
-            ColumnPorcent.ReadOnly = true;
-            // 
-            // ColumnPrecoF
-            // 
-            ColumnPrecoF.HeaderText = "Preço Final";
-            ColumnPrecoF.Name = "ColumnPrecoF";
-            ColumnPrecoF.ReadOnly = true;
-            // 
             // TabelaItens
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -252,7 +252,6 @@
             MinimumSize = new Size(1041, 665);
             Name = "TabelaItens";
             ShowIcon = false;
-            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)dataGridItens).EndInit();
             menuStrip1.ResumeLayout(false);

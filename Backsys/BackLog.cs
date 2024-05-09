@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vanilla.Backsys
 {
-    public class BackLog : AdicionarUsuarios
+    public class BackLog : UserClass
     {
         private int id_log;
         private string log;

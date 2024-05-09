@@ -14,6 +14,7 @@ namespace Vanilla
     public partial class UserOn : Form
     {
         private Database db = new Database();
+        private UserOnBack userOnBack = new UserOnBack();
         static public List<UserOnBack> listuser = new List<UserOnBack>();
         public UserOn()
         {
@@ -23,7 +24,7 @@ namespace Vanilla
         {
             listuser.Clear();
             dataGridLogados.Rows.Clear();
-            db.ChamaView("view_users_logados", 1);
+            userOnBack.ChamaView();
 
             foreach (UserOnBack obj in listuser)
             {
@@ -95,7 +96,7 @@ namespace Vanilla
                 if (validador == 1) //desloga colaborador
                 {
                     listuser.Clear();
-                    db.ChamaView("view_users_logados", 1);
+                    userOnBack.ChamaView();
                     foreach (UserOnBack obj2 in listuser) //verifica se o colaborador esta ainda online
                     {
                         if (obj2.Login == user)
