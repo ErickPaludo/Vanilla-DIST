@@ -46,7 +46,7 @@ namespace Vanilla.CadastraCd.Tabela
                     CadastroCd cd = new CadastroCd();
                     connection.Open();
 
-                    using (OracleCommand cmd = new OracleCommand($"select * from view_enderecos_cd", connection))
+                    using (OracleCommand cmd = new OracleCommand($"select * from view_enderecos_cd where possui_subla = 'N'", connection))
                     {
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {
