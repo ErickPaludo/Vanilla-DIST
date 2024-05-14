@@ -42,7 +42,6 @@ namespace Vanilla
 
         public void InsereItens(int id, int quantidade)     //Faz a Gravação de itens na tabela
         {
-
             try
             {
                 using (OracleConnection connection = new OracleConnection(config.Lerdados()))
@@ -58,9 +57,13 @@ namespace Vanilla
                                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                                 cmd.Parameters.Add("v_id_item", OracleDbType.Int32).Value = id;
                                 cmd.Parameters.Add("v_quant", OracleDbType.Decimal).Value = quantidade;
+                                cmd.Parameters.Add("r_retorno", OracleDbType.Varchar2, 1000).Direction = ParameterDirection.Output;
+                               
                                 cmd.ExecuteNonQuery();
+                                string retorno = cmd.Parameters["r_retorno"].Value.ToString();
+                                MessageBox.Show(retorno);
+
                             }
-                            MessageBox.Show("Item gravado com sucesso!");
                         }
                     }
                     catch (Exception ex)
@@ -72,7 +75,6 @@ namespace Vanilla
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 

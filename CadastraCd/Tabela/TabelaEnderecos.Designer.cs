@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabelaEnderecos));
             dataGridCd = new DataGridView();
             ColumnEndereco = new DataGridViewTextBoxColumn();
             ColumnCod = new DataGridViewTextBoxColumn();
@@ -43,8 +44,13 @@
             radioButtonLivres = new RadioButton();
             camppesq = new TextBox();
             search = new Button();
+            menuStrip1 = new MenuStrip();
+            salvarToolStripMenuItem = new ToolStripMenuItem();
+            planilhaToolStripMenuItem = new ToolStripMenuItem();
+            pDFToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridCd).BeginInit();
             groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridCd
@@ -54,30 +60,30 @@
             dataGridCd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridCd.BackgroundColor = SystemColors.Control;
             dataGridCd.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridCd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridCd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridCd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridCd.Columns.AddRange(new DataGridViewColumn[] { ColumnEndereco, ColumnCod, ColumnRegiao, ColumnItem });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridCd.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridCd.Location = new Point(12, 121);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridCd.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridCd.Location = new Point(12, 146);
             dataGridCd.Name = "dataGridCd";
             dataGridCd.ReadOnly = true;
             dataGridCd.RowHeadersVisible = false;
             dataGridCd.RowTemplate.Height = 25;
-            dataGridCd.Size = new Size(900, 423);
+            dataGridCd.Size = new Size(900, 398);
             dataGridCd.TabIndex = 14;
             dataGridCd.CellContentClick += dataGridCd_CellContentClick;
             // 
@@ -137,7 +143,7 @@
             // 
             groupBox1.Controls.Add(radioButtonEnd);
             groupBox1.Controls.Add(radioButtonPick);
-            groupBox1.Location = new Point(12, 36);
+            groupBox1.Location = new Point(12, 61);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(200, 79);
             groupBox1.TabIndex = 17;
@@ -148,7 +154,7 @@
             // 
             radioButtonTodos.AutoSize = true;
             radioButtonTodos.Checked = true;
-            radioButtonTodos.Location = new Point(227, 47);
+            radioButtonTodos.Location = new Point(227, 71);
             radioButtonTodos.Name = "radioButtonTodos";
             radioButtonTodos.Size = new Size(56, 19);
             radioButtonTodos.TabIndex = 18;
@@ -160,7 +166,7 @@
             // radioButtonOcupados
             // 
             radioButtonOcupados.AutoSize = true;
-            radioButtonOcupados.Location = new Point(227, 71);
+            radioButtonOcupados.Location = new Point(227, 96);
             radioButtonOcupados.Name = "radioButtonOcupados";
             radioButtonOcupados.Size = new Size(136, 19);
             radioButtonOcupados.TabIndex = 19;
@@ -171,7 +177,7 @@
             // radioButtonLivres
             // 
             radioButtonLivres.AutoSize = true;
-            radioButtonLivres.Location = new Point(227, 96);
+            radioButtonLivres.Location = new Point(227, 121);
             radioButtonLivres.Name = "radioButtonLivres";
             radioButtonLivres.Size = new Size(112, 19);
             radioButtonLivres.TabIndex = 20;
@@ -181,7 +187,7 @@
             // 
             // camppesq
             // 
-            camppesq.Location = new Point(12, 7);
+            camppesq.Location = new Point(12, 32);
             camppesq.Name = "camppesq";
             camppesq.Size = new Size(190, 23);
             camppesq.TabIndex = 22;
@@ -189,7 +195,7 @@
             // search
             // 
             search.Cursor = Cursors.Hand;
-            search.Location = new Point(208, 7);
+            search.Location = new Point(208, 32);
             search.Name = "search";
             search.Size = new Size(75, 23);
             search.TabIndex = 21;
@@ -197,11 +203,48 @@
             search.UseVisualStyleBackColor = true;
             search.Click += Pesquisar;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.White;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { salvarToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
+            menuStrip1.Size = new Size(924, 24);
+            menuStrip1.TabIndex = 23;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // salvarToolStripMenuItem
+            // 
+            salvarToolStripMenuItem.BackColor = SystemColors.ButtonHighlight;
+            salvarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { planilhaToolStripMenuItem, pDFToolStripMenuItem });
+            salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
+            salvarToolStripMenuItem.Size = new Size(50, 20);
+            salvarToolStripMenuItem.Text = "Salvar";
+            // 
+            // planilhaToolStripMenuItem
+            // 
+            planilhaToolStripMenuItem.BackColor = SystemColors.Control;
+            planilhaToolStripMenuItem.Image = (Image)resources.GetObject("planilhaToolStripMenuItem.Image");
+            planilhaToolStripMenuItem.Name = "planilhaToolStripMenuItem";
+            planilhaToolStripMenuItem.Size = new Size(180, 22);
+            planilhaToolStripMenuItem.Text = "Planilha";
+            planilhaToolStripMenuItem.Click += ExportarXls;
+            // 
+            // pDFToolStripMenuItem
+            // 
+            pDFToolStripMenuItem.Image = (Image)resources.GetObject("pDFToolStripMenuItem.Image");
+            pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            pDFToolStripMenuItem.Size = new Size(180, 22);
+            pDFToolStripMenuItem.Text = "PDF";
+            pDFToolStripMenuItem.Click += ExportarPdf;
+            // 
             // TabelaEnderecos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(924, 575);
+            Controls.Add(menuStrip1);
             Controls.Add(camppesq);
             Controls.Add(search);
             Controls.Add(radioButtonLivres);
@@ -215,6 +258,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridCd).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -234,5 +279,9 @@
         private RadioButton radioButtonLivres;
         private TextBox camppesq;
         private Button search;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem salvarToolStripMenuItem;
+        private ToolStripMenuItem planilhaToolStripMenuItem;
+        private ToolStripMenuItem pDFToolStripMenuItem;
     }
 }

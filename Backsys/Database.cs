@@ -323,7 +323,7 @@ namespace Vanilla
                         cmd.Parameters.Add("v_ocorrencia", OracleDbType.Varchar2).Value = ocorrencia;
                         cmd.Parameters.Add("v_data_ini", OracleDbType.Date).Value = data_ini;
                         cmd.Parameters.Add("v_data_fin", OracleDbType.Date).Value = dataFinal;
-                        ;
+                        
                         cmd.Parameters.Add("r_info", OracleDbType.RefCursor, ParameterDirection.Output);
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {

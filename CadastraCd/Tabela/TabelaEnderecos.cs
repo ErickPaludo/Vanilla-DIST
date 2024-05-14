@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vanilla.CadastraCd.Tabela;
 
 namespace Vanilla
 {
@@ -43,62 +42,54 @@ namespace Vanilla
                 radioButtonPick.Enabled = false;
                 radioButtonEnd.Checked = true;
             }
-        }
-        public void Atualizar()
+        } 
+        public void Atualizar() //Atualiza pulmao
         {
             cdList.Clear();
             dataGridCd.Rows.Clear();
-            cadcd.RetornaEnd();
+
+            if (radioButtonLivres.Checked)
+            {
+                cadcd.RetornaEnd(3, "");
+            }
+
+            else if (radioButtonOcupados.Checked)
+            {
+                cadcd.RetornaEnd(2, "");
+            }
+            else
+            {
+                cadcd.RetornaEnd(0, "");
+            }
+
             foreach (LogisticaCD obj in cdList)
             {
-                if (radioButtonLivres.Checked)
-                {
-                    if (obj.Item_no_endereco == "")
-                    {
-                        dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
-                    }
-                }
-                else if (radioButtonOcupados.Checked)
-                {
-                    if (obj.Item_no_endereco != "")
-                    {
-                        dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
-                    }
-                }
-                else
-                {
-                    dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
-                }
+                dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
             }
         }
         public void AtualizarPicking()
         {
             picking.Clear();
             dataGridCd.Rows.Clear();
-            cadcd.RetornaSubLa();
+
+            if (radioButtonLivres.Checked)
+            {
+                cadcd.RetornaSubLa(2);
+            }
+            else if (radioButtonOcupados.Checked)
+            {
+                cadcd.RetornaSubLa(1);
+            }
+            else
+            {
+                cadcd.RetornaSubLa(0);
+            }
+
             foreach (LogisticaCD obj in picking)
             {
-
-                if (radioButtonLivres.Checked)
-                {
-                    if (obj.Item_no_endereco == "")
-                    {
-                        dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la} - {obj.Id_Subla}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
-                    }
-                }
-                else if (radioButtonOcupados.Checked)
-                {
-                    if (obj.Item_no_endereco != "")
-                    {
-                        dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la} - {obj.Id_Subla}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
-                    }
-                }
-                else
-                {
-                    dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la} - {obj.Id_Subla}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
-                }
-
+                dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la} - {obj.Id_Subla}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
             }
+
         }
         public void GravaListEndereco(int rua, int predio, int andar, string codbar, string name_reg, string nome_item)
         {
@@ -154,28 +145,24 @@ namespace Vanilla
         private void Pesquisar(object sender, EventArgs e)
         {
 
-            if (radioButtonEnd.Checked)
-            {
+
                 cdList.Clear();
-                cadcd.RetornaEnd();
+                if (!string.IsNullOrEmpty(camppesq.Text))
+                {
+                    cadcd.RetornaEnd(1, camppesq.Text);
+                }
+                else
+                {
+                    cadcd.RetornaEnd(0, "");
+                }
+
                 dataGridCd.Rows.Clear();
-                var enderecosFiltrados = cdList.Where(item => item.Cod_bar.StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase) || item.Item_no_endereco.StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase)).ToList(); // Filtro
-                foreach (var obj in enderecosFiltrados) //Imprimi na tela
+
+                foreach (LogisticaCD obj in cdList) //Imprimi na tela
                 {
                     dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
                 }
-            }
-            else
-            {
-                picking.Clear();
-                cadcd.RetornaSubLa();
-                dataGridCd.Rows.Clear();
-                var enderecosFiltrados = picking.Where(item => item.Cod_bar.StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase) || item.Item_no_endereco.StartsWith(camppesq.Text, StringComparison.OrdinalIgnoreCase)).ToList(); // Filtro
-                foreach (var obj in enderecosFiltrados) //Imprimi na tela
-                {
-                    dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la} - {obj.Id_Subla}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
-                }
-            }
+            
         }
 
         private void dataGridCd_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -207,6 +194,18 @@ namespace Vanilla
                     this.Close();
                 }
             }
+        }
+
+        private void ExportarXls(object sender, EventArgs e)//Exporta lista para XLS
+        {
+            TabelaItensClass export = new TabelaItensClass();
+            export.ExportXls();
+        }
+
+        private void ExportarPdf(object sender, EventArgs e)//Exporta lista para PDF
+        {
+            TabelaItensClass export = new TabelaItensClass();
+            export.ExportPdf();
         }
     }
 }
