@@ -117,7 +117,8 @@ namespace Vanilla
         {
             try
             {
-                TabelaItens list = new TabelaItens();
+                TabelaEnderecos list = new TabelaEnderecos();
+                
                 // Cria um novo documento com orientação paisagem e margens definidas
                 Document document = new Document(PageSize.A4);
 
@@ -126,10 +127,10 @@ namespace Vanilla
                 PdfWriter.GetInstance(document, new FileStream(@$"{pasta}\{arquivo}", FileMode.Create));
                 document.Open();
 
-                PdfPTable table = new PdfPTable(8); // Cria uma tabela com 11 colunas
+                PdfPTable table = new PdfPTable(4); // Cria uma tabela com 11 colunas
 
                 // Define a largura de cada coluna
-                float[] widths = new float[] { 20f, 20f, 20f, 10f, 10f, 15f, 10f, 15f };
+                float[] widths = new float[] { 15f, 20f, 15f, 20f };
                 table.SetWidths(widths);
 
                 int font_size_head = 7;
@@ -140,26 +141,31 @@ namespace Vanilla
                 table.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
 
                 // Adiciona células à tabela
-                table.AddCell(GetCell("FORNECEDOR", font_head));
-                table.AddCell(GetCell("NOME", font_head));
+                table.AddCell(GetCell("ENDEREÇO", font_head));
                 table.AddCell(GetCell("CODIGO DE BARRAS", font_head));
-                table.AddCell(GetCell("UN.MED", font_head));
-                table.AddCell(GetCell("STATUS", font_head));
-                table.AddCell(GetCell("PREÇO DE CUSTO", font_head));
-                table.AddCell(GetCell("LUCRO", font_head));
-                table.AddCell(GetCell("PREÇO FINAL", font_head));
+                table.AddCell(GetCell("REGIÃO DE SEPARAÇÃO", font_head));
+                table.AddCell(GetCell("ITEM", font_head));
 
-
-                foreach (CadastrarItens item in list.Itens)
+                if (list.Picking.Count > 0)
                 {
-                    table.AddCell(GetCell(item.Nome_f, font_data));
-                    table.AddCell(GetCell(item.Nome_item, font_data));
-                    table.AddCell(GetCell(item.Codbar, font_data));
-                    table.AddCell(GetCell(item.Unmed, font_data));
-                    table.AddCell(GetCell(item.Status_conv, font_data));
-                    table.AddCell(GetCell($"R${item.Preco_custo.ToString("f2")}", font_data));
-                    table.AddCell(GetCell($"{item.Lucro_porcent.ToString("f1")}%", font_data));
-                    table.AddCell(GetCell($"R${item.Preco_final.ToString("f2")}", font_data));
+                    foreach (LogisticaCD obj in list.Picking)
+                    {
+                        table.AddCell(GetCell($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}-{obj.Id_Subla}", font_data));
+                        table.AddCell(GetCell(obj.Cod_bar, font_data));
+                        table.AddCell(GetCell(obj.Name, font_data));
+                        table.AddCell(GetCell(obj.Item_no_endereco, font_data));
+
+                    }                 
+                }
+                else
+                {
+                    foreach (LogisticaCD obj in list.CdList)
+                    {
+                        table.AddCell(GetCell($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}", font_data));
+                        table.AddCell(GetCell(obj.Cod_bar, font_data));
+                        table.AddCell(GetCell(obj.Name, font_data));
+                        table.AddCell(GetCell(obj.Item_no_endereco, font_data));
+                    }
                 }
 
                 document.Add(table);
@@ -184,21 +190,17 @@ namespace Vanilla
         {
             try
             {
-                TabelaItens list = new TabelaItens();
+                TabelaEnderecos list = new TabelaEnderecos();
                 HSSFWorkbook workbook = new HSSFWorkbook();
 
                 ISheet planilha = workbook.CreateSheet("Itens");
                 var center = workbook.CreateCellStyle();
                 center.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
 
-                planilha.SetColumnWidth(0, 8000);  // Fornecedor
-                planilha.SetColumnWidth(1, 20000);  // Nome
-                planilha.SetColumnWidth(2, 4000);  // Código de Barras
-                planilha.SetColumnWidth(3, 2500);  // Unidade de Medida
-                planilha.SetColumnWidth(4, 4000);  // Status
-                planilha.SetColumnWidth(5, 4000); // Preço de Custo
-                planilha.SetColumnWidth(6, 4000);  // Lucro
-                planilha.SetColumnWidth(7, 4000);  // Preço Final
+                planilha.SetColumnWidth(0, 5000);  // Endereco
+                planilha.SetColumnWidth(1, 7000);  // codbar
+                planilha.SetColumnWidth(2, 10000);  // reg sep
+                planilha.SetColumnWidth(3, 30000);  // item
 
                 // Estilo para bordas destacadas
                 var borderStyle = workbook.CreateCellStyle();
@@ -212,7 +214,7 @@ namespace Vanilla
                 IRow headerRow = planilha.CreateRow(0);
 
                 headerRow.HeightInPoints = 20;
-                for (int x = 0; x < 8; x++)
+                for (int x = 0; x < 4; x++)
                 {
                     ICell cell = headerRow.CreateCell(x);
                     cell.SetCellValue(GetHeaderName(x));
@@ -223,48 +225,76 @@ namespace Vanilla
                     cell.CellStyle.BorderRight = borderStyle.BorderRight;
                 }
                 int i = 0; //contador
-                foreach (CadastrarItens obj in list.Itens)
+
+                if (list.Picking.Count > 0)
                 {
-                    IRow dataRow = planilha.CreateRow(i + 1);
-                    int columnIndex = 0; // Inicialize columnIndex dentro do loop
-
-                    // Defina os valores das células
-                    ICell cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue(obj.Nome_f);
-
-                    cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue(obj.Nome_item);
-
-                    cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue(obj.Codbar);
-
-                    cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue(obj.Unmed);
-
-                    cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue(obj.Status_conv);
-
-                    cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue($"R${obj.Preco_custo.ToString("f2")}");
-
-                    cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue($"{obj.Lucro_porcent}%");
-
-                    cell = dataRow.CreateCell(columnIndex++);
-                    cell.SetCellValue($"R${obj.Preco_final.ToString("f2")}");
-
-
-                    for (int j = 0; j < columnIndex; j++)
+                    foreach (LogisticaCD obj in list.Picking)
                     {
-                        ICell currentCell = dataRow.GetCell(j) ?? dataRow.CreateCell(j);
-                        currentCell.CellStyle = center;
-                        currentCell.CellStyle.BorderTop = borderStyle.BorderTop;
-                        currentCell.CellStyle.BorderBottom = borderStyle.BorderBottom;
-                        currentCell.CellStyle.BorderLeft = borderStyle.BorderLeft;
-                        currentCell.CellStyle.BorderRight = borderStyle.BorderRight;
-                    }
+                        IRow dataRow = planilha.CreateRow(i + 1);
+                        int columnIndex = 0; // Inicialize columnIndex dentro do loop
 
-                    i++; // Incrementa o contador de linhas
+                        // Defina os valores das células
+                        ICell cell = dataRow.CreateCell(columnIndex++);
+                        cell.SetCellValue($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}-{obj.Id_Subla}");
+
+                        cell = dataRow.CreateCell(columnIndex++);
+                        cell.SetCellValue(obj.Cod_bar);
+
+                        cell = dataRow.CreateCell(columnIndex++);
+                        cell.SetCellValue(obj.Name);
+
+                        cell = dataRow.CreateCell(columnIndex++);
+                        cell.SetCellValue(obj.Item_no_endereco);
+
+
+                        for (int j = 0; j < columnIndex; j++)
+                        {
+                            ICell currentCell = dataRow.GetCell(j) ?? dataRow.CreateCell(j);
+                            currentCell.CellStyle = center;
+                            currentCell.CellStyle.BorderTop = borderStyle.BorderTop;
+                            currentCell.CellStyle.BorderBottom = borderStyle.BorderBottom;
+                            currentCell.CellStyle.BorderLeft = borderStyle.BorderLeft;
+                            currentCell.CellStyle.BorderRight = borderStyle.BorderRight;
+                        }
+
+                        i++; // Incrementa o contador de linhas
+                    }
+                }
+                else
+                {
+                    {
+                        foreach (LogisticaCD obj in list.CdList)
+                        {
+                            IRow dataRow = planilha.CreateRow(i + 1);
+                            int columnIndex = 0; // Inicialize columnIndex dentro do loop
+
+                            // Defina os valores das células
+                            ICell cell = dataRow.CreateCell(columnIndex++);
+                            cell.SetCellValue($"{obj.Id_rua}-{obj.Id_predio}-{obj.Id_la}");
+
+                            cell = dataRow.CreateCell(columnIndex++);
+                            cell.SetCellValue(obj.Cod_bar);
+
+                            cell = dataRow.CreateCell(columnIndex++);
+                            cell.SetCellValue(obj.Name);
+
+                            cell = dataRow.CreateCell(columnIndex++);
+                            cell.SetCellValue(obj.Item_no_endereco);
+
+
+                            for (int j = 0; j < columnIndex; j++)
+                            {
+                                ICell currentCell = dataRow.GetCell(j) ?? dataRow.CreateCell(j);
+                                currentCell.CellStyle = center;
+                                currentCell.CellStyle.BorderTop = borderStyle.BorderTop;
+                                currentCell.CellStyle.BorderBottom = borderStyle.BorderBottom;
+                                currentCell.CellStyle.BorderLeft = borderStyle.BorderLeft;
+                                currentCell.CellStyle.BorderRight = borderStyle.BorderRight;
+                            }
+
+                            i++; // Incrementa o contador de linhas
+                        }
+                    }
                 }
 
 
@@ -288,23 +318,13 @@ namespace Vanilla
             switch (index)
             {
                 case 0:
-                    return "Fornecedor";
+                    return "Endereço";
                 case 1:
-                    return "Nome";
+                    return "Codigo de barras";
                 case 2:
-                    return "Código de Barras";
-                case 3:
-                    return "Un.Med";
-                case 4:
-                    return "Status";
-                case 5:
-                    return "Preço de Custo";
-                case 6:
-                    return "Lucro";
-                case 7:
-                    return "Preço Final";
+                    return "Região de separação";
                 default:
-                    return "";
+                    return "Item";
             }
         }
 

@@ -118,12 +118,10 @@
             // radioButtonEnd
             // 
             radioButtonEnd.AutoSize = true;
-            radioButtonEnd.Checked = true;
             radioButtonEnd.Location = new Point(6, 22);
             radioButtonEnd.Name = "radioButtonEnd";
             radioButtonEnd.Size = new Size(131, 19);
             radioButtonEnd.TabIndex = 15;
-            radioButtonEnd.TabStop = true;
             radioButtonEnd.Text = "Endereços (Pulmão)";
             radioButtonEnd.UseVisualStyleBackColor = true;
             radioButtonEnd.Click += AtualizarEnd;
@@ -131,10 +129,12 @@
             // radioButtonPick
             // 
             radioButtonPick.AutoSize = true;
+            radioButtonPick.Checked = true;
             radioButtonPick.Location = new Point(6, 47);
             radioButtonPick.Name = "radioButtonPick";
             radioButtonPick.Size = new Size(107, 19);
             radioButtonPick.TabIndex = 16;
+            radioButtonPick.TabStop = true;
             radioButtonPick.Text = "Picking (Sub la)";
             radioButtonPick.UseVisualStyleBackColor = true;
             radioButtonPick.Click += AtualizaPick;
@@ -227,7 +227,7 @@
             planilhaToolStripMenuItem.BackColor = SystemColors.Control;
             planilhaToolStripMenuItem.Image = (Image)resources.GetObject("planilhaToolStripMenuItem.Image");
             planilhaToolStripMenuItem.Name = "planilhaToolStripMenuItem";
-            planilhaToolStripMenuItem.Size = new Size(180, 22);
+            planilhaToolStripMenuItem.Size = new Size(116, 22);
             planilhaToolStripMenuItem.Text = "Planilha";
             planilhaToolStripMenuItem.Click += ExportarXls;
             // 
@@ -235,7 +235,7 @@
             // 
             pDFToolStripMenuItem.Image = (Image)resources.GetObject("pDFToolStripMenuItem.Image");
             pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            pDFToolStripMenuItem.Size = new Size(180, 22);
+            pDFToolStripMenuItem.Size = new Size(116, 22);
             pDFToolStripMenuItem.Text = "PDF";
             pDFToolStripMenuItem.Click += ExportarPdf;
             // 
@@ -271,8 +271,8 @@
         private DataGridViewTextBoxColumn ColumnCod;
         private DataGridViewTextBoxColumn ColumnRegiao;
         private DataGridViewTextBoxColumn ColumnItem;
-        private RadioButton radioButtonEnd;
-        private RadioButton radioButtonPick;
+        public RadioButton radioButtonEnd;
+        public RadioButton radioButtonPick;
         private GroupBox groupBox1;
         private RadioButton radioButtonTodos;
         private RadioButton radioButtonOcupados;

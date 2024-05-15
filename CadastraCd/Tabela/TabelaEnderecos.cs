@@ -15,6 +15,24 @@ namespace Vanilla
     {
         static private List<LogisticaCD> cdList = new List<LogisticaCD>();
         static private List<LogisticaCD> picking = new List<LogisticaCD>();
+
+
+        public List<LogisticaCD> CdList
+        {
+            get
+            {
+                return cdList;
+            }
+        }
+
+        public List<LogisticaCD> Picking
+        {
+            get
+            {
+                return picking;
+            }
+        }
+
         ClassTabelaEnd cadcd = new ClassTabelaEnd();
         public bool edit = false;
         public TabelaEnderecos()
@@ -45,6 +63,7 @@ namespace Vanilla
         } 
         public void Atualizar() //Atualiza pulmao
         {
+            picking.Clear();
             cdList.Clear();
             dataGridCd.Rows.Clear();
 
@@ -69,6 +88,7 @@ namespace Vanilla
         }
         public void AtualizarPicking()
         {
+            cdList.Clear();
             picking.Clear();
             dataGridCd.Rows.Clear();
 
@@ -198,13 +218,13 @@ namespace Vanilla
 
         private void ExportarXls(object sender, EventArgs e)//Exporta lista para XLS
         {
-            TabelaItensClass export = new TabelaItensClass();
+            ClassTabelaEnd export = new ClassTabelaEnd();
             export.ExportXls();
         }
 
         private void ExportarPdf(object sender, EventArgs e)//Exporta lista para PDF
         {
-            TabelaItensClass export = new TabelaItensClass();
+            ClassTabelaEnd export = new ClassTabelaEnd();
             export.ExportPdf();
         }
     }
