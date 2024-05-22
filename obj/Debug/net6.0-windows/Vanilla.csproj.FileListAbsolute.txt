@@ -389,3 +389,4 @@ C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\OfficeOpenXml.Exten
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Select.HtmlToPdf.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Spire.XLS.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.sourcelink.json
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ViewMsg.resources

@@ -62,6 +62,7 @@
             flowLayoutPanel5 = new FlowLayoutPanel();
             BInsereItem = new Button();
             pictureBox1 = new PictureBox();
+            button2 = new Button();
             menuStrip1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             containercad.SuspendLayout();
@@ -460,6 +461,17 @@
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button2.Location = new Point(899, 542);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 16;
+            button2.Text = "Chat";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += ChamaChat;
+            // 
             // Homepage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -467,6 +479,7 @@
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
             ClientSize = new Size(981, 577);
+            Controls.Add(button2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             Controls.Add(pictureBox1);
@@ -475,6 +488,7 @@
             Text = "Início";
             WindowState = FormWindowState.Maximized;
             FormClosing += Homepage_FormClosing;
+            Click += ChamaChat;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
@@ -526,5 +540,6 @@
         private FlowLayoutPanel flowLayoutPanel5;
         private Button BInsereItem;
         private Button button1;
+        private Button button2;
     }
 }

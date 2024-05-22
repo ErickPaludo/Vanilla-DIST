@@ -327,7 +327,23 @@ namespace Vanilla
             {
                 StatusdoCd scd = new StatusdoCd();
                 scd.Mostrar();
-                scd.Show();                     
+                scd.Show();
+            }
+            else
+            {
+                DeslogarUsuario();
+            }
+        }
+
+        private void ChamaChat(object sender, EventArgs e)
+        {
+            if (db.VerificaLogin() == true)
+            {
+                ViewMsg view = new ViewMsg();
+                view.Visible = false;
+                ModelMsg model = new ModelMsg();
+                ControllerMsg controller = new ControllerMsg(view, model);
+                view.ShowDialog();
             }
             else
             {
