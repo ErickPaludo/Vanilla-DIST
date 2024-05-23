@@ -63,7 +63,6 @@ C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastroCd.
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaEnderecos.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastraCNPJ.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaEmpresas.resources
-C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.EnderecoFront.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
@@ -390,3 +389,4 @@ C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Select.HtmlToPdf.dl
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Spire.XLS.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.sourcelink.json
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ViewMsg.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ViewMsg.resources

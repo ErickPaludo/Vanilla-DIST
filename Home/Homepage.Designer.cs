@@ -464,11 +464,12 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.Location = new Point(899, 542);
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Location = new Point(922, 518);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(50, 50);
             button2.TabIndex = 16;
-            button2.Text = "Chat";
             button2.UseVisualStyleBackColor = true;
             button2.Click += ChamaChat;
             // 
