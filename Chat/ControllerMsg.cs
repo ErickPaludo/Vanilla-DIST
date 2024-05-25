@@ -22,7 +22,7 @@ namespace Vanilla
             this.viewmsg = viewmsg;
             this.modelmsg = modelmsg;
             viewmsg.SetController(this);
-           modelmsg.CarregaContatos();
+            modelmsg.CarregaContatos();
             CarregaContatos();
         }
 
@@ -31,7 +31,7 @@ namespace Vanilla
             if (!string.IsNullOrEmpty(viewmsg.UserText.Text))
             {
                 modelmsg.Env(Util.id_user.ToString(), Usuario.id_des, viewmsg.UserText.Text); ;
-                    viewmsg.UserText.Clear();    
+                viewmsg.UserText.Clear();
             }
             else
             {
@@ -42,13 +42,13 @@ namespace Vanilla
         public void CarregaMensagens()
         {
             viewmsg.Allmsg.Clear();
-            foreach(Mensagem obj in modelmsg.Histlist)
+            foreach (Mensagem obj in modelmsg.Histlist)
             {
                 int start = viewmsg.Allmsg.TextLength;
                 string formattedMessage = $"{obj.Name_r}      \n {obj.Msg}\n{obj.Date}\n" + Environment.NewLine;
                 viewmsg.Allmsg.AppendText(formattedMessage);
                 if (obj.Id_rem == Util.id_user.ToString())
-                {                 
+                {
                     // Seleciona o texto recém-adicionado
                     viewmsg.Allmsg.Select(start, formattedMessage.Length);
                     viewmsg.Allmsg.SelectionAlignment = HorizontalAlignment.Right;
@@ -63,13 +63,13 @@ namespace Vanilla
                 viewmsg.Allmsg.SelectionLength = 0;
                 viewmsg.Allmsg.ScrollToCaret();
             }
-         
+
         }
 
         public void SeleiconaContato(string us)
         {
             viewmsg.Destinatario.Text = us;
-            modelmsg.SetDestinoId(us);          
+            modelmsg.SetDestinoId(us);
             modelmsg.RecebeMensagens();
             viewmsg.Env.Enabled = true;
             CarregaMensagens();
@@ -85,10 +85,14 @@ namespace Vanilla
                 viewmsg.GridUser.Rows.Add(obj.Name_r);
             }
         }
-
+        public void EncerraThead()
+        {
+            msg.Pesq = false;
+        }
         public async Task CheckMsg()
         {
-            while (true)
+            msg.Pesq = true;
+            while (msg.Pesq)
             {
                 modelmsg.NovaMsg();
                 if (modelmsg.Id != old_id)

@@ -22,8 +22,13 @@ namespace Vanilla
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 controller.SeleiconaContato(dataGridUsers.Rows[e.RowIndex].Cells[0].Value.ToString());
-              
+
             }
+        }
+
+        private void Encerramento(object sender, FormClosedEventArgs e)
+        {
+            controller.EncerraThead();
         }
 
         public RichTextBox Allmsg

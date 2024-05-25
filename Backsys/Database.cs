@@ -7,6 +7,7 @@ using System.Net;
 using System.Reflection.PortableExecutable;
 using System.Reflection.Metadata;
 using Newtonsoft.Json.Linq;
+using System.Drawing.Text;
 
 
 namespace Vanilla
@@ -170,7 +171,7 @@ namespace Vanilla
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         } //gravar na base o usuario
-       
+
 
         public void AddLog(string msg, int id)
         {
@@ -195,11 +196,11 @@ namespace Vanilla
         }
         #endregion
 
-      
+
 
 
         #region Buscadores
-       
+
 
         public void TabelaFornecItem() //Vai coletar alguns dados de endereco para jogar na tabela de fornecedores de itens
         {
@@ -234,7 +235,7 @@ namespace Vanilla
             }
         }
 
-      
+
         public void RetornarUserC(int id, out string nome, out string email, out string tel, out string tel_, out string pass, out string login)
         {
             nome = string.Empty;
@@ -323,7 +324,7 @@ namespace Vanilla
                         cmd.Parameters.Add("v_ocorrencia", OracleDbType.Varchar2).Value = ocorrencia;
                         cmd.Parameters.Add("v_data_ini", OracleDbType.Date).Value = data_ini;
                         cmd.Parameters.Add("v_data_fin", OracleDbType.Date).Value = dataFinal;
-                        
+
                         cmd.Parameters.Add("r_info", OracleDbType.RefCursor, ParameterDirection.Output);
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {
@@ -342,7 +343,7 @@ namespace Vanilla
             }
         }
 
-       
+
         #endregion
         public bool AntiCopy(string celula, string table, string cod)//Verifica se uma palavra já existe já existe
         {
@@ -407,6 +408,17 @@ namespace Vanilla
                 return false;
             }
         }
+
+        public async Task ValidaLicenca()
+        {
+            bool validador = true;
+            do
+            {
+                await Task.Delay(1100);
+                validador = VerificaLogin();
+            } while (validador);
+
+        }
         public bool VerificaLogin()
         {
             try
@@ -435,7 +447,7 @@ namespace Vanilla
 
                         if (v_retorno != true)
                         {
-                            throw new Exception("Este usuário não está mais conectado na aplicação.");
+                            throw new Exception("Este usuário não está mais conectado na aplicação.");                          
                         }
                         return true;
                     }
@@ -444,6 +456,24 @@ namespace Vanilla
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Type formTypeToKeepOpen = typeof(LoginFront);
+
+                // Crie uma instância do formulário de login
+                LoginFront login = new LoginFront();
+
+                // Itere sobre todas as formas abertas
+                foreach (Form childForm in Application.OpenForms.Cast<Form>().ToArray())
+                {
+                    // Verifique se a forma não é a forma que você quer manter aberta
+                    if (childForm.GetType() != formTypeToKeepOpen)
+                    {
+                        // Se não for, feche a forma
+                        childForm.Hide();
+                    }
+                }
+
+                // Mostrar o formulário de login
+                login.Show();
                 return false;
             }
         }

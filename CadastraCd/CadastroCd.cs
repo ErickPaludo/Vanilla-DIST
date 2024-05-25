@@ -131,7 +131,6 @@ namespace Vanilla
                 else
                 {
                     Homepage home = new Homepage();
-                    home.DeslogarUsuario();
                 }
             }
             catch (Exception ex)
@@ -418,7 +417,6 @@ namespace Vanilla
             else
             {
                 Homepage home = new Homepage();
-                home.DeslogarUsuario();
             }
         }
         public void AtualizaReg()

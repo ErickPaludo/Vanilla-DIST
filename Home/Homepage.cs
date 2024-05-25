@@ -23,6 +23,7 @@ namespace Vanilla
         public Homepage()
         {
             InitializeComponent();
+            db.ValidaLicenca();
             Exibir();
         }
         public void ValidaRecebe(bool type)//atribuira true ou false para o validador
@@ -44,41 +45,22 @@ namespace Vanilla
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
+           
                 CadastraCNPJ transportadora = new CadastraCNPJ();
                 transportadora.ShowDialog();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
+         
         }
 
         private void AbrirItem(object sender, EventArgs e)
-        {
-            if (db.VerificaLogin() == true)
-            {
+        {        
                 CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
-                cadastrarItensFront.ShowDialog();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
+                cadastrarItensFront.ShowDialog();       
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {
-            if (db.VerificaLogin() == true)
-            {
+        {          
                 AdicionarUsuariosFront usuarios = new AdicionarUsuariosFront();
                 usuarios.ShowDialog();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void Homepage_FormClosing(object sender, FormClosingEventArgs e)
@@ -92,22 +74,13 @@ namespace Vanilla
 
         private void Config_User(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
                 AlterarUserCFront altercomun = new AlterarUserCFront();
                 altercomun.ExibirDados();
                 altercomun.ShowDialog();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void AlterarUser(object sender, EventArgs e)
-        {
-            if (db.VerificaLogin() == true)
-            {
+        {      
                 AlterarUserCFront altercomun = new AlterarUserCFront();
                 altercomun.ExibirDados();
                 altercomun.ShowDialog();
@@ -115,13 +88,7 @@ namespace Vanilla
                 {
                     validador = false;
                     db.Deslog(0);
-                    DeslogarUsuario();
                 }
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void AddCd(object sender, EventArgs e)
@@ -136,18 +103,11 @@ namespace Vanilla
             if (db.VerificaLogin() == true)
             {
                 db.Deslog(0);
-                DeslogarUsuario();
-            }
-            else
-            {
-                DeslogarUsuario();
             }
         }
 
         private void AlterarQualqueruser(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
                 AlterarUsersGeral users = new AlterarUsersGeral();
                 users.ExibirDadosTabela();
                 users.ShowDialog();
@@ -155,45 +115,23 @@ namespace Vanilla
                 {
                     validador = false;
                     db.Deslog(0);
-                    DeslogarUsuario();
                 }
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void Exit(object sender, EventArgs e)
-        {
-            if (db.VerificaLogin() == true)
-            {
+        {          
                 db.Deslog(0);
                 Environment.Exit(0);
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void EndereçoBanco(object sender, EventArgs e)
-        {
-
-            if (db.VerificaLogin() == true)
-            {
+        {        
                 ConfigBank editbank = new ConfigBank();
                 editbank.ShowDialog();
                 if (validador == true)
                 {
                     db.Deslog(0);
-                    DeslogarUsuario();
                 }
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void VerSobre(object sender, EventArgs e)
@@ -204,151 +142,78 @@ namespace Vanilla
 
         private void VerEmpresas(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
                 Cursor = Cursors.WaitCursor;
                 TabelaEmpresas emp = new TabelaEmpresas(false);
                 emp.Carregar();
                 emp.Show();
                 Cursor = Cursors.Default;
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void VerLog(object sender, EventArgs e)
         {
-
-            if (db.VerificaLogin() == true)
-            {
                 Logs log = new Logs();
                 log.LimparCombo();
                 db.RetornaUsuarios();
                 log.ExibirlistComb();
                 log.Show();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void ConsultarItens(object sender, EventArgs e)
-        {
-            if (db.VerificaLogin() == true)
-            {
+        {                
                 TabelaItens itens = new TabelaItens(false);
                 itens.AtualizarItens();
-                itens.Show();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
+                itens.Show();    
         }
 
         private void LOgados(object sender, EventArgs e)
-        {
-            if (db.VerificaLogin() == true)
-            {
+        {      
                 UserOn logados = new UserOn();
                 logados.AtualizaTable();
-                logados.Show();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
+                logados.Show(); 
         }
 
-        public void DeslogarUsuario()
-        {
-            Type formTypeToKeepOpen = typeof(LoginFront);
-
-            // Crie uma instância do formulário de login
-            LoginFront login = new LoginFront();
-
-            // Itere sobre todas as formas abertas
-            foreach (Form childForm in Application.OpenForms.Cast<Form>().ToArray())
-            {
-                // Verifique se a forma não é a forma que você quer manter aberta
-                if (childForm.GetType() != formTypeToKeepOpen)
-                {
-                    // Se não for, feche a forma
-                    childForm.Hide();
-                }
-            }
-
-            // Mostrar o formulário de login
-            login.Show();
-        }
 
         private void nameuser_Click(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == false)
-            {
-                DeslogarUsuario();
-            }
+         
         }
 
         private void AcessaTableCd(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
+          
                 TabelaEnderecos itens = new TabelaEnderecos();
                 //   itens.Atualizar();
                 itens.Show();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
         }
 
         private void InserirItens(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
+         
                 InserirItem itens = new InserirItem();
                 itens.Atualizar();
                 itens.Show();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
+            
+         
         }
 
         private void StatusCd(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
+           
                 StatusdoCd scd = new StatusdoCd();
                 scd.Mostrar();
                 scd.Show();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
+           
         }
 
         private void ChamaChat(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
-            {
+           
                 ViewMsg view = new ViewMsg();
                 view.Visible = false;
                 ModelMsg model = new ModelMsg();
                 ControllerMsg controller = new ControllerMsg(view, model);
                 view.ShowDialog();
-            }
-            else
-            {
-                DeslogarUsuario();
-            }
+         
         }
     }
 }

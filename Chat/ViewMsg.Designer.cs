@@ -156,6 +156,7 @@
             Name = "ViewMsg";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ValkTalk - Mensagens";
+            FormClosed += Encerramento;
             ((System.ComponentModel.ISupportInitialize)dataGridUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();

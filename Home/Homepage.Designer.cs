@@ -489,7 +489,6 @@
             Text = "Início";
             WindowState = FormWindowState.Maximized;
             FormClosing += Homepage_FormClosing;
-            Click += ChamaChat;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);

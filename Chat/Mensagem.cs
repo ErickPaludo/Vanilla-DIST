@@ -8,10 +8,16 @@ namespace Vanilla
 {
     public class Mensagem
     {
+        static private bool pesq;
         private int id;
         private string id_rem,name_r;
         private string msg;
         private DateTime date;
+        public bool Pesq
+        {
+            get { return pesq; }
+            set { pesq = value; }
+        }
         public int Id
         {
             get

@@ -168,7 +168,6 @@ namespace Vanilla
             else
             {
                 Homepage home = new Homepage();
-                home.DeslogarUsuario();
             }
         }
         private void codMaual_Click(object sender, EventArgs e)//habilita ou desabilita o cod de barras manual

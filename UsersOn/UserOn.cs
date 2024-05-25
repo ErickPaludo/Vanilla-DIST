@@ -42,17 +42,11 @@ namespace Vanilla
 
         private void Deslogar(int user)
         {
-            if (db.VerificaLogin() == true)
-            {
+           
                 db.Deslog(user);
                 MessageBox.Show("A sessão do usuário selecionada foi encerrada!");
                 AtualizaTable();
-            }
-            else
-            {
-                Homepage home = new Homepage();
-                home.DeslogarUsuario();
-            }
+          
         }
 
         private void Atualize(object sender, KeyEventArgs e)

@@ -68,7 +68,6 @@ namespace Vanilla
             else
             {
                 Homepage home = new Homepage();
-                home.DeslogarUsuario();
             }
         }
         private void buttonCancelar_Click(object sender, EventArgs e)

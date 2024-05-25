@@ -149,7 +149,6 @@ namespace Vanilla
             else
             {
                 Homepage home = new Homepage();
-                home.DeslogarUsuario();
             }
             Cursor = Cursors.Default;
         }
