@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\chat\\controllermsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:chat\\controllermsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\chat\\modelmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:chat\\modelmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\errorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:errorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\errorbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:errorbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\errorbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:errorbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\login\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\errorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:errorcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,83 +46,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ViewMsg.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs",
-              "RelativeDocumentMoniker": "Chat\\ViewMsg.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs",
-              "RelativeToolTip": "Chat\\ViewMsg.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAAEwAAAAJAAAA",
+              "DocumentIndex": 1,
+              "Title": "Homepage.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
+              "RelativeDocumentMoniker": "Home\\Homepage.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
+              "RelativeToolTip": "Home\\Homepage.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAC4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:13:55.473Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-05-25T21:41:15.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Homepage.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
               "RelativeDocumentMoniker": "Home\\Homepage.cs",
               "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs [Projeto]",
               "RelativeToolTip": "Home\\Homepage.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:43:20.426Z",
+              "WhenOpened": "2024-05-25T21:40:28.063Z",
               "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewMsg.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs",
-              "RelativeDocumentMoniker": "Chat\\ViewMsg.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs [Projeto]",
-              "RelativeToolTip": "Chat\\ViewMsg.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:36:51.498Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ModelMsg.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ModelMsg.cs",
-              "RelativeDocumentMoniker": "Chat\\ModelMsg.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ModelMsg.cs",
-              "RelativeToolTip": "Chat\\ModelMsg.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAiwIgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:13:33.864Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ControllerMsg.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ControllerMsg.cs",
-              "RelativeDocumentMoniker": "Chat\\ControllerMsg.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ControllerMsg.cs",
-              "RelativeToolTip": "Chat\\ControllerMsg.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAQwGQAAAAQAAAA",
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Backsys\\Database.cs",
+              "RelativeDocumentMoniker": "Backsys\\Database.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Backsys\\Database.cs",
+              "RelativeToolTip": "Backsys\\Database.cs",
+              "ViewState": "AQIAAIQBAAAAAAAAAAAQwJoBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:13:22.511Z",
+              "WhenOpened": "2024-05-25T21:40:10.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T21:28:11.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginClass.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginClass.cs",
+              "RelativeDocumentMoniker": "Login\\LoginClass.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginClass.cs",
+              "RelativeToolTip": "Login\\LoginClass.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwDkAAABzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T21:26:19.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorBox.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorBox.cs",
+              "RelativeDocumentMoniker": "ErrorBox.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorBox.cs",
+              "RelativeToolTip": "ErrorBox.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T20:03:52.221Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Homepage.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
-              "RelativeDocumentMoniker": "Home\\Homepage.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
-              "RelativeToolTip": "Home\\Homepage.cs",
-              "ViewState": "AQIAAE4BAAAAAAAAAAAuwFkBAAAiAAAA",
+              "Title": "ErrorBox.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorBox.cs",
+              "RelativeDocumentMoniker": "ErrorBox.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorBox.cs [Projeto]",
+              "RelativeToolTip": "ErrorBox.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:11:41.962Z",
+              "WhenOpened": "2024-05-25T20:02:18.857Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ErrorComponent.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorComponent.cs",
+              "RelativeDocumentMoniker": "ErrorComponent.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorComponent.cs [Projeto]",
+              "RelativeToolTip": "ErrorComponent.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T19:59:20.085Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "259e4093-b10e-49e3-97ad-12c2e5dc41dc",
+        "Display": 1,
+        "X": 638,
+        "Y": 236,
+        "Width": 1141,
+        "Height": 778,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ErrorComponent.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorComponent.cs",
+              "RelativeDocumentMoniker": "ErrorComponent.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\ErrorComponent.cs",
+              "RelativeToolTip": "ErrorComponent.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAcwCEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T20:00:49.646Z",
               "EditorCaption": ""
             }
           ]

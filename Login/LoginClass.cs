@@ -55,7 +55,7 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!",ex.Message);
                     return false;
                 }
             }
