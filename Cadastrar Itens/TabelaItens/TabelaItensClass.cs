@@ -6,6 +6,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
+using Vanilla.Interfaces;
 using Font = iTextSharp.text.Font;
 
 namespace Vanilla

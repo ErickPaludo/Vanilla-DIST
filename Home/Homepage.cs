@@ -14,22 +14,287 @@ using Vanilla.StatusCd;
 
 namespace Vanilla
 {
-    public partial class Homepage : Form
+    public partial class Homepage : Form, IHomePage
     {
+        HomeController controller;
         Util utilitarios = new Util();
         Database db = new Database();
-        public static bool validador = false;
-        private Config _config = new Config();
+        private LicencasLogin lic = new LicencasLogin();
         public Homepage()
         {
             InitializeComponent();
-            db.ValidaLicenca();
+            lic.ValidaLicenca();
             Exibir();
         }
-        public void ValidaRecebe(bool type)//atribuira true ou false para o validador
+
+        #region elements_view
+        public void SetController(HomeController controller)
         {
-            validador = type;
+            this.controller = controller;
         }
+        public ToolStripMenuItem UserMenu
+        {
+            get
+            {
+                return Snameuser;
+            }
+            set
+            {
+                Snameuser = value;
+            }
+        }
+        public ToolStripMenuItem UserOn
+        {
+            get
+            {
+                return Suseron;
+            }
+            set
+            {
+                Suseron = value;
+            }
+        }
+        public ToolStripMenuItem AlterUserAdm
+        {
+            get
+            {
+                return Salterauseradm;
+            }
+            set
+            {
+                Salterauseradm = value;
+            }
+        }
+        public ToolStripMenuItem AlterUserDefaul
+        {
+            get
+            {
+                return Salteraruser;
+            }
+            set
+            {
+                Salteraruser = value;
+            }
+        }
+        public ToolStripMenuItem Logoff
+        {
+            get
+            {
+                return Slogout;
+            }
+            set
+            {
+                Slogout = value;
+            }
+        }
+        public ToolStripMenuItem Sair
+        {
+            get
+            {
+                return Sexit;
+            }
+            set
+            {
+                Sexit = value;
+            }
+        }
+        public Button CadEmpresas
+        {
+            get
+            {
+                return Ccademp;
+            }
+            set
+            {
+                Ccademp = value;
+            }
+        }
+        public Button CadItens
+        {
+            get
+            {
+                return Bcaditem;
+            }
+            set
+            {
+                Bcaditem = value;
+            }
+        }
+        public Button CadUser
+        {
+            get
+            {
+                return Badduser;
+            }
+            set
+            {
+                Badduser = value;
+            }
+        }
+        public Button LayoutCd
+        {
+            get
+            {
+                return Baddcd;
+            }
+            set
+            {
+                Baddcd = value;
+            }
+        }
+        public Button ViewLog
+        {
+            get
+            {
+                return Blogs;
+            }
+            set
+            {
+                Blogs = value;
+            }
+        }
+        public Button ViewEmp
+        {
+            get
+            {
+                return Bvisualizaemp;
+            }
+            set
+            {
+                Bvisualizaemp = value;
+            }
+        }
+        public Button ViewItens
+        {
+            get
+            {
+                return Bvisualizaitens;
+            }
+            set
+            {
+                Bvisualizaitens = value;
+            }
+        }
+        public Button ViewEnd
+        {
+            get
+            {
+                return Bvisualizacd;
+            }
+            set
+            {
+                Bvisualizacd = value;
+            }
+        }
+        public Button CdStatus
+        {
+            get
+            {
+                return Bstatuscd;
+            }
+            set
+            {
+                Bstatuscd = value;
+            }
+        }
+        public Button InsItem
+        {
+            get
+            {
+                return BInsereItem;
+            }
+            set
+            {
+                BInsereItem = value;
+            }
+        }
+        public Button MsgOpen
+        {
+            get
+            {
+                return Bmsg;
+            }
+            set
+            {
+                Bmsg = value;
+            }
+        }
+        #endregion
+
+        #region Menu
+        private void LOgados(object sender, EventArgs e)
+        {
+            controller.UsersOn();
+        }
+        private void AlterarQualqueruser(object sender, EventArgs e)
+        {
+            controller.AlterUserComplet();
+        }
+        private void AlterarUser(object sender, EventArgs e)
+        {
+            controller.AlterUser();
+        }
+        private void TrocarConta(object sender, EventArgs e)
+        {
+            controller.TrocarConta();
+        }
+        private void Exit(object sender, EventArgs e)
+        {
+            controller.Sair();
+        }
+        #endregion
+
+        #region Cadastros
+        private void StrEmp(object sender, EventArgs e)
+        {
+            controller.StartCadEmp();
+        }
+        private void AbrirItem(object sender, EventArgs e)
+        {
+            controller.StartCadItens();
+        }
+        private void StrCadUs(object sender, EventArgs e)
+        {
+            controller.StartCadUser();
+        }
+        private void AddCd(object sender, EventArgs e)
+        {
+            controller.StartCadCd();
+        }
+        #endregion
+
+        #region Visualização
+        private void VerLog(object sender, EventArgs e)
+        {
+            controller.StartViewLogs();
+        }
+        private void VerEmpresas(object sender, EventArgs e)
+        {
+            controller.StartViewEmps();
+        }
+        private void ConsultarItens(object sender, EventArgs e)
+        {
+            controller.StartViewItens();
+        }
+        private void AcessaTableCd(object sender, EventArgs e)
+        {
+            controller.StartViewEnd();
+        }
+        private void StatusCd(object sender, EventArgs e)
+        {
+            controller.StartViewCd();
+        }
+        #endregion
+
+        #region Operações
+        private void InserirItens(object sender, EventArgs e)
+        {
+            InserirItem itens = new InserirItem();
+            itens.Atualizar();
+            itens.Show();
+        }
+        #endregion
+
         public void Exibir()
         {
             if (utilitarios.Permissao_user == 0)
@@ -43,29 +308,9 @@ namespace Vanilla
             Snameuser.Text = utilitarios.Nome_user;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-                CadastraCNPJ transportadora = new CadastraCNPJ();
-                transportadora.ShowDialog();
-         
-        }
-
-        private void AbrirItem(object sender, EventArgs e)
-        {        
-                CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
-                cadastrarItensFront.ShowDialog();       
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {          
-                AdicionarUsuariosFront usuarios = new AdicionarUsuariosFront();
-                usuarios.ShowDialog();
-        }
-
         private void Homepage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (db.VerificaLogin() == true)
+            if (lic.VerificaLogin() == true)
             {
                 db.Deslog(0);
             }
@@ -74,64 +319,15 @@ namespace Vanilla
 
         private void Config_User(object sender, EventArgs e)
         {
-                AlterarUserCFront altercomun = new AlterarUserCFront();
-                altercomun.ExibirDados();
-                altercomun.ShowDialog();
-        }
-
-        private void AlterarUser(object sender, EventArgs e)
-        {      
-                AlterarUserCFront altercomun = new AlterarUserCFront();
-                altercomun.ExibirDados();
-                altercomun.ShowDialog();
-                if (validador == true)
-                {
-                    validador = false;
-                    db.Deslog(0);
-                }
-        }
-
-        private void AddCd(object sender, EventArgs e)
-        {
-            CadastroCd cd = new CadastroCd();
-            cd.AtualizaTabelaRuas();
-            cd.ShowDialog();
-        }
-
-        private void TrocarConta(object sender, EventArgs e)
-        {
-            if (db.VerificaLogin() == true)
-            {
-                db.Deslog(0);
-            }
-        }
-
-        private void AlterarQualqueruser(object sender, EventArgs e)
-        {
-                AlterarUsersGeral users = new AlterarUsersGeral();
-                users.ExibirDadosTabela();
-                users.ShowDialog();
-                if (validador)
-                {
-                    validador = false;
-                    db.Deslog(0);
-                }
-        }
-
-        private void Exit(object sender, EventArgs e)
-        {          
-                db.Deslog(0);
-                Environment.Exit(0);
+            AlterarUserCFront altercomun = new AlterarUserCFront();
+            altercomun.ExibirDados();
+            altercomun.ShowDialog();
         }
 
         private void EndereçoBanco(object sender, EventArgs e)
-        {        
-                ConfigBank editbank = new ConfigBank();
-                editbank.ShowDialog();
-                if (validador == true)
-                {
-                    db.Deslog(0);
-                }
+        {
+            ConfigBank editbank = new ConfigBank();
+            editbank.ShowDialog();
         }
 
         private void VerSobre(object sender, EventArgs e)
@@ -140,80 +336,9 @@ namespace Vanilla
             sobre.Show();
         }
 
-        private void VerEmpresas(object sender, EventArgs e)
-        {
-                Cursor = Cursors.WaitCursor;
-                TabelaEmpresas emp = new TabelaEmpresas(false);
-                emp.Carregar();
-                emp.Show();
-                Cursor = Cursors.Default;
-        }
-
-        private void VerLog(object sender, EventArgs e)
-        {
-                Logs log = new Logs();
-                log.LimparCombo();
-                db.RetornaUsuarios();
-                log.ExibirlistComb();
-                log.Show();
-        }
-
-        private void ConsultarItens(object sender, EventArgs e)
-        {                
-                TabelaItens itens = new TabelaItens(false);
-                itens.AtualizarItens();
-                itens.Show();    
-        }
-
-        private void LOgados(object sender, EventArgs e)
-        {      
-                UserOn logados = new UserOn();
-                logados.AtualizaTable();
-                logados.Show(); 
-        }
-
-
-        private void nameuser_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void AcessaTableCd(object sender, EventArgs e)
-        {
-          
-                TabelaEnderecos itens = new TabelaEnderecos();
-                //   itens.Atualizar();
-                itens.Show();
-        }
-
-        private void InserirItens(object sender, EventArgs e)
-        {
-         
-                InserirItem itens = new InserirItem();
-                itens.Atualizar();
-                itens.Show();
-            
-         
-        }
-
-        private void StatusCd(object sender, EventArgs e)
-        {
-           
-                StatusdoCd scd = new StatusdoCd();
-                scd.Mostrar();
-                scd.Show();
-           
-        }
-
         private void ChamaChat(object sender, EventArgs e)
         {
-           
-                ViewMsg view = new ViewMsg();
-                view.Visible = false;
-                ModelMsg model = new ModelMsg();
-                ControllerMsg controller = new ControllerMsg(view, model);
-                view.ShowDialog();
-         
+            controller.StartOpenMsg();
         }
     }
 }

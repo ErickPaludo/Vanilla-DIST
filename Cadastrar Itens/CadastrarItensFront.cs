@@ -18,6 +18,7 @@ namespace Vanilla
         Util cnpj = new Util();
         Database db = new Database();
         CadastrarItens cad = new CadastrarItens();
+        private LicencasLogin lic = new LicencasLogin();
         private static List<CadastrarItens> import = new List<CadastrarItens>(); //Lista que vai coletar as informacoes dos fornecedores para adicionar na tabela
         private int id_fornecedor; // Id do fornecedor fica armazenado nessa variavel
         private static int id_item;
@@ -143,7 +144,7 @@ namespace Vanilla
         private void buttonGravar_Click(object sender, EventArgs e) //Grava o item
         {
             //Verifica os parametros
-            if (db.VerificaLogin() == true)
+            if (lic.VerificaLogin() == true)
             {
                 if (!string.IsNullOrEmpty(TnomeItem.Text) && (!string.IsNullOrEmpty(TcodigoBarras.Text) && (!string.IsNullOrEmpty(comboStatus.Text) && (!string.IsNullOrEmpty(Lselectfornecedor.Text)) && (!string.IsNullOrEmpty(comboUMed.Text)) && (!string.IsNullOrEmpty(LprecoFinal.Text) && (!string.IsNullOrEmpty(Lcubagen.Text))))))
                 {

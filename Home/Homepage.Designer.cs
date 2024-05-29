@@ -56,13 +56,13 @@
             Blogs = new Button();
             Bvisualizaitens = new Button();
             Bvisualizacd = new Button();
-            button1 = new Button();
+            Bstatuscd = new Button();
             flowLayoutPanel3 = new FlowLayoutPanel();
             Llogistica = new Label();
             flowLayoutPanel5 = new FlowLayoutPanel();
             BInsereItem = new Button();
             pictureBox1 = new PictureBox();
-            button2 = new Button();
+            Bmsg = new Button();
             menuStrip1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             containercad.SuspendLayout();
@@ -90,7 +90,7 @@
             Ccademp.Text = "Empresa";
             Ccademp.TextAlign = ContentAlignment.MiddleLeft;
             Ccademp.UseVisualStyleBackColor = false;
-            Ccademp.Click += button1_Click;
+            Ccademp.Click += StrEmp;
             // 
             // Bcaditem
             // 
@@ -126,7 +126,7 @@
             Badduser.Text = "Usuario";
             Badduser.TextAlign = ContentAlignment.MiddleLeft;
             Badduser.UseVisualStyleBackColor = false;
-            Badduser.Click += button5_Click;
+            Badduser.Click += StrCadUs;
             // 
             // Baddcd
             // 
@@ -165,7 +165,6 @@
             Snameuser.Name = "Snameuser";
             Snameuser.Size = new Size(59, 20);
             Snameuser.Text = "Usuário";
-            Snameuser.Click += nameuser_Click;
             // 
             // Suseron
             // 
@@ -326,7 +325,7 @@
             flowLayoutPanel2.Controls.Add(Bvisualizaemp);
             flowLayoutPanel2.Controls.Add(Bvisualizaitens);
             flowLayoutPanel2.Controls.Add(Bvisualizacd);
-            flowLayoutPanel2.Controls.Add(button1);
+            flowLayoutPanel2.Controls.Add(Bstatuscd);
             flowLayoutPanel2.Location = new Point(3, 211);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(865, 125);
@@ -386,23 +385,23 @@
             Bvisualizacd.UseVisualStyleBackColor = false;
             Bvisualizacd.Click += AcessaTableCd;
             // 
-            // button1
+            // Bstatuscd
             // 
-            button1.BackColor = Color.Green;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.Black;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(695, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(167, 114);
-            button1.TabIndex = 19;
-            button1.Text = "Status CD";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += StatusCd;
+            Bstatuscd.BackColor = Color.Green;
+            Bstatuscd.Cursor = Cursors.Hand;
+            Bstatuscd.FlatAppearance.BorderColor = Color.Black;
+            Bstatuscd.FlatAppearance.BorderSize = 0;
+            Bstatuscd.FlatStyle = FlatStyle.Flat;
+            Bstatuscd.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Bstatuscd.ForeColor = SystemColors.ButtonHighlight;
+            Bstatuscd.Location = new Point(695, 3);
+            Bstatuscd.Name = "Bstatuscd";
+            Bstatuscd.Size = new Size(167, 114);
+            Bstatuscd.TabIndex = 19;
+            Bstatuscd.Text = "Status CD";
+            Bstatuscd.TextAlign = ContentAlignment.MiddleLeft;
+            Bstatuscd.UseVisualStyleBackColor = false;
+            Bstatuscd.Click += StatusCd;
             // 
             // flowLayoutPanel3
             // 
@@ -461,17 +460,17 @@
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
-            // button2
+            // Bmsg
             // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(922, 518);
-            button2.Name = "button2";
-            button2.Size = new Size(50, 50);
-            button2.TabIndex = 16;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += ChamaChat;
+            Bmsg.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            Bmsg.BackgroundImage = (Image)resources.GetObject("Bmsg.BackgroundImage");
+            Bmsg.FlatStyle = FlatStyle.Popup;
+            Bmsg.Location = new Point(922, 518);
+            Bmsg.Name = "Bmsg";
+            Bmsg.Size = new Size(50, 50);
+            Bmsg.TabIndex = 16;
+            Bmsg.UseVisualStyleBackColor = true;
+            Bmsg.Click += ChamaChat;
             // 
             // Homepage
             // 
@@ -480,7 +479,7 @@
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
             ClientSize = new Size(981, 577);
-            Controls.Add(button2);
+            Controls.Add(Bmsg);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             Controls.Add(pictureBox1);
@@ -539,7 +538,7 @@
         private Label Llogistica;
         private FlowLayoutPanel flowLayoutPanel5;
         private Button BInsereItem;
-        private Button button1;
-        private Button button2;
+        private Button Bstatuscd;
+        private Button Bmsg;
     }
 }

@@ -32,7 +32,6 @@ namespace Vanilla
             {
                 classconfig.GravarDados(FormatEndereco(ipbank.Text, portabank.Text, sidbank.Text, userbank.Text, passbank.Text));
                 MessageBox.Show("Endereço Redefinido");
-                home.ValidaRecebe(true);//Faz o fechamento da aba home
                 this.Close();
             }
             Cursor = Cursors.Default;

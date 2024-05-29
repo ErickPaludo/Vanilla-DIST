@@ -29,6 +29,8 @@ namespace Vanilla
         private void Encerramento(object sender, FormClosedEventArgs e)
         {
             controller.EncerraThead();
+            HomeController home = new HomeController();
+            home.Encerramento(1);
         }
 
         public RichTextBox Allmsg

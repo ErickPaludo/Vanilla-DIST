@@ -13,6 +13,7 @@ using System;
 using System.IO;
 using Aspose.Words.Tables;
 using Font = iTextSharp.text.Font;
+using Vanilla.Interfaces;
 
 namespace Vanilla
 {

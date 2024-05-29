@@ -192,8 +192,6 @@ namespace Vanilla
             Clear();
             if (id_user == util.Id_user)
             {
-                Homepage home = new Homepage();
-                home.ValidaRecebe(true);
                 this.Close();
             }
             else

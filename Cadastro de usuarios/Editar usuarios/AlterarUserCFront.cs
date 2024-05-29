@@ -52,8 +52,6 @@ namespace Vanilla
                                 utiarios.EnviarEmail("Acesso e e-mail alterados!", oldemail, $"Olá, seus dados foram atualizados com sucesso!\nSeguem abaixo os dados de acesso ao nosso sistema:\n\nNovo e-mail: {emailBox.Text}\n\nUsuário: {user}\nSenha: {passBox.Text}");
                                 utiarios.EnviarEmail("Conta alterada!", emailBox.Text, $"Olá, seus dados foram atualizados com sucesso!\nSeguem abaixo os dados de acesso ao nosso sistema:\n\nUsuário: {user}\nSenha: {passBox.Text}");
                             }
-                        Homepage home = new Homepage();
-                        home.ValidaRecebe(true);
                         this.Close();
                     }
                     else

@@ -21,6 +21,7 @@ namespace Vanilla
         private CadastraCnpjBack cad = new CadastraCnpjBack();
         private Util util = new Util();
         private static List<CadastraCnpjBack> list = new List<CadastraCnpjBack>();
+        private LicencasLogin lic = new LicencasLogin();
         static List<Endereco> ceparmazena = new List<Endereco>();
         private TabelaEmpClass table = new TabelaEmpClass();
         private Database db = new Database();
@@ -122,7 +123,7 @@ namespace Vanilla
         private void CadastrarCnpj(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            if (db.VerificaLogin() == true)
+            if (lic.VerificaLogin() == true)
             {
                 try//verifica se o numero do endereco eh um numero de fato
                 {

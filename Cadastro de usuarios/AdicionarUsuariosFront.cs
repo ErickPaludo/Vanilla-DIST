@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NPOI.SS.Formula;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Vanilla
         Database db = new Database();
         Util util = new Util();
         UserClass usuarios = new UserClass();
+        private LicencasLogin lic = new LicencasLogin();
         public AdicionarUsuariosFront()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace Vanilla
 
         private void GravarUser(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
+            if (lic.VerificaLogin() == true)
             {
                 if (!string.IsNullOrEmpty(nomeCompleto.Text) && !string.IsNullOrEmpty(cpfText.Text) && !string.IsNullOrEmpty(emailBox.Text) && !string.IsNullOrEmpty(telfBox.Text) && !string.IsNullOrEmpty(comboPerm.Text) && !string.IsNullOrEmpty(comboStatus.Text) && !string.IsNullOrEmpty(userBox.Text) && !string.IsNullOrEmpty(passBox.Text) && !string.IsNullOrEmpty(confPassBox.Text) && cpfText.Text.Length == 11)
                 {

@@ -9,14 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vanilla
+namespace Vanilla.Interfaces
 {
-    internal interface IExportarRelatorios 
+    internal interface IExportarRelatorios
     {
-         void ExportPdf();
+        void ExportPdf();
 
-         void ExportXls();
+        void ExportXls();
 
-         string GetHeaderName(int index);
+        string GetHeaderName(int index);
     }
 }

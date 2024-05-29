@@ -31,6 +31,9 @@ namespace Vanilla
                 else if (val == true)
                 {
                     Homepage home = new Homepage();
+                    home.Visible = false;
+                    HomeModel model = new HomeModel();
+                    HomeController controller = new HomeController(home, model);
                     home.Show();
                     this.Hide();
                 }

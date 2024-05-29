@@ -22,6 +22,7 @@ namespace Vanilla
     public partial class CadastroCd : Form
     {
         private Database db = new Database();
+        private LicencasLogin lic = new LicencasLogin();
         private Util util = new Util();
         ClassAddCd cadcd = new ClassAddCd();
         static private List<LogisticaCD> ruasList = new List<LogisticaCD>();
@@ -63,7 +64,7 @@ namespace Vanilla
             Cursor = Cursors.WaitCursor;
             try
             {
-                if (db.VerificaLogin() == true)
+                if (lic.VerificaLogin() == true)
                 {
                     if (minemp.Text == string.Empty)
                     {
@@ -393,7 +394,7 @@ namespace Vanilla
         #region Cadastro de Região
         private void RegistraArmz(object sender, EventArgs e)
         {
-            if (db.VerificaLogin() == true)
+            if (lic.VerificaLogin() == true)
             {
                 if (!string.IsNullOrEmpty(Tnamereg.Text))
                 {
