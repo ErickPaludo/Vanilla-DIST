@@ -58,7 +58,6 @@
             textabertura = new MaskedTextBox();
             textdataatual = new MaskedTextBox();
             textel = new MaskedTextBox();
-            Sair = new Button();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -345,16 +344,6 @@
             textel.Size = new Size(117, 23);
             textel.TabIndex = 7;
             // 
-            // Sair
-            // 
-            Sair.Location = new Point(214, 666);
-            Sair.Name = "Sair";
-            Sair.Size = new Size(75, 26);
-            Sair.TabIndex = 17;
-            Sair.Text = "Sair";
-            Sair.UseVisualStyleBackColor = true;
-            Sair.Click += CancelaOp;
-            // 
             // pictureBox1
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
@@ -460,14 +449,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(509, 697);
-            ControlBox = false;
             Controls.Add(textcep);
             Controls.Add(label17);
             Controls.Add(nomefantasia);
             Controls.Add(textnumber);
             Controls.Add(label1);
             Controls.Add(combostatus);
-            Controls.Add(Sair);
             Controls.Add(textel);
             Controls.Add(textdataatual);
             Controls.Add(textabertura);
@@ -505,7 +492,6 @@
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
-            MinimizeBox = false;
             Name = "CadastraCNPJ";
             ShowIcon = false;
             SizeGripStyle = SizeGripStyle.Hide;
@@ -550,7 +536,6 @@
         private MaskedTextBox textabertura;
         private MaskedTextBox textdataatual;
         private MaskedTextBox textel;
-        private Button Sair;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

@@ -11,18 +11,27 @@ namespace Vanilla
     public class LicencasLogin
     {
         Config config = new Config();
+        private static bool ativo;
+        public bool Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
         public LicencasLogin()
         {
         }
 
         public async Task ValidaLicenca()
         {
-            bool validador = true;
+            ativo = true;
             do
             {
                 await Task.Delay(1100);
-                validador = VerificaLogin();
-            } while (validador);
+                if (ativo)
+                {
+                    ativo = VerificaLogin();
+                }
+            } while (ativo);
 
         }
         public bool VerificaLogin()

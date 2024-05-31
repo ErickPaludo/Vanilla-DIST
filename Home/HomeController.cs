@@ -12,6 +12,7 @@ namespace Vanilla
         IHomePage viewhome;
         HomeModel model;
         Database db = new Database();
+        private CadastrarItensFront itensForm;
         public HomeController()
         {
         }
@@ -56,23 +57,64 @@ namespace Vanilla
         public void StartCadEmp()
         {
             CadastraCNPJ emp = new CadastraCNPJ();
+            viewhome.CadEmpresas.Enabled = false;
+            model.AddJanela("Cadastra Empresa");
+            Atualizar();
             emp.Show();
+
+            emp.FormClosed += (s, args) =>
+            {
+                viewhome.CadEmpresas.Enabled = true;
+                model.RemJanela("Cadastra Empresa");
+                Atualizar();
+            };
+
         }
         public void StartCadItens()
         {
             CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
-            cadastrarItensFront.ShowDialog();
+            viewhome.CadItens.Enabled = false;
+            model.AddJanela("Cadastra Itens");
+            Atualizar();
+            cadastrarItensFront.Show();
+            cadastrarItensFront.FormClosed += (s, args) =>
+            {
+                viewhome.CadItens.Enabled = true;
+                model.RemJanela("Cadastra Itens");
+                Atualizar();
+            };
+
         }
         public void StartCadUser()
         {
             AdicionarUsuariosFront usuarios = new AdicionarUsuariosFront();
-            usuarios.ShowDialog();
+            viewhome.CadUser.Enabled = false;
+            model.AddJanela("Cadastra Usuários");
+            Atualizar();
+            usuarios.Show();
+            usuarios.FormClosed += (s, args) =>
+            {
+                viewhome.CadUser.Enabled = true;
+                model.RemJanela("Cadastra Usuários");
+                Atualizar();
+            };
         }
         public void StartCadCd()
         {
             CadastroCd cd = new CadastroCd();
+            viewhome.LayoutCd.Enabled = false;
+            model.AddJanela("Cadastro Cd");
+            Atualizar();
             cd.AtualizaTabelaRuas();
             cd.Show();
+
+            cd.FormClosed += (s, args) =>
+            {
+                viewhome.LayoutCd.Enabled = true;
+                model.RemJanela("Cadastro Cd");
+                Atualizar();
+            };
+
         }
         #endregion
 
@@ -114,23 +156,18 @@ namespace Vanilla
         #region Operações
         public void StartInsItem()
         {
-            ViewMsg view = new ViewMsg();
-            view.Visible = false;
-            ModelMsg model = new ModelMsg();
-            ControllerMsg controller = new ControllerMsg(view, model);
-            view.Show();
-        }
-        public void Encerramento(int id_tela)
-        {
-            switch (id_tela)
+            InserirItem inserir = new InserirItem();
+            inserir.Atualizar();
+            viewhome.InsItem.Enabled = false;
+            model.AddJanela("Inserir Item");
+            Atualizar();
+            inserir.FormClosed += (s, args) =>
             {
-                case 1:
-                    viewhome.MsgOpen.Enabled = true;
-                    break;
-                default:
-                    viewhome.MsgOpen.Enabled = true;
-                    break;
-            }
+                viewhome.InsItem.Enabled = true;
+                model.RemJanela("Inserir Item");
+                Atualizar();
+            };
+            inserir.Show();
         }
         #endregion
 
@@ -139,9 +176,55 @@ namespace Vanilla
             viewhome.MsgOpen.Enabled = false;
             ViewMsg view = new ViewMsg();
             view.Visible = false;
-            ModelMsg model = new ModelMsg();
-            ControllerMsg controller = new ControllerMsg(view, model);
+            ModelMsg model_ = new ModelMsg();
+            ControllerMsg controller = new ControllerMsg(view, model_);
+            model.AddJanela("WalkVan - Msg");
+            Atualizar();
             view.Show();
+
+            view.FormClosed += (s, args) =>
+            {
+                viewhome.MsgOpen.Enabled = true;
+                model.RemJanela("WalkVan - Msg");
+                Atualizar();
+            };
+        }
+
+        public void Seleiconajanela(string janela)
+        {
+            Dictionary<string, string> janelas = new Dictionary<string, string>()
+            {
+               { "Cadastra Empresa", "CadastraCNPJ" },
+               { "Cadastra Itens", "CadastrarItensFront" },
+               { "Cadastra Usuários", "AdicionarUsuariosFront" },
+               { "Cadastro Cd", "CadastroCd" },
+               { "WalkVan - Msg", "ViewMsg" },
+                {"Inserir Item", "InserirItem" }
+             };
+
+            if (janelas.ContainsKey(janela))
+            {
+                janela = janelas[janela]; 
+            }
+
+            Form form = Application.OpenForms[janela];
+
+            if (form != null)
+            {
+                if (form.WindowState == FormWindowState.Minimized)
+                {
+                    form.WindowState = FormWindowState.Normal; // Restaura a janela se estiver minimizada
+                }
+                form.BringToFront(); // Traz a janela para frente
+            }
+        }
+        public void Atualizar()
+        {
+            viewhome.Janelas.Rows.Clear();
+            foreach (string obj in model.LWindows)
+            {
+                viewhome.Janelas.Rows.Add(obj);
+            }
         }
     }
 }

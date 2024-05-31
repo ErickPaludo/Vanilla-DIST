@@ -3,6 +3,7 @@ namespace Vanilla
     public partial class ViewMsg : Form, IViewMsg
     {
         ControllerMsg controller;
+
         public ViewMsg()
         {
             InitializeComponent();
@@ -22,16 +23,14 @@ namespace Vanilla
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 controller.SeleiconaContato(dataGridUsers.Rows[e.RowIndex].Cells[0].Value.ToString());
-
             }
         }
 
         private void Encerramento(object sender, FormClosedEventArgs e)
         {
             controller.EncerraThead();
-            HomeController home = new HomeController();
-            home.Encerramento(1);
         }
+
 
         public RichTextBox Allmsg
         {

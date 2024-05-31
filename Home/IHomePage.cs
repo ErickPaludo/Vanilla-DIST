@@ -73,6 +73,10 @@ namespace Vanilla
         {
             get; set;
         }
+        DataGridView Janelas
+        {
+            get; set;
+        }
         Button MsgOpen
         {
             get; set;

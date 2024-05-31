@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Ccademp = new Button();
             Bcaditem = new Button();
             Badduser = new Button();
@@ -63,6 +65,8 @@
             BInsereItem = new Button();
             pictureBox1 = new PictureBox();
             Bmsg = new Button();
+            dataGridWindows = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             containercad.SuspendLayout();
@@ -72,6 +76,7 @@
             flowLayoutPanel3.SuspendLayout();
             flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridWindows).BeginInit();
             SuspendLayout();
             // 
             // Ccademp
@@ -455,7 +460,7 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Padding = new Padding(5);
-            pictureBox1.Size = new Size(981, 24);
+            pictureBox1.Size = new Size(1061, 24);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
@@ -465,12 +470,61 @@
             Bmsg.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             Bmsg.BackgroundImage = (Image)resources.GetObject("Bmsg.BackgroundImage");
             Bmsg.FlatStyle = FlatStyle.Popup;
-            Bmsg.Location = new Point(922, 518);
+            Bmsg.Location = new Point(899, 515);
             Bmsg.Name = "Bmsg";
             Bmsg.Size = new Size(50, 50);
             Bmsg.TabIndex = 16;
             Bmsg.UseVisualStyleBackColor = true;
             Bmsg.Click += ChamaChat;
+            // 
+            // dataGridWindows
+            // 
+            dataGridWindows.AllowUserToAddRows = false;
+            dataGridWindows.AllowUserToDeleteRows = false;
+            dataGridWindows.AllowUserToResizeColumns = false;
+            dataGridWindows.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridWindows.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridWindows.BorderStyle = BorderStyle.None;
+            dataGridWindows.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            dataGridWindows.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridWindows.ColumnHeadersVisible = false;
+            dataGridWindows.Columns.AddRange(new DataGridViewColumn[] { Column1 });
+            dataGridWindows.Cursor = Cursors.Hand;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Padding = new Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = Color.SlateBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridWindows.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridWindows.GridColor = Color.FromArgb(128, 128, 255);
+            dataGridWindows.ImeMode = ImeMode.On;
+            dataGridWindows.Location = new Point(923, 26);
+            dataGridWindows.Name = "dataGridWindows";
+            dataGridWindows.ReadOnly = true;
+            dataGridWindows.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridWindows.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridWindows.RowHeadersVisible = false;
+            dataGridWindows.RowTemplate.Height = 30;
+            dataGridWindows.Size = new Size(138, 554);
+            dataGridWindows.TabIndex = 17;
+            dataGridWindows.CellClick += ReabrirJanela;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // Homepage
             // 
@@ -478,8 +532,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
-            ClientSize = new Size(981, 577);
+            ClientSize = new Size(1061, 577);
             Controls.Add(Bmsg);
+            Controls.Add(dataGridWindows);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             Controls.Add(pictureBox1);
@@ -501,6 +556,7 @@
             flowLayoutPanel3.PerformLayout();
             flowLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridWindows).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -540,5 +596,7 @@
         private Button BInsereItem;
         private Button Bstatuscd;
         private Button Bmsg;
+        private DataGridView dataGridWindows;
+        private DataGridViewTextBoxColumn Column1;
     }
 }

@@ -27,6 +27,8 @@ namespace Vanilla
 
         public void Deslog(int id)
         {
+            LicencasLogin login = new LicencasLogin();
+            login.Ativo = false;
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
             {
                 try

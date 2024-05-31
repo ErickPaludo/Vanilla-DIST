@@ -206,12 +206,6 @@ namespace Vanilla
             }
         }
 
-        private void CancelaOp(object sender, EventArgs e)
-        {
-            editar = false;
-            this.Close();
-        }
-
         private void Editar(object sender, EventArgs e)
         {
             TabelaEmpresas emp = new TabelaEmpresas(true);
@@ -251,9 +245,9 @@ namespace Vanilla
             editar = type;
             table.CarregarDadosEmpresas(1, cnpj);
         }
-        public void AddList(string status, string type, string nomef, string nome_emp, string cnpj, string ie, string tel, string email, int id, int id_end, string uf, string cidade, string bairro, string rua, int numero, string cep, DateTime data,string complemento)
+        public void AddList(string status, string type, string nomef, string nome_emp, string cnpj, string ie, string tel, string email, int id, int id_end, string uf, string cidade, string bairro, string rua, int numero, string cep, DateTime data, string complemento)
         {
-            list.Add(new CadastraCnpjBack(status, type, nomef, nome_emp, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep, data,complemento));
+            list.Add(new CadastraCnpjBack(status, type, nomef, nome_emp, cnpj, ie, tel, email, id, id_end, uf, cidade, bairro, rua, numero, cep, data, complemento));
         }
 
         private void combostatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -288,6 +282,10 @@ namespace Vanilla
         private void SomenteNumeros(object sender, KeyPressEventArgs e)
         {
             util.SomenteNumeros(e);
+        }
+
+        private void CadastraCNPJ_Load(object sender, EventArgs e)
+        {
         }
 
     }

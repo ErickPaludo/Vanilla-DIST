@@ -26,6 +26,10 @@ namespace Vanilla
             lic.ValidaLicenca();
             Exibir();
         }
+        public Homepage(bool t)
+        {
+            Exibir();
+        }
 
         #region elements_view
         public void SetController(HomeController controller)
@@ -208,6 +212,11 @@ namespace Vanilla
                 BInsereItem = value;
             }
         }
+        public DataGridView Janelas
+        {
+            get { return dataGridWindows; }
+            set { dataGridWindows = value; }
+        }
         public Button MsgOpen
         {
             get
@@ -289,9 +298,7 @@ namespace Vanilla
         #region Operações
         private void InserirItens(object sender, EventArgs e)
         {
-            InserirItem itens = new InserirItem();
-            itens.Atualizar();
-            itens.Show();
+            controller.StartInsItem();
         }
         #endregion
 
@@ -339,6 +346,14 @@ namespace Vanilla
         private void ChamaChat(object sender, EventArgs e)
         {
             controller.StartOpenMsg();
+        }
+
+        private void ReabrirJanela(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                controller.Seleiconajanela(dataGridWindows.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
         }
     }
 }
