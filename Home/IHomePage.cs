@@ -9,6 +9,7 @@ namespace Vanilla
     public interface IHomePage
     {
         void SetController(HomeController controler);
+        Form Home { get; set; }
         ToolStripMenuItem UserMenu
         {
             get;set;

@@ -394,3 +394,5 @@ C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorBox.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.VanillaMDI.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Telas.resources

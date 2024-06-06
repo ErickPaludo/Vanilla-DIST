@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Vanilla.StatusCd;
 
 namespace Vanilla
@@ -11,16 +12,18 @@ namespace Vanilla
     {
         IHomePage viewhome;
         HomeModel model;
+        Form mdiPai;
         Database db = new Database();
         private CadastrarItensFront itensForm;
         public HomeController()
         {
         }
-        public HomeController(IHomePage viewhome, HomeModel model)
+        public HomeController(IHomePage viewhome, HomeModel model, Form mdiPai)
         {
             this.viewhome = viewhome;
             this.model = model;
             viewhome.SetController(this);
+            this.mdiPai = mdiPai;
         }
 
         #region Menu
@@ -60,7 +63,10 @@ namespace Vanilla
             viewhome.CadEmpresas.Enabled = false;
             model.AddJanela("Cadastra Empresa");
             Atualizar();
+            emp.MdiParent = mdiPai;
             emp.Show();
+            viewhome.Home.WindowState = FormWindowState.Maximized;
+            emp.WindowState = FormWindowState.Normal; // Define o estado da janela como normal
 
             emp.FormClosed += (s, args) =>
             {

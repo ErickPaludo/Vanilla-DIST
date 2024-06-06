@@ -90,7 +90,7 @@
             Ccademp.ForeColor = SystemColors.ButtonHighlight;
             Ccademp.Location = new Point(3, 47);
             Ccademp.Name = "Ccademp";
-            Ccademp.Size = new Size(167, 114);
+            Ccademp.Size = new Size(49, 43);
             Ccademp.TabIndex = 0;
             Ccademp.Text = "Empresa";
             Ccademp.TextAlign = ContentAlignment.MiddleLeft;
@@ -106,9 +106,9 @@
             Bcaditem.FlatStyle = FlatStyle.Flat;
             Bcaditem.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             Bcaditem.ForeColor = SystemColors.ButtonHighlight;
-            Bcaditem.Location = new Point(176, 47);
+            Bcaditem.Location = new Point(58, 47);
             Bcaditem.Name = "Bcaditem";
-            Bcaditem.Size = new Size(167, 114);
+            Bcaditem.Size = new Size(45, 43);
             Bcaditem.TabIndex = 1;
             Bcaditem.Text = "Itens";
             Bcaditem.TextAlign = ContentAlignment.MiddleLeft;
@@ -124,7 +124,7 @@
             Badduser.FlatStyle = FlatStyle.Flat;
             Badduser.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             Badduser.ForeColor = SystemColors.ButtonHighlight;
-            Badduser.Location = new Point(349, 47);
+            Badduser.Location = new Point(109, 47);
             Badduser.Name = "Badduser";
             Badduser.Size = new Size(167, 114);
             Badduser.TabIndex = 2;
@@ -142,7 +142,7 @@
             Baddcd.FlatStyle = FlatStyle.Flat;
             Baddcd.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             Baddcd.ForeColor = SystemColors.ButtonHighlight;
-            Baddcd.Location = new Point(522, 47);
+            Baddcd.Location = new Point(282, 47);
             Baddcd.Name = "Baddcd";
             Baddcd.Size = new Size(167, 114);
             Baddcd.TabIndex = 3;
@@ -533,13 +533,19 @@
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
             ClientSize = new Size(1061, 577);
+            ControlBox = false;
             Controls.Add(Bmsg);
             Controls.Add(dataGridWindows);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
             Name = "Homepage";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Início";
             WindowState = FormWindowState.Maximized;
             FormClosing += Homepage_FormClosing;

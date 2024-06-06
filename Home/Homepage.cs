@@ -36,6 +36,11 @@ namespace Vanilla
         {
             this.controller = controller;
         }
+        public Form Home
+        {
+            get { return this; }
+            set { this.Home = value; }
+        }
         public ToolStripMenuItem UserMenu
         {
             get

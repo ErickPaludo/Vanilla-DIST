@@ -491,7 +491,6 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
-            MdiChildrenMinimizedAnchorBottom = false;
             Name = "CadastraCNPJ";
             ShowIcon = false;
             SizeGripStyle = SizeGripStyle.Hide;
