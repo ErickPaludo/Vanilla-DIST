@@ -1,0 +1,621 @@
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.exe
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.deps.json
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.runtimeconfig.json
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Aspose.Words.Pdf2Word.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Aspose.Words.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\GenCode128.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\SkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\cs\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\de\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\es\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\fr\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\it\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ja\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ko\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\pl\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ru\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\tr\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.AssemblyReference.cache
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ConfigBank.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Logs.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Sobre.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastroCd.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaEnderecos.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastraCNPJ.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaEmpresas.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Homepage.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.LoginFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Properties.Resources.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.SelecionarReg.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.UserOn.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.GenerateResource.cache
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AssemblyInfoInputs.cache
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AssemblyInfo.cs
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.CopyComplete
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\refint\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.exe
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.deps.json
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.runtimeconfig.json
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Aspose.Words.Pdf2Word.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Aspose.Words.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\GenCode128.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\SkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\cs\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\de\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\es\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\fr\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\it\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ja\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ko\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\pl\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ru\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\tr\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.AssemblyReference.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ConfigBank.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Logs.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Sobre.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastroCd.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaEnderecos.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastraCNPJ.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaEmpresas.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Homepage.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.LoginFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Properties.Resources.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.SelecionarReg.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.UserOn.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.GenerateResource.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.sourcelink.json
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.Up2Date
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\refint\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.InserirItem.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.exe
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.deps.json
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.runtimeconfig.json
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.Pdf2Word.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\GenCode128.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.AssemblyReference.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ConfigBank.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Sobre.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastroCd.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEnderecos.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastraCNPJ.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEmpresas.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.EnderecoFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Homepage.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.InserirItem.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.LoginFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Logs.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Properties.Resources.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.SelecionarReg.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.UserOn.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfoInputs.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfo.cs
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.Up2Date
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\refint\Vanilla.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.exe
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.deps.json
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.runtimeconfig.json
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.Pdf2Word.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\GenCode128.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.AssemblyReference.cache
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ConfigBank.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Sobre.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastroCd.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEnderecos.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastraCNPJ.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEmpresas.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.EnderecoFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Homepage.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.InserirItem.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.LoginFront.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Logs.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Properties.Resources.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.SelecionarReg.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.UserOn.resources
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.GenerateResource.cache
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfoInputs.cache
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfo.cs
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.CopyComplete
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\refint\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
+C:\Users\Erick\Desktop\Vanilla-DIST-master (2)\Vanilla-DIST-master\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.InserirItem.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.StatusCd.StatusdoCd.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Enums.NET.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ExtendedNumerics.BigDecimal.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\MathNet.Numerics.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.Core.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OOXML.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OpenXml4Net.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.StatusCd.StatusdoCd.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Enums.NET.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ExtendedNumerics.BigDecimal.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\MathNet.Numerics.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.Core.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OOXML.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OpenXml4Net.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\EPPlus.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\OfficeOpenXml.Extends.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Select.Html.dep
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Select.HtmlToPdf.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\bin\Debug\net6.0-windows\Spire.XLS.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Select.Html.dep
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\EPPlus.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\OfficeOpenXml.Extends.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Select.HtmlToPdf.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\Spire.XLS.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.sourcelink.json
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ViewMsg.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ViewMsg.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorBox.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorBox.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.VanillaMDI.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Telas.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Select.Html.dep
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.exe
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.deps.json
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.runtimeconfig.json
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.Pdf2Word.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Enums.NET.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\EPPlus.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ExtendedNumerics.BigDecimal.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\GenCode128.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\MathNet.Numerics.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.Core.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.OOXML.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.OpenXml4Net.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\OfficeOpenXml.Extends.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Select.HtmlToPdf.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Spire.XLS.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.AssemblyReference.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ConfigBank.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Sobre.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastroCd.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.SelecionarReg.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEnderecos.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastraCNPJ.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEmpresas.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ViewMsg.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ErrorBox.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Homepage.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.InserirItem.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.LoginFront.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Logs.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Properties.Resources.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.StatusCd.StatusdoCd.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Telas.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.UserOn.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.VanillaMDI.resources
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfoInputs.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfo.cs
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.Up2Date
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\refint\Vanilla.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.GradeElements.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Select.Html.dep
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.exe
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.deps.json
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.runtimeconfig.json
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.Pdf2Word.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Aspose.Words.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Enums.NET.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\EPPlus.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ExtendedNumerics.BigDecimal.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\GenCode128.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\MathNet.Numerics.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.Core.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.OOXML.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.OpenXml4Net.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\NPOI.OpenXmlFormats.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\OfficeOpenXml.Extends.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Select.HtmlToPdf.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\SkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Spire.XLS.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.AssemblyReference.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ConfigBank.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Sobre.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastroCd.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.SelecionarReg.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEnderecos.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastraCNPJ.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaEmpresas.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ViewMsg.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ErrorBox.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Homepage.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.InserirItem.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.LoginFront.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Logs.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.Properties.Resources.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.StatusCd.StatusdoCd.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.UserOn.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.VanillaMDI.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.GenerateResource.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.csproj.Up2Date
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\refint\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.pdb
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master (6)\Vanilla-DIST-master (6)\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.CustomBtnScreen.resources
