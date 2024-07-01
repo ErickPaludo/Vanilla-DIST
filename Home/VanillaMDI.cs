@@ -19,7 +19,7 @@ namespace Vanilla
         Database db = new Database();
         private LicencasLogin lic = new LicencasLogin();
         public VanillaMDI()
-        { 
+        {
             InitializeComponent();
         }
 
@@ -210,7 +210,7 @@ namespace Vanilla
                 BInsereItem = value;
             }
         }
-      
+
 
 
         #endregion
@@ -235,6 +235,15 @@ namespace Vanilla
         private void Exit(object sender, EventArgs e)
         {
             controller.Sair();
+        }
+        private void EndereçoBanco(object sender, EventArgs e)
+        {
+            ConfigBank editbank = new ConfigBank();
+            editbank.ShowDialog();
+        }
+        private void EnderecoBanco(object sender, EventArgs e)
+        {
+            controller.ConfigBanco();
         }
         #endregion
 
@@ -316,11 +325,6 @@ namespace Vanilla
             altercomun.ShowDialog();
         }
 
-        private void EndereçoBanco(object sender, EventArgs e)
-        {
-            ConfigBank editbank = new ConfigBank();
-            editbank.ShowDialog();
-        }
 
         private void VerSobre(object sender, EventArgs e)
         {
@@ -338,12 +342,10 @@ namespace Vanilla
             //int buc = vScrollBar1.Value;
 
             cPanel.Top = -vScrollBar1.Value;
-             if (vScrollBar1.Value <= 1)
-             {
+            if (vScrollBar1.Value <= 1)
+            {
                 cPanel.Top = 25;
-             }
+            }
         }
-
-       
     }
 }

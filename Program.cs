@@ -14,15 +14,11 @@ namespace Vanilla
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-           // ApplicationConfiguration.Initialize();
-           //Application.Run(new VanillaMDI()); // Acessa LOGIN
+            ApplicationConfiguration.Initialize();
+            Application.Run(new LoginFront()); // Acessa LOGIN
 
 
-            VanillaMDI home = new VanillaMDI();
-            home.Visible = false;
-            HomeModel model = new HomeModel();
-            HomeController controller = new HomeController(home, model);
-            home.ShowDialog();
+
 
         }
     }

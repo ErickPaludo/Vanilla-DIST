@@ -12,7 +12,6 @@ namespace Vanilla
     {
         IHomePage viewhome;
         HomeModel model;
-        Form mdiPai;
         Database db = new Database();
         private CadastrarItensFront itensForm;
         public HomeController()
@@ -53,6 +52,12 @@ namespace Vanilla
             db.Deslog(0);
             Environment.Exit(0);
         }
+        public void ConfigBanco()
+        {
+            ConfigBank editbank = new ConfigBank();
+            editbank.ShowDialog();
+        }
+
         #endregion
 
         #region Cadastros
@@ -60,9 +65,10 @@ namespace Vanilla
         {
             CadastraCNPJ emp = new CadastraCNPJ();
             viewhome.CadEmpresas.Enabled = false;
+
             model.AddJanela("Cadastra Empresa");
-          
-            emp.MdiParent = mdiPai;
+
+            emp.MdiParent = viewhome.Home;
             emp.Show();
             viewhome.Home.WindowState = FormWindowState.Maximized;
             emp.WindowState = FormWindowState.Normal; // Define o estado da janela como normal
@@ -71,7 +77,7 @@ namespace Vanilla
             {
                 viewhome.CadEmpresas.Enabled = true;
                 model.RemJanela("Cadastra Empresa");
-          
+
             };
 
         }
@@ -79,12 +85,12 @@ namespace Vanilla
         {
             CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
             viewhome.CadItens.Enabled = false;
-         
+            cadastrarItensFront.MdiParent = viewhome.Home;
             cadastrarItensFront.Show();
             cadastrarItensFront.FormClosed += (s, args) =>
             {
                 viewhome.CadItens.Enabled = true;
-  
+
             };
 
         }
@@ -97,8 +103,6 @@ namespace Vanilla
             usuarios.FormClosed += (s, args) =>
             {
                 viewhome.CadUser.Enabled = true;
- 
-              
             };
         }
         public void StartCadCd()
@@ -106,14 +110,14 @@ namespace Vanilla
             CadastroCd cd = new CadastroCd();
             viewhome.LayoutCd.Enabled = false;
             model.AddJanela("Cadastro Cd");
-  
+
             cd.AtualizaTabelaRuas();
             cd.Show();
 
             cd.FormClosed += (s, args) =>
             {
                 viewhome.LayoutCd.Enabled = true;
-          
+
             };
 
         }
@@ -160,12 +164,12 @@ namespace Vanilla
             InserirItem inserir = new InserirItem();
             inserir.Atualizar();
             viewhome.InsItem.Enabled = false;
- 
-          
+
+
             inserir.FormClosed += (s, args) =>
             {
                 viewhome.InsItem.Enabled = true;
-               
+
             };
             inserir.Show();
         }
@@ -173,18 +177,18 @@ namespace Vanilla
 
         public void StartOpenMsg()
         {
-       //   viewhome.MsgOpen.Enabled = false;
+            //   viewhome.MsgOpen.Enabled = false;
             ViewMsg view = new ViewMsg();
             view.Visible = false;
             ModelMsg model_ = new ModelMsg();
             ControllerMsg controller = new ControllerMsg(view, model_);
-       
+
             view.Show();
 
             view.FormClosed += (s, args) =>
             {
-          //   viewhome.MsgOpen.Enabled = true;
-             
+                //   viewhome.MsgOpen.Enabled = true;
+
             };
         }
 
@@ -202,7 +206,7 @@ namespace Vanilla
 
             if (janelas.ContainsKey(janela))
             {
-                janela = janelas[janela]; 
+                janela = janelas[janela];
             }
 
             Form form = Application.OpenForms[janela];
@@ -216,6 +220,6 @@ namespace Vanilla
                 form.BringToFront(); // Traz a janela para frente
             }
         }
-       
+
     }
 }

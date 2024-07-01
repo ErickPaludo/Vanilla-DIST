@@ -30,6 +30,7 @@
         {
             Ccademp = new Button();
             label1 = new Label();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // Ccademp
@@ -57,12 +58,22 @@
             label1.TabIndex = 2;
             label1.Text = "label1";
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Transparent;
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(288, 37);
+            panel1.TabIndex = 3;
+            // 
             // CustomBtnScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(Ccademp);
             Controls.Add(label1);
+            Controls.Add(panel1);
             Cursor = Cursors.Hand;
             Name = "CustomBtnScreen";
             Size = new Size(288, 37);
@@ -74,5 +85,6 @@
 
         private Button Ccademp;
         private Label label1;
+        private Panel panel1;
     }
 }

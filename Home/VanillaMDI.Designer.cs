@@ -41,17 +41,17 @@
             cPanel = new FlowLayoutPanel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
-            Ccademp = new CustomBtnScreen();
-            Bcaditem = new CustomBtnScreen();
             Badduser = new CustomBtnScreen();
+            Ccademp = new CustomBtnScreen();
             Baddcd = new CustomBtnScreen();
+            Bcaditem = new CustomBtnScreen();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label2 = new Label();
+            Bstatuscd = new CustomBtnScreen();
             Blogs = new CustomBtnScreen();
             Bvisualizaemp = new CustomBtnScreen();
             Bvisualizaitens = new CustomBtnScreen();
             Bvisualizacd = new CustomBtnScreen();
-            Bstatuscd = new CustomBtnScreen();
             flowLayoutPanel3 = new FlowLayoutPanel();
             label3 = new Label();
             BInsereItem = new CustomBtnScreen();
@@ -70,7 +70,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(963, 24);
+            menuStrip1.Size = new Size(967, 24);
             menuStrip1.TabIndex = 17;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -143,6 +143,7 @@
             Sconfigbanco.Name = "Sconfigbanco";
             Sconfigbanco.Size = new Size(159, 22);
             Sconfigbanco.Text = "Endereço Banco";
+            Sconfigbanco.Click += EnderecoBanco;
             // 
             // Ssobresistema
             // 
@@ -161,19 +162,20 @@
             cPanel.Controls.Add(flowLayoutPanel3);
             cPanel.Location = new Point(0, 25);
             cPanel.Name = "cPanel";
-            cPanel.Size = new Size(255, 1117);
+            cPanel.Size = new Size(285, 1142);
             cPanel.TabIndex = 19;
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.BackColor = SystemColors.ButtonHighlight;
             flowLayoutPanel1.Controls.Add(label1);
-            flowLayoutPanel1.Controls.Add(Ccademp);
-            flowLayoutPanel1.Controls.Add(Bcaditem);
             flowLayoutPanel1.Controls.Add(Badduser);
+            flowLayoutPanel1.Controls.Add(Ccademp);
             flowLayoutPanel1.Controls.Add(Baddcd);
+            flowLayoutPanel1.Controls.Add(Bcaditem);
             flowLayoutPanel1.Location = new Point(3, 3);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(200, 203);
+            flowLayoutPanel1.Size = new Size(252, 203);
             flowLayoutPanel1.TabIndex = 25;
             // 
             // label1
@@ -186,61 +188,62 @@
             label1.TabIndex = 4;
             label1.Text = "Cadastros";
             // 
-            // Ccademp
-            // 
-            Ccademp.CorBtn = Color.SteelBlue;
-            Ccademp.ImageBtn = null;
-            Ccademp.Location = new Point(3, 35);
-            Ccademp.Name = "Ccademp";
-            Ccademp.Size = new Size(221, 37);
-            Ccademp.TabIndex = 9;
-            Ccademp.Tela = "Empresas";
-            Ccademp.Click += StrEmp;
-            // 
-            // Bcaditem
-            // 
-            Bcaditem.CorBtn = Color.SteelBlue;
-            Bcaditem.ImageBtn = null;
-            Bcaditem.Location = new Point(3, 78);
-            Bcaditem.Name = "Bcaditem";
-            Bcaditem.Size = new Size(221, 37);
-            Bcaditem.TabIndex = 11;
-            Bcaditem.Tela = "Itens";
-            Bcaditem.Click += AbrirItem;
-            // 
             // Badduser
             // 
             Badduser.CorBtn = Color.SteelBlue;
             Badduser.ImageBtn = null;
-            Badduser.Location = new Point(3, 121);
+            Badduser.Location = new Point(3, 35);
             Badduser.Name = "Badduser";
             Badduser.Size = new Size(221, 37);
             Badduser.TabIndex = 10;
             Badduser.Tela = "Usuarios";
-            Badduser.Click += StrCadUs;
+            Badduser.MyControlClick += StrCadUs;
+            // 
+            // Ccademp
+            // 
+            Ccademp.CorBtn = Color.SteelBlue;
+            Ccademp.ImageBtn = null;
+            Ccademp.Location = new Point(3, 78);
+            Ccademp.Name = "Ccademp";
+            Ccademp.Size = new Size(221, 37);
+            Ccademp.TabIndex = 9;
+            Ccademp.Tela = "Empresas";
+            Ccademp.MyControlClick += StrEmp;
             // 
             // Baddcd
             // 
             Baddcd.CorBtn = Color.SteelBlue;
             Baddcd.ImageBtn = null;
-            Baddcd.Location = new Point(3, 164);
+            Baddcd.Location = new Point(3, 121);
             Baddcd.Name = "Baddcd";
             Baddcd.Size = new Size(221, 37);
             Baddcd.TabIndex = 3;
             Baddcd.Tela = "Endereços";
-            Baddcd.Click += AddCd;
+            Baddcd.MyControlClick += AddCd;
+            // 
+            // Bcaditem
+            // 
+            Bcaditem.CorBtn = Color.SteelBlue;
+            Bcaditem.ImageBtn = null;
+            Bcaditem.Location = new Point(3, 164);
+            Bcaditem.Name = "Bcaditem";
+            Bcaditem.Size = new Size(221, 37);
+            Bcaditem.TabIndex = 11;
+            Bcaditem.Tela = "Itens";
+            Bcaditem.MyControlClick += AbrirItem;
+            Bcaditem.Click += AbrirItem;
             // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.Controls.Add(label2);
+            flowLayoutPanel2.Controls.Add(Bstatuscd);
             flowLayoutPanel2.Controls.Add(Blogs);
             flowLayoutPanel2.Controls.Add(Bvisualizaemp);
             flowLayoutPanel2.Controls.Add(Bvisualizaitens);
             flowLayoutPanel2.Controls.Add(Bvisualizacd);
-            flowLayoutPanel2.Controls.Add(Bstatuscd);
             flowLayoutPanel2.Location = new Point(3, 212);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(267, 246);
+            flowLayoutPanel2.Size = new Size(304, 246);
             flowLayoutPanel2.TabIndex = 26;
             // 
             // label2
@@ -253,60 +256,62 @@
             label2.TabIndex = 5;
             label2.Text = "Visualizadores";
             // 
+            // Bstatuscd
+            // 
+            Bstatuscd.CorBtn = Color.LimeGreen;
+            Bstatuscd.ImageBtn = null;
+            Bstatuscd.Location = new Point(3, 35);
+            Bstatuscd.Name = "Bstatuscd";
+            Bstatuscd.Size = new Size(221, 37);
+            Bstatuscd.TabIndex = 15;
+            Bstatuscd.Tela = "Status do Cd";
+            Bstatuscd.MyControlClick += StatusCd;
+            // 
             // Blogs
             // 
             Blogs.CorBtn = Color.LimeGreen;
             Blogs.ImageBtn = null;
-            Blogs.Location = new Point(3, 35);
+            Blogs.Location = new Point(3, 78);
             Blogs.Name = "Blogs";
-            Blogs.Size = new Size(221, 37);
+            Blogs.Size = new Size(249, 37);
             Blogs.TabIndex = 6;
             Blogs.Tela = "Consultar Logs";
+            Blogs.MyControlClick += VerLog;
             Blogs.Click += VerLog;
             // 
             // Bvisualizaemp
             // 
             Bvisualizaemp.CorBtn = Color.LimeGreen;
             Bvisualizaemp.ImageBtn = null;
-            Bvisualizaemp.Location = new Point(3, 78);
+            Bvisualizaemp.Location = new Point(3, 121);
             Bvisualizaemp.Name = "Bvisualizaemp";
-            Bvisualizaemp.Size = new Size(221, 37);
+            Bvisualizaemp.Size = new Size(264, 37);
             Bvisualizaemp.TabIndex = 12;
-            Bvisualizaemp.Tela = "Consuoltar Empresas";
-            Bvisualizaemp.Click += VerEmpresas;
+            Bvisualizaemp.Tela = "Consultar Empresas";
+            Bvisualizaemp.MyControlClick += VerEmpresas;
             // 
             // Bvisualizaitens
             // 
             Bvisualizaitens.CorBtn = Color.LimeGreen;
             Bvisualizaitens.ImageBtn = null;
-            Bvisualizaitens.Location = new Point(3, 121);
+            Bvisualizaitens.Location = new Point(3, 164);
             Bvisualizaitens.Name = "Bvisualizaitens";
-            Bvisualizaitens.Size = new Size(221, 37);
+            Bvisualizaitens.Size = new Size(249, 37);
             Bvisualizaitens.TabIndex = 13;
             Bvisualizaitens.Tela = "Consuoltar Itens";
+            Bvisualizaitens.MyControlClick += ConsultarItens;
             Bvisualizaitens.Click += ConsultarItens;
             // 
             // Bvisualizacd
             // 
             Bvisualizacd.CorBtn = Color.LimeGreen;
             Bvisualizacd.ImageBtn = null;
-            Bvisualizacd.Location = new Point(3, 164);
+            Bvisualizacd.Location = new Point(3, 207);
             Bvisualizacd.Name = "Bvisualizacd";
-            Bvisualizacd.Size = new Size(221, 37);
+            Bvisualizacd.Size = new Size(264, 37);
             Bvisualizacd.TabIndex = 14;
             Bvisualizacd.Tela = "Consuoltar Estoque";
-            Bvisualizacd.Click += AcessaTableCd;
-            // 
-            // Bstatuscd
-            // 
-            Bstatuscd.CorBtn = Color.LimeGreen;
-            Bstatuscd.ImageBtn = null;
-            Bstatuscd.Location = new Point(3, 207);
-            Bstatuscd.Name = "Bstatuscd";
-            Bstatuscd.Size = new Size(221, 37);
-            Bstatuscd.TabIndex = 15;
-            Bstatuscd.Tela = "Status do Cd";
-            Bstatuscd.Click += StatusCd;
+            Bvisualizacd.MyControlClick += AcessaTableCd;
             // 
             // flowLayoutPanel3
             // 
@@ -336,15 +341,15 @@
             BInsereItem.Size = new Size(221, 37);
             BInsereItem.TabIndex = 6;
             BInsereItem.Tela = "Inserir Itens";
-            BInsereItem.Click += InserirItens;
+            BInsereItem.MyControlClick += InserirItens;
             // 
             // vScrollBar1
             // 
             vScrollBar1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             vScrollBar1.LargeChange = 5;
-            vScrollBar1.Location = new Point(254, 24);
+            vScrollBar1.Location = new Point(283, 24);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(19, 624);
+            vScrollBar1.Size = new Size(19, 649);
             vScrollBar1.TabIndex = 23;
             vScrollBar1.Scroll += ScroolBar;
             // 
@@ -353,7 +358,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CausesValidation = false;
-            ClientSize = new Size(963, 646);
+            ClientSize = new Size(967, 671);
             Controls.Add(vScrollBar1);
             Controls.Add(menuStrip1);
             Controls.Add(cPanel);

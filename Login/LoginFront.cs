@@ -30,10 +30,11 @@ namespace Vanilla
                 }
                 else if (val == true)
                 {
-                //  VanillaMDI vanillaMDI = new VanillaMDI();
-              //      vanillaMDI.Show();
-                    Homepage home = new Homepage();
-                    home.Show();
+                    VanillaMDI home = new VanillaMDI();
+                    home.Visible = false;
+                    HomeModel model = new HomeModel();
+                    HomeController controller = new HomeController(home, model);
+                    home.ShowDialog();
                     this.Hide();
                 }
             }

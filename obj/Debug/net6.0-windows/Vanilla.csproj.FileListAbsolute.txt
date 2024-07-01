@@ -395,7 +395,6 @@ C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorBox.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.VanillaMDI.resources
-C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Telas.resources
 C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Select.Html.dep
 C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.exe
 C:\Users\Administrador\Desktop\Vanilla-DIST-master (6)\Vanilla-DIST-master\bin\Debug\net6.0-windows\Vanilla.deps.json
@@ -731,3 +730,4 @@ C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master\obj\Debug\net6.0-w
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.pdb
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CustomBtnScreen.resources
