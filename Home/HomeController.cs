@@ -192,33 +192,14 @@ namespace Vanilla
             };
         }
 
-        public void Seleiconajanela(string janela)
+       public void CriarPedido()
         {
-            Dictionary<string, string> janelas = new Dictionary<string, string>()
-            {
-               { "Cadastra Empresa", "CadastraCNPJ" },
-               { "Cadastra Itens", "CadastrarItensFront" },
-               { "Cadastra Usuários", "AdicionarUsuariosFront" },
-               { "Cadastro Cd", "CadastroCd" },
-               { "WalkVan - Msg", "ViewMsg" },
-                {"Inserir Item", "InserirItem" }
-             };
-
-            if (janelas.ContainsKey(janela))
-            {
-                janela = janelas[janela];
-            }
-
-            Form form = Application.OpenForms[janela];
-
-            if (form != null)
-            {
-                if (form.WindowState == FormWindowState.Minimized)
-                {
-                    form.WindowState = FormWindowState.Normal; // Restaura a janela se estiver minimizada
-                }
-                form.BringToFront(); // Traz a janela para frente
-            }
+            PedidosView view = new PedidosView();
+            view.Visible = false;
+            view.MdiParent = viewhome.Home;
+            PedidosModel model = new PedidosModel();
+            PedidosController controller = new PedidosController(view, model);
+            view.Show();
         }
 
     }

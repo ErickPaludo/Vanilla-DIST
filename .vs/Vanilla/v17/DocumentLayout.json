@@ -3,68 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\pedidosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\cadastracd\\tabela\\classtabelaend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastracd\\tabela\\classtabelaend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\cadastrar itens\\tabelaitens\\tabelaitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\tabelaitens\\tabelaitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\cadastrar itens\\cadastraritens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\cadastraritens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\cadastrar itens\\tabelaitens\\tabelaitensclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\tabelaitens\\tabelaitensclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\custombtnscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:custombtnscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\ipedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\cadastrar empresas\\cadastracnpj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\cadastracnpj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\cadastrar empresas\\cadastracnpj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\cadastracnpj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\custombtnscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:custombtnscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\vanillamdi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,198 +54,190 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClassTabelaEnd.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\CadastraCd\\Tabela\\ClassTabelaEnd.cs",
-              "RelativeDocumentMoniker": "CadastraCd\\Tabela\\ClassTabelaEnd.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\CadastraCd\\Tabela\\ClassTabelaEnd.cs",
-              "RelativeToolTip": "CadastraCd\\Tabela\\ClassTabelaEnd.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAADwv5UAAAAQAAAA",
+              "DocumentIndex": 6,
+              "Title": "CadastrarItens.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Itens\\CadastrarItens.cs",
+              "RelativeDocumentMoniker": "Cadastrar Itens\\CadastrarItens.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Itens\\CadastrarItens.cs",
+              "RelativeToolTip": "Cadastrar Itens\\CadastrarItens.cs",
+              "ViewState": "AQIAALIAAAAAAAAAAADwv8QAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T23:55:02.37Z",
+              "WhenOpened": "2024-07-03T02:17:15.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Endereco.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Endereco.cs",
-              "RelativeDocumentMoniker": "Endereco.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Endereco.cs",
-              "RelativeToolTip": "Endereco.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBEAAAAeAAAA",
+              "DocumentIndex": 2,
+              "Title": "PedidosView.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs",
+              "RelativeDocumentMoniker": "Pedidos\\PedidosView.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs",
+              "RelativeToolTip": "Pedidos\\PedidosView.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAswBoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T21:12:25.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeDocumentMoniker": "Backsys\\Database.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeToolTip": "Backsys\\Database.cs",
-              "ViewState": "AQIAABsBAAAAAAAAAADwv0IBAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T20:12:27.624Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CustomBtnScreen.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\CustomBtnScreen.cs",
-              "RelativeDocumentMoniker": "CustomBtnScreen.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\CustomBtnScreen.cs",
-              "RelativeToolTip": "CustomBtnScreen.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T01:59:26.873Z"
+              "WhenOpened": "2024-07-03T01:18:39.604Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeDocumentMoniker": "Home\\HomeController.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeToolTip": "Home\\HomeController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAswKIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T02:31:09.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T21:40:02.031Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginFront.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs",
-              "RelativeDocumentMoniker": "Login\\LoginFront.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs",
-              "RelativeToolTip": "Login\\LoginFront.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T02:41:28.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TabelaItens.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
-              "RelativeDocumentMoniker": "Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Itens\\TabelaItens\\TabelaItens.cs [Projeto]",
-              "RelativeToolTip": "Cadastrar Itens\\TabelaItens\\TabelaItens.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T21:05:24.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Homepage.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
-              "RelativeDocumentMoniker": "Home\\Homepage.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
-              "RelativeToolTip": "Home\\Homepage.cs",
-              "ViewState": "AQIAAAcBAAAAAAAAAADwv0MBAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T22:05:07.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "VanillaMDI.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs",
               "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
               "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs [Projeto]",
               "RelativeToolTip": "Home\\VanillaMDI.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T23:57:44.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CadastraCNPJ.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Empresas\\CadastraCNPJ.cs",
-              "RelativeDocumentMoniker": "Cadastrar Empresas\\CadastraCNPJ.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Empresas\\CadastraCNPJ.cs [Projeto]",
-              "RelativeToolTip": "Cadastrar Empresas\\CadastraCNPJ.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T20:48:18.447Z"
+              "WhenOpened": "2024-07-03T01:16:03.275Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "PedidosView.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs",
+              "RelativeDocumentMoniker": "Pedidos\\PedidosView.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs [Projeto]",
+              "RelativeToolTip": "Pedidos\\PedidosView.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T01:02:30.582Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PedidosController.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosController.cs",
+              "RelativeDocumentMoniker": "Pedidos\\PedidosController.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosController.cs",
+              "RelativeToolTip": "Pedidos\\PedidosController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAcwDUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T01:02:45.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PedidosModel.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosModel.cs",
+              "RelativeDocumentMoniker": "Pedidos\\PedidosModel.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosModel.cs",
+              "RelativeToolTip": "Pedidos\\PedidosModel.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwE8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T01:02:58.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TabelaItensClass.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Itens\\TabelaItens\\TabelaItensClass.cs",
+              "RelativeDocumentMoniker": "Cadastrar Itens\\TabelaItens\\TabelaItensClass.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Itens\\TabelaItens\\TabelaItensClass.cs",
+              "RelativeToolTip": "Cadastrar Itens\\TabelaItens\\TabelaItensClass.cs",
+              "ViewState": "AQIAAKcAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T01:38:15.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
+              "RelativeDocumentMoniker": "Home\\HomeController.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
+              "RelativeToolTip": "Home\\HomeController.cs",
+              "ViewState": "AQIAALIAAAAAAAAAAAAiwMUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T02:05:10.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "VanillaMDI.cs",
               "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs",
               "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
               "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs",
               "RelativeToolTip": "Home\\VanillaMDI.cs",
-              "ViewState": "AQIAABUBAAAAAAAAAAAkwCUBAAAIAAAA",
+              "ViewState": "AQIAAEwBAAAAAAAAAAAiwGABAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T23:58:03.269Z"
-            },
+              "WhenOpened": "2024-07-03T01:16:31.949Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "0562909a-d17a-4f63-90c4-b2becd69e50e",
+        "Display": 1,
+        "X": 390,
+        "Y": 136,
+        "Width": 1234,
+        "Height": 785,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CadastraCNPJ.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Empresas\\CadastraCNPJ.cs",
-              "RelativeDocumentMoniker": "Cadastrar Empresas\\CadastraCNPJ.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Cadastrar Empresas\\CadastraCNPJ.cs",
-              "RelativeToolTip": "Cadastrar Empresas\\CadastraCNPJ.cs",
-              "ViewState": "AQIAAPoAAAAAAAAAAAAnwAUBAAAiAAAA",
+              "DocumentIndex": 9,
+              "Title": "Ipedido.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\Ipedido.cs",
+              "RelativeDocumentMoniker": "Pedidos\\Ipedido.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\Ipedido.cs",
+              "RelativeToolTip": "Pedidos\\Ipedido.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T00:20:12.663Z"
-            },
+              "WhenOpened": "2024-07-03T01:03:29.686Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "2bd5e412-4182-4897-913f-d32a1c47c042",
+        "Display": 1,
+        "X": 875,
+        "Y": 336,
+        "Width": 1209,
+        "Height": 785,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CustomBtnScreen.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\CustomBtnScreen.cs",
-              "RelativeDocumentMoniker": "CustomBtnScreen.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\CustomBtnScreen.cs [Projeto]",
-              "RelativeToolTip": "CustomBtnScreen.cs [Projeto]",
+              "DocumentIndex": 5,
+              "Title": "Pedidos.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\Pedidos.cs",
+              "RelativeDocumentMoniker": "Pedidos\\Pedidos.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\Pedidos.cs",
+              "RelativeToolTip": "Pedidos\\Pedidos.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA3wCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T03:03:57.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "VanillaMDI.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.Designer.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.Designer.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.Designer.cs",
-              "RelativeToolTip": "Home\\VanillaMDI.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:29:03.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LoginFront.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs",
-              "RelativeDocumentMoniker": "Login\\LoginFront.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs [Projeto]",
-              "RelativeToolTip": "Login\\LoginFront.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T02:41:25.422Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-07-03T01:03:39.591Z",
+              "EditorCaption": ""
             }
           ]
         }

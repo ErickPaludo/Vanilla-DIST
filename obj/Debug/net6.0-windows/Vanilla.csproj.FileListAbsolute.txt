@@ -731,3 +731,4 @@ C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master\obj\Debug\net6.0-w
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-master\obj\Debug\net6.0-windows\ref\Vanilla.dll
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CustomBtnScreen.resources
+C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.PedidosView.resources

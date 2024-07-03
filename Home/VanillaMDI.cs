@@ -347,5 +347,10 @@ namespace Vanilla
                 cPanel.Top = 25;
             }
         }
+
+        private void CriarPedido(object sender, EventArgs e)
+        {
+            controller.CriarPedido();
+        }
     }
 }

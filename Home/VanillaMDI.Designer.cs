@@ -56,6 +56,7 @@
             label3 = new Label();
             BInsereItem = new CustomBtnScreen();
             vScrollBar1 = new VScrollBar();
+            customBtnScreen1 = new CustomBtnScreen();
             menuStrip1.SuspendLayout();
             cPanel.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -317,6 +318,7 @@
             // 
             flowLayoutPanel3.Controls.Add(label3);
             flowLayoutPanel3.Controls.Add(BInsereItem);
+            flowLayoutPanel3.Controls.Add(customBtnScreen1);
             flowLayoutPanel3.Location = new Point(3, 464);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Size = new Size(267, 246);
@@ -352,6 +354,17 @@
             vScrollBar1.Size = new Size(19, 649);
             vScrollBar1.TabIndex = 23;
             vScrollBar1.Scroll += ScroolBar;
+            // 
+            // customBtnScreen1
+            // 
+            customBtnScreen1.CorBtn = Color.Orange;
+            customBtnScreen1.ImageBtn = null;
+            customBtnScreen1.Location = new Point(3, 78);
+            customBtnScreen1.Name = "customBtnScreen1";
+            customBtnScreen1.Size = new Size(221, 37);
+            customBtnScreen1.TabIndex = 7;
+            customBtnScreen1.Tela = "Criar Pedido";
+            customBtnScreen1.MyControlClick += CriarPedido;
             // 
             // VanillaMDI
             // 
@@ -411,6 +424,7 @@
         private FlowLayoutPanel flowLayoutPanel3;
         private Label label3;
         private CustomBtnScreen BInsereItem;
+        private CustomBtnScreen customBtnScreen1;
     }
 }
 
