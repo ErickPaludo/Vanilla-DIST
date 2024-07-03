@@ -352,5 +352,10 @@ namespace Vanilla
         {
             controller.CriarPedido();
         }
+
+        private void Fechar(object sender, FormClosingEventArgs e)
+        {
+            controller.Fechar();
+        }
     }
 }

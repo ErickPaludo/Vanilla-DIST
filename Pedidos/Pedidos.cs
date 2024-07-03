@@ -36,9 +36,8 @@ namespace Vanilla
         {
         }
 
-        public Pedidos(int id, int id_c, int id_t)
+        public Pedidos(int id_c, int id_t)
         {
-            this.id = id;
             this.id_c = id_c;
             this.id_t = id_t;
         }

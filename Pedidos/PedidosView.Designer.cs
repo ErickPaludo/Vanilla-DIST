@@ -35,6 +35,7 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             dataGridClient = new DataGridView();
             Column2 = new DataGridViewTextBoxColumn();
@@ -90,6 +91,7 @@
             dataGridClient.RowTemplate.Height = 25;
             dataGridClient.Size = new Size(348, 160);
             dataGridClient.TabIndex = 13;
+            dataGridClient.CellClick += SelecionaCliente;
             // 
             // Column2
             // 
@@ -110,18 +112,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 26);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(47, 15);
             label1.TabIndex = 14;
-            label1.Text = "label1";
+            label1.Text = "Cliente:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(384, 26);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(89, 15);
             label2.TabIndex = 16;
-            label2.Text = "label2";
+            label2.Text = "Transportadora:";
             // 
             // dataGridTrans
             // 
@@ -153,6 +155,7 @@
             dataGridTrans.RowTemplate.Height = 25;
             dataGridTrans.Size = new Size(348, 160);
             dataGridTrans.TabIndex = 15;
+            dataGridTrans.CellClick += SelecionaTansportadora;
             // 
             // Column3
             // 
@@ -228,22 +231,22 @@
             dataGridItensSelect.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridItensSelect.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridItensSelect.Columns.AddRange(new DataGridViewColumn[] { Column5, dataGridViewTextBoxColumn3, Column1 });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dataGridItensSelect.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = SystemColors.Window;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
+            dataGridItensSelect.DefaultCellStyle = dataGridViewCellStyle9;
             dataGridItensSelect.Location = new Point(384, 210);
             dataGridItensSelect.Name = "dataGridItensSelect";
-            dataGridItensSelect.ReadOnly = true;
             dataGridItensSelect.RowHeadersVisible = false;
             dataGridItensSelect.RowTemplate.Height = 25;
             dataGridItensSelect.Size = new Size(348, 178);
             dataGridItensSelect.TabIndex = 20;
-            dataGridItensSelect.CellClick += RetiraItem;
+            dataGridItensSelect.CellDoubleClick += RetirarItem;
+            dataGridItensSelect.CellValidated += AlterarQtd;
             // 
             // Column5
             // 
@@ -261,24 +264,27 @@
             // 
             // Column1
             // 
+            dataGridViewCellStyle8.NullValue = "0";
+            Column1.DefaultCellStyle = dataGridViewCellStyle8;
             Column1.HeaderText = "Qtd";
+            Column1.MaxInputLength = 4;
             Column1.Name = "Column1";
-            Column1.ReadOnly = true;
             Column1.Width = 50;
             // 
             // button1
             // 
-            button1.Location = new Point(657, 394);
+            button1.Location = new Point(657, 397);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 21;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += CriarPedido;
             // 
             // lclient
             // 
             lclient.AutoSize = true;
-            lclient.Location = new Point(56, 26);
+            lclient.Location = new Point(65, 26);
             lclient.Name = "lclient";
             lclient.Size = new Size(38, 15);
             lclient.TabIndex = 22;
@@ -287,7 +293,7 @@
             // ltransp
             // 
             ltransp.AutoSize = true;
-            ltransp.Location = new Point(428, 26);
+            ltransp.Location = new Point(479, 26);
             ltransp.Name = "ltransp";
             ltransp.Size = new Size(38, 15);
             ltransp.TabIndex = 23;
@@ -297,7 +303,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(751, 450);
+            ClientSize = new Size(751, 432);
             Controls.Add(ltransp);
             Controls.Add(lclient);
             Controls.Add(button1);

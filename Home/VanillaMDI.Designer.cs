@@ -55,8 +55,8 @@
             flowLayoutPanel3 = new FlowLayoutPanel();
             label3 = new Label();
             BInsereItem = new CustomBtnScreen();
-            vScrollBar1 = new VScrollBar();
             customBtnScreen1 = new CustomBtnScreen();
+            vScrollBar1 = new VScrollBar();
             menuStrip1.SuspendLayout();
             cPanel.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -345,16 +345,6 @@
             BInsereItem.Tela = "Inserir Itens";
             BInsereItem.MyControlClick += InserirItens;
             // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            vScrollBar1.LargeChange = 5;
-            vScrollBar1.Location = new Point(283, 24);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(19, 649);
-            vScrollBar1.TabIndex = 23;
-            vScrollBar1.Scroll += ScroolBar;
-            // 
             // customBtnScreen1
             // 
             customBtnScreen1.CorBtn = Color.Orange;
@@ -365,6 +355,16 @@
             customBtnScreen1.TabIndex = 7;
             customBtnScreen1.Tela = "Criar Pedido";
             customBtnScreen1.MyControlClick += CriarPedido;
+            // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            vScrollBar1.LargeChange = 5;
+            vScrollBar1.Location = new Point(283, 24);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(19, 649);
+            vScrollBar1.TabIndex = 23;
+            vScrollBar1.Scroll += ScroolBar;
             // 
             // VanillaMDI
             // 
@@ -382,6 +382,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "VanillaMDI";
             WindowState = FormWindowState.Maximized;
+            FormClosing += Fechar;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             cPanel.ResumeLayout(false);

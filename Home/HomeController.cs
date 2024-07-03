@@ -23,7 +23,10 @@ namespace Vanilla
             this.model = model;
             viewhome.SetController(this);
         }
-
+        public void Fechar()
+        {
+            model.Fechar();
+        }
         #region Menu
         public void UsersOn()
         {
@@ -76,7 +79,7 @@ namespace Vanilla
             emp.FormClosed += (s, args) =>
             {
                 viewhome.CadEmpresas.Enabled = true;
-                model.RemJanela("Cadastra Empresa");
+                
 
             };
 
