@@ -198,11 +198,20 @@ namespace Vanilla
        public void CriarPedido()
         {
             PedidosView view = new PedidosView();
-            view.Visible = false;
+            view.Visible = false; // Inicialmente invisível para evitar flicker
             view.MdiParent = viewhome.Home;
             PedidosModel model = new PedidosModel();
             PedidosController controller = new PedidosController(view, model);
+
+            // Adiciona um manipulador para o evento Load
+            view.Load += (s, e) =>
+            {
+                // Define a localização e o tamanho desejados
+                view.Location = new Point(650, 200);
+            };
+
             view.Show();
+            view.Visible = true; 
         }
 
     }

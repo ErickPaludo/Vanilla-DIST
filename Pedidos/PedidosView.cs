@@ -77,11 +77,18 @@ namespace Vanilla
 
                         controller.AlteraQtd(Convert.ToInt32(dataGridItensSelect.Rows[e.RowIndex].Cells[0].Value), Convert.ToInt32(dataGridItensSelect.Rows[e.RowIndex].Cells[2].Value));
                     }
-                    catch { MessageBox.Show("O valor inserido não é um número!");
+                    catch
+                    {
+                        MessageBox.Show("O valor inserido não é um número!");
                         dataGridItensSelect.Rows[e.RowIndex].Cells[2].Value = 0.ToString();
                     }
                 }
             }
+        }
+
+        private void Mover(object sender, EventArgs e)
+        {
+            if (this.Left < 255) this.Left = 273;
         }
 
         public Label NameClient { get { return lclient; } set { lclient = value; } }

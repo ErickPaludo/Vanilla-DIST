@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidosView));
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
@@ -84,46 +85,35 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridClient.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridClient.Location = new Point(12, 44);
+            resources.ApplyResources(dataGridClient, "dataGridClient");
             dataGridClient.Name = "dataGridClient";
             dataGridClient.ReadOnly = true;
             dataGridClient.RowHeadersVisible = false;
             dataGridClient.RowTemplate.Height = 25;
-            dataGridClient.Size = new Size(348, 160);
-            dataGridClient.TabIndex = 13;
             dataGridClient.CellClick += SelecionaCliente;
             // 
             // Column2
             // 
-            Column2.HeaderText = "Cod";
+            resources.ApplyResources(Column2, "Column2");
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
-            Column2.Width = 80;
             // 
             // ColumnPrecoF
             // 
             ColumnPrecoF.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            ColumnPrecoF.HeaderText = "Cliente";
+            resources.ApplyResources(ColumnPrecoF, "ColumnPrecoF");
             ColumnPrecoF.Name = "ColumnPrecoF";
             ColumnPrecoF.ReadOnly = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 26);
+            resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 14;
-            label1.Text = "Cliente:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(384, 26);
+            resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            label2.Size = new Size(89, 15);
-            label2.TabIndex = 16;
-            label2.Text = "Transportadora:";
             // 
             // dataGridTrans
             // 
@@ -148,25 +138,23 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridTrans.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridTrans.Location = new Point(384, 44);
+            resources.ApplyResources(dataGridTrans, "dataGridTrans");
             dataGridTrans.Name = "dataGridTrans";
             dataGridTrans.ReadOnly = true;
             dataGridTrans.RowHeadersVisible = false;
             dataGridTrans.RowTemplate.Height = 25;
-            dataGridTrans.Size = new Size(348, 160);
-            dataGridTrans.TabIndex = 15;
             dataGridTrans.CellClick += SelecionaTansportadora;
             // 
             // Column3
             // 
-            Column3.HeaderText = "Cod";
+            resources.ApplyResources(Column3, "Column3");
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
             dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn1.HeaderText = "Transportadora";
+            resources.ApplyResources(dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -193,26 +181,23 @@
             dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dataGridItens.DefaultCellStyle = dataGridViewCellStyle6;
-            dataGridItens.Location = new Point(12, 210);
+            resources.ApplyResources(dataGridItens, "dataGridItens");
             dataGridItens.Name = "dataGridItens";
             dataGridItens.ReadOnly = true;
             dataGridItens.RowHeadersVisible = false;
             dataGridItens.RowTemplate.Height = 25;
-            dataGridItens.Size = new Size(348, 178);
-            dataGridItens.TabIndex = 17;
             dataGridItens.CellClick += SelecionaItem;
             // 
             // Column4
             // 
-            Column4.HeaderText = "Cod";
+            resources.ApplyResources(Column4, "Column4");
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
-            Column4.Width = 80;
             // 
             // dataGridViewTextBoxColumn2
             // 
             dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn2.HeaderText = "Item";
+            resources.ApplyResources(dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
@@ -239,26 +224,23 @@
             dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
             dataGridItensSelect.DefaultCellStyle = dataGridViewCellStyle9;
-            dataGridItensSelect.Location = new Point(384, 210);
+            resources.ApplyResources(dataGridItensSelect, "dataGridItensSelect");
             dataGridItensSelect.Name = "dataGridItensSelect";
             dataGridItensSelect.RowHeadersVisible = false;
             dataGridItensSelect.RowTemplate.Height = 25;
-            dataGridItensSelect.Size = new Size(348, 178);
-            dataGridItensSelect.TabIndex = 20;
             dataGridItensSelect.CellDoubleClick += RetirarItem;
             dataGridItensSelect.CellValidated += AlterarQtd;
             // 
             // Column5
             // 
-            Column5.HeaderText = "Cod";
+            resources.ApplyResources(Column5, "Column5");
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
-            Column5.Width = 80;
             // 
             // dataGridViewTextBoxColumn3
             // 
             dataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn3.HeaderText = "Item";
+            resources.ApplyResources(dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
@@ -266,44 +248,31 @@
             // 
             dataGridViewCellStyle8.NullValue = "0";
             Column1.DefaultCellStyle = dataGridViewCellStyle8;
-            Column1.HeaderText = "Qtd";
+            resources.ApplyResources(Column1, "Column1");
             Column1.MaxInputLength = 4;
             Column1.Name = "Column1";
-            Column1.Width = 50;
             // 
             // button1
             // 
-            button1.Location = new Point(657, 397);
+            resources.ApplyResources(button1, "button1");
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 21;
-            button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += CriarPedido;
             // 
             // lclient
             // 
-            lclient.AutoSize = true;
-            lclient.Location = new Point(65, 26);
+            resources.ApplyResources(lclient, "lclient");
             lclient.Name = "lclient";
-            lclient.Size = new Size(38, 15);
-            lclient.TabIndex = 22;
-            lclient.Text = "label3";
             // 
             // ltransp
             // 
-            ltransp.AutoSize = true;
-            ltransp.Location = new Point(479, 26);
+            resources.ApplyResources(ltransp, "ltransp");
             ltransp.Name = "ltransp";
-            ltransp.Size = new Size(38, 15);
-            ltransp.TabIndex = 23;
-            ltransp.Text = "label4";
             // 
             // PedidosView
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(751, 432);
             Controls.Add(ltransp);
             Controls.Add(lclient);
             Controls.Add(button1);
@@ -313,8 +282,11 @@
             Controls.Add(dataGridTrans);
             Controls.Add(label1);
             Controls.Add(dataGridClient);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "PedidosView";
-            Text = "PedidosView";
+            TopMost = true;
+            Move += Mover;
             ((System.ComponentModel.ISupportInitialize)dataGridClient).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridTrans).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridItens).EndInit();

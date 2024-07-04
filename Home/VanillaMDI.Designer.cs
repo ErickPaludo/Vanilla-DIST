@@ -163,7 +163,7 @@
             cPanel.Controls.Add(flowLayoutPanel3);
             cPanel.Location = new Point(0, 25);
             cPanel.Name = "cPanel";
-            cPanel.Size = new Size(285, 1142);
+            cPanel.Size = new Size(260, 1142);
             cPanel.TabIndex = 19;
             // 
             // flowLayoutPanel1
@@ -244,7 +244,7 @@
             flowLayoutPanel2.Controls.Add(Bvisualizacd);
             flowLayoutPanel2.Location = new Point(3, 212);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(304, 246);
+            flowLayoutPanel2.Size = new Size(252, 246);
             flowLayoutPanel2.TabIndex = 26;
             // 
             // label2
@@ -321,7 +321,7 @@
             flowLayoutPanel3.Controls.Add(customBtnScreen1);
             flowLayoutPanel3.Location = new Point(3, 464);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(267, 246);
+            flowLayoutPanel3.Size = new Size(252, 246);
             flowLayoutPanel3.TabIndex = 27;
             // 
             // label3
@@ -360,7 +360,7 @@
             // 
             vScrollBar1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             vScrollBar1.LargeChange = 5;
-            vScrollBar1.Location = new Point(283, 24);
+            vScrollBar1.Location = new Point(254, 24);
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(19, 649);
             vScrollBar1.TabIndex = 23;
