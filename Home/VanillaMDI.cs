@@ -21,6 +21,7 @@ namespace Vanilla
         public VanillaMDI()
         {
             InitializeComponent();
+            lic.ValidaLicenca();
         }
 
         #region elements_view

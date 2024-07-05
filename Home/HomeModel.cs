@@ -20,11 +20,11 @@ namespace Vanilla
 
         public void Fechar()
         {
-            if (lic.VerificaLogin() == true)
+         /*   if (lic.VerificaLogin() == true)
             {
                 db.Deslog(0);
             }
-            Environment.Exit(0);
+            Environment.Exit(0);*/
         }
     }
 }

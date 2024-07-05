@@ -23,7 +23,7 @@ namespace Vanilla
         public Homepage()
         {
             InitializeComponent();
-         //   lic.ValidaLicenca();
+       //   lic.ValidaLicenca();
             Exibir();
         }
         public Homepage(bool t)

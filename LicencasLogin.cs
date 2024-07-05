@@ -31,8 +31,8 @@ namespace Vanilla
                 {
                     ativo = VerificaLogin();
                 }
+           
             } while (ativo);
-
         }
         public bool VerificaLogin()
         {
@@ -70,25 +70,30 @@ namespace Vanilla
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
                 Type formTypeToKeepOpen = typeof(LoginFront);
 
                 // Crie uma instância do formulário de login
                 LoginFront login = new LoginFront();
 
-                // Itere sobre todas as formas abertas
-                foreach (Form childForm in Application.OpenForms.Cast<Form>().ToArray())
+                if (ativo)
                 {
-                    // Verifique se a forma não é a forma que você quer manter aberta
-                    if (childForm.GetType() != formTypeToKeepOpen)
+                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Itere sobre todas as formas abertas
+                    foreach (Form childForm in Application.OpenForms.Cast<Form>().ToArray())
                     {
-                        // Se não for, feche a forma
-                        childForm.Hide();
+                        // Verifique se a forma não é a forma que você quer manter aberta
+                        if (childForm.GetType() != formTypeToKeepOpen)
+                        {
+                            // Se não for, feche a forma
+                            childForm.Hide();
+                        }
                     }
+                    login.Show();
                 }
 
                 // Mostrar o formulário de login
-                login.Show();
+               
                 return false;
             }
         }

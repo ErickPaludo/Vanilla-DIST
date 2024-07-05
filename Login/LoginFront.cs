@@ -34,8 +34,9 @@ namespace Vanilla
                     home.Visible = false;
                     HomeModel model = new HomeModel();
                     HomeController controller = new HomeController(home, model);
-                    home.ShowDialog();
                     this.Hide();
+                    home.ShowDialog();
+                   
                 }
             }
             else
