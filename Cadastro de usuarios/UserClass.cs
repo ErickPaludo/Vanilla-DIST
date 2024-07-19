@@ -56,8 +56,9 @@ namespace Vanilla
             this.bloq_user = bloq_user;
         }
 
-        public UserClass(string email, string tel, string tel2, string login, string password) : this(email)
+        public UserClass(string email, string tel, string tel2, string login, string password)
         {
+            this.email = email;
             this.tel = tel;
             this.tel2 = tel2;
             this.login = login;
@@ -227,20 +228,24 @@ namespace Vanilla
                 try
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_busc_userc", connection))
+                    using (OracleCommand cmd = new OracleCommand($"select b.email,b.tel,b.tel_2,b.pass,b.login from vnl_user b where id = {util.Id_user}", connection))
                     {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = util.Id_user;
-                        cmd.Parameters.Add("r_user", OracleDbType.RefCursor, ParameterDirection.Output);
-
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {
-                            reader.Read();
+                            if (reader.Read())
+                            {
+                                string email = reader["email"].ToString();
+                                string tel = reader["tel"].ToString();
+                                string tel2 = reader["tel_2"].ToString();
+                                string pass = reader["pass"].ToString();
+                                string login = reader["login"].ToString();
 
-                            return new UserClass(reader.GetString(0), reader.GetString(1), !reader.IsDBNull(2) ? reader.GetString(2) : string.Empty, reader.GetString(3), reader.GetString(4));
-                            
-
-
+                                return new UserClass(reader["email"].ToString(), reader["tel"].ToString(), reader["tel_2"].ToString(), reader["login"].ToString(), reader["pass"].ToString());
+                            }
+                            else
+                            {
+                                return new UserClass();
+                            }
                         }
                     }
                 }

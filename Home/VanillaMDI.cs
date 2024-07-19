@@ -358,5 +358,15 @@ namespace Vanilla
         {
             controller.Fechar();
         }
+
+        private void ConsultarPedidos(object sender, EventArgs e)
+        {
+            controller.ConsultarPedidos();
+        }
+
+        private void ChamaWalkTalk(object sender, EventArgs e)
+        {
+            controller.StartOpenMsg();
+        }
     }
 }

@@ -47,6 +47,7 @@
             Bcaditem = new CustomBtnScreen();
             flowLayoutPanel2 = new FlowLayoutPanel();
             label2 = new Label();
+            customBtnScreen2 = new CustomBtnScreen();
             Bstatuscd = new CustomBtnScreen();
             Blogs = new CustomBtnScreen();
             Bvisualizaemp = new CustomBtnScreen();
@@ -56,12 +57,16 @@
             label3 = new Label();
             BInsereItem = new CustomBtnScreen();
             customBtnScreen1 = new CustomBtnScreen();
+            flowLayoutPanel4 = new FlowLayoutPanel();
+            label4 = new Label();
+            customBtnScreen3 = new CustomBtnScreen();
             vScrollBar1 = new VScrollBar();
             menuStrip1.SuspendLayout();
             cPanel.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -161,9 +166,10 @@
             cPanel.Controls.Add(flowLayoutPanel1);
             cPanel.Controls.Add(flowLayoutPanel2);
             cPanel.Controls.Add(flowLayoutPanel3);
+            cPanel.Controls.Add(flowLayoutPanel4);
             cPanel.Location = new Point(0, 25);
             cPanel.Name = "cPanel";
-            cPanel.Size = new Size(260, 1142);
+            cPanel.Size = new Size(260, 1220);
             cPanel.TabIndex = 19;
             // 
             // flowLayoutPanel1
@@ -237,6 +243,7 @@
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.Controls.Add(label2);
+            flowLayoutPanel2.Controls.Add(customBtnScreen2);
             flowLayoutPanel2.Controls.Add(Bstatuscd);
             flowLayoutPanel2.Controls.Add(Blogs);
             flowLayoutPanel2.Controls.Add(Bvisualizaemp);
@@ -244,7 +251,7 @@
             flowLayoutPanel2.Controls.Add(Bvisualizacd);
             flowLayoutPanel2.Location = new Point(3, 212);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(252, 246);
+            flowLayoutPanel2.Size = new Size(252, 284);
             flowLayoutPanel2.TabIndex = 26;
             // 
             // label2
@@ -257,11 +264,22 @@
             label2.TabIndex = 5;
             label2.Text = "Visualizadores";
             // 
+            // customBtnScreen2
+            // 
+            customBtnScreen2.CorBtn = Color.LimeGreen;
+            customBtnScreen2.ImageBtn = null;
+            customBtnScreen2.Location = new Point(3, 35);
+            customBtnScreen2.Name = "customBtnScreen2";
+            customBtnScreen2.Size = new Size(264, 37);
+            customBtnScreen2.TabIndex = 16;
+            customBtnScreen2.Tela = "Consultar Pedidos";
+            customBtnScreen2.MyControlClick += ConsultarPedidos;
+            // 
             // Bstatuscd
             // 
             Bstatuscd.CorBtn = Color.LimeGreen;
             Bstatuscd.ImageBtn = null;
-            Bstatuscd.Location = new Point(3, 35);
+            Bstatuscd.Location = new Point(3, 78);
             Bstatuscd.Name = "Bstatuscd";
             Bstatuscd.Size = new Size(221, 37);
             Bstatuscd.TabIndex = 15;
@@ -272,7 +290,7 @@
             // 
             Blogs.CorBtn = Color.LimeGreen;
             Blogs.ImageBtn = null;
-            Blogs.Location = new Point(3, 78);
+            Blogs.Location = new Point(3, 121);
             Blogs.Name = "Blogs";
             Blogs.Size = new Size(249, 37);
             Blogs.TabIndex = 6;
@@ -284,7 +302,7 @@
             // 
             Bvisualizaemp.CorBtn = Color.LimeGreen;
             Bvisualizaemp.ImageBtn = null;
-            Bvisualizaemp.Location = new Point(3, 121);
+            Bvisualizaemp.Location = new Point(3, 164);
             Bvisualizaemp.Name = "Bvisualizaemp";
             Bvisualizaemp.Size = new Size(264, 37);
             Bvisualizaemp.TabIndex = 12;
@@ -295,11 +313,11 @@
             // 
             Bvisualizaitens.CorBtn = Color.LimeGreen;
             Bvisualizaitens.ImageBtn = null;
-            Bvisualizaitens.Location = new Point(3, 164);
+            Bvisualizaitens.Location = new Point(3, 207);
             Bvisualizaitens.Name = "Bvisualizaitens";
             Bvisualizaitens.Size = new Size(249, 37);
             Bvisualizaitens.TabIndex = 13;
-            Bvisualizaitens.Tela = "Consuoltar Itens";
+            Bvisualizaitens.Tela = "Consultar Itens";
             Bvisualizaitens.MyControlClick += ConsultarItens;
             Bvisualizaitens.Click += ConsultarItens;
             // 
@@ -307,11 +325,11 @@
             // 
             Bvisualizacd.CorBtn = Color.LimeGreen;
             Bvisualizacd.ImageBtn = null;
-            Bvisualizacd.Location = new Point(3, 207);
+            Bvisualizacd.Location = new Point(3, 250);
             Bvisualizacd.Name = "Bvisualizacd";
             Bvisualizacd.Size = new Size(264, 37);
             Bvisualizacd.TabIndex = 14;
-            Bvisualizacd.Tela = "Consuoltar Estoque";
+            Bvisualizacd.Tela = "Consultar Estoque";
             Bvisualizacd.MyControlClick += AcessaTableCd;
             // 
             // flowLayoutPanel3
@@ -319,9 +337,9 @@
             flowLayoutPanel3.Controls.Add(label3);
             flowLayoutPanel3.Controls.Add(BInsereItem);
             flowLayoutPanel3.Controls.Add(customBtnScreen1);
-            flowLayoutPanel3.Location = new Point(3, 464);
+            flowLayoutPanel3.Location = new Point(3, 502);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(252, 246);
+            flowLayoutPanel3.Size = new Size(252, 117);
             flowLayoutPanel3.TabIndex = 27;
             // 
             // label3
@@ -356,13 +374,43 @@
             customBtnScreen1.Tela = "Criar Pedido";
             customBtnScreen1.MyControlClick += CriarPedido;
             // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.Controls.Add(label4);
+            flowLayoutPanel4.Controls.Add(customBtnScreen3);
+            flowLayoutPanel4.Location = new Point(3, 625);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new Size(252, 73);
+            flowLayoutPanel4.TabIndex = 28;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(3, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(147, 32);
+            label4.TabIndex = 5;
+            label4.Text = "Chat Interno";
+            // 
+            // customBtnScreen3
+            // 
+            customBtnScreen3.CorBtn = Color.DarkViolet;
+            customBtnScreen3.ImageBtn = null;
+            customBtnScreen3.Location = new Point(3, 35);
+            customBtnScreen3.Name = "customBtnScreen3";
+            customBtnScreen3.Size = new Size(221, 37);
+            customBtnScreen3.TabIndex = 6;
+            customBtnScreen3.Tela = "WalkTalk Meneger";
+            customBtnScreen3.MyControlClick += ChamaWalkTalk;
+            // 
             // vScrollBar1
             // 
             vScrollBar1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             vScrollBar1.LargeChange = 5;
             vScrollBar1.Location = new Point(254, 24);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(19, 649);
+            vScrollBar1.Size = new Size(19, 727);
             vScrollBar1.TabIndex = 23;
             vScrollBar1.Scroll += ScroolBar;
             // 
@@ -371,7 +419,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CausesValidation = false;
-            ClientSize = new Size(967, 671);
+            ClientSize = new Size(967, 749);
             Controls.Add(vScrollBar1);
             Controls.Add(menuStrip1);
             Controls.Add(cPanel);
@@ -392,6 +440,8 @@
             flowLayoutPanel2.PerformLayout();
             flowLayoutPanel3.ResumeLayout(false);
             flowLayoutPanel3.PerformLayout();
+            flowLayoutPanel4.ResumeLayout(false);
+            flowLayoutPanel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -426,6 +476,10 @@
         private Label label3;
         private CustomBtnScreen BInsereItem;
         private CustomBtnScreen customBtnScreen1;
+        private CustomBtnScreen customBtnScreen2;
+        private FlowLayoutPanel flowLayoutPanel4;
+        private Label label4;
+        private CustomBtnScreen customBtnScreen3;
     }
 }
 

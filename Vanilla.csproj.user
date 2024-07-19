@@ -62,6 +62,9 @@
     <Compile Update="Pedidos\PedidosView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pedidos\TabelaPedidos\TabelaPedidosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="StatusCd\StatusdoCd.cs">
       <SubType>Form</SubType>
     </Compile>

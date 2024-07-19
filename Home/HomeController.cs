@@ -44,7 +44,8 @@ namespace Vanilla
         {
             AlterarUserCFront altercomun = new AlterarUserCFront();
             altercomun.ExibirDados();
-            altercomun.Show();
+            altercomun.MdiParent = viewhome.Home;
+            altercomun.Show();                    
         }
         public void TrocarConta()
         {
@@ -158,6 +159,15 @@ namespace Vanilla
             StatusdoCd scd = new StatusdoCd();
             scd.Mostrar();
             scd.Show();
+        }
+        public void ConsultarPedidos()
+        {
+            TabelaPedidosView view_tb_pedidos = new TabelaPedidosView();
+            view_tb_pedidos.Visible = false;
+            ModelTabelaPedidos model_tb_pedidos = new ModelTabelaPedidos();
+            ControllerTabelaPedidos controller_tb_pedidos = new ControllerTabelaPedidos(view_tb_pedidos, model_tb_pedidos);
+            view_tb_pedidos.Show();
+
         }
         #endregion
 

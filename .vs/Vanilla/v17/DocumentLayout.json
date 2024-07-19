@@ -1,54 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\licencaslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:licencaslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\pedidos\\pedidosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\pedidos\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\pedidos\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,156 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeModel.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeModel.cs",
-              "RelativeDocumentMoniker": "Home\\HomeModel.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeModel.cs",
-              "RelativeToolTip": "Home\\HomeModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAANAAAA",
+              "Title": "VanillaMDI.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
+              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs [Projeto]",
+              "RelativeToolTip": "Home\\VanillaMDI.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T21:59:06.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginFront.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs",
-              "RelativeDocumentMoniker": "Login\\LoginFront.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs [Projeto]",
-              "RelativeToolTip": "Login\\LoginFront.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T21:13:01.691Z",
+              "WhenOpened": "2024-07-18T22:14:00.021Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VanillaMDI.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeToolTip": "Home\\VanillaMDI.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAdAAAA",
+              "DocumentIndex": 3,
+              "Title": "AlterarUserCFront.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs [Projeto]",
+              "RelativeToolTip": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T20:41:27.415Z",
+              "WhenOpened": "2024-07-18T22:12:46.681Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserClass.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\UserClass.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\UserClass.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\UserClass.cs",
+              "RelativeToolTip": "Cadastro de usuarios\\UserClass.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAiwOAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T17:55:54.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
+              "RelativeDocumentMoniker": "Home\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
+              "RelativeToolTip": "Home\\HomeController.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAWwL4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T22:14:02.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LicencasLogin.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\LicencasLogin.cs",
-              "RelativeDocumentMoniker": "LicencasLogin.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\LicencasLogin.cs",
-              "RelativeToolTip": "LicencasLogin.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAwwCUAAAAIAAAA",
+              "Title": "VanillaMDI.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
+              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
+              "RelativeToolTip": "Home\\VanillaMDI.cs",
+              "ViewState": "AQIAAGABAAAAAAAAAAAtwHABAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T20:40:53.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginFront.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs",
-              "RelativeDocumentMoniker": "Login\\LoginFront.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Login\\LoginFront.cs",
-              "RelativeToolTip": "Login\\LoginFront.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T21:12:46.331Z",
+              "WhenOpened": "2024-07-18T22:14:14.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "VanillaMDI.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\VanillaMDI.cs [Projeto]",
-              "RelativeToolTip": "Home\\VanillaMDI.cs [Projeto]",
+              "Title": "AlterarUserCFront.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "RelativeToolTip": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T22:54:20.351Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PedidosView.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs",
-              "RelativeDocumentMoniker": "Pedidos\\PedidosView.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs",
-              "RelativeToolTip": "Pedidos\\PedidosView.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAUwFkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:18:39.604Z",
+              "WhenOpened": "2024-07-18T22:12:57.58Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PedidosView.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs",
-              "RelativeDocumentMoniker": "Pedidos\\PedidosView.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosView.cs [Projeto]",
-              "RelativeToolTip": "Pedidos\\PedidosView.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:02:30.582Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeDocumentMoniker": "Home\\HomeController.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeToolTip": "Home\\HomeController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA7wNEAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T23:23:01.705Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Pedidos.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\Pedidos.cs",
-              "RelativeDocumentMoniker": "Pedidos\\Pedidos.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\Pedidos.cs",
-              "RelativeToolTip": "Pedidos\\Pedidos.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAcwCoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T12:17:14.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PedidosController.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosController.cs",
-              "RelativeDocumentMoniker": "Pedidos\\PedidosController.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosController.cs",
-              "RelativeToolTip": "Pedidos\\PedidosController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:02:45.502Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PedidosModel.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosModel.cs",
-              "RelativeDocumentMoniker": "Pedidos\\PedidosModel.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\PedidosModel.cs",
-              "RelativeToolTip": "Pedidos\\PedidosModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:02:58.255Z"
             }
           ]
         }
