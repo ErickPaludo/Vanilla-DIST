@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\pedidos\\tabelapedidos\\modeltabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\tabelapedidos\\modeltabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\pedidos\\tabelapedidos\\controllertabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\tabelapedidos\\controllertabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\pedidos\\tabelapedidos\\tabelapedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\tabelapedidos\\tabelapedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\administrador\\desktop\\vanilla-dist\\pedidos\\tabelapedidos\\tabelapedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\tabelapedidos\\tabelapedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,83 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VanillaMDI.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs [Projeto]",
-              "RelativeToolTip": "Home\\VanillaMDI.cs [Projeto]",
+              "DocumentIndex": 0,
+              "Title": "ModelTabelaPedidos.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "RelativeDocumentMoniker": "Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "RelativeToolTip": "Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAqwIMAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T22:14:00.021Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AlterarUserCFront.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
-              "RelativeDocumentMoniker": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs [Projeto]",
-              "RelativeToolTip": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T22:12:46.681Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserClass.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\UserClass.cs",
-              "RelativeDocumentMoniker": "Cadastro de usuarios\\UserClass.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\UserClass.cs",
-              "RelativeToolTip": "Cadastro de usuarios\\UserClass.cs",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAiwOAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T17:55:54.094Z",
+              "WhenOpened": "2024-07-21T02:18:26.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeDocumentMoniker": "Home\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeToolTip": "Home\\HomeController.cs",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAWwL4AAAAgAAAA",
+              "Title": "TabelaPedidosView.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "RelativeDocumentMoniker": "Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "RelativeToolTip": "Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAqwEcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T22:14:02.286Z",
+              "WhenOpened": "2024-07-20T19:55:28.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VanillaMDI.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeToolTip": "Home\\VanillaMDI.cs",
-              "ViewState": "AQIAAGABAAAAAAAAAAAtwHABAAAmAAAA",
+              "DocumentIndex": 1,
+              "Title": "ControllerTabelaPedidos.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "RelativeDocumentMoniker": "Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "RelativeToolTip": "Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAxwDYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T22:14:14.3Z",
+              "WhenOpened": "2024-07-20T20:32:49.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AlterarUserCFront.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
-              "RelativeDocumentMoniker": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
-              "RelativeToolTip": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABcAAAAIAAAA",
+              "DocumentIndex": 3,
+              "Title": "TabelaPedidosView.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "RelativeDocumentMoniker": "Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\TabelaPedidosView.cs [Projeto]",
+              "RelativeToolTip": "Pedidos\\TabelaPedidos\\TabelaPedidosView.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T22:12:57.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T19:38:40.775Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }

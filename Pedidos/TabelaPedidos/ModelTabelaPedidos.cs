@@ -1,6 +1,8 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -113,6 +115,31 @@ namespace Vanilla
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AlterarSituacao(int id_pedido, string situacao)
+        {
+            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            {
+                try
+                {
+                    connection.Open();
+                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_pedidos.prc_altera_pedido", connection))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        //  cmd.Parameters.Add("v_id_user", OracleDbType.Int32).Value = Util.id_user;
+
+                        cmd.Parameters.Add("v_situacao", OracleDbType.Varchar2).Value = situacao;
+                        cmd.Parameters.Add("v_id_pedido", OracleDbType.Int32).Value = id_pedido;
+                        cmd.ExecuteNonQuery();
+                    }
+                    connection.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!", ex.Message);
+                }
             }
         }
     }

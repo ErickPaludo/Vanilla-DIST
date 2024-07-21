@@ -24,11 +24,19 @@ namespace Vanilla
             view.Tabela_pedidos.Rows.Clear();
             foreach(var obj in model.ListaPedidos)
             {
-                int rowIndex = view.Tabela_pedidos.Rows.Add(obj.N_pedido, obj.Cliente, obj.Transportadora,obj.Status, obj.Cubagem.ToString("f3"),obj.Data_ini.ToString(), obj.Data_fim.ToString());
+                int rowIndex = view.Tabela_pedidos.Rows.Add(obj.Status,obj.N_pedido, obj.Cliente, obj.Transportadora, obj.Cubagem.ToString("f3"),obj.Data_ini.ToString(), obj.Data_fim.ToString());
 
                 if(obj.Status == "Bloqueado")
                 {
                     view.Tabela_pedidos.Rows[rowIndex].DefaultCellStyle.ForeColor = Color.Red;
+                }
+                else if(obj.Status == "Liberado")
+                {
+                    view.Tabela_pedidos.Rows[rowIndex].DefaultCellStyle.ForeColor = Color.Green;
+                }
+                else if (obj.Status == "Cancelado")
+                {
+                    view.Tabela_pedidos.Rows[rowIndex].DefaultCellStyle.ForeColor = Color.Gray;
                 }
             }
         }
@@ -40,6 +48,13 @@ namespace Vanilla
             {
                  view.Tabela_linha_pedidos.Rows.Add(obj.N_pedido, obj.Item, obj.Qtd.ToString(), obj.Cubagem.ToString("f3"));
             }
+        }
+        public void AlterarSituacao(int id_pedido,string situacao)
+        {
+           // MessageBox.Show("Meusovo");
+            model.AlterarSituacao(id_pedido, situacao);
+            AtualizaPedidos();
+            view.Tabela_linha_pedidos.Rows.Clear();
         }
     }
 }

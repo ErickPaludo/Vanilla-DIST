@@ -30,102 +30,22 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            dataGridPedidos = new DataGridView();
-            Column4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             dataGridLinhaPedido = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridPedidos).BeginInit();
+            dataGridPedidos = new DataGridView();
+            Column10 = new DataGridViewComboBoxColumn();
+            Column11 = new DataGridViewTextBoxColumn();
+            Column12 = new DataGridViewTextBoxColumn();
+            Column13 = new DataGridViewTextBoxColumn();
+            Column15 = new DataGridViewTextBoxColumn();
+            Column16 = new DataGridViewTextBoxColumn();
+            Column17 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridLinhaPedido).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridPedidos).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridPedidos
-            // 
-            dataGridPedidos.AllowUserToAddRows = false;
-            dataGridPedidos.AllowUserToDeleteRows = false;
-            dataGridPedidos.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridPedidos.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridPedidos.Columns.AddRange(new DataGridViewColumn[] { Column4, dataGridViewTextBoxColumn2, Column3, Column2, Column6, Column5, Column1 });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridPedidos.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridPedidos.Location = new Point(12, 33);
-            dataGridPedidos.Name = "dataGridPedidos";
-            dataGridPedidos.ReadOnly = true;
-            dataGridPedidos.RowHeadersVisible = false;
-            dataGridPedidos.RowTemplate.Height = 25;
-            dataGridPedidos.Size = new Size(776, 200);
-            dataGridPedidos.TabIndex = 18;
-            dataGridPedidos.CellClick += SelecionaPedido;
-            dataGridPedidos.KeyDown += Atualiza;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Pedido";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            Column4.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn2.HeaderText = "Cliente";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Transportadora";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Status";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Cubagem";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Data Criação";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Data Fim";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
             // 
             // dataGridLinhaPedido
             // 
@@ -133,24 +53,24 @@
             dataGridLinhaPedido.AllowUserToDeleteRows = false;
             dataGridLinhaPedido.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridLinhaPedido.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridLinhaPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridLinhaPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridLinhaPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridLinhaPedido.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Column8, Column7, dataGridViewTextBoxColumn6 });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridLinhaPedido.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridLinhaPedido.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridLinhaPedido.Location = new Point(12, 254);
             dataGridLinhaPedido.Name = "dataGridLinhaPedido";
             dataGridLinhaPedido.ReadOnly = true;
@@ -185,23 +105,88 @@
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
+            // dataGridPedidos
+            // 
+            dataGridPedidos.AllowUserToAddRows = false;
+            dataGridPedidos.AllowUserToDeleteRows = false;
+            dataGridPedidos.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridPedidos.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridPedidos.Columns.AddRange(new DataGridViewColumn[] { Column10, Column11, Column12, Column13, Column15, Column16, Column17 });
+            dataGridPedidos.Location = new Point(12, 12);
+            dataGridPedidos.Name = "dataGridPedidos";
+            dataGridPedidos.RowHeadersVisible = false;
+            dataGridPedidos.RowTemplate.Height = 25;
+            dataGridPedidos.Size = new Size(776, 236);
+            dataGridPedidos.TabIndex = 20;
+            dataGridPedidos.CellClick += SelecionaPedido;
+            dataGridPedidos.CurrentCellDirtyStateChanged += SelecionaSituacao;
+            dataGridPedidos.KeyDown += Atualiza;
+            // 
+            // Column10
+            // 
+            Column10.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+            Column10.HeaderText = "Status";
+            Column10.Items.AddRange(new object[] { "Liberado", "Bloqueado", "Encerrado", "Cancelado" });
+            Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            Column11.HeaderText = "Pedido";
+            Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            Column12.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column12.HeaderText = "Cliente";
+            Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            Column13.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column13.HeaderText = "Transportadora";
+            Column13.Name = "Column13";
+            // 
+            // Column15
+            // 
+            Column15.HeaderText = "Cubagem";
+            Column15.Name = "Column15";
+            // 
+            // Column16
+            // 
+            Column16.HeaderText = "Data ini";
+            Column16.Name = "Column16";
+            Column16.Width = 150;
+            // 
+            // Column17
+            // 
+            Column17.HeaderText = "Data Fim";
+            Column17.Name = "Column17";
+            Column17.Width = 150;
+            // 
             // TabelaPedidosView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 628);
-            Controls.Add(dataGridLinhaPedido);
             Controls.Add(dataGridPedidos);
+            Controls.Add(dataGridLinhaPedido);
             Name = "TabelaPedidosView";
             Text = "TabelaPedidosView";
-            ((System.ComponentModel.ISupportInitialize)dataGridPedidos).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridLinhaPedido).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridPedidos).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private DataGridView dataGridPedidos;
+        private DataGridView dataGridLinhaPedido;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewComboBoxColumn Column9;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn Column3;
@@ -209,10 +194,12 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column1;
-        private DataGridView dataGridLinhaPedido;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewComboBoxColumn Column10;
+        private DataGridViewTextBoxColumn Column11;
+        private DataGridViewTextBoxColumn Column12;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridViewTextBoxColumn Column15;
+        private DataGridViewTextBoxColumn Column16;
+        private DataGridViewTextBoxColumn Column17;
     }
 }
