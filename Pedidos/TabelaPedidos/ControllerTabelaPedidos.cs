@@ -37,6 +37,11 @@ namespace Vanilla
                 else if (obj.Status == "Cancelado")
                 {
                     view.Tabela_pedidos.Rows[rowIndex].DefaultCellStyle.ForeColor = Color.Gray;
+                    view.Tabela_pedidos.Rows[rowIndex].Cells[0].ReadOnly = true;
+                }
+                else
+                {
+                    view.Tabela_pedidos.Rows[rowIndex].Cells[0].ReadOnly = true;
                 }
             }
         }

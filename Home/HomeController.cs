@@ -21,6 +21,7 @@ namespace Vanilla
         {
             this.viewhome = viewhome;
             this.model = model;
+            viewhome.UserMenu.Text = Util.nome_user;
             viewhome.SetController(this);
         }
         public void Fechar()
@@ -61,6 +62,12 @@ namespace Vanilla
             ConfigBank editbank = new ConfigBank();
             editbank.ShowDialog();
         }
+        public void AbrirSobre()
+        {
+            Sobre sobre = new Sobre();
+            sobre.MdiParent = viewhome.Home;
+            sobre.Show();
+        }
 
         #endregion
 
@@ -80,8 +87,6 @@ namespace Vanilla
             emp.FormClosed += (s, args) =>
             {
                 viewhome.CadEmpresas.Enabled = true;
-                
-
             };
 
         }
@@ -94,7 +99,6 @@ namespace Vanilla
             cadastrarItensFront.FormClosed += (s, args) =>
             {
                 viewhome.CadItens.Enabled = true;
-
             };
 
         }
@@ -121,7 +125,6 @@ namespace Vanilla
             cd.FormClosed += (s, args) =>
             {
                 viewhome.LayoutCd.Enabled = true;
-
             };
 
         }
@@ -190,19 +193,11 @@ namespace Vanilla
 
         public void StartOpenMsg()
         {
-            //   viewhome.MsgOpen.Enabled = false;
             ViewMsg view = new ViewMsg();
             view.Visible = false;
             ModelMsg model_ = new ModelMsg();
             ControllerMsg controller = new ControllerMsg(view, model_);
-
             view.Show();
-
-            view.FormClosed += (s, args) =>
-            {
-                //   viewhome.MsgOpen.Enabled = true;
-
-            };
         }
 
        public void CriarPedido()

@@ -237,14 +237,13 @@ namespace Vanilla
         {
             controller.Sair();
         }
-        private void EndereçoBanco(object sender, EventArgs e)
-        {
-            ConfigBank editbank = new ConfigBank();
-            editbank.ShowDialog();
-        }
         private void EnderecoBanco(object sender, EventArgs e)
         {
             controller.ConfigBanco();
+        }
+        private void ChamaSobre(object sender, EventArgs e)
+        {
+            controller.AbrirSobre();
         }
         #endregion
 
@@ -368,5 +367,7 @@ namespace Vanilla
         {
             controller.StartOpenMsg();
         }
+
+     
     }
 }

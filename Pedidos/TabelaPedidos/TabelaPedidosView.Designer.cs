@@ -120,6 +120,7 @@
             dataGridPedidos.Size = new Size(776, 236);
             dataGridPedidos.TabIndex = 20;
             dataGridPedidos.CellClick += SelecionaPedido;
+            dataGridPedidos.CellMouseClick += dataGridPedidos_CellMouseClick;
             dataGridPedidos.CurrentCellDirtyStateChanged += SelecionaSituacao;
             dataGridPedidos.KeyDown += Atualiza;
             // 
@@ -129,6 +130,7 @@
             Column10.HeaderText = "Status";
             Column10.Items.AddRange(new object[] { "Liberado", "Bloqueado", "Encerrado", "Cancelado" });
             Column10.Name = "Column10";
+            Column10.Width = 80;
             // 
             // Column11
             // 

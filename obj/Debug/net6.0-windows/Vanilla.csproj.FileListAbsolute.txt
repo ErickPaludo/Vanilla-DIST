@@ -78,7 +78,6 @@ C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.GeneratedMS
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AssemblyInfoInputs.cache
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AssemblyInfo.cs
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.CoreCompileInputs.cache
-C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.CopyComplete
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\refint\Vanilla.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.pdb
@@ -959,3 +958,8 @@ C:\Users\Administrador\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\refint\Vani
 C:\Users\Administrador\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.pdb
 C:\Users\Administrador\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.genruntimeconfig.cache
 C:\Users\Administrador\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\ref\Vanilla.dll
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CustomBtnScreen.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.VanillaMDI.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.PedidosView.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaPedidosView.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.Up2Date

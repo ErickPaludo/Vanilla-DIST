@@ -147,7 +147,7 @@
             Sconfigbanco.BackColor = Color.DarkSlateBlue;
             Sconfigbanco.ForeColor = SystemColors.ButtonHighlight;
             Sconfigbanco.Name = "Sconfigbanco";
-            Sconfigbanco.Size = new Size(159, 22);
+            Sconfigbanco.Size = new Size(180, 22);
             Sconfigbanco.Text = "Endereço Banco";
             Sconfigbanco.Click += EnderecoBanco;
             // 
@@ -156,8 +156,9 @@
             Ssobresistema.BackColor = Color.DarkSlateBlue;
             Ssobresistema.ForeColor = SystemColors.ButtonHighlight;
             Ssobresistema.Name = "Ssobresistema";
-            Ssobresistema.Size = new Size(159, 22);
+            Ssobresistema.Size = new Size(180, 22);
             Ssobresistema.Text = "Sobre";
+            Ssobresistema.Click += ChamaSobre;
             // 
             // cPanel
             // 

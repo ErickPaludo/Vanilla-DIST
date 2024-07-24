@@ -45,11 +45,6 @@ namespace Vanilla
             }
         }
 
-        private void SelecionaStatus(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
         private void SelecionaSituacao(object sender, EventArgs e)
         {
             // Verifica se a alteração ocorreu na coluna 0 e se a linha é válida
@@ -68,14 +63,20 @@ namespace Vanilla
 
                     if (comboBoxCell != null && comboBoxCell.Value != null)
                     {
-                      controller.AlterarSituacao(Convert.ToInt32(dataGridPedidos.Rows[rowIndex].Cells[1].Value.ToString()),comboBoxCell.Value.ToString());
-
-                        // Se precisar atualizar algo baseado na seleção, você pode fazer aqui
-                        // Exemplo: controller.AtualizaLinhaPedidos(selectedValue);
+                        controller.AlterarSituacao(Convert.ToInt32(dataGridPedidos.Rows[rowIndex].Cells[1].Value.ToString()), comboBoxCell.Value.ToString());
                     }
                 }
             }
         }
-
+        private void dataGridPedidos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+            {
+                // Força o modo de edição da célula
+                dataGridPedidos.BeginEdit(true);
+                DataGridViewComboBoxEditingControl comboBox = dataGridPedidos.EditingControl as DataGridViewComboBoxEditingControl;
+         //       SendKeys.Send("{F4}");
+            };
+        }
     }
 }
