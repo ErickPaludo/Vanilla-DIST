@@ -59,16 +59,22 @@
     <Compile Update="CadastraCd\Tabela\TabelaEnderecos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pedidos\PedidosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pedidos\TabelaPedidos\TabelaPedidosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="StatusCd\StatusdoCd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Telas.cs">
+    <Compile Update="CustomBtnScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UsersOn\UserOn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="VanillaMDI.cs">
+    <Compile Update="Home\VanillaMDI.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

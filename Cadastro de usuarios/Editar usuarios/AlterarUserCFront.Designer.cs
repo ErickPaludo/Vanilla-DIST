@@ -174,7 +174,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(344, 303);
-            ControlBox = false;
             Controls.Add(encaminhar);
             Controls.Add(telfBox2);
             Controls.Add(telfBox);
@@ -192,7 +191,6 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "AlterarUserCFront";
-            ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Modificar Perfil";

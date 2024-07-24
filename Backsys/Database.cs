@@ -78,7 +78,7 @@ namespace Vanilla
                 try
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("select * from vnl_sobre", connection))
+                    using (OracleCommand cmd = new OracleCommand("select * from vnl_version", connection))
                     {
                         using (OracleDataReader reader = cmd.ExecuteReader())
                         {

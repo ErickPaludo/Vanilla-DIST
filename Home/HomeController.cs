@@ -12,20 +12,22 @@ namespace Vanilla
     {
         IHomePage viewhome;
         HomeModel model;
-        Form mdiPai;
         Database db = new Database();
         private CadastrarItensFront itensForm;
         public HomeController()
         {
         }
-        public HomeController(IHomePage viewhome, HomeModel model, Form mdiPai)
+        public HomeController(IHomePage viewhome, HomeModel model)
         {
             this.viewhome = viewhome;
             this.model = model;
+            viewhome.UserMenu.Text = Util.nome_user;
             viewhome.SetController(this);
-            this.mdiPai = mdiPai;
         }
-
+        public void Fechar()
+        {
+            model.Fechar();
+        }
         #region Menu
         public void UsersOn()
         {
@@ -43,7 +45,8 @@ namespace Vanilla
         {
             AlterarUserCFront altercomun = new AlterarUserCFront();
             altercomun.ExibirDados();
-            altercomun.Show();
+            altercomun.MdiParent = viewhome.Home;
+            altercomun.Show();                    
         }
         public void TrocarConta()
         {
@@ -54,6 +57,18 @@ namespace Vanilla
             db.Deslog(0);
             Environment.Exit(0);
         }
+        public void ConfigBanco()
+        {
+            ConfigBank editbank = new ConfigBank();
+            editbank.ShowDialog();
+        }
+        public void AbrirSobre()
+        {
+            Sobre sobre = new Sobre();
+            sobre.MdiParent = viewhome.Home;
+            sobre.Show();
+        }
+
         #endregion
 
         #region Cadastros
@@ -61,9 +76,10 @@ namespace Vanilla
         {
             CadastraCNPJ emp = new CadastraCNPJ();
             viewhome.CadEmpresas.Enabled = false;
+
             model.AddJanela("Cadastra Empresa");
-            Atualizar();
-            emp.MdiParent = mdiPai;
+
+            emp.MdiParent = viewhome.Home;
             emp.Show();
             viewhome.Home.WindowState = FormWindowState.Maximized;
             emp.WindowState = FormWindowState.Normal; // Define o estado da janela como normal
@@ -71,8 +87,6 @@ namespace Vanilla
             emp.FormClosed += (s, args) =>
             {
                 viewhome.CadEmpresas.Enabled = true;
-                model.RemJanela("Cadastra Empresa");
-                Atualizar();
             };
 
         }
@@ -80,14 +94,11 @@ namespace Vanilla
         {
             CadastrarItensFront cadastrarItensFront = new CadastrarItensFront();
             viewhome.CadItens.Enabled = false;
-            model.AddJanela("Cadastra Itens");
-            Atualizar();
+            cadastrarItensFront.MdiParent = viewhome.Home;
             cadastrarItensFront.Show();
             cadastrarItensFront.FormClosed += (s, args) =>
             {
                 viewhome.CadItens.Enabled = true;
-                model.RemJanela("Cadastra Itens");
-                Atualizar();
             };
 
         }
@@ -96,13 +107,10 @@ namespace Vanilla
             AdicionarUsuariosFront usuarios = new AdicionarUsuariosFront();
             viewhome.CadUser.Enabled = false;
             model.AddJanela("Cadastra Usuários");
-            Atualizar();
             usuarios.Show();
             usuarios.FormClosed += (s, args) =>
             {
                 viewhome.CadUser.Enabled = true;
-                model.RemJanela("Cadastra Usuários");
-                Atualizar();
             };
         }
         public void StartCadCd()
@@ -110,15 +118,13 @@ namespace Vanilla
             CadastroCd cd = new CadastroCd();
             viewhome.LayoutCd.Enabled = false;
             model.AddJanela("Cadastro Cd");
-            Atualizar();
+
             cd.AtualizaTabelaRuas();
             cd.Show();
 
             cd.FormClosed += (s, args) =>
             {
                 viewhome.LayoutCd.Enabled = true;
-                model.RemJanela("Cadastro Cd");
-                Atualizar();
             };
 
         }
@@ -157,6 +163,15 @@ namespace Vanilla
             scd.Mostrar();
             scd.Show();
         }
+        public void ConsultarPedidos()
+        {
+            TabelaPedidosView view_tb_pedidos = new TabelaPedidosView();
+            view_tb_pedidos.Visible = false;
+            ModelTabelaPedidos model_tb_pedidos = new ModelTabelaPedidos();
+            ControllerTabelaPedidos controller_tb_pedidos = new ControllerTabelaPedidos(view_tb_pedidos, model_tb_pedidos);
+            view_tb_pedidos.Show();
+
+        }
         #endregion
 
         #region Operações
@@ -165,13 +180,12 @@ namespace Vanilla
             InserirItem inserir = new InserirItem();
             inserir.Atualizar();
             viewhome.InsItem.Enabled = false;
-            model.AddJanela("Inserir Item");
-            Atualizar();
+
+
             inserir.FormClosed += (s, args) =>
             {
                 viewhome.InsItem.Enabled = true;
-                model.RemJanela("Inserir Item");
-                Atualizar();
+
             };
             inserir.Show();
         }
@@ -179,58 +193,31 @@ namespace Vanilla
 
         public void StartOpenMsg()
         {
-            viewhome.MsgOpen.Enabled = false;
             ViewMsg view = new ViewMsg();
             view.Visible = false;
             ModelMsg model_ = new ModelMsg();
             ControllerMsg controller = new ControllerMsg(view, model_);
-            model.AddJanela("WalkVan - Msg");
-            Atualizar();
             view.Show();
+        }
 
-            view.FormClosed += (s, args) =>
+       public void CriarPedido()
+        {
+            PedidosView view = new PedidosView();
+            view.Visible = false; // Inicialmente invisível para evitar flicker
+            view.MdiParent = viewhome.Home;
+            PedidosModel model = new PedidosModel();
+            PedidosController controller = new PedidosController(view, model);
+
+            // Adiciona um manipulador para o evento Load
+            view.Load += (s, e) =>
             {
-                viewhome.MsgOpen.Enabled = true;
-                model.RemJanela("WalkVan - Msg");
-                Atualizar();
+                // Define a localização e o tamanho desejados
+                view.Location = new Point(650, 200);
             };
+
+            view.Show();
+            view.Visible = true; 
         }
 
-        public void Seleiconajanela(string janela)
-        {
-            Dictionary<string, string> janelas = new Dictionary<string, string>()
-            {
-               { "Cadastra Empresa", "CadastraCNPJ" },
-               { "Cadastra Itens", "CadastrarItensFront" },
-               { "Cadastra Usuários", "AdicionarUsuariosFront" },
-               { "Cadastro Cd", "CadastroCd" },
-               { "WalkVan - Msg", "ViewMsg" },
-                {"Inserir Item", "InserirItem" }
-             };
-
-            if (janelas.ContainsKey(janela))
-            {
-                janela = janelas[janela]; 
-            }
-
-            Form form = Application.OpenForms[janela];
-
-            if (form != null)
-            {
-                if (form.WindowState == FormWindowState.Minimized)
-                {
-                    form.WindowState = FormWindowState.Normal; // Restaura a janela se estiver minimizada
-                }
-                form.BringToFront(); // Traz a janela para frente
-            }
-        }
-        public void Atualizar()
-        {
-            viewhome.Janelas.Rows.Clear();
-            foreach (string obj in model.LWindows)
-            {
-                viewhome.Janelas.Rows.Add(obj);
-            }
-        }
     }
 }

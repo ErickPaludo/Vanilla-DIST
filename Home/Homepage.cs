@@ -14,7 +14,7 @@ using Vanilla.StatusCd;
 
 namespace Vanilla
 {
-    public partial class Homepage : Form, IHomePage
+    public partial class Homepage : Form
     {
         HomeController controller;
         Util utilitarios = new Util();
@@ -23,7 +23,7 @@ namespace Vanilla
         public Homepage()
         {
             InitializeComponent();
-            lic.ValidaLicenca();
+       //   lic.ValidaLicenca();
             Exibir();
         }
         public Homepage(bool t)
@@ -217,22 +217,7 @@ namespace Vanilla
                 BInsereItem = value;
             }
         }
-        public DataGridView Janelas
-        {
-            get { return dataGridWindows; }
-            set { dataGridWindows = value; }
-        }
-        public Button MsgOpen
-        {
-            get
-            {
-                return Bmsg;
-            }
-            set
-            {
-                Bmsg = value;
-            }
-        }
+     
         #endregion
 
         #region Menu
@@ -351,14 +336,6 @@ namespace Vanilla
         private void ChamaChat(object sender, EventArgs e)
         {
             controller.StartOpenMsg();
-        }
-
-        private void ReabrirJanela(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                controller.Seleiconajanela(dataGridWindows.Rows[e.RowIndex].Cells[0].Value.ToString());
-            }
         }
     }
 }

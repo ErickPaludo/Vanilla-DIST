@@ -12,7 +12,7 @@ namespace Vanilla
         Form Home { get; set; }
         ToolStripMenuItem UserMenu
         {
-            get;set;
+            get; set;
         }
         ToolStripMenuItem UserOn
         {
@@ -34,51 +34,43 @@ namespace Vanilla
         {
             get; set;
         }
-        Button CadEmpresas
-        {
-            get;set;
-        }
-        Button CadItens
+        CustomBtnScreen CadEmpresas
         {
             get; set;
         }
-        Button CadUser
+        CustomBtnScreen CadItens
         {
             get; set;
         }
-        Button LayoutCd
+        CustomBtnScreen CadUser
         {
             get; set;
         }
-        Button ViewLog
+        CustomBtnScreen LayoutCd
         {
             get; set;
         }
-        Button ViewEmp
+        CustomBtnScreen ViewLog
         {
             get; set;
         }
-        Button ViewItens
+        CustomBtnScreen ViewEmp
         {
             get; set;
         }
-        Button ViewEnd
+        CustomBtnScreen ViewItens
         {
             get; set;
         }
-        Button CdStatus
+        CustomBtnScreen ViewEnd
         {
             get; set;
         }
-        Button InsItem
+        CustomBtnScreen CdStatus
         {
             get; set;
         }
-        DataGridView Janelas
-        {
-            get; set;
-        }
-        Button MsgOpen
+        CustomBtnScreen InsItem
         {
             get; set;
         }

@@ -194,6 +194,12 @@ namespace Vanilla
         {
         }
 
+        public CadastrarItens(string nome_item, int id_item)
+        {
+            this.nome_item = nome_item;
+            this.id_item = id_item;
+        }
+
         public CadastrarItens(int id_item, int id_fornec, string nome_f, string nome_item, decimal preco_custo, decimal lucro_porcent, decimal preco_final, string codbar, string status_conv, string descricao, string unmed) : base(nome_f, id_fornec)
         {
             this.nome_item = nome_item;

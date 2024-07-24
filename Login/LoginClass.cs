@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,8 +28,19 @@ namespace Vanilla
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.Add("v_user", OracleDbType.Varchar2).Value = user;
                         cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
-                        cmd.Parameters.Add("v_ip", OracleDbType.Varchar2).Value = Dns.GetHostAddresses(Dns.GetHostName())
-                        .FirstOrDefault(ip => ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
+
+                        string vpnIpAddress = GetVpnIpAddress();
+                        if (vpnIpAddress != null) //coleta ip da vpn
+                        {
+                            cmd.Parameters.Add("v_ip", OracleDbType.Varchar2).Value = vpnIpAddress;
+                        }
+                        else //Coleta ip da rede
+                        {
+                            cmd.Parameters.Add("v_ip", OracleDbType.Varchar2).Value = Dns.GetHostAddresses(Dns.GetHostName())
+                      .FirstOrDefault(ip => ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
+
+                        }
+
                         cmd.Parameters.Add("v_host", OracleDbType.Varchar2).Value = System.Net.Dns.GetHostName();
                         cmd.Parameters.Add("r_verificador", OracleDbType.Boolean).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("r_msg", OracleDbType.Varchar2, 1000).Direction = ParameterDirection.Output;
@@ -59,6 +71,25 @@ namespace Vanilla
                     return false;
                 }
             }
+
+        }
+        public static string GetVpnIpAddress()
+        {
+            foreach (NetworkInterface ni in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (ni.OperationalStatus == OperationalStatus.Up && ni.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
+                {
+                    foreach (UnicastIPAddressInformation ip in ni.GetIPProperties().UnicastAddresses)
+                    {
+                        if (ip.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork && ip.IPv4Mask != null)
+                        {
+                            // Assuming VPN IPs might be differentiated in some way, otherwise add more specific checks
+                            return ip.Address.ToString();
+                        }
+                    }
+                }
+            }
+            return null;
         }
     }
 }
