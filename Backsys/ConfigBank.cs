@@ -18,7 +18,6 @@ namespace Vanilla
         Util utilitarios = new Util();
         Config classconfig = new Config();
         Database db = new Database();
-        Homepage home = new Homepage();
         public ConfigBank()
         {
             InitializeComponent();

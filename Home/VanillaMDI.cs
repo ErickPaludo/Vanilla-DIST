@@ -368,6 +368,9 @@ namespace Vanilla
             controller.StartOpenMsg();
         }
 
-     
+        private void VanillaMDI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

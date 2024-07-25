@@ -131,7 +131,7 @@ namespace Vanilla
                 }
                 else
                 {
-                    Homepage home = new Homepage();
+                   // Homepage home = new Homepage();
                 }
             }
             catch (Exception ex)
@@ -417,7 +417,7 @@ namespace Vanilla
             }
             else
             {
-                Homepage home = new Homepage();
+                //Homepage home = new Homepage();
             }
         }
         public void AtualizaReg()

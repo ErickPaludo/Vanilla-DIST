@@ -149,7 +149,7 @@ namespace Vanilla
             }
             else
             {
-                Homepage home = new Homepage();
+                //Homepage home = new Homepage();
             }
             Cursor = Cursors.Default;
         }

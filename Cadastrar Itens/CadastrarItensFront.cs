@@ -168,7 +168,7 @@ namespace Vanilla
             }
             else
             {
-                Homepage home = new Homepage();
+             //   VanillaMDI home = new VanillaMDI();
             }
         }
         private void codMaual_Click(object sender, EventArgs e)//habilita ou desabilita o cod de barras manual

@@ -69,7 +69,7 @@ namespace Vanilla
             }
             else
             {
-                Homepage home = new Homepage();
+                //Homepage home = new //Homepage();
             }
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
