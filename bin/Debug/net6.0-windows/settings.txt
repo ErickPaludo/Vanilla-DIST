@@ -1,1 +1,0 @@
-Data Source=25.3.54.167:1521/freepdb1;User Id =Vanilla_for_dev;Password=Vanilla_for_dev;

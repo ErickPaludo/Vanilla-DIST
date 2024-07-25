@@ -35,8 +35,7 @@ namespace Vanilla
                     HomeModel model = new HomeModel();
                     HomeController controller = new HomeController(home, model);
                     this.Hide();
-                    home.ShowDialog();
-                   
+                    home.ShowDialog();                   
                 }
             }
             else
@@ -60,8 +59,11 @@ namespace Vanilla
 
         private void ConfigBanco(object sender, EventArgs e)
         {
-            ConfigBank configbank = new ConfigBank();
-            configbank.ShowDialog();
+            BancoView view = new BancoView();
+            view.Visible = false;
+            ModelBanco model = new ModelBanco();
+            ControllerBanco controller = new ControllerBanco(view, model);
+            view.ShowDialog();
         }
 
         private void LoginFront_FormClosed(object sender, FormClosedEventArgs e)

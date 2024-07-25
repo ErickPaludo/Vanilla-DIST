@@ -56,7 +56,6 @@ C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\osx\lib\ne
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.AssemblyReference.cache
-C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.ConfigBank.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Logs.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Sobre.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.CadastroCd.resources
@@ -68,7 +67,6 @@ C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaItens
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
-C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Homepage.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.LoginFront.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Properties.Resources.resources
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.SelecionarReg.resources
@@ -964,3 +962,4 @@ C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaPedid
 C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.csproj.Up2Date
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.TabelaPedidosView.resources
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.Telas.resources
+C:\Users\Erick\Desktop\Vanilla-DIST\obj\Debug\net6.0-windows\Vanilla.BancoView.resources

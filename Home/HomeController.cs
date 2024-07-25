@@ -50,7 +50,25 @@ namespace Vanilla
         }
         public void TrocarConta()
         {
-            db.Deslog(0);
+            db.Deslog(Util.id_user);
+            Type formTypeToKeepOpen = typeof(LoginFront);
+
+            // Crie uma instância do formulário de login
+            LoginFront login = new LoginFront();
+
+            // Itere sobre todas as formas abertas
+            foreach (Form childForm in Application.OpenForms.Cast<Form>().ToArray())
+            {
+                // Verifique se a forma não é a forma que você quer manter aberta
+                if (childForm.GetType() != formTypeToKeepOpen)
+                {
+                    // Se não for, feche a forma
+                    childForm.Hide();
+                }
+            }
+
+            // Mostrar o formulário de login
+            login.Show();
         }
         public void Sair()
         {
@@ -59,8 +77,13 @@ namespace Vanilla
         }
         public void ConfigBanco()
         {
-            ConfigBank editbank = new ConfigBank();
-            editbank.ShowDialog();
+            BancoView view = new BancoView();
+            view.Visible = false;
+            ModelBanco model = new ModelBanco();
+            ControllerBanco controller = new ControllerBanco(view, model);
+            view.MdiParent = viewhome.Home;
+            view.Show();
+
         }
         public void AbrirSobre()
         {

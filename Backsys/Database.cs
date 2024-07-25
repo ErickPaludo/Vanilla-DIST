@@ -37,15 +37,9 @@ namespace Vanilla
                     using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_deslog", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        util = new Util();
-                        ;
-                        if (id == 0)
-                        {
-                            id = Util.id_user;
-                        }
                         cmd.Parameters.Add("v_id", OracleDbType.Int16).Value = id;
                         cmd.ExecuteNonQuery();
-                        AddLog("USUÁRIO DESLOGADO!", id); //temporário
+                        AddLog("USUÁRIO DESLOGADO!", id);
                     }
                 }
                 catch (Exception ex)

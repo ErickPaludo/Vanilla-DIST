@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Vanilla
 {
@@ -22,22 +23,21 @@ namespace Vanilla
 
             sw.Close();
         }
+
+
+
         public string Lerdados() //lê o endereço do banco
         {
-            string endereco = "";
-
-            try
+            ModelBanco banco = new ModelBanco();
+            BancoOracle dados = banco.RetornaEndereco();
+            if (dados.User != null)
             {
-                StreamReader sr = new StreamReader(arquivo);
-                endereco = sr.ReadLine();
-                sr.Close();
+                return $"Data Source={dados.Connection}:{dados.Port}/{dados.Sid};User Id ={dados.User};Password={dados.Pass};";
             }
-            catch
+            else
             {
-                StreamWriter sw = File.CreateText(arquivo);
-            }
-           
-            return endereco;
+                return string.Empty;
+            }           
         }
     }
 }

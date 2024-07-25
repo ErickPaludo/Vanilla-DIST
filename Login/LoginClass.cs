@@ -18,6 +18,17 @@ namespace Vanilla
             Util util;
             Database db = new Database();
             Config config = new Config();
+
+            while (config.Lerdados() == string.Empty) //Verifica se existe configuração de endereço
+            {
+                BancoView view = new BancoView();
+                view.Visible = false;
+                ModelBanco model = new ModelBanco();
+                ControllerBanco controller = new ControllerBanco(view, model);
+                view.ShowDialog();
+                //Basicamente esse laço vai obrigar o usuário a preencher o endereço para o banco
+            }
+
             using (OracleConnection connection = new OracleConnection(config.Lerdados()))
             {
                 try
@@ -29,10 +40,9 @@ namespace Vanilla
                         cmd.Parameters.Add("v_user", OracleDbType.Varchar2).Value = user;
                         cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
 
-                        string vpnIpAddress = GetVpnIpAddress();
-                        if (vpnIpAddress != null) //coleta ip da vpn
+                        if (GetVpnIpAddress() != null) //coleta ip da vpn
                         {
-                            cmd.Parameters.Add("v_ip", OracleDbType.Varchar2).Value = vpnIpAddress;
+                            cmd.Parameters.Add("v_ip", OracleDbType.Varchar2).Value = GetVpnIpAddress();
                         }
                         else //Coleta ip da rede
                         {
@@ -67,9 +77,10 @@ namespace Vanilla
                 }
                 catch (Exception ex)
                 {
-                    ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!",ex.Message);
+                    ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!", ex.Message);
                     return false;
                 }
+
             }
 
         }
@@ -82,8 +93,7 @@ namespace Vanilla
                     foreach (UnicastIPAddressInformation ip in ni.GetIPProperties().UnicastAddresses)
                     {
                         if (ip.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork && ip.IPv4Mask != null)
-                        {
-                            // Assuming VPN IPs might be differentiated in some way, otherwise add more specific checks
+                        {                      
                             return ip.Address.ToString();
                         }
                     }
