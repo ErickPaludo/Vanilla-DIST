@@ -1,0 +1,50 @@
+;;; 
+Export: Release 23.0.0.0.0 - Production on Fri Jul 26 02:03:54 2024
+Version 23.4.0.24.05
+
+Copyright (c) 1982, 2024, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Starting "VANILLA_FOR_DEV"."SYS_EXPORT_SCHEMA_01":  Vanilla_for_dev/********@freepdb1 DUMPFILE=25_07_24.DMP 
+Processing object type SCHEMA_EXPORT/TABLE/TABLE_DATA
+Processing object type SCHEMA_EXPORT/PACKAGE/PACKAGE_BODY
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Processing object type SCHEMA_EXPORT/USER
+Processing object type SCHEMA_EXPORT/SYSTEM_GRANT
+Processing object type SCHEMA_EXPORT/ROLE_GRANT
+Processing object type SCHEMA_EXPORT/DEFAULT_ROLE
+Processing object type SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA/LOGREP
+Processing object type SCHEMA_EXPORT/SEQUENCE/SEQUENCE
+Processing object type SCHEMA_EXPORT/TABLE/TABLE
+Processing object type SCHEMA_EXPORT/TABLE/COMMENT
+Processing object type SCHEMA_EXPORT/TABLE/IDENTITY_COLUMN
+Processing object type SCHEMA_EXPORT/PACKAGE/PACKAGE_SPEC
+Processing object type SCHEMA_EXPORT/FUNCTION/FUNCTION
+Processing object type SCHEMA_EXPORT/PROCEDURE/PROCEDURE
+Processing object type SCHEMA_EXPORT/PACKAGE/COMPILE_PACKAGE/PACKAGE_SPEC/ALTER_PACKAGE_SPEC
+Processing object type SCHEMA_EXPORT/FUNCTION/ALTER_FUNCTION
+Processing object type SCHEMA_EXPORT/PROCEDURE/ALTER_PROCEDURE
+Processing object type SCHEMA_EXPORT/VIEW/VIEW
+Processing object type SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Processing object type SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+. . exported "VANILLA_FOR_DEV"."VNL_MSG"                   8.1 KB      30 rows
+. . exported "VANILLA_FOR_DEV"."VNL_LA"                  113.8 KB    2660 rows
+. . exported "VANILLA_FOR_DEV"."VNL_LOGS"                 19.7 KB     344 rows
+. . exported "VANILLA_FOR_DEV"."VNL_ITENS"                16.7 KB      57 rows
+. . exported "VANILLA_FOR_DEV"."VNL_SUBLA"                  14 KB     200 rows
+. . exported "VANILLA_FOR_DEV"."VNL_CAD_EMPRESAS"         10.8 KB       5 rows
+. . exported "VANILLA_FOR_DEV"."VNL_USER"                  9.8 KB       3 rows
+. . exported "VANILLA_FOR_DEV"."VNL_ENDERECOS"             8.6 KB       5 rows
+. . exported "VANILLA_FOR_DEV"."VNL_PEDIDOS"               7.9 KB       1 rows
+. . exported "VANILLA_FOR_DEV"."VNL_PREDIO"                8.3 KB     120 rows
+. . exported "VANILLA_FOR_DEV"."VNL_LINHA_PEDIDOS"         6.5 KB       3 rows
+. . exported "VANILLA_FOR_DEV"."VNL_LOGADOS"                 0 KB       0 rows
+. . exported "VANILLA_FOR_DEV"."VNL_RUAS"                  6.5 KB       2 rows
+. . exported "VANILLA_FOR_DEV"."VNL_REGIAO"                  6 KB       1 rows
+. . exported "VANILLA_FOR_DEV"."VNL_VERSION"               5.1 KB       1 rows
+Master table "VANILLA_FOR_DEV"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for VANILLA_FOR_DEV.SYS_EXPORT_SCHEMA_01 is:
+  /opt/oracle/admin/FREE/dpdump/18C3145CFE420B30E0630F02000AC690/25_07_24.DMP
+Job "VANILLA_FOR_DEV"."SYS_EXPORT_SCHEMA_01" successfully completed at Fri Jul 26 02:05:24 2024 elapsed 0 00:01:20
