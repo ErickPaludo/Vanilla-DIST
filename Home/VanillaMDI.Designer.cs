@@ -434,7 +434,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "Vanilla";
             WindowState = FormWindowState.Maximized;
-            FormClosing += Fechar;
+            FormClosed += Fechar;
             Load += VanillaMDI_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

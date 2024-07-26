@@ -372,5 +372,10 @@ namespace Vanilla
         {
 
         }
+
+        private void Fechar(object sender, FormClosedEventArgs e)
+        {
+            controller.Fechar();
+        }
     }
 }

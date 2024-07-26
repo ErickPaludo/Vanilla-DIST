@@ -54,10 +54,20 @@ namespace Vanilla
                  view.Tabela_linha_pedidos.Rows.Add(obj.N_pedido, obj.Item, obj.Qtd.ToString(), obj.Cubagem.ToString("f3"));
             }
         }
-        public void AlterarSituacao(int id_pedido,string situacao)
+        public void AlterarSituacao(int id_pedido, string situacao)
         {
-           // MessageBox.Show("Meusovo");
-            model.AlterarSituacao(id_pedido, situacao);
+            if (situacao == "Cancelado" || situacao == "Encerrado")
+            {
+                DialogResult dialog = MessageBox.Show($"O pedido será {situacao}, essa alteração não poderá ser desfeita. \nDeseja continuar?", "Alteração do status", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialog == DialogResult.Yes)
+                {
+                    model.AlterarSituacao(id_pedido, situacao);
+                }
+            }
+            else
+            {
+                model.AlterarSituacao(id_pedido, situacao);
+            }
             AtualizaPedidos();
             view.Tabela_linha_pedidos.Rows.Clear();
         }

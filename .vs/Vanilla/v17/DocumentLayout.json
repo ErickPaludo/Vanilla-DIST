@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\",
+  "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\tabelapedidos\\tabelapedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\tabelapedidos\\tabelapedidosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\pedidos\\tabelapedidos\\controllertabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\tabelapedidos\\controllertabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,70 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeModel.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeModel.cs",
-              "RelativeDocumentMoniker": "Home\\HomeModel.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeModel.cs",
-              "RelativeToolTip": "Home\\HomeModel.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAowA4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T18:59:39.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeDocumentMoniker": "Home\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeToolTip": "Home\\HomeController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAArwDMAAAAIAAAAAAAAAA==",
+              "Title": "TabelaPedidosView.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "RelativeDocumentMoniker": "Pedidos\\TabelaPedidos\\TabelaPedidosView.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\TabelaPedidosView.cs [Projeto]",
+              "RelativeToolTip": "Pedidos\\TabelaPedidos\\TabelaPedidosView.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T18:31:04.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VanillaMDI.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeToolTip": "Home\\VanillaMDI.cs",
-              "ViewState": "AgIAAFcBAAAAAAAAAAAgwGUBAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T18:29:21.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VanillaMDI.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs [Projeto]",
-              "RelativeToolTip": "Home\\VanillaMDI.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T14:14:33.296Z",
+              "WhenOpened": "2024-07-26T00:37:04.287Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeDocumentMoniker": "Backsys\\Database.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeToolTip": "Backsys\\Database.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAgwB0AAAA2AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ControllerTabelaPedidos.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "RelativeDocumentMoniker": "Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "RelativeToolTip": "Pedidos\\TabelaPedidos\\ControllerTabelaPedidos.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAuwDwAAADYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T13:01:15.568Z",
+              "WhenOpened": "2024-07-26T00:21:22.18Z",
               "EditorCaption": ""
             }
           ]
