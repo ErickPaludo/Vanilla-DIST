@@ -71,7 +71,6 @@ namespace Vanilla
             {
                 cadcd.RetornaEnd(3, "");
             }
-
             else if (radioButtonOcupados.Checked)
             {
                 cadcd.RetornaEnd(2, "");
@@ -83,7 +82,7 @@ namespace Vanilla
 
             foreach (LogisticaCD obj in cdList)
             {
-                dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
+                dataGridCd.Rows.Add(obj.Id, $"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
             }
         }
         public void AtualizarPicking()
@@ -107,13 +106,13 @@ namespace Vanilla
 
             foreach (LogisticaCD obj in picking)
             {
-                dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la} - {obj.Id_Subla}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
+                dataGridCd.Rows.Add(obj.Id,$"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la} - {obj.Id_Subla}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
             }
 
         }
-        public void GravaListEndereco(int rua, int predio, int andar, string codbar, string name_reg, string nome_item)
+        public void GravaListEndereco(int id,int rua, int predio, int andar, string codbar, string name_reg, string nome_item)
         {
-            cdList.Add(new LogisticaCD(rua, predio, andar, codbar, name_reg, nome_item));
+            cdList.Add(new LogisticaCD(id,rua, predio, andar, codbar, name_reg, nome_item));
         }
         public void GravaListPicking(int id, int rua, int predio, int andar, int subla, string codbar, string name_reg, string nome_item)
         {
@@ -180,7 +179,7 @@ namespace Vanilla
 
                 foreach (LogisticaCD obj in cdList) //Imprimi na tela
                 {
-                    dataGridCd.Rows.Add($"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
+                    dataGridCd.Rows.Add(obj.Id,$"{obj.Id_rua} - {obj.Id_predio} - {obj.Id_la}", obj.Cod_bar, obj.Name, obj.Item_no_endereco);
                 }
             
         }
@@ -191,8 +190,8 @@ namespace Vanilla
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0) //Está sendo enviada a inscrição estadual para busca de dados (vai ser alterado para cnpj)
                 {
-                    string codbar = (dataGridCd.Rows[e.RowIndex].Cells[1].Value).ToString();
-                    string endereco = (dataGridCd.Rows[e.RowIndex].Cells[0].Value).ToString();
+                    string codbar = (dataGridCd.Rows[e.RowIndex].Cells[2].Value).ToString();
+                    string endereco = (dataGridCd.Rows[e.RowIndex].Cells[1].Value).ToString();
                     if (radioButtonEnd.Checked)
                     {
                         foreach (var obj in cdList)
@@ -208,6 +207,7 @@ namespace Vanilla
                             {
                                 CadastrarItensFront.id_endereco = obj.Id;
                                 CadastrarItensFront.endereco = endereco;
+
                             }
                         }
                     }

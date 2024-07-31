@@ -192,6 +192,8 @@ namespace Vanilla
             view_tb_pedidos.Visible = false;
             ModelTabelaPedidos model_tb_pedidos = new ModelTabelaPedidos();
             ControllerTabelaPedidos controller_tb_pedidos = new ControllerTabelaPedidos(view_tb_pedidos, model_tb_pedidos);
+            view_tb_pedidos.MdiParent = viewhome.Home;
+            view_tb_pedidos.Show();
             view_tb_pedidos.Show();
 
         }

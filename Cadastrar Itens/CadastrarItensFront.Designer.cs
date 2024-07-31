@@ -554,7 +554,7 @@ namespace Vanilla
             // Lenderecoselecionado
             // 
             Lenderecoselecionado.AutoSize = true;
-            Lenderecoselecionado.Location = new Point(482, 165);
+            Lenderecoselecionado.Location = new Point(482, 135);
             Lenderecoselecionado.Name = "Lenderecoselecionado";
             Lenderecoselecionado.Size = new Size(90, 15);
             Lenderecoselecionado.TabIndex = 42;

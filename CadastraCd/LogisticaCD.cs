@@ -25,6 +25,8 @@ namespace Vanilla
         {
         }
 
+
+
         public LogisticaCD(int id_rua, int id_predio, int id_la, string codbar)
         {
             this.id_rua = id_rua;
@@ -42,8 +44,8 @@ namespace Vanilla
             this.item_no_endereco = item_no_endereco;
         }
 
-        public LogisticaCD(int id_rua, int id_predio, int id_la, string codbar, string name_reg,string item_no_endereco) : base(name_reg)
-        {
+        public LogisticaCD(int id,int id_rua, int id_predio, int id_la, string codbar, string name_reg,string item_no_endereco) : base(name_reg)
+        {this.id = id;
             this.id_rua = id_rua;
             this.id_predio = id_predio;
             this.id_la = id_la;

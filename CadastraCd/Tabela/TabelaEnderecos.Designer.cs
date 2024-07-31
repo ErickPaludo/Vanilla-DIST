@@ -32,10 +32,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabelaEnderecos));
             dataGridCd = new DataGridView();
-            ColumnEndereco = new DataGridViewTextBoxColumn();
-            ColumnCod = new DataGridViewTextBoxColumn();
-            ColumnRegiao = new DataGridViewTextBoxColumn();
-            ColumnItem = new DataGridViewTextBoxColumn();
             radioButtonEnd = new RadioButton();
             radioButtonPick = new RadioButton();
             groupBox1 = new GroupBox();
@@ -48,6 +44,11 @@
             salvarToolStripMenuItem = new ToolStripMenuItem();
             planilhaToolStripMenuItem = new ToolStripMenuItem();
             pDFToolStripMenuItem = new ToolStripMenuItem();
+            Column1 = new DataGridViewTextBoxColumn();
+            ColumnEndereco = new DataGridViewTextBoxColumn();
+            ColumnCod = new DataGridViewTextBoxColumn();
+            ColumnRegiao = new DataGridViewTextBoxColumn();
+            ColumnItem = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridCd).BeginInit();
             groupBox1.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -69,7 +70,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridCd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridCd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCd.Columns.AddRange(new DataGridViewColumn[] { ColumnEndereco, ColumnCod, ColumnRegiao, ColumnItem });
+            dataGridCd.Columns.AddRange(new DataGridViewColumn[] { Column1, ColumnEndereco, ColumnCod, ColumnRegiao, ColumnItem });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -86,34 +87,6 @@
             dataGridCd.Size = new Size(900, 398);
             dataGridCd.TabIndex = 14;
             dataGridCd.CellContentClick += dataGridCd_CellContentClick;
-            // 
-            // ColumnEndereco
-            // 
-            ColumnEndereco.HeaderText = "Endereço";
-            ColumnEndereco.Name = "ColumnEndereco";
-            ColumnEndereco.ReadOnly = true;
-            ColumnEndereco.Width = 150;
-            // 
-            // ColumnCod
-            // 
-            ColumnCod.HeaderText = "Código de Barras";
-            ColumnCod.Name = "ColumnCod";
-            ColumnCod.ReadOnly = true;
-            ColumnCod.Width = 180;
-            // 
-            // ColumnRegiao
-            // 
-            ColumnRegiao.HeaderText = "Região de Separação";
-            ColumnRegiao.Name = "ColumnRegiao";
-            ColumnRegiao.ReadOnly = true;
-            ColumnRegiao.Width = 150;
-            // 
-            // ColumnItem
-            // 
-            ColumnItem.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            ColumnItem.HeaderText = "Item";
-            ColumnItem.Name = "ColumnItem";
-            ColumnItem.ReadOnly = true;
             // 
             // radioButtonEnd
             // 
@@ -239,6 +212,41 @@
             pDFToolStripMenuItem.Text = "PDF";
             pDFToolStripMenuItem.Click += ExportarPdf;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Id";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Width = 60;
+            // 
+            // ColumnEndereco
+            // 
+            ColumnEndereco.HeaderText = "Endereço";
+            ColumnEndereco.Name = "ColumnEndereco";
+            ColumnEndereco.ReadOnly = true;
+            ColumnEndereco.Width = 150;
+            // 
+            // ColumnCod
+            // 
+            ColumnCod.HeaderText = "Código de Barras";
+            ColumnCod.Name = "ColumnCod";
+            ColumnCod.ReadOnly = true;
+            ColumnCod.Width = 180;
+            // 
+            // ColumnRegiao
+            // 
+            ColumnRegiao.HeaderText = "Região de Separação";
+            ColumnRegiao.Name = "ColumnRegiao";
+            ColumnRegiao.ReadOnly = true;
+            ColumnRegiao.Width = 150;
+            // 
+            // ColumnItem
+            // 
+            ColumnItem.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ColumnItem.HeaderText = "Item";
+            ColumnItem.Name = "ColumnItem";
+            ColumnItem.ReadOnly = true;
+            // 
             // TabelaEnderecos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -267,10 +275,6 @@
         #endregion
 
         private DataGridView dataGridCd;
-        private DataGridViewTextBoxColumn ColumnEndereco;
-        private DataGridViewTextBoxColumn ColumnCod;
-        private DataGridViewTextBoxColumn ColumnRegiao;
-        private DataGridViewTextBoxColumn ColumnItem;
         public RadioButton radioButtonEnd;
         public RadioButton radioButtonPick;
         private GroupBox groupBox1;
@@ -283,5 +287,10 @@
         private ToolStripMenuItem salvarToolStripMenuItem;
         private ToolStripMenuItem planilhaToolStripMenuItem;
         private ToolStripMenuItem pDFToolStripMenuItem;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn ColumnEndereco;
+        private DataGridViewTextBoxColumn ColumnCod;
+        private DataGridViewTextBoxColumn ColumnRegiao;
+        private DataGridViewTextBoxColumn ColumnItem;
     }
 }

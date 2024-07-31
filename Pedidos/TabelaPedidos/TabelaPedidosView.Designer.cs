@@ -71,12 +71,12 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridLinhaPedido.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridLinhaPedido.Location = new Point(12, 254);
+            dataGridLinhaPedido.Location = new Point(12, 289);
             dataGridLinhaPedido.Name = "dataGridLinhaPedido";
             dataGridLinhaPedido.ReadOnly = true;
             dataGridLinhaPedido.RowHeadersVisible = false;
             dataGridLinhaPedido.RowTemplate.Height = 25;
-            dataGridLinhaPedido.Size = new Size(1260, 362);
+            dataGridLinhaPedido.Size = new Size(1260, 327);
             dataGridLinhaPedido.TabIndex = 19;
             // 
             // dataGridViewTextBoxColumn1
@@ -117,7 +117,7 @@
             dataGridPedidos.Name = "dataGridPedidos";
             dataGridPedidos.RowHeadersVisible = false;
             dataGridPedidos.RowTemplate.Height = 25;
-            dataGridPedidos.Size = new Size(1260, 236);
+            dataGridPedidos.Size = new Size(1260, 271);
             dataGridPedidos.TabIndex = 20;
             dataGridPedidos.CellClick += SelecionaPedido;
             dataGridPedidos.CellMouseClick += dataGridPedidos_CellMouseClick;

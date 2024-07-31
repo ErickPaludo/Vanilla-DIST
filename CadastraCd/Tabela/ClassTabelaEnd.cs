@@ -100,7 +100,7 @@ namespace Vanilla
                             while (reader.Read())
                             {
 
-                                end.GravaListEndereco(Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), reader["cod"].ToString(), reader["nome_regiao"].ToString(), reader["nome_item"].ToString());
+                                end.GravaListEndereco(Convert.ToInt32(reader["id"]),Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), reader["cod"].ToString(), reader["nome_regiao"].ToString(), reader["nome_item"].ToString());
                             }
                         }
                     }
