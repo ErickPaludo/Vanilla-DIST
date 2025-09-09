@@ -36,37 +36,38 @@ namespace Vanilla
         }
         public bool VerificaLogin()
         {
+            return true;
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
 
-                    using (OracleCommand cmd = new OracleCommand("vnl_prc_verificar_existencia_usuario", connection))
-                    {
-                        try
-                        {
-                            cmd.CommandType = CommandType.StoredProcedure;
+                //    using (OracleCommand cmd = new OracleCommand("vnl_prc_verificar_existencia_usuario", connection))
+                //    {
+                //        try
+                //        {
+                //            cmd.CommandType = CommandType.StoredProcedure;
 
-                            cmd.Parameters.Add(new OracleParameter("v_valor", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = Util.id_user.ToString();
-                            cmd.Parameters.Add(new OracleParameter("r_retorno", OracleDbType.Boolean, ParameterDirection.Output));
+                //            cmd.Parameters.Add(new OracleParameter("v_valor", OracleDbType.NVarchar2, ParameterDirection.Input)).Value = Util.id_user.ToString();
+                //            cmd.Parameters.Add(new OracleParameter("r_retorno", OracleDbType.Boolean, ParameterDirection.Output));
 
-                            cmd.ExecuteNonQuery();
-                        }
-                        catch (Exception)
-                        {
-                            throw new Exception("Erro ao tentar executar a query.");
-                        }
+                //            cmd.ExecuteNonQuery();
+                //        }
+                //        catch (Exception)
+                //        {
+                //            throw new Exception("Erro ao tentar executar a query.");
+                //        }
 
-                        bool v_retorno = Convert.ToBoolean(cmd.Parameters["r_retorno"].Value.ToString());
+                //        bool v_retorno = Convert.ToBoolean(cmd.Parameters["r_retorno"].Value.ToString());
 
-                        if (v_retorno != true)
-                        {
-                            throw new Exception("Este usuário não está mais conectado na aplicação.");
-                        }
-                        return true;
-                    }
-                }
+                //        if (v_retorno != true)
+                //        {
+                //            throw new Exception("Este usuário não está mais conectado na aplicação.");
+                //        }
+                //        return true;
+                //    }
+                //}
             }
             catch (Exception ex)
             {

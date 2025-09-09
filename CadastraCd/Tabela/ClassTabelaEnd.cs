@@ -23,93 +23,93 @@ namespace Vanilla
         Util util = new Util();
         public void RetornaSubLa(int type)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    CadastroCd cd = new CadastroCd();
-                    connection.Open();
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        CadastroCd cd = new CadastroCd();
+            //        connection.Open();
 
-                    string query = string.Empty;
+            //        string query = string.Empty;
 
-                    if (type == 0) //filtra tudo que é picking
-                    {
-                        query = "select * from view_subla";
-                    }
-                    else if (type == 1) //filtra o que esta ocupado
-                    {
-                        query = $"select * from view_subla where ocupado = 'S'";
-                    }
-                    else //filtra o que esta livre
-                    {
-                        query = $"select * from view_subla where ocupado = 'N'";
-                    }
+            //        if (type == 0) //filtra tudo que é picking
+            //        {
+            //            query = "select * from view_subla";
+            //        }
+            //        else if (type == 1) //filtra o que esta ocupado
+            //        {
+            //            query = $"select * from view_subla where ocupado = 'S'";
+            //        }
+            //        else //filtra o que esta livre
+            //        {
+            //            query = $"select * from view_subla where ocupado = 'N'";
+            //        }
 
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            TabelaEnderecos end = new TabelaEnderecos();
-                            while (reader.Read())
-                            {
-                                end.GravaListPicking(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), Convert.ToInt32(reader["sub_la"]), reader["regiao"].ToString(), reader["cod"].ToString(), reader["item"].ToString());
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //        //using (OracleCommand cmd = new OracleCommand(query, connection))
+            //        //{
+            //        //    using (OracleDataReader reader = cmd.ExecuteReader())
+            //        //    {
+            //        //        TabelaEnderecos end = new TabelaEnderecos();
+            //        //        while (reader.Read())
+            //        //        {
+            //        //            end.GravaListPicking(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), Convert.ToInt32(reader["sub_la"]), reader["regiao"].ToString(), reader["cod"].ToString(), reader["item"].ToString());
+            //        //        }
+            //        //    }
+            //        //}
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
         public void RetornaEnd(int type, string chave)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    CadastroCd cd = new CadastroCd();
-                    connection.Open();
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        CadastroCd cd = new CadastroCd();
+            //        connection.Open();
 
-                    string query = string.Empty;
+            //        string query = string.Empty;
 
-                    if (type == 0) //filtra tudo que é pulmão
-                    {
-                        query = "select * from view_enderecos_cd where possui_subla = 'N'";
-                    }
-                    else if (type == 1) //filtra por codigo de barras ou nome
-                    {
-                        query = $"select * from view_enderecos_cd e where e.cod like '%{chave}%' or e.nome_item like '%{chave}%' ";
-                    }
-                    else if (type == 2) //filtra o que esta ocupado
-                    {
-                        query = $"select * from view_enderecos_cd e where e.possui_subla = 'N' and e.ocupado = 'S'";
-                    }
-                    else //filtra o que esta livre
-                    {
-                        query = $"select * from view_enderecos_cd e where e.possui_subla = 'N' and e.ocupado = 'N'";
-                    }
+            //        if (type == 0) //filtra tudo que é pulmão
+            //        {
+            //            query = "select * from view_enderecos_cd where possui_subla = 'N'";
+            //        }
+            //        else if (type == 1) //filtra por codigo de barras ou nome
+            //        {
+            //            query = $"select * from view_enderecos_cd e where e.cod like '%{chave}%' or e.nome_item like '%{chave}%' ";
+            //        }
+            //        else if (type == 2) //filtra o que esta ocupado
+            //        {
+            //            query = $"select * from view_enderecos_cd e where e.possui_subla = 'N' and e.ocupado = 'S'";
+            //        }
+            //        else //filtra o que esta livre
+            //        {
+            //            query = $"select * from view_enderecos_cd e where e.possui_subla = 'N' and e.ocupado = 'N'";
+            //        }
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            TabelaEnderecos end = new TabelaEnderecos();
-                            while (reader.Read())
-                            {
+            //        //using (OracleCommand cmd = new OracleCommand(query, connection))
+            //        //{
+            //        //    using (OracleDataReader reader = cmd.ExecuteReader())
+            //        //    {
+            //        //        TabelaEnderecos end = new TabelaEnderecos();
+            //        //        while (reader.Read())
+            //        //        {
 
-                                end.GravaListEndereco(Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), reader["cod"].ToString(), reader["nome_regiao"].ToString(), reader["nome_item"].ToString());
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //        //            end.GravaListEndereco(Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), reader["cod"].ToString(), reader["nome_regiao"].ToString(), reader["nome_item"].ToString());
+            //        //        }
+            //        //    }
+            //        //}
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
 
         private string pasta = @"C:\Vanilla\temp";

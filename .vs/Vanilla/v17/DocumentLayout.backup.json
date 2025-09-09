@@ -1,26 +1,98 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\",
+  "WorkspaceRootPath": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastrar itens\\cadastraritens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\cadastraritens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\inseriritens\\classquantitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:inseriritens\\classquantitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\licencaslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:licencaslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\userson\\useronback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:userson\\useronback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\statuscd\\classstatuscd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:statuscd\\classstatuscd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\salvararquivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:salvararquivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\pedidos\\tabelapedidos\\modeltabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\tabelapedidos\\modeltabelapedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\pedidos\\pedidosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:pedidos\\pedidosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\login\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\chat\\modelmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:chat\\modelmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastrar empresas\\tabela\\tabelaempclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\tabela\\tabelaempclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastrar empresas\\cadastracnpjback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\cadastracnpjback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastracd\\tabela\\classtabelaend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastracd\\tabela\\classtabelaend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\desktop\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastracd\\classaddcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastracd\\classaddcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastracd\\cadregion\\regarmazenagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastracd\\cadregion\\regarmazenagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\vanillamdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\cadastracd\\cadastrocd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastracd\\cadastrocd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\fullsoft\\estudos\\vanilla-dist\\login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,70 +102,306 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeModel.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeModel.cs",
-              "RelativeDocumentMoniker": "Home\\HomeModel.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeModel.cs*",
-              "RelativeToolTip": "Home\\HomeModel.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAowA4AAAAlAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UserOnBack.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\UsersOn\\UserOnBack.cs",
+              "RelativeDocumentMoniker": "UsersOn\\UserOnBack.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\UsersOn\\UserOnBack.cs",
+              "RelativeToolTip": "UsersOn\\UserOnBack.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwCUAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T18:59:39.133Z",
+              "WhenOpened": "2025-09-09T13:26:05.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeDocumentMoniker": "Home\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeToolTip": "Home\\HomeController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAABwAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Classstatuscd.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\StatusCd\\Classstatuscd.cs",
+              "RelativeDocumentMoniker": "StatusCd\\Classstatuscd.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\StatusCd\\Classstatuscd.cs",
+              "RelativeToolTip": "StatusCd\\Classstatuscd.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwDIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T18:31:04.013Z",
+              "WhenOpened": "2025-09-09T13:25:57.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SalvarArquivo.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\SalvarArquivo.cs",
+              "RelativeDocumentMoniker": "SalvarArquivo.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\SalvarArquivo.cs",
+              "RelativeToolTip": "SalvarArquivo.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAwwLcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:25:38.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ModelTabelaPedidos.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "RelativeDocumentMoniker": "Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "RelativeToolTip": "Pedidos\\TabelaPedidos\\ModelTabelaPedidos.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAwwI4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:25:18.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PedidosModel.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Pedidos\\PedidosModel.cs",
+              "RelativeDocumentMoniker": "Pedidos\\PedidosModel.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Pedidos\\PedidosModel.cs",
+              "RelativeToolTip": "Pedidos\\PedidosModel.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAwwKMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:24:45.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VanillaMDI.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeToolTip": "Home\\VanillaMDI.cs",
-              "ViewState": "AgIAAFcBAAAAAAAAAAAgwGUBAAAdAAAAAAAAAA==",
+              "Title": "LicencasLogin.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\LicencasLogin.cs",
+              "RelativeDocumentMoniker": "LicencasLogin.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\LicencasLogin.cs*",
+              "RelativeToolTip": "LicencasLogin.cs*",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T18:29:21.851Z",
+              "WhenOpened": "2025-09-09T13:24:32.303Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VanillaMDI.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs",
-              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Home\\VanillaMDI.cs [Projeto]",
-              "RelativeToolTip": "Home\\VanillaMDI.cs [Projeto]",
+              "DocumentIndex": 1,
+              "Title": "ClassQuantItem.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\InserirItens\\ClassQuantItem.cs",
+              "RelativeDocumentMoniker": "InserirItens\\ClassQuantItem.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\InserirItens\\ClassQuantItem.cs*",
+              "RelativeToolTip": "InserirItens\\ClassQuantItem.cs*",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwFIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T14:14:33.296Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-09-09T13:24:11.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ModelMsg.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Chat\\ModelMsg.cs",
+              "RelativeDocumentMoniker": "Chat\\ModelMsg.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Chat\\ModelMsg.cs",
+              "RelativeToolTip": "Chat\\ModelMsg.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAwwJwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:23:07.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CadastrarItens.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastrar Itens\\CadastrarItens.cs",
+              "RelativeDocumentMoniker": "Cadastrar Itens\\CadastrarItens.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastrar Itens\\CadastrarItens.cs*",
+              "RelativeToolTip": "Cadastrar Itens\\CadastrarItens.cs*",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAowJEBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:21:52.879Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeDocumentMoniker": "Backsys\\Database.cs",
-              "ToolTip": "C:\\Users\\Erick\\Desktop\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeToolTip": "Backsys\\Database.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAgwB0AAAA2AAAAAAAAAA==",
+              "Title": "UserClass.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastro de usuarios\\UserClass.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\UserClass.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastro de usuarios\\UserClass.cs*",
+              "RelativeToolTip": "Cadastro de usuarios\\UserClass.cs*",
+              "ViewState": "AgIAANIAAAAAAAAAAAAwwOEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T13:01:15.568Z",
+              "WhenOpened": "2025-09-09T13:03:52.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TabelaEmpClass.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "RelativeDocumentMoniker": "Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "RelativeToolTip": "Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwEYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:21:42.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CadastraCnpjBack.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastrar Empresas\\CadastraCnpjBack.cs",
+              "RelativeDocumentMoniker": "Cadastrar Empresas\\CadastraCnpjBack.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Cadastrar Empresas\\CadastraCnpjBack.cs",
+              "RelativeToolTip": "Cadastrar Empresas\\CadastraCnpjBack.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAwwLgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:20:26.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClassTabelaEnd.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\Tabela\\ClassTabelaEnd.cs",
+              "RelativeDocumentMoniker": "CadastraCd\\Tabela\\ClassTabelaEnd.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\Tabela\\ClassTabelaEnd.cs",
+              "RelativeToolTip": "CadastraCd\\Tabela\\ClassTabelaEnd.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwG8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:20:07.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ClassAddCd.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\ClassAddCd.cs",
+              "RelativeDocumentMoniker": "CadastraCd\\ClassAddCd.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\ClassAddCd.cs",
+              "RelativeToolTip": "CadastraCd\\ClassAddCd.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAwwIMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:19:36.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginClass.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Login\\LoginClass.cs",
+              "RelativeDocumentMoniker": "Login\\LoginClass.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Login\\LoginClass.cs",
+              "RelativeToolTip": "Login\\LoginClass.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwFQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:05:05.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RegArmazenagem.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\CadRegion\\RegArmazenagem.cs",
+              "RelativeDocumentMoniker": "CadastraCd\\CadRegion\\RegArmazenagem.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\CadRegion\\RegArmazenagem.cs",
+              "RelativeToolTip": "CadastraCd\\CadRegion\\RegArmazenagem.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAIwFkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:19:13.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Backsys\\Database.cs",
+              "RelativeDocumentMoniker": "Backsys\\Database.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Backsys\\Database.cs",
+              "RelativeToolTip": "Backsys\\Database.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwDUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:13:56.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CadastroCd.cs [Projeto]",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\CadastroCd.cs",
+              "RelativeDocumentMoniker": "CadastraCd\\CadastroCd.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\CadastraCd\\CadastroCd.cs [Projeto]",
+              "RelativeToolTip": "CadastraCd\\CadastroCd.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:11:18.228Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "VanillaMDI.cs [Projeto]",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Home\\VanillaMDI.cs",
+              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Home\\VanillaMDI.cs [Projeto]",
+              "RelativeToolTip": "Home\\VanillaMDI.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:11:29.864Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "VanillaMDI.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Home\\VanillaMDI.cs",
+              "RelativeDocumentMoniker": "Home\\VanillaMDI.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Home\\VanillaMDI.cs",
+              "RelativeToolTip": "Home\\VanillaMDI.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAIA7wCYBAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:09:29.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginFront.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Login\\LoginFront.cs",
+              "RelativeDocumentMoniker": "Login\\LoginFront.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Login\\LoginFront.cs",
+              "RelativeToolTip": "Login\\LoginFront.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAMwCAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:06:30.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginFront.cs [Projeto]",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Login\\LoginFront.cs",
+              "RelativeDocumentMoniker": "Login\\LoginFront.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Login\\LoginFront.cs [Projeto]",
+              "RelativeToolTip": "Login\\LoginFront.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:07:58.65Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Home\\HomeController.cs",
+              "RelativeDocumentMoniker": "Home\\HomeController.cs",
+              "ToolTip": "C:\\Fullsoft\\Estudos\\Vanilla-DIST\\Home\\HomeController.cs",
+              "RelativeToolTip": "Home\\HomeController.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAewMsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T13:03:52.882Z",
               "EditorCaption": ""
             }
           ]

@@ -40,84 +40,84 @@ namespace Vanilla
 
         public void Env(string id_r, string id_d, string mensagem)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("vnl_prc_msg", connection))
-                    {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_id_remetente", OracleDbType.Int16).Value = Convert.ToInt32(id_r);
-                        cmd.Parameters.Add("v_id_destinatario", OracleDbType.Int16).Value = Convert.ToInt32(id_d);
-                        cmd.Parameters.Add("v_msg", OracleDbType.Varchar2).Value = mensagem;
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand("vnl_prc_msg", connection))
+            //        {
+            //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //            cmd.Parameters.Add("v_id_remetente", OracleDbType.Int16).Value = Convert.ToInt32(id_r);
+            //            cmd.Parameters.Add("v_id_destinatario", OracleDbType.Int16).Value = Convert.ToInt32(id_d);
+            //            cmd.Parameters.Add("v_msg", OracleDbType.Varchar2).Value = mensagem;
+            //            cmd.ExecuteNonQuery();
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
         public void RecebeMensagens()
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"select * from view_msg w where w.id_remetente = {Util.id_user} and w.id_destinatario = {Usuario.id_des} or w.id_remetente = {Usuario.id_des} and w.id_destinatario = {Util.id_user} order by dthr", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            histlist.Clear();
-                            while (reader.Read())
-                            {
-                                histlist.Add(new Mensagem(reader["id_remetente"].ToString(), reader["remetente"].ToString(), reader["msg"].ToString(), Convert.ToDateTime(reader["dthr"])));
-                            }
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand($"select * from view_msg w where w.id_remetente = {Util.id_user} and w.id_destinatario = {Usuario.id_des} or w.id_remetente = {Usuario.id_des} and w.id_destinatario = {Util.id_user} order by dthr", connection))
+            //        {
+            //            using (OracleDataReader reader = cmd.ExecuteReader())
+            //            {
+            //                histlist.Clear();
+            //                while (reader.Read())
+            //                {
+            //                    histlist.Add(new Mensagem(reader["id_remetente"].ToString(), reader["remetente"].ToString(), reader["msg"].ToString(), Convert.ToDateTime(reader["dthr"])));
+            //                }
 
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
 
           
         }
         public void NovaMsg()
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"SELECT MAX(id) as id FROM vnl_msg WHERE (destinatario = {Usuario.id_des} OR destinatario = {Util.id_user}) AND (remetente = {Util.id_user} OR remetente = {Usuario.id_des})", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                if (reader.IsDBNull(reader.GetOrdinal("id")))
-                                {
-                                    id_ultima_msg = 0;
-                                }
-                                else
-                                {
-                                    id_ultima_msg = reader.GetInt32(reader.GetOrdinal("id"));
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand($"SELECT MAX(id) as id FROM vnl_msg WHERE (destinatario = {Usuario.id_des} OR destinatario = {Util.id_user}) AND (remetente = {Util.id_user} OR remetente = {Usuario.id_des})", connection))
+            //        {
+            //            using (OracleDataReader reader = cmd.ExecuteReader())
+            //            {
+            //                if (reader.Read())
+            //                {
+            //                    if (reader.IsDBNull(reader.GetOrdinal("id")))
+            //                    {
+            //                        id_ultima_msg = 0;
+            //                    }
+            //                    else
+            //                    {
+            //                        id_ultima_msg = reader.GetInt32(reader.GetOrdinal("id"));
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
         public void SetDestinoId(string us)
         {
@@ -132,29 +132,29 @@ namespace Vanilla
         }
         public void CarregaContatos()
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                contatos.Clear();
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"select * from vnl_user where id != {Util.id_user}", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                contatos.Add(new Mensagem(Convert.ToInt32(reader["id"]), reader["login"].ToString()));
-                            }
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    contatos.Clear();
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand($"select * from vnl_user where id != {Util.id_user}", connection))
+            //        {
+            //            using (OracleDataReader reader = cmd.ExecuteReader())
+            //            {
+            //                while (reader.Read())
+            //                {
+            //                    contatos.Add(new Mensagem(Convert.ToInt32(reader["id"]), reader["login"].ToString()));
+            //                }
 
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
 
     }

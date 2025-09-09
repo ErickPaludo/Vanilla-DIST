@@ -62,26 +62,26 @@ namespace Vanilla
             listapedidos.Clear();
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
 
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("Select * from view_pedidos order by id desc", connection))
-                        {
-                            using (OracleDataReader reader = cmd.ExecuteReader())
-                            {
-                                while (reader.Read())
-                                {
-                                    DateTime? data_fim = reader["dthr_fim"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["dthr_fim"]);
+                //    using (OracleTransaction transaction = connection.BeginTransaction())
+                //    {
+                //        using (OracleCommand cmd = new OracleCommand("Select * from view_pedidos order by id desc", connection))
+                //        {
+                //            using (OracleDataReader reader = cmd.ExecuteReader())
+                //            {
+                //                while (reader.Read())
+                //                {
+                //                    DateTime? data_fim = reader["dthr_fim"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["dthr_fim"]);
 
-                                    listapedidos.Add(new ModelTabelaPedidos(Convert.ToDateTime(reader["dthr_criacao"]), data_fim, reader["cliente"].ToString(), reader["transportadora"].ToString(), reader["situacao"].ToString(), reader["id"].ToString(), Convert.ToDouble(reader["cubagem_pedido"])));
-                                }
-                            }
-                        }
-                    }
-                }
+                //                    listapedidos.Add(new ModelTabelaPedidos(Convert.ToDateTime(reader["dthr_criacao"]), data_fim, reader["cliente"].ToString(), reader["transportadora"].ToString(), reader["situacao"].ToString(), reader["id"].ToString(), Convert.ToDouble(reader["cubagem_pedido"])));
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -93,24 +93,24 @@ namespace Vanilla
             listalinhapedidos.Clear();
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
 
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand($"Select * from view_linha_pedidos where id_pedido = {id_pedido}", connection))
-                        {
-                            using (OracleDataReader reader = cmd.ExecuteReader())
-                            {
-                                while (reader.Read())
-                                {
-                                    listalinhapedidos.Add(new ModelTabelaPedidos(reader["id_pedido"].ToString(), reader["item"].ToString(), Convert.ToDouble(reader["cubagem_pedido"]), Convert.ToInt32(reader["qtd"])));
-                                }
-                            }
-                        }
-                    }
-                }
+                //    using (OracleTransaction transaction = connection.BeginTransaction())
+                //    {
+                //        using (OracleCommand cmd = new OracleCommand($"Select * from view_linha_pedidos where id_pedido = {id_pedido}", connection))
+                //        {
+                //            using (OracleDataReader reader = cmd.ExecuteReader())
+                //            {
+                //                while (reader.Read())
+                //                {
+                //                    listalinhapedidos.Add(new ModelTabelaPedidos(reader["id_pedido"].ToString(), reader["item"].ToString(), Convert.ToDouble(reader["cubagem_pedido"]), Convert.ToInt32(reader["qtd"])));
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -119,28 +119,28 @@ namespace Vanilla
         }
         public void AlterarSituacao(int id_pedido, string situacao)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_pedidos.prc_altera_pedido", connection))
-                    {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        //  cmd.Parameters.Add("v_id_user", OracleDbType.Int32).Value = Util.id_user;
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_pedidos.prc_altera_pedido", connection))
+            //        {
+            //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //            //  cmd.Parameters.Add("v_id_user", OracleDbType.Int32).Value = Util.id_user;
 
-                        cmd.Parameters.Add("v_situacao", OracleDbType.Varchar2).Value = situacao;
-                        cmd.Parameters.Add("v_id_pedido", OracleDbType.Int32).Value = id_pedido;
-                        cmd.ExecuteNonQuery();
-                    }
-                    connection.Close();
+            //            cmd.Parameters.Add("v_situacao", OracleDbType.Varchar2).Value = situacao;
+            //            cmd.Parameters.Add("v_id_pedido", OracleDbType.Int32).Value = id_pedido;
+            //            cmd.ExecuteNonQuery();
+            //        }
+            //        connection.Close();
 
-                }
-                catch (Exception ex)
-                {
-                    ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!", ex.Message);
-                }
-            }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!", ex.Message);
+            //    }
+            //}
         }
     }
 }

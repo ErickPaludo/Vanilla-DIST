@@ -86,35 +86,35 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    try
-                    {
-                        connection.Open();
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_ins_user", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_nome", nome);
-                            cmd.Parameters.Add("v_cpf", cpf);
-                            cmd.Parameters.Add("v_email", email);
-                            cmd.Parameters.Add("v_tel", tel);
-                            cmd.Parameters.Add("v_tel_2", tel2);
-                            cmd.Parameters.Add("v_perm", permissao);
-                            cmd.Parameters.Add("v_status", status);
-                            cmd.Parameters.Add("v_login", user);
-                            cmd.Parameters.Add("v_pass", pass);
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    try
+                //    {
+                //        connection.Open();
+                //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_ins_user", connection))
+                //        {
+                //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //            cmd.Parameters.Add("v_nome", nome);
+                //            cmd.Parameters.Add("v_cpf", cpf);
+                //            cmd.Parameters.Add("v_email", email);
+                //            cmd.Parameters.Add("v_tel", tel);
+                //            cmd.Parameters.Add("v_tel_2", tel2);
+                //            cmd.Parameters.Add("v_perm", permissao);
+                //            cmd.Parameters.Add("v_status", status);
+                //            cmd.Parameters.Add("v_login", user);
+                //            cmd.Parameters.Add("v_pass", pass);
 
-                            cmd.ExecuteNonQuery();
-                            db.AddLog($"USUARIO: {user} | TIPO: {permissao} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
-                            MessageBox.Show("Usuario adicionado com sucesso!");
-                        }
-                        connection.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                //            cmd.ExecuteNonQuery();
+                //            db.AddLog($"USUARIO: {user} | TIPO: {permissao} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
+                //            MessageBox.Show("Usuario adicionado com sucesso!");
+                //        }
+                //        connection.Close();
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    }
+                //}
 
             }
             catch (Exception ex)
@@ -131,27 +131,27 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
 
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_edit_userc", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
-                            cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = email;
-                            cmd.Parameters.Add("v_tel", OracleDbType.Varchar2).Value = tel;
-                            cmd.Parameters.Add("v_tel_2", OracleDbType.Varchar2).Value = tel2;
-                            cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
-                            cmd.ExecuteNonQuery();
-                            db.AddLog($"ALTERAÇÃO REALIZADA COM SUCESSO!", Util.id_user);
-                        }
+                //    using (OracleTransaction transaction = connection.BeginTransaction())
+                //    {
+                //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_edit_userc", connection))
+                //        {
+                //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
+                //            cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = email;
+                //            cmd.Parameters.Add("v_tel", OracleDbType.Varchar2).Value = tel;
+                //            cmd.Parameters.Add("v_tel_2", OracleDbType.Varchar2).Value = tel2;
+                //            cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
+                //            cmd.ExecuteNonQuery();
+                //            db.AddLog($"ALTERAÇÃO REALIZADA COM SUCESSO!", Util.id_user);
+                //        }
 
-                        MessageBox.Show("Usuário gravado com sucesso!");
-                    }
-                }
+                //        MessageBox.Show("Usuário gravado com sucesso!");
+                //    }
+                //}
 
             }
             catch (Exception ex)
@@ -163,31 +163,31 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_edit_useradm", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
-                            cmd.Parameters.Add("v_nome", OracleDbType.Varchar2).Value = nome;
-                            ;
-                            cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = email;
-                            cmd.Parameters.Add("v_tel", OracleDbType.Varchar2).Value = tel;
-                            cmd.Parameters.Add("v_tel_2", OracleDbType.Varchar2).Value = tel2;
-                            cmd.Parameters.Add("v_perm", OracleDbType.Varchar2).Value = perm;
-                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                            cmd.Parameters.Add("v_login", OracleDbType.Varchar2).Value = login;
-                            cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
-                            cmd.ExecuteNonQuery();
-                            db.AddLog($"USUARIO: {login} | ID: {id} | PERMISSAO: {perm} | STATUS: {status} | FOI EDITADO COM SUCESSO!", Util.id_user);
-                        }
-                        MessageBox.Show("Usuário gravado com sucesso!");
-                    }
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
+                //    using (OracleTransaction transaction = connection.BeginTransaction())
+                //    {
+                //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_edit_useradm", connection))
+                //        {
+                //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
+                //            cmd.Parameters.Add("v_nome", OracleDbType.Varchar2).Value = nome;
+                //            ;
+                //            cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = email;
+                //            cmd.Parameters.Add("v_tel", OracleDbType.Varchar2).Value = tel;
+                //            cmd.Parameters.Add("v_tel_2", OracleDbType.Varchar2).Value = tel2;
+                //            cmd.Parameters.Add("v_perm", OracleDbType.Varchar2).Value = perm;
+                //            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
+                //            cmd.Parameters.Add("v_login", OracleDbType.Varchar2).Value = login;
+                //            cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
+                //            cmd.ExecuteNonQuery();
+                //            db.AddLog($"USUARIO: {login} | ID: {id} | PERMISSAO: {perm} | STATUS: {status} | FOI EDITADO COM SUCESSO!", Util.id_user);
+                //        }
+                //        MessageBox.Show("Usuário gravado com sucesso!");
+                //    }
 
-                }
+                //}
             }
             catch (Exception ex)
             {
@@ -198,22 +198,22 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From view_users", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                AlterarUsersGeral alteruserc = new AlterarUsersGeral();
-                                alteruserc.ArmazenaDados(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), reader["cpf"].ToString(), reader["email"].ToString(), reader["tel"].ToString(), reader["tel_2"].ToString(), reader["perm_form"].ToString(), reader["status_format"].ToString(), reader["login"].ToString(), reader["pass"].ToString(), Convert.ToInt32(reader["bloq"]));
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
+                //    using (OracleCommand cmd = new OracleCommand($"Select * From view_users", connection))
+                //    {
+                //        using (OracleDataReader reader = cmd.ExecuteReader())
+                //        {
+                //            while (reader.Read())
+                //            {
+                //                AlterarUsersGeral alteruserc = new AlterarUsersGeral();
+                //                alteruserc.ArmazenaDados(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), reader["cpf"].ToString(), reader["email"].ToString(), reader["tel"].ToString(), reader["tel_2"].ToString(), reader["perm_form"].ToString(), reader["status_format"].ToString(), reader["login"].ToString(), reader["pass"].ToString(), Convert.ToInt32(reader["bloq"]));
 
-                            }
-                        }
-                    }
-                }
+                //            }
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -223,38 +223,39 @@ namespace Vanilla
 
         public UserClass RetornarUserC()
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"select b.email,b.tel,b.tel_2,b.pass,b.login from vnl_user b where id = {util.Id_user}", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                string email = reader["email"].ToString();
-                                string tel = reader["tel"].ToString();
-                                string tel2 = reader["tel_2"].ToString();
-                                string pass = reader["pass"].ToString();
-                                string login = reader["login"].ToString();
+            return new UserClass();
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand($"select b.email,b.tel,b.tel_2,b.pass,b.login from vnl_user b where id = {util.Id_user}", connection))
+            //        {
+            //            using (OracleDataReader reader = cmd.ExecuteReader())
+            //            {
+            //                if (reader.Read())
+            //                {
+            //                    string email = reader["email"].ToString();
+            //                    string tel = reader["tel"].ToString();
+            //                    string tel2 = reader["tel_2"].ToString();
+            //                    string pass = reader["pass"].ToString();
+            //                    string login = reader["login"].ToString();
 
-                                return new UserClass(reader["email"].ToString(), reader["tel"].ToString(), reader["tel_2"].ToString(), reader["login"].ToString(), reader["pass"].ToString());
-                            }
-                            else
-                            {
-                                return new UserClass();
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return new UserClass();
-                }
-            }
+            //                    return new UserClass(reader["email"].ToString(), reader["tel"].ToString(), reader["tel_2"].ToString(), reader["login"].ToString(), reader["pass"].ToString());
+            //                }
+            //                else
+            //                {
+            //                    return new UserClass();
+            //                }
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return new UserClass();
+            //    }
+            //}
         }
     }
 }

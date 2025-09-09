@@ -17,22 +17,22 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                InserirItem item = new InserirItem();
-                                item.AddListItems(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), Convert.ToInt32(reader["qtn_total"]));
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
+                //    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens", connection))
+                //    {
+                //        using (OracleDataReader reader = cmd.ExecuteReader())
+                //        {
+                //            while (reader.Read())
+                //            {
+                //                InserirItem item = new InserirItem();
+                //                item.AddListItems(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), Convert.ToInt32(reader["qtn_total"]));
 
-                            }
-                        }
-                    }
-                }
+                //            }
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -44,33 +44,33 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    try
-                    {
-                        connection.Open();
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    try
+                //    {
+                //        connection.Open();
 
-                        using (OracleTransaction transaction = connection.BeginTransaction())
-                        {
-                            using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_end", connection))
-                            {
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                                cmd.Parameters.Add("v_id_item", OracleDbType.Int32).Value = id;
-                                cmd.Parameters.Add("v_quant", OracleDbType.Decimal).Value = quantidade;
-                                cmd.Parameters.Add("r_retorno", OracleDbType.Varchar2, 1000).Direction = ParameterDirection.Output;
+                //        using (OracleTransaction transaction = connection.BeginTransaction())
+                //        {
+                //            using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_end", connection))
+                //            {
+                //                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //                cmd.Parameters.Add("v_id_item", OracleDbType.Int32).Value = id;
+                //                cmd.Parameters.Add("v_quant", OracleDbType.Decimal).Value = quantidade;
+                //                cmd.Parameters.Add("r_retorno", OracleDbType.Varchar2, 1000).Direction = ParameterDirection.Output;
                                
-                                cmd.ExecuteNonQuery();
-                                string retorno = cmd.Parameters["r_retorno"].Value.ToString();
-                                MessageBox.Show(retorno);
+                //                cmd.ExecuteNonQuery();
+                //                string retorno = cmd.Parameters["r_retorno"].Value.ToString();
+                //                MessageBox.Show(retorno);
 
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                //            }
+                //        }
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -80,43 +80,44 @@ namespace Vanilla
 
         public bool VerificaExistencia()    
         {
+            return false;
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    try
-                    {
-                        connection.Open();
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    try
+                //    {
+                //        connection.Open();
 
-                        using (OracleTransaction transaction = connection.BeginTransaction())
-                        {
-                            using (OracleCommand cmd = new OracleCommand("vnl_pkg_cd.vnl_status_cd", connection))
-                            {
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                                cmd.Parameters.Add("r_total", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                                cmd.Parameters.Add("r_pulmao_t", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                                cmd.Parameters.Add("r_picking_t", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                                cmd.Parameters.Add("r_pulmao_l", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                                cmd.Parameters.Add("r_picking_l", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                                cmd.ExecuteNonQuery();
-                               if(((OracleDecimal)cmd.Parameters["r_pulmao_t"].Value) != 0)
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    return false;
-                                }
+                //        using (OracleTransaction transaction = connection.BeginTransaction())
+                //        {
+                //            using (OracleCommand cmd = new OracleCommand("vnl_pkg_cd.vnl_status_cd", connection))
+                //            {
+                //                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //                cmd.Parameters.Add("r_total", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                //                cmd.Parameters.Add("r_pulmao_t", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                //                cmd.Parameters.Add("r_picking_t", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                //                cmd.Parameters.Add("r_pulmao_l", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                //                cmd.Parameters.Add("r_picking_l", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                //                cmd.ExecuteNonQuery();
+                //               if(((OracleDecimal)cmd.Parameters["r_pulmao_t"].Value) != 0)
+                //                {
+                //                    return true;
+                //                }
+                //                else
+                //                {
+                //                    return false;
+                //                }
 
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-                }
+                //            }
+                //        }
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //        return false;
+                //    }
+                //}
             }
             catch (Exception ex)
             {

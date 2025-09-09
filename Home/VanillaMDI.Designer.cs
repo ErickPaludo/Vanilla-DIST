@@ -207,6 +207,7 @@
             Badduser.TabIndex = 10;
             Badduser.Tela = "Usuarios";
             Badduser.MyControlClick += StrCadUs;
+            Badduser.Load += Badduser_Load;
             // 
             // Ccademp
             // 

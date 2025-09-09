@@ -21,7 +21,7 @@ namespace Vanilla
         {
             this.viewhome = viewhome;
             this.model = model;
-            viewhome.UserMenu.Text = Util.nome_user;
+            //viewhome.UserMenu.Text = Util.nome_user;
             viewhome.SetController(this);
         }
         public void Fechar()

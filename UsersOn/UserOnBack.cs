@@ -32,21 +32,21 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From view_users_logados", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {                              
-                                    UserOn user = new UserOn();
-                                    user.AddNaLista(Convert.ToInt32(reader["id"]), reader["login"].ToString(), reader["hostname"].ToString(), reader["ip"].ToString(), Convert.ToDateTime(reader["acess"]));
-                            }
-                        }
-                    }
-                }
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
+                //    using (OracleCommand cmd = new OracleCommand($"Select * From view_users_logados", connection))
+                //    {
+                //        using (OracleDataReader reader = cmd.ExecuteReader())
+                //        {
+                //            while (reader.Read())
+                //            {                              
+                //                    UserOn user = new UserOn();
+                //                    user.AddNaLista(Convert.ToInt32(reader["id"]), reader["login"].ToString(), reader["hostname"].ToString(), reader["ip"].ToString(), Convert.ToDateTime(reader["acess"]));
+                //            }
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {

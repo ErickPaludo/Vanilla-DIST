@@ -35,57 +35,58 @@ namespace Vanilla.CadastraCd.CadRegion
 
         public void GravaReg(string name_reg)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_region.vnl_cadastra_reg", connection))
-                    {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_name_reg", OracleDbType.Varchar2).Value = name_reg;
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_region.vnl_cadastra_reg", connection))
+            //        {
+            //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //            cmd.Parameters.Add("v_name_reg", OracleDbType.Varchar2).Value = name_reg;
+            //            cmd.ExecuteNonQuery();
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
         public void RetornoReg(int local_class)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    CadastroCd cd = new CadastroCd();
-                    SelecionarReg reg = new SelecionarReg();
-                    connection.Open();
+            //    using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //    {
+            //        try
+            //        {
+            //            CadastroCd cd = new CadastroCd();
+            //            SelecionarReg reg = new SelecionarReg();
+            //            connection.Open();
 
-                    using (OracleCommand cmd = new OracleCommand("Select * from view_reg_sep order by id", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                if (local_class == 0)
-                                {
-                                    cd.GravarListaReg(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), reader["status"].ToString());
-                                }
-                                else
-                                {
-                                    reg.GravarListaReg(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), reader["status"].ToString());
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //            using (OracleCommand cmd = new OracleCommand("Select * from view_reg_sep order by id", connection))
+            //            {
+            //                using (OracleDataReader reader = cmd.ExecuteReader())
+            //                {
+            //                    while (reader.Read())
+            //                    {
+            //                        if (local_class == 0)
+            //                        {
+            //                            cd.GravarListaReg(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), reader["status"].ToString());
+            //                        }
+            //                        else
+            //                        {
+            //                            reg.GravarListaReg(Convert.ToInt32(reader["id"]), reader["nome"].ToString(), reader["status"].ToString());
+            //                        }
+            //                    }
+            //                }
+            //            }
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+            //}
         }
     }
 }

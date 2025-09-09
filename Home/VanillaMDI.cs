@@ -21,7 +21,7 @@ namespace Vanilla
         public VanillaMDI()
         {
             InitializeComponent();
-            lic.ValidaLicenca();
+            // lic.ValidaLicenca();
         }
 
         #region elements_view
@@ -376,6 +376,11 @@ namespace Vanilla
         private void Fechar(object sender, FormClosedEventArgs e)
         {
             controller.Fechar();
+        }
+
+        private void Badduser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -129,59 +129,59 @@ namespace Vanilla
         }
         private void RetornaRua(int rua)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    CadastroCd cd = new CadastroCd();
-                    connection.Open();
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        CadastroCd cd = new CadastroCd();
+            //        connection.Open();
 
-                    using (OracleCommand cmd = new OracleCommand($"select * from view_enderecos_cd where rua= {rua}", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
+            //        using (OracleCommand cmd = new OracleCommand($"select * from view_enderecos_cd where rua= {rua}", connection))
+            //        {
+            //            using (OracleDataReader reader = cmd.ExecuteReader())
+            //            {
 
-                            while (reader.Read())
-                            {
-                               GravaListEndereco(Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), reader["cod"].ToString());
-                            }
+            //                while (reader.Read())
+            //                {
+            //                   GravaListEndereco(Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), reader["cod"].ToString());
+            //                }
 
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
         public void RetornaRuaPicking(int rua)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    CadastroCd cd = new CadastroCd();
-                    connection.Open();
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        CadastroCd cd = new CadastroCd();
+            //        connection.Open();
 
-                    using (OracleCommand cmd = new OracleCommand($"select * from view_subla where rua= {rua}", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
+            //        using (OracleCommand cmd = new OracleCommand($"select * from view_subla where rua= {rua}", connection))
+            //        {
+            //            using (OracleDataReader reader = cmd.ExecuteReader())
+            //            {
 
-                            while (reader.Read())
-                            {
-                                PickingAdd(Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), Convert.ToInt32(reader["sub_la"]), reader["cod"].ToString(), reader["item"].ToString());
-                            }
+            //                while (reader.Read())
+            //                {
+            //                    PickingAdd(Convert.ToInt32(reader["rua"]), Convert.ToInt32(reader["predio"]), Convert.ToInt32(reader["la"]), Convert.ToInt32(reader["sub_la"]), reader["cod"].ToString(), reader["item"].ToString());
+            //                }
 
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
 
         public void SalvarCodUnitario(string codbar_endereco, string endereco_formated)

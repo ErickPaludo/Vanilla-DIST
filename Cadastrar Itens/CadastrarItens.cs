@@ -269,36 +269,36 @@ namespace Vanilla
 
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
 
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_item", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
-                            cmd.Parameters.Add("v_cubagem", OracleDbType.Decimal).Value = cubagem;
-                            cmd.Parameters.Add("v_altura", OracleDbType.Decimal).Value = altura;
-                            cmd.Parameters.Add("v_largura", OracleDbType.Decimal).Value = largura;
-                            cmd.Parameters.Add("v_comprimento", OracleDbType.Decimal).Value = comprimento;
-                            cmd.Parameters.Add("v_codbar", OracleDbType.Varchar2).Value = codigo_barras;
-                            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
-                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
-                            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = und_m;
-                            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_custo;
-                            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem_lucro;
-                            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_venda;
-                            cmd.Parameters.Add("v_id_picking", OracleDbType.Int32).Value = id_end;
-                            cmd.Parameters.Add("v_quant_max", OracleDbType.Int32).Value = 999;
-                            cmd.ExecuteNonQuery();
-                            db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {codigo_barras} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
-                        }
-                        MessageBox.Show("Item gravado com sucesso!");
-                    }
-                }
+                //    using (OracleTransaction transaction = connection.BeginTransaction())
+                //    {
+                //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_item", connection))
+                //        {
+                //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
+                //            cmd.Parameters.Add("v_cubagem", OracleDbType.Decimal).Value = cubagem;
+                //            cmd.Parameters.Add("v_altura", OracleDbType.Decimal).Value = altura;
+                //            cmd.Parameters.Add("v_largura", OracleDbType.Decimal).Value = largura;
+                //            cmd.Parameters.Add("v_comprimento", OracleDbType.Decimal).Value = comprimento;
+                //            cmd.Parameters.Add("v_codbar", OracleDbType.Varchar2).Value = codigo_barras;
+                //            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
+                //            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
+                //            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
+                //            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = und_m;
+                //            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_custo;
+                //            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem_lucro;
+                //            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_venda;
+                //            cmd.Parameters.Add("v_id_picking", OracleDbType.Int32).Value = id_end;
+                //            cmd.Parameters.Add("v_quant_max", OracleDbType.Int32).Value = 999;
+                //            cmd.ExecuteNonQuery();
+                //            db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {codigo_barras} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
+                //        }
+                //        MessageBox.Show("Item gravado com sucesso!");
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -310,29 +310,29 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_edit_item", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id_principal;
-                            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
-                            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
-                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
-                            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = und_m;
-                            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_custo;
-                            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem_lucro;
-                            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_final;
-                            cmd.ExecuteNonQuery();
-                            db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!", Util.id_user);
-                        }
-                        MessageBox.Show("Item gravado com sucesso!");
-                    }
-                }
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
+                //    using (OracleTransaction transaction = connection.BeginTransaction())
+                //    {
+                //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_edit_item", connection))
+                //        {
+                //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                //            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id_principal;
+                //            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
+                //            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
+                //            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
+                //            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
+                //            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = und_m;
+                //            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_custo;
+                //            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem_lucro;
+                //            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_final;
+                //            cmd.ExecuteNonQuery();
+                //            db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!", Util.id_user);
+                //        }
+                //        MessageBox.Show("Item gravado com sucesso!");
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -344,22 +344,22 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens order by id", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
+                //    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens order by id", connection))
+                //    {
+                //        using (OracleDataReader reader = cmd.ExecuteReader())
+                //        {
+                //            while (reader.Read())
+                //            {
 
-                                TabelaItens itens_table = new TabelaItens(true);
-                                itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString());
-                            }
-                        }
-                    }
-                }
+                //                TabelaItens itens_table = new TabelaItens(true);
+                //                itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString());
+                //            }
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -371,21 +371,21 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens where {column} LIKE '%{busca}%'", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                TabelaItens itens_table = new TabelaItens(true);
-                                itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString());
-                            }
-                        }
-                    }
-                }
+                //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                //{
+                //    connection.Open();
+                //    using (OracleCommand cmd = new OracleCommand($"Select * From view_itens where {column} LIKE '%{busca}%'", connection))
+                //    {
+                //        using (OracleDataReader reader = cmd.ExecuteReader())
+                //        {
+                //            while (reader.Read())
+                //            {
+                //                TabelaItens itens_table = new TabelaItens(true);
+                //                itens_table.AddNaTabelaItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["codbar"].ToString(), reader["nome"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["status"].ToString());
+                //            }
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -400,31 +400,31 @@ namespace Vanilla
 
         public CadastrarItens RetornarItens(int id)
         {
+            return new CadastrarItens();
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand($"select * from view_itens where id = {id}", connection))
+            //        {
+            //            using (OracleDataReader reader = cmd.ExecuteReader())
+            //            {
+            //                if (reader.Read())
+            //                {
 
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"select * from view_itens where id = {id}", connection))
-                    {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                
-                                return new CadastrarItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["nome"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]),reader["codbar"].ToString(), reader["status"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["altura"]), Convert.ToDecimal(reader["largura"]),Convert.ToDecimal(reader["comprimento"]), Convert.ToDecimal(reader["cubagem_item"]));
-                            }
-                            return new CadastrarItens();
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return new CadastrarItens();
-                }
-            }
+            //                    return new CadastrarItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["nome"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]),reader["codbar"].ToString(), reader["status"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["altura"]), Convert.ToDecimal(reader["largura"]),Convert.ToDecimal(reader["comprimento"]), Convert.ToDecimal(reader["cubagem_item"]));
+            //                }
+            //                return new CadastrarItens();
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return new CadastrarItens();
+            //    }
+            //}
         }
     }
 
